@@ -1,10 +1,11 @@
 "use client";
 
-import { useMemo, ReactNode } from "react";
-import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
-import { getTheme } from "@/theme";
+import { ThemeProvider } from "@mui/material/styles";
+import { ReactNode, useMemo } from "react";
+
 import { ThemeProviderContext, useThemeMode } from "@/contexts";
+import { getTheme } from "@/theme";
 
 function ThemeInner({ children }: { children: ReactNode }) {
   const { mode } = useThemeMode();
