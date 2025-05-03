@@ -1,1 +1,1 @@
-export * from './PaletteModeSwitch'
+export * from "./PaletteModeSwitch";
