@@ -5,8 +5,7 @@ import { Roboto } from "next/font/google";
 // https://mui.com/material-ui/integrations/nextjs/#app-router
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "../theme";
+import { ThemeProviderClient } from "@/providers/ThemeProviderClient";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -29,7 +28,7 @@ export default function RootLayout({
     <html lang="en" className={roboto.variable}>
       <body>
         <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProviderClient>{children}</ThemeProviderClient>
         </AppRouterCacheProvider>
       </body>
     </html>
