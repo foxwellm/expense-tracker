@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 
 import { PaletteModeSwitch } from "@/components";
+import { VertBarChart } from "@/components/VertBarChart";
 
 const bull = (
   <Box
@@ -46,6 +47,7 @@ export default function RootPage() {
           <Button size="small">Learn More</Button>
         </CardActions>
       </Card>
+      <VertBarChart />
     </Container>
   );
 }

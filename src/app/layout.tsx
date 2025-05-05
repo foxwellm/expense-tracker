@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
-
 // NOTE: Prevents Flash of Unstyled Content (FOUC)
 // https://mui.com/material-ui/integrations/nextjs/#app-router
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import type { Metadata } from "next";
+import { Roboto } from "next/font/google";
 
 import { ThemeProviderClient } from "@/providers/ThemeProviderClient";
 
