@@ -1,7 +1,7 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -24,6 +24,7 @@ const eslintConfig = [
     rules: {
       "simple-import-sort/imports": "warn",
       "simple-import-sort/exports": "warn",
+      "no-console": ["error", { allow: ["warn", "error"] }],
     },
   },
 ];

@@ -7,8 +7,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 
-import { PaletteModeSwitch } from "@/components";
-import { VertBarChart } from "@/components/VertBarChart";
+import { PaletteModeSwitch, VertBarChart } from "@/components";
 
 const bull = (
   <Box

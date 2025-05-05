@@ -25,20 +25,21 @@ export function VertBarChart() {
       const marginLeft = 50;
       const legendHeight = 40;
 
-      const union = d3.union(data.map((d) => d.age));
-      console.log("🚀 ~ renderChart ~ union:", union);
+      const ageGroups = Array.from(new Set(data.map((d) => d.age))); // stack keys
+
+      const reshaped = d3
+        .groups(data, (d) => d.state)
+        .map(([state, records]) => {
+          const row: Record<string, number | string> = { state };
+          for (const r of records) {
+            row[r.age] = r.population;
+          }
+          return row;
+        });
 
       const series = d3
-        .stack<PopulationData>()
-        .keys(d3.union(data.map((d) => d.age)))
-        .value(([, D], key) => D.get(key)?.population ?? 0)(
-        d3.index(
-          data,
-          (d) => d.state,
-          (d) => d.age
-        )
-      );
-      console.log("🚀 ~ renderChart ~ series:", series);
+        .stack<Record<string, number | string>>()
+        .keys(ageGroups)(reshaped as Record<string, number>[]);
 
       const x = d3
         .scaleBand()
@@ -74,7 +75,7 @@ export function VertBarChart() {
         .attr("viewBox", [0, 0, width, height])
         .attr("style", "max-width: 100%; height: auto; font: 10px sans-serif;");
 
-      // Add legend at top
+      // Legend
       const legendG = svg
         .append("g")
         .attr("transform", `translate(${marginLeft}, 10)`);
@@ -111,16 +112,16 @@ export function VertBarChart() {
         .selectAll("rect")
         .data((D) => D.map((d) => (Object.assign(d, { key: D.key }), d)))
         .join("rect")
-        .attr("x", (d) => x(d.data[0])!)
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .attr("x", (d) => x((d.data as any).state)!)
         .attr("y", (d) => y(d[1]))
         .attr("height", (d) => y(d[0]) - y(d[1]))
         .attr("width", x.bandwidth())
         .append("title")
         .text(
           (d) =>
-            `${d.data[0]} ${d.key}\n${formatValue(
-              d.data[1].get(d.key).population
-            )}`
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            `${(d.data as any).state} ${(d as any).key}\n${formatValue(d[1] - d[0])}`
         );
 
       // X Axis
