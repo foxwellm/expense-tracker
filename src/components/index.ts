@@ -1,3 +1,3 @@
-export * from "./PaletteModeSwitch";
-export * from "./VertBarChart";
-export * from "./VertBarChartContainer";
+export * from "./PaletteModeSwitch"
+export * from "./VertBarChart"
+export * from "./VertBarChartContainer"

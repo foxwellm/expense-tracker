@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import { styled } from "@mui/material/styles";
-import Switch from "@mui/material/Switch";
+import { styled } from "@mui/material/styles"
+import Switch from "@mui/material/Switch"
 
-import { useThemeMode } from "@/contexts";
+import { useThemeMode } from "@/contexts"
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -59,14 +59,14 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
       backgroundColor: "#8796A5",
     }),
   },
-}));
+}))
 
 export function PaletteModeSwitch() {
-  const { mode, setMode } = useThemeMode();
+  const { mode, setMode } = useThemeMode()
 
   const toggleMode = () => {
-    setMode(mode === "dark" ? "light" : "dark");
-  };
+    setMode(mode === "dark" ? "light" : "dark")
+  }
 
   return (
     <MaterialUISwitch
@@ -74,5 +74,5 @@ export function PaletteModeSwitch() {
       checked={mode === "dark"}
       onClick={toggleMode}
     />
-  );
+  )
 }

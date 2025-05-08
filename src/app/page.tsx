@@ -1,13 +1,13 @@
-import { Container } from "@mui/material";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import * as React from "react";
+import { Container } from "@mui/material"
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import Card from "@mui/material/Card"
+import CardActions from "@mui/material/CardActions"
+import CardContent from "@mui/material/CardContent"
+import Typography from "@mui/material/Typography"
+import * as React from "react"
 
-import { PaletteModeSwitch, VertBarChartContainer } from "@/components";
+import { PaletteModeSwitch, VertBarChartContainer } from "@/components"
 
 const bull = (
   <Box
@@ -16,7 +16,7 @@ const bull = (
   >
     •
   </Box>
-);
+)
 
 export default function RootPage() {
   return (
@@ -48,5 +48,5 @@ export default function RootPage() {
       </Card>
       <VertBarChartContainer />
     </Container>
-  );
+  )
 }

@@ -1,33 +1,33 @@
-"use client";
+"use client"
 
-import * as d3 from "d3";
-import { useEffect, useRef } from "react";
+import * as d3 from "d3"
+import { useEffect, useRef } from "react"
 
-import data from "../constants/data.json";
+import data from "../constants/data.json"
 
-const formatValue = (x: number) => (isNaN(x) ? "N/A" : x.toLocaleString("en"));
+const formatValue = (x: number) => (isNaN(x) ? "N/A" : x.toLocaleString("en"))
 
 export function VertBarChart({
   reshaped,
   ageGroups,
 }: {
-  reshaped: Record<string, number | string>[];
-  ageGroups: string[];
+  reshaped: Record<string, number | string>[]
+  ageGroups: string[]
 }) {
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
-    const width = ref.current?.clientWidth ?? 928;
-    const height = 500;
-    const marginTop = 10;
-    const marginRight = 0;
-    const marginBottom = 40;
-    const marginLeft = 50;
-    const legendHeight = 40;
+    const width = ref.current?.clientWidth ?? 928
+    const height = 500
+    const marginTop = 10
+    const marginRight = 0
+    const marginBottom = 40
+    const marginLeft = 50
+    const legendHeight = 40
 
     const series = d3.stack<Record<string, number | string>>().keys(ageGroups)(
       reshaped as Record<string, number | string>[]
-    );
+    )
 
     // console.log("🚀 ~ VertBarChart.tsx:39 ~ renderChart ~ series:", series);
     const xScaleBandFunc = d3
@@ -40,54 +40,54 @@ export function VertBarChart({
         )
       )
       .range([marginLeft, width - marginRight])
-      .padding(0.1);
+      .padding(0.1)
 
     const yScaleLinearFunc = d3
       .scaleLinear()
       .domain([0, d3.max(series, (s) => d3.max(s, (d) => d[1]))!])
       .nice()
-      .range([height - marginBottom, marginTop + legendHeight]);
+      .range([height - marginBottom, marginTop + legendHeight])
 
     const color = d3
 
       .scaleOrdinal<string>()
       .domain(series.map((d) => d.key!))
       .range(d3.schemeSpectral[series.length])
-      .unknown("#ccc");
+      .unknown("#ccc")
 
     const svg = d3
       .create("svg")
       .attr("width", width)
       .attr("height", height)
       .attr("viewBox", [0, 0, width, height])
-      .attr("style", "max-width: 100%; height: auto; font-siz: 14px;");
+      .attr("style", "max-width: 100%; height: auto; font-siz: 14px;")
 
     // LEGEND
     const legendGroup = svg
       // "g" group (container for grouping related items)
       .append("g")
-      .attr("transform", `translate(${marginLeft}, 10)`);
+      .attr("transform", `translate(${marginLeft}, 10)`)
 
     // Calculate the number of legend items
-    const numLegendItems = series.length;
+    const numLegendItems = series.length
 
     // Dynamically calculate the spacing for each legend item
-    const legendItemWidth = width / numLegendItems;
+    const legendItemWidth = width / numLegendItems
 
     // Adjust for padding or margins if needed
-    const padding = 10; // Example padding between items
-    const adjustedLegendItemWidth = legendItemWidth - padding;
+    const padding = 10 // Example padding between items
+    const adjustedLegendItemWidth = legendItemWidth - padding
 
     series.forEach((s, i) => {
       const legendRow = legendGroup
         .append("g")
-        .attr("transform", `translate(${i * adjustedLegendItemWidth}, 0)`);
+        .attr("transform", `translate(${i * adjustedLegendItemWidth}, 0)`)
 
       legendRow
         .append("rect")
         .attr("width", 15)
         .attr("height", 15)
-        .attr("fill", color(s.key!));
+        .attr("fill", color(s.key!))
 
       legendRow
         .append("text")
@@ -96,8 +96,8 @@ export function VertBarChart({
         .text(s.key!)
         .attr("font-size", "14px")
         // currentColor inherits from parent context
-        .attr("fill", "currentColor");
-    });
+        .attr("fill", "currentColor")
+    })
 
     // Draw bars
     svg
@@ -119,7 +119,7 @@ export function VertBarChart({
         (d) =>
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           `${(d.data as any).state} ${(d as any).key}\n${formatValue(d[1] - d[0])}`
-      );
+      )
 
     // X Axis
     svg
@@ -128,26 +128,26 @@ export function VertBarChart({
       .call(d3.axisBottom(xScaleBandFunc))
       .selectAll("text")
       .attr("transform", "rotate(-45)")
-      .style("text-anchor", "end");
+      .style("text-anchor", "end")
 
     // Y Axis
     svg
       .append("g")
       .attr("transform", `translate(${marginLeft},0)`)
-      .call(d3.axisLeft(yScaleLinearFunc));
+      .call(d3.axisLeft(yScaleLinearFunc))
     // remove line around axis
     // .call((g) => g.selectAll(".domain").remove());
 
     if (ref.current) {
-      ref.current.innerHTML = "";
-      ref.current.appendChild(svg.node()!);
+      ref.current.innerHTML = ""
+      ref.current.appendChild(svg.node()!)
     }
-  }, [reshaped, ageGroups]);
+  }, [reshaped, ageGroups])
 
   return (
     <div
       ref={ref}
       style={{ width: "100%", fontFamily: "Roboto, sans-serif" }}
     />
-  );
+  )
 }
