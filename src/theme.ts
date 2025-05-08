@@ -23,13 +23,12 @@ export const getTheme = (mode: "light" | "dark") =>
       divider: mode === "dark" ? "#2e2e2e" : "#e0e0e0",
     },
     typography: {
-      fontFamily: "var(--font-roboto)",
+      fontFamily: "Roboto, sans-serif",
     },
     components: {
       MuiCssBaseline: {
         styleOverrides: {
           body: {
-            fontFamily: "Roboto, sans-serif",
             backgroundColor: mode === "dark" ? "#0d0d0d" : "#fafafa",
             WebkitFontSmoothing: "antialiased", // sharper font on MacOS
             MozOsxFontSmoothing: "grayscale", // sharper font on Firefox

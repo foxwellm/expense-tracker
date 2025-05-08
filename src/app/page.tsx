@@ -7,7 +7,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 
-import { PaletteModeSwitch, VertBarChart } from "@/components";
+import { PaletteModeSwitch, VertBarChartContainer } from "@/components";
 
 const bull = (
   <Box
@@ -46,7 +46,7 @@ export default function RootPage() {
           <Button size="small">Learn More</Button>
         </CardActions>
       </Card>
-      <VertBarChart />
+      <VertBarChartContainer />
     </Container>
   );
 }
