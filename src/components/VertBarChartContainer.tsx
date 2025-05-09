@@ -1,5 +1,5 @@
-import data from "../constants/data.json"
-import { VertBarChart } from "./VertBarChart"
+import data from '../constants/data.json'
+import { VertBarChart } from './VertBarChart'
 
 interface PopulationData {
   state: string
@@ -39,12 +39,11 @@ export function VertBarChartContainer() {
     mappedData.push(row)
   })
 
-
   const mockData = [
-    { month: "Jan", expense: "audio", total: 34 },
-    { month: "Jan", expense: "home", total: 20 },
-    { month: "Feb", expense: "audio", total: 34 },
-    { month: "Feb", expense: "audio", total: 2 },
+    { month: 'Jan', expense: 'audio', total: 34 },
+    { month: 'Jan', expense: 'home', total: 20 },
+    { month: 'Feb', expense: 'audio', total: 34 },
+    { month: 'Feb', expense: 'audio', total: 2 },
   ]
 
   return (
@@ -52,10 +51,10 @@ export function VertBarChartContainer() {
       <VertBarChart
         data={mockData}
         reshaped={[
-          { month: "Jan", audio: 34, home: 20 },
-          { month: "Feb", audio: 34, home: 2 },
+          { month: 'Jan', audio: 34, home: 20 },
+          { month: 'Feb', audio: 34, home: 2 },
         ]}
-        ageGroups={["audio", "home"]}
+        ageGroups={['audio', 'home']}
       />
       {/* <VertBarChart data={data} reshaped={mappedData} ageGroups={stackedKeys} /> */}
     </>
