@@ -1,0 +1,1173 @@
+{
+  "Food - Household": {
+    "Household Supplies": {
+      "Laundry Detergent": null,
+      "Toilet Paper (12 rolls)": null
+    }
+  },
+  "Clothing - Shirts": {
+    "Casual Shirts": { "Striped Long Sleeve Shirt": null },
+    "Dress Shirts": { "Classic Slim Fit Shirt": null }
+  },
+  "Kitchen": {
+    "Coffee Equipment": {
+      "Cold Brew Coffee Maker": null,
+      "Herbal Tea Infuser": null,
+      "Siphon Coffee Maker": null,
+      "Electric Kettle with Temperature Control": null
+    },
+    "Drinkware": { "Travel Mug": null, "Stainless Steel Water Pitcher": null },
+    "Cooking Tools & Utensils": {
+      "Digital Wireless Meat Thermometer": null,
+      "Handmade Wooden Utensil Set": null,
+      "Silicone Cooking Utensils Set": null,
+      "Cooking Utensil Set": null,
+      "Quality Chef Apron": null,
+      "Oven Thermometer": null,
+      "Instant Read Meat Thermometer": null
+    },
+    "Cutlery": {
+      "Stainless Steel Cutlery Set": null,
+      "Ceramic Knife Set": null
+    },
+    "Barware": {
+      "Cocktail Shaker and Mixing Glass Set": null,
+      "Cocktail Shaker Set": null
+    },
+    "Kitchen Gadget": { "Electric Can Opener": null },
+    "Coffee Accessories": { "Coffee Capsule Dispenser": null },
+    "Food Preparation Tools": { "Electric Food Slicer": null },
+    "Cooking Appliances": {
+      "Electric Ice Cream Maker": null,
+      "Pressure Cooker": null,
+      "Pasta Maker Machine": null,
+      "Sous Vide Cooker": null,
+      "Electric Stir Fry Pan": null
+    },
+    "Food Storage Solutions": {
+      "Eco-Friendly Beeswax Wraps": null,
+      "Snap-On Tupperware Set": null,
+      "Reusable Food Storage Bags": null,
+      "Insulated Lunch Box": null,
+      "Insulated Lunch Bag": null
+    },
+    "Kitchen Gadgets": {
+      "Ice Cream Scoop": null,
+      "Stainless Steel Grater": null,
+      "Multi-Function Meat Tenderizer": null
+    },
+    "Small Appliances": {
+      "Electric Fondue Pot": null,
+      "Electric Meat Grinder": null,
+      "Ice Cream Maker": null,
+      "Compact Electric Kettle": null,
+      "Electric Pressure Cooker": null,
+      "Electric Knife": null,
+      "Hand Crank Blender": null,
+      "Air Fryer": null,
+      "Portable Ice Maker": null,
+      "Waffle Maker": null,
+      "Electric Rice Cooker with Steamer": null,
+      "Electric Hot Water Dispenser": null
+    },
+    "Cookware": {
+      "Non-Stick Grill Pan": null,
+      "Heart-Shaped Baking Molds": null,
+      "Ceramic Bakeware Set": null,
+      "Dual Function Electric Skillet": null
+    },
+    "Kitchen Storage & Organization": {
+      "Bamboo Utensil Holder": null,
+      "Magnetic Spice Containers": null
+    },
+    "Baking Accessories": {
+      "Heat-Resistant Silicone Mat": null,
+      "Measuring Cups Set": null,
+      "Silicone Baking Cups": null
+    },
+    "Cutting Boards & Utensils": {
+      "Bamboo Cutting Board": null,
+      "Chopping Board": null
+    },
+    "Cookware Accessories": { "Oven Mitts": null },
+    "Sustainable Tableware": { "Eco-Friendly Disposable Plates": null },
+    "Ice Cube Trays": {
+      "Ice Cube Tray with Lid": null,
+      "Silicone Ice Cube Tray": null
+    },
+    "Eco-Friendly Kitchen Products": { "Reusable Produce Bags Set": null },
+    "Blenders & Juicers": { "Juice Extractor": null, "Hand Mixer": null }
+  },
+  "Music": {
+    "Accessories": { "Guitar Tuner": null },
+    "Instruments": { "Acoustic Guitar": null }
+  },
+  "Travel": {
+    "Travel Accessories": {
+      "Travel Orthopedic Pillow": null,
+      "Compressible Packing Cubes": null,
+      "Lightweight Travel Backpack": null,
+      "Compressed Towel Tablets": null,
+      "Travel Size Toiletry Bottles": null
+    }
+  },
+  "Gaming": {
+    "Gaming Accessories": {
+      "Wireless Gaming Mouse": null,
+      "Gaming Mousepad": null,
+      "Ergonomic Gaming Chair": null
+    }
+  },
+  "Outdoor": {
+    "Camping Equipment": {
+      "Pocket Blanket": null,
+      "Portable Hammock with Stand": null,
+      "Folding Table": null,
+      "Air Mattress": null,
+      "Outdoor Camping Hammock": null,
+      "LED Camping Lantern with USB Charging": null,
+      "Collapsible Folding Chair": null,
+      "Backpacking Tent": null,
+      "Portable Campfire": null,
+      "LED Flashlight with Rechargeable Batteries": null,
+      "Outdoor Camping Lantern": null,
+      "Portable Air Pump": null,
+      "Portable Camping Stove": null,
+      "Outdoor Adventure Kit": null,
+      "Portable Water Filter": null,
+      "Tactical Backpack": null,
+      "Camping Lantern": null,
+      "Overnight Hiking Backpack": null,
+      "Lightweight Backpacking Tent": null
+    },
+    "Outdoor Accessories": {
+      "Solar Garden Lights": null,
+      "Telescope": null,
+      "Foldable Electric Scooter": null,
+      "Rolling Cooler": null,
+      "Hiking Water Bottle with Filter": null,
+      "LED Canopy Lights": null,
+      "Outdoor Sports Backpack": null,
+      "Outdoor Fire Pit": null,
+      "Shatterproof Wine Glasses": null,
+      "Hydration Backpack": null,
+      "Picnic Blanket": null
+    },
+    "Garden Supplies": {
+      "Portable Leaf Blower": null,
+      "Portable Solar Path Lights": null
+    },
+    "Fishing Equipment": { "Fishing Tackle Box": null },
+    "Outdoor Furniture": {
+      "Foldable Picnic Table": null,
+      "Camping Chair": null,
+      "Portable Hammock Swing": null
+    },
+    "Bird Feeding Accessories": {
+      "Window Bird Feeder with Suction Cups": null
+    },
+    "Grilling Accessories": {
+      "Portable Grill Cover": null,
+      "Stainless Steel BBQ Grill Set": null
+    },
+    "Grills and Smokers": { "Kettle BBQ Grill": null },
+    "Cycling Accessories": { "Lockable Bicycle Chain": null }
+  },
+  "Office": {
+    "Office Supplies": { "Customizable Name Plate": null },
+    "Office Accessories": {
+      "Under Desk Footrest": null,
+      "Leather Notebook Cover": null,
+      "Computer Monitor Stand": null,
+      "Sturdy Bookends": null
+    },
+    "Laptop Accessories": {
+      "Workstation Laptop Stand": null,
+      "Adjustable Laptop Stand": null
+    },
+    "Furniture": { "Adjustable Height Standing Desk Converter": null },
+    "Lighting": { "Desk Lamp with USB Port": null },
+    "Printers & Scanners": { "Wireless Printer": null }
+  },
+  "Pets": {
+    "Pet Accessories": {
+      "Pet Bed": null,
+      "Personalized Pet ID Tags": null,
+      "Collapsible Pet Dog Bowl": null,
+      "Pet Food Storage Container": null,
+      "LED Flashing Pet Collar": null
+    },
+    "Cat Furniture": {
+      "Cat Tree": null,
+      "Cat Scratching Post with Toys": null
+    },
+    "Grooming Supplies": {
+      "Pet Grooming Glove": null,
+      "Pet Hair Vacuum Cleaner Attachment": null,
+      "Pet Grooming Kit": null,
+      "Portable Pet Bathing Tool": null
+    },
+    "Training Supplies": { "Dog Training Whistle": null },
+    "Dog Accessories": { "Dog Walking Waist Pack": null },
+    "Pet Supplies": {
+      "Pet Waterer with Filtration": null,
+      "Pet Bed with Removable Cover": null
+    },
+    "Dog Toys": { "Dog Frisbee Toy": null },
+    "Travel Accessories": { "Pet Carrier": null, "Pet Travel Carrier": null },
+    "Cat Care": { "Self-Cleaning Cat Litter Box": null },
+    "Pet Hydration Supplies": { "Pet Water Bottle": null }
+  },
+  "Fitness": {
+    "Yoga Equipment": {
+      "High-Quality Yoga Block": null,
+      "Eco-Friendly Yoga Blocks": null,
+      "Adjustable Yoga Mat Strap": null,
+      "Non-Slip Yoga Socks": null,
+      "Yoga Mat Carrier": null,
+      "Cork Yoga Mat": null,
+      "Yoga Strap": null,
+      "Yoga Mat": null,
+      "Foldable Yoga Mat": null
+    },
+    "Fitness Equipment": { "Fitness Balance Ball": null },
+    "Strength Training Equipment": {
+      "Bodyweight Resistance Bands": null,
+      "Adjustable Dumbbells": null,
+      "Fitness Resistance Bands Set": null
+    },
+    "Cardio Equipment": {
+      "Jump Rope with Counter": null,
+      "Adjustable Skipping Rope": null
+    },
+    "Wearable Technology": {
+      "Fitness Tracker with Heart Rate Monitor": null,
+      "Fitness Tracker Band": null,
+      "Fitbit Activity Tracker": null,
+      "Fitness Tracker": null
+    },
+    "Recovery Tools": { "Foam Roller for Muscle Recovery": null },
+    "Health & Wellness Tools": { "Fitness Activity Journal": null },
+    "Fitness Accessories": { "Fitness Mat": null },
+    "Hydration Gear": {
+      "Blender Bottle": null,
+      "Electrolyte Water Bottle": null,
+      "Sports Bottle": null
+    }
+  },
+  "Home": {
+    "Home Fragrance & Accessories": {
+      "Natural Soy Candles": null,
+      "Electric Wax Warmer": null,
+      "Scented Candle Set": null,
+      "Scent Diffuser Oil": null
+    },
+    "Home Organization": {
+      "Wire Shelving Unit": null,
+      "Suction Cup Hooks": null,
+      "Freestanding Wine Rack": null,
+      "Over-the-Door Shoe Organizer": null,
+      "Set of Decorative Storage Bins": null,
+      "Over-the-Door Hooks": null,
+      "Bamboo Bathtub Caddy": null,
+      "Photo Album": null,
+      "Collapsible Storage Crates": null,
+      "Over-The-Door Shoe Organizer": null
+    },
+    "Air Quality & Purification": {
+      "Smart Air Purifier": null,
+      "Bamboo Charcoal Air Purifier Bags": null
+    },
+    "Home Furnishings": {
+      "Wall-Mounted Bookshelf": null,
+      "Compact Shoe Rack": null
+    },
+    "Wine Storage Solutions": { "Wall-Mounted Wine Rack": null },
+    "Bedding & Linens": {
+      "Faux Fur Throw Blanket": null,
+      "Memory Foam Mattress Pad": null,
+      "Decorative Throw Blanket": null,
+      "Bamboo Memory Foam Pillow": null,
+      "Electric Blanket": null,
+      "Cotton Quilted Throw Blanket": null,
+      "Fleece Throw Blanket": null,
+      "Memory Foam Mattress Topper": null
+    },
+    "Lighting & Lamps": {
+      "Multicolored LED Strip Lights": null,
+      "Decorative LED Neon Sign": null,
+      "LED Desk Lamp": null,
+      "LED Under Cabinet Lighting": null,
+      "Luminous Night Light": null,
+      "LED Table Lamp": null,
+      "LED Desk Light": null
+    },
+    "Decorative Wall Art & Accessories": {
+      "Digital Photo Frame": null,
+      "Wall Art": null,
+      "Self-Adhesive Wallpaper": null,
+      "Cushion Covers": null
+    },
+    "Smart Home & Security": {
+      "Digital Alarm Clock": null,
+      "Digital Thermostat": null,
+      "Smart LED Light Strip": null
+    },
+    "Eco-Friendly Home Products": { "Biodegradable Trash Bags": null },
+    "Seasonal Home Decor": { "LED Christmas Lights": null },
+    "Kitchen Accessories": { "Two-Tier Fruit Basket": null },
+    "Home Decor": { "Magnetic Curtain Tiebacks": null }
+  },
+  "Clothing - Coats": { "Outerwear - Faux Fur": { "Faux Fur Coat": null } },
+  "Food - Pasta": {
+    "Specialty Pasta": {
+      "Black Bean Spaghetti": null,
+      "Chickpea Pasta": null,
+      "Lentil Pasta": null,
+      "Red Lentil Pasta": null
+    },
+    "Noodles": { "Ramen Noodles": null }
+  },
+  "Food - Canned Soups": {
+    "Soups": {
+      "Spiced Pumpkin Soup": null,
+      "Lentil Vegetable Stew": null,
+      "Basil Tomato Soup": null
+    }
+  },
+  "Food - Snacks": {
+    "Savory Snacks": {
+      "Puffed Rice Cake": null,
+      "Pepper Jack Cheese Sticks": null,
+      "Sweet Potato Chips": null,
+      "Pretzel Bites": null,
+      "Honey Mustard Pretzel Bites": null,
+      "Chili Lime Corn Chips": null,
+      "Taro Chips": null,
+      "Oven-Baked Cheese Crisps": null,
+      "Spicy Garlic Edamame": null,
+      "Cinnamon Sugar Popcorn": null,
+      "Radish Chips": null,
+      "Honey Wheat Pretzels": null
+    },
+    "Protein Snacks": {
+      "Almond Joy Protein Bars": null,
+      "Cinnamon Roll Protein Bar": null
+    },
+    "Dried Fruits": { "Dried Cranberries": null, "Tropical Fruit Bowl": null },
+    "Gourmet Snacks": { "Aged White Cheddar Popcorn": null },
+    "Healthy Snacks": {
+      "Coconut Chips": null,
+      "Mango Chia Pudding": null,
+      "Organic Cereal Bars": null,
+      "Nutty Trail Mix": null,
+      "Organic Brown Rice Cakes": null,
+      "Fruit and Nut Energy Bites": null,
+      "Rice Cakes": null,
+      "Coconut Granola": null,
+      "Veggie Chips Variety Pack": null,
+      "Fruit and Nut Bars": null,
+      "Almond Joy Munch Bars": null,
+      "Baked Potato Chips": null,
+      "Rainbow Veggie Chips": null
+    },
+    "Chips and Crisps": { "Kettle Chip Variety Pack": null },
+    "Vegetable Snacks": { "Garden Vegetable Chips": null },
+    "Nuts and Trail Mix": {
+      "Fruit and Nut Medley": null,
+      "Cinnamon Spiced Almonds": null
+    },
+    "Nuts and Seeds": { "Honey Roasted Peanuts": null, "Pumpkin Seeds": null },
+    "Dips and Spreads": {
+      "Spinach Artichoke Dip": null,
+      "Hummus Trio Pack": null
+    },
+    "Sweet Snacks": { "Dried Fruit Medley": null, "Caramel Apple Chips": null },
+    "Nut-Based Snacks": { "Nut Butter Cups": null },
+    "Candy": { "Peanut Butter Pretzel Nuggets": null },
+    "Chocolate Snacks": { "Dark Chocolate Raisins": null },
+    "Salsas and Dips": { "Black Bean Salsa": null }
+  },
+  "Food - Salad Toppings": { "Croutons": { "Herb Seasoned Croutons": null } },
+  "Art Supplies": {
+    "Storage & Organization": { "Art Supplies Organizer": null },
+    "Painting Kits": { "Paint By Numbers Kit": null },
+    "Craft Kits": { "Crafting Kit": null }
+  },
+  "Clothing - Activewear": {
+    "Sports Apparel": { "Athletic Compression Tights": null },
+    "Running Shorts": { "Running Shorts": null },
+    "Fitness Apparel": { "Sporty Leggings": null },
+    "Leggings": { "Mesh Sports Leggings": null }
+  },
+  "Food - Dairy": {
+    "Cheese": {
+      "Cheddar Cheese Slices": null,
+      "Sliced Provolone Cheese": null,
+      "Greek Feta Cheese": null,
+      "Pepper Jack Cheese Slices": null
+    },
+    "Dairy Spreads": { "Cream Cheese": null },
+    "Cottage Cheese": { "Low-Fat Cottage Cheese": null },
+    "Eggs": { "Eggs (dozen)": null },
+    "Dairy Alternatives": { "Almond Milk": null, "Hummus Variety Pack": null },
+    "Yogurt": { "Greek Yogurt": null },
+    "Flavored Yogurt": {
+      "Raspberry Vanilla Greek Yogurt": null,
+      "Maple Almond Yogurt": null
+    }
+  },
+  "Food - Frozen Foods": {
+    "Frozen Meals": { "Frozen Pizza": null, "Vegetable Fried Rice": null },
+    "Frozen Pizza Crusts": { "Almond Flour Pizza Crust": null },
+    "Frozen Potato Products": { "Frozen Hash Browns": null },
+    "Frozen Snacks": {
+      "Sweet Potato Tots": null,
+      "Spinach Pizza Rolls": null,
+      "Crispy Potato Tots": null
+    },
+    "Frozen Vegetables": {
+      "Roasted Garlic Mashed Potatoes": null,
+      "Frozen Cauliflower Rice": null,
+      "Frozen Spinach": null,
+      "Sweet Potato Mash": null,
+      "Asian Stir-Fry Vegetables": null
+    },
+    "Frozen Vegan Meals": { "Vegan Tacos": null },
+    "Frozen Vegetarian Meals": {
+      "Cauliflower Gnocchi": null,
+      "Vegetarian Pizza": null
+    },
+    "Frozen Fruits": {
+      "Frozen Berry Blend": null,
+      "Frozen Fruit Medley": null
+    },
+    "Frozen Appetizers": { "Vegetable Spring Rolls": null },
+    "Frozen Smoothies": { "Banana Peanut Butter Smoothie": null },
+    "Frozen Pizza": { "Margherita Pizza": null }
+  },
+  "Food - Beverages": {
+    "Juice": {
+      "Apple Juice": null,
+      "Cranberry Juice": null,
+      "Fruit Medley Juice": null,
+      "Raspberry Limeade": null
+    },
+    "Health Drinks": { "Green Smoothie Mix": null, "Kombucha Drink": null },
+    "Herbal Tea": {
+      "Herbal Tea Variety Pack": null,
+      "Ginger Turmeric Tea": null,
+      "Honey Lemon Tea": null,
+      "Ginger Tea": null
+    },
+    "Tea": {
+      "Matcha Green Tea Powder": null,
+      "Peach Green Tea": null,
+      "Green Tea Matcha Powder": null
+    },
+    "Sparkling Beverages": {
+      "Sparkling Blood Orange Soda": null,
+      "Cranberry Lime Sparkling Water": null,
+      "Cucumber Lime Sparkling Water": null
+    },
+    "Smoothies": {
+      "Peach Mango Smoothie": null,
+      "Peach Mango Smoothie Mix": null
+    }
+  },
+  "Food - Sauces": {
+    "Condiments": { "Honey Garlic Sauce": null },
+    "Pasta Sauces": {
+      "Tomato Basil Pasta Sauce": null,
+      "Italian Marinara Sauce": null,
+      "Pesto Pasta Sauce": null,
+      "Lemon Basil Pasta Sauce": null
+    },
+    "Asian Sauces": {
+      "Sesame Garlic Stir-Fry Sauce": null,
+      "Vegetable Stir-Fry Sauce": null
+    },
+    "Italian Sauces": { "Classic Pesto Sauce": null }
+  },
+  "Clothing - Footwear": {
+    "Athletic Footwear": { "Trainers with Mesh Inserts": null },
+    "Boots": { "High-Top Leather Boots": null, "Ankle Boots": null },
+    "Casual Footwear": { "Sporty Slide Sandals": null }
+  },
+  "Health": {
+    "Aromatherapy & Wellness": {
+      "Essential Oil Roller Bottles": null,
+      "Essential Oils Diffuser Necklace": null
+    },
+    "Injury Prevention & Recovery": { "Wrist Support Brace": null },
+    "Oral Care & Hygiene": { "Rechargeable Electric Toothbrush": null },
+    "Personal Care & Grooming": {
+      "Electric Razor": null,
+      "Smartphone UV Sanitizer": null
+    },
+    "Sleep & Relaxation": {
+      "Self-Massaging Pillow": null,
+      "Weighted Blanket": null
+    },
+    "Safety & Protection": { "Breathable Face Mask Set": null },
+    "Wellness & Relaxation": { "Ice Pack": null },
+    "Nutrition & Fitness": { "Home Delivery Food Journal": null },
+    "Emergency Preparedness & First Aid": {
+      "Deluxe First Aid Kit": null,
+      "First Aid Kit": null
+    },
+    "Pain Relief & Therapy": { "Electric Heating Pad": null },
+    "Massage Therapy": {
+      "Portable Massage Gun": null,
+      "Portable Massage Table": null
+    },
+    "Health Devices": {
+      "Portable Air Purifier": null,
+      "Portable UV Sterilizer": null
+    }
+  },
+  "Food - Vegetables": {
+    "Vegetables": { "Sweet Potatoes (organic)": null },
+    "Salads": { "Cabbage Slaw Mix": null },
+    "Pasta Alternatives": { "Zucchini Noodle Pasta": null }
+  },
+  "Food - Prepared Meals": {
+    "Meal Kits - Pasta": { "Fettuccine Alfredo Dinner Kit": null },
+    "Vegetarian Meals": { "Teriyaki Tofu Stir-Fry": null },
+    "Kits - Sushi": { "Spicy Tuna Sushi Kit": null },
+    "Cuisine - Italian": { "Basil Pesto Pasta": null },
+    "Cuisine - Asian": { "Teriyaki Chicken Bowl": null }
+  },
+  "Food - Bakery": {
+    "Flatbreads": { "Mediterranean Flatbread": null },
+    "Breads": {
+      "Caraway Rye Bread": null,
+      "Sourdough Bread": null,
+      "Artisan Bread": null,
+      "Artisan Flatbreads": null,
+      "Hot Dog Buns": null,
+      "Whole Grain Hamburger Buns": null,
+      "Whole Wheat Bread": null,
+      "Jalapeño Cornbread": null,
+      "French Bread": null
+    },
+    "Cookies": {
+      "Peanut Butter Cookies": null,
+      "Cranberry Almond Cookies": null,
+      "Cranberry Almond Biscotti": null
+    },
+    "Gluten-Free Treats": { "Almond Flour Cookies": null },
+    "Baking Mixes": { "Chocolate Chip Pancake Mix": null },
+    "Pastry Products": { "Puff Pastry": null },
+    "Vegan Baked Goods": { "Vegan chocolate chip cookies": null },
+    "Muffins": {
+      "Banana Nut Muffins": null,
+      "Apple Cinnamon Breakfast Muffins": null
+    },
+    "Seasonal Items": {
+      "Pumpkin Spice Cookies": null,
+      "Pumpkin Spice Muffins": null
+    },
+    "Artisan Bread": { "Rustic Italian Breads": null },
+    "Desserts": { "Sea Salt Caramel Brownie": null }
+  },
+  "Food - Produce": {
+    "Fresh Cut Fruits": { "Sliced Avocado": null },
+    "Fresh Vegetables": { "Organic Baby Spinach": null },
+    "Fresh Cut Vegetables": { "Sliced Cucumbers": null },
+    "Fruits": {
+      "Grapes (red)": null,
+      "Organic Apples": null,
+      "Avocados": null
+    },
+    "Fruits & Vegetables": { "Sweet Cherry Tomatoes": null },
+    "Mixed Vegetables": { "Vegetable Medley": null },
+    "Vegetables": { "Spaghetti Squash": null, "Organic Sweet Potatoes": null },
+    "Vegetable Snacks": { "Carrot Sticks": null },
+    "Pre-Packaged Produce Kits": { "Vegetable Stir-Fry Kit": null }
+  },
+  "Food - Deli Meats": { "Deli Meats": { "Sliced Turkey Breast": null } },
+  "Baby": {
+    "Safety Equipment": { "Baby Safety Corner Guards": null },
+    "Feeding Accessories": { "Multifunctional Baby Bottle Warmer": null }
+  },
+  "Food - Canned Goods": {
+    "Soups & Broths": {
+      "Tuscan Bean Soup": null,
+      "Classic Chicken Noodle Soup": null,
+      "Mushroom Soup (canned)": null,
+      "Vegetarian Chili": null,
+      "Chicken Broth": null,
+      "Coconut Curry Lentil Soup": null,
+      "Garden Vegetable Soup": null,
+      "Classic Beef Chili": null
+    },
+    "Vegetable Purees": { "Pumpkin Puree": null },
+    "Sauces & Condiments": { "Tomato Paste": null, "Apple Sauce": null },
+    "Canned Legumes": { "Canned Black Beans": null, "Chickpeas": null },
+    "Canned Vegetables": { "Chili Beans (canned)": null, "Black Olives": null },
+    "Coconut Products": { "Coconut Milk": null },
+    "Canned Fruits": { "Peach Slices in Syrup": null }
+  },
+  "Food - Condiments": {
+    "Salsas": {
+      "Chipotle Lime Salsa": null,
+      "Fire Roasted Salsa": null,
+      "Spicy Avocado Salsa": null
+    },
+    "Vinegars": { "Balsamic Vinegar": null },
+    "Sauces": {
+      "Maple Chipotle Glaze": null,
+      "Teriyaki Stir-Fry Sauce": null,
+      "Marinara Sauce": null,
+      "BBQ Sauce": null,
+      "Sweet Chili Thai Sauce": null,
+      "Salsa Verde": null
+    },
+    "Dressing": {
+      "Sesame Ginger Dressing": null,
+      "Classic Caesar Dressing": null,
+      "Orange Ginger Vinaigrette": null,
+      "Zesty Cilantro Lime Dressing": null,
+      "Indian Curry Sauce": null,
+      "Avocado Lime Dressing": null,
+      "Thai Peanut Dressing": null
+    },
+    "Dips": { "Sweet Chili Dipping Sauce": null, "Roasted Garlic Aioli": null },
+    "Fruit Chutneys": { "Mango Chutney": null },
+    "Hot Sauces": { "Sriracha Chili Sauce": null },
+    "Plant-Based Condiments": { "Vegan Mayonnaise": null },
+    "Dips & Spreads": { "Honey Mustard Dip": null },
+    "Mustards": { "Bock Beer Mustard": null },
+    "Nut Butters": { "Tahini": null },
+    "Specialty Salts": { "Himalayan Pink Salt": null },
+    "Guacamole": { "Smashed Avocado with Lime": null },
+    "Olives": { "Sliced Olives": null },
+    "Marinades and Sauces": {
+      "Sweet BBQ Dipping Sauce": null,
+      "Vegetarian Stir Fry Sauce": null
+    },
+    "Olive Products": { "Mediterranean Olives": null },
+    "Flavored Butters": { "Roasted Garlic Butter": null },
+    "BBQ Sauces": {
+      "Sweet and Spicy Barbecue Sauce": null,
+      "Classic BBQ Sauce": null
+    },
+    "Spicy Sauces": { "Chipotle Sauce": null, "Habanero Hot Sauce": null },
+    "Cooking Oils": { "Olive Oil": null },
+    "Fruit Spreads": { "Blackberry Compote": null, "Peach Preserves": null },
+    "Natural Sauces": { "Organic Tomato Ketchup": null },
+    "Seasoning Blends": { "Spicy Beef Taco Mix": null },
+    "Garlic-Based Sauces": { "Roasted Garlic": null }
+  },
+  "Home Appliances": {
+    "Cooling Appliances": { "Portable Air Conditioner": null },
+    "Robotic Cleaners": { "Home Cleaning Robot": null }
+  },
+  "Food - Baking": {
+    "Sweeteners": { "Organic Brown Sugar": null, "Brown Sugar": null },
+    "Mixes": {
+      "Artisan Cornbread Mix": null,
+      "Almond Flour Brownies": null,
+      "Chocolate Fudge Brownie Mix": null,
+      "Samoas Cookie Mix": null,
+      "Chocolate Chip Cookie Mix": null,
+      "Vegan Chocolate Cake Mix": null
+    },
+    "Flours & Meals": { "Organic Almond Flour": null },
+    "Baking Ingredients": {
+      "Sooji (Semolina)": null,
+      "Organic Coconut Flour": null,
+      "Cocoa Powder": null
+    },
+    "Cookies": { "Chocolate Mint Cookies": null },
+    "Baking Kits": { "Cinnamon Roll Kit": null }
+  },
+  "Toys": {
+    "STEM Learning Toys": { "Educational STEM Kit": null },
+    "Pretend Play Toys": { "Wooden Children's Play Kitchen": null },
+    "Creative Toys": { "Kids' Art Easel": null, "Children's Art Set": null },
+    "Creative Arts & Crafts": { "Kids' Craft Supplies Set": null },
+    "Eco-Friendly Toys": { "Sustainable Wooden Toys": null },
+    "Board Games": { "Magnetic Chess Set": null, "Puzzle Game Set": null },
+    "Educational Toys": {
+      "Children's Educational Puzzle": null,
+      "Customizable Name Puzzle": null
+    },
+    "Building Toys": {
+      "Foam Building Blocks for Kids": null,
+      "Kids' Building Blocks": null
+    },
+    "Puzzles": { "Wooden Puzzle Game": null },
+    "Remote Control Drones": { "Mini Hand Gesture Drone": null }
+  },
+  "Garden": {
+    "Indoor Gardening Supplies": { "Plant Growing Kit": null },
+    "Garden Tools": {
+      "Gardening Gloves": null,
+      "Heavy Duty Gardening Tool Set": null,
+      "Multi-Purpose Plant Care Tool": null,
+      "Gardening Gloves with Claws": null,
+      "Adjustable Garden Rake": null,
+      "Garden Kneeler and Seat": null,
+      "Garden Hose Reel": null
+    },
+    "Planters": {
+      "Herb Garden Planter Box": null,
+      "Self-Watering Planters": null
+    },
+    "Garden Technology": { "Smart Plant Monitor": null },
+    "Garden Supplies": { "Plant Watering Spikes": null, "Garden Hose": null },
+    "Gardening Kits": { "Herbal Garden Starter Kit": null },
+    "Gardening Accessories": { "Plant Pot Drip Trays": null },
+    "Garden Decor": { "Gardening Fairy Figurines": null },
+    "Gardening Tools": { "Children's Garden Tool Set": null },
+    "Houseplants": { "Indoor Plants": null }
+  },
+  "Beauty": {
+    "Lip Care": { "Jennifer's Amazing Lip Balm Kit": null },
+    "Skincare": { "Skincare Set": null, "Skincare Fridge": null },
+    "Nail Care": { "Electric Nail File Kit": null, "Nail Polish Set": null },
+    "Makeup": {
+      "Travel Makeup Organizer": null,
+      "Luxury Rolling Makeup Case": null
+    },
+    "Hair Care Tools": { "Hair Dryer": null },
+    "Bath & Body": { "Body Wash": null, "Luxury Bath Salts": null }
+  },
+  "Food - Freezer": {
+    "Frozen Meals": { "Cauliflower Crust Pizza": null },
+    "Frozen Snacks": { "Buffalo Cauliflower Bites": null }
+  },
+  "Audio": {
+    "Wireless Audio Accessories": { "Bluetooth Headphones": null },
+    "Headphones & Earbuds": { "Noise Reduction Headphones": null },
+    "Portable Speakers": { "Bluetooth Shower Speaker": null },
+    "Headphones": { "Over-Ear Headphones": null },
+    "Wireless Speakers": { "Portable Speakers": null }
+  },
+  "Food - Soups": {
+    "Specialty Soups": {
+      "Savory Pumpkin Soup": null,
+      "Miso Soup Starter": null
+    },
+    "Instant Soups": { "Miso Soup Mix": null },
+    "Canned Soups": {
+      "Classic Minestrone Soup": null,
+      "Organic Lentil Soup": null
+    },
+    "Creamy Soups": { "Cheesy Broccoli Soup Mix": null }
+  },
+  "Food - Baking Goods": {
+    "Baking Ingredients": { "Organic Whole Wheat Flour": null }
+  },
+  "Food - Salads": {
+    "Vegetarian Salads": { "Curried Lentil Salad": null },
+    "Salad Kits": { "Classic Caesar Salad Kit": null, "Kale Salad Kit": null },
+    "Bean Salads": { "Chipotle Black Bean Salad": null },
+    "Meal Kits": { "Quinoa and Kale Salad Kit": null },
+    "Grain Salads": {
+      "Mediterranean Couscous Salad": null,
+      "Nutty Quinoa Salad": null,
+      "Harvest Grain Salad": null
+    },
+    "Ready-to-Eat Salads": { "Kale & Quinoa Salad Mix": null },
+    "Healthy Salads": { "Mediterranean Chickpea Salad": null }
+  },
+  "Books": {
+    "Cookbooks & Nutrition": { "Plant-Based Cookbook": null, "Cookbook": null },
+    "Children's Educational Books": { "Children's Educational Workbook": null }
+  },
+  "Accessories": {
+    "Mobile Accessories": {
+      "Phone Screen Protector": null,
+      "Portable Phone Charger": null,
+      "Wireless Charging Pad": null,
+      "Smartphone Hand Grip": null
+    },
+    "Bags": { "Backpack": null },
+    "Jewelry Storage": {
+      "Handcrafted Wooden Jewelry Box": null,
+      "Travel Jewelry Case": null,
+      "Travel Jewelry Organizer": null
+    },
+    "Travel Souvenirs": { "Magnet Travel Fridge Magnets": null },
+    "Custom Accessories": { "Personalized Keychain": null },
+    "Power Accessories": { "USB Wall Charger": null },
+    "Tech Accessories": {
+      "Bluetooth Tracker": null,
+      "Portable Hand Warmer": null
+    },
+    "Watches": { "Classic Watch": null }
+  },
+  "Sports": {
+    "Soccer": { "Training Soccer Ball": null },
+    "Snow Sports": { "Ski Goggles": null }
+  },
+  "Bathroom": {
+    "Shower Fixtures": { "Thermostatic Shower Valve Kit": null },
+    "Shower Accessories": { "Handheld Shower Head": null }
+  },
+  "Clothing - Dresses": {
+    "Evening Wear": { "Satin Slip Dress": null },
+    "Casual Dresses": {
+      "Ribbed Knit Dress": null,
+      "Floral Summer Dress": null
+    },
+    "Cocktail Dresses": { "Party Mini Dress": null }
+  },
+  "Food - Meat & Seafood": {
+    "Meat Products": { "Spicy Italian Sausage": null }
+  },
+  "Clothing - Tops": {
+    "Activewear": { "Golf Polo Shirt": null, "Active Racerback Tank": null },
+    "Graphic Tees": { "Graphic Sweatshirt": null, "Vintage Graphic Tee": null },
+    "Sweaters": { "Chunky Knit Sweater": null },
+    "Sustainable Fashion": { "Bamboo Cotton Tank Top": null },
+    "Shirts": { "Relaxed Fit Henley Shirt": null },
+    "T-Shirts": {
+      "Classic White T-Shirt": null,
+      "High-Low Hem Tee": null,
+      "Basic V-Neck T-Shirt": null
+    },
+    "Tank Tops": { "Cotton Basic Tank": null }
+  },
+  "Clothing - Pants": { "Leggings": { "Faux Leather Leggings": null } },
+  "Electronics": {
+    "Cameras & Photography": { "Video Camera": null },
+    "Home Entertainment Equipment": {
+      "Portable Projector": null,
+      "Streaming Device": null,
+      "Smartphone Projector Kit": null
+    },
+    "Computer Accessories": {
+      "Portable Bluetooth Keyboard": null,
+      "Portable USB-C Monitor": null,
+      "Wireless Keyboard and Mouse Combo": null,
+      "Wireless Mouse": null,
+      "Multi-Port USB Hub": null
+    },
+    "Tablets for Kids": { "Kids' Educational Tablet": null },
+    "Wireless Video Transmission": { "Wireless HDMI Receiver": null },
+    "Drones & Accessories": { "Drone": null },
+    "Portable Projectors": { "Mini Projector for Smartphones": null },
+    "Mobile Accessories": { "Multi-Function Smartphone Holder": null },
+    "Networking Equipment": { "Wireless Range Extender": null },
+    "Portable Power Solutions": { "Solar Charger": null }
+  },
+  "Food": {
+    "Beverages": {
+      "Home Brewing Starter Kit": null,
+      "Coffee Subscription Service": null
+    }
+  },
+  "Tools": {
+    "Hand Tools": {
+      "Folding Pocket Knife": null,
+      "Repair Tool Set for Home Improvement": null
+    },
+    "Power Tools": {
+      "Cordless Electric Screwdriver": null,
+      "Electric Screwdriver": null,
+      "Rechargeable Electric Screwdriver": null
+    }
+  },
+  "Food - Deli": {
+    "Dips/Spreads": { "Balsamic Salad Dressing": null, "Spicy Hummus": null }
+  },
+  "Food - Spices": {
+    "Seasoning Blends": { "Cajun Seasoning": null },
+    "Plant-Based Seasonings": { "Vegan Taco Seasoning": null },
+    "Herb Blends": { "Garlic and Herb Rub": null },
+    "Herbs and Spices": {
+      "Ground Cinnamon": null,
+      "Organic Italian Seasoning": null
+    }
+  },
+  "Photography": {
+    "Tripods & Accessories": { "Smartphone Tripod with Remote": null },
+    "Marine Photography Equipment": { "Underwater Camera": null },
+    "Gimbals & Stabilizers": { "Smartphone Gimbal Stabilizer": null }
+  },
+  "Food - Prepared Foods": {
+    "Meal Kits": { "Chicken Fajita Kit": null },
+    "International Cuisine": { "Stuffed Grape Leaves": null },
+    "Plant-Based Meals": {
+      "Mediterranean Chickpea Bowl": null,
+      "BBQ Jackfruit": null
+    },
+    "Salads": { "Chicken Salad Kit": null },
+    "Frozen Meals": { "Herbed Mushroom Risotto": null },
+    "Vegetarian Meals": { "Spicy Vegetable Sushi Rolls": null },
+    "Dips and Spreads": { "Creamy Spinach Dip": null }
+  },
+  "Home Improvement": {
+    "Outdoor Cleaning": {
+      "Pressure Washer Accessories Kit": null,
+      "Electric Pressure Washer": null
+    }
+  },
+  "Food - Gourmet Rice": {
+    "Gourmet Rice": { "Savory Mushroom Risotto": null }
+  },
+  "Food - Meat Alternatives": {
+    "Plant-Based Proteins": { "Tofu": null, "Grilled Veggie Burgers": null }
+  },
+  "Clothing - Bottoms": {
+    "Bottoms": {
+      "Wrap Front Midi Skirt": null,
+      "Blue Denim Jeans": null,
+      "Cotton Sweatpants": null,
+      "Comfortable Jogger Pants": null,
+      "Chino Shorts": null
+    },
+    "Trousers": { "Linen Trousers": null }
+  },
+  "Food - Oils": { "Oils": { "Herb-Infused Olive Oil": null } },
+  "Wearable Tech": {
+    "Smartwatches": { "Samsung Galaxy Smartwatch": null },
+    "Fitness Monitors": { "Smartwatch": null, "Fitness Smartwatch": null }
+  },
+  "Smart Home": {
+    "Smart Lighting": {
+      "Smart Light Switch": null,
+      "Smart Wi-Fi Light Bulbs": null,
+      "Wi-Fi Enabled Smart Light Switch": null
+    },
+    "Home Security": { "Smart Wi-Fi Camera": null, "Smart Doorbell": null }
+  },
+  "Food - Meat": {
+    "Prepared Poultry": { "Honey mustard chicken tenders": null },
+    "Marinades and Sauces": { "Pineapple Teriyaki Chicken Mix": null },
+    "Poultry": { "Ground Turkey": null, "Spicy Chicken Wings": null },
+    "Marinated Poultry": { "Lemon Dill Chicken Skewers": null },
+    "Red Meat": { "Beef Stew Meat": null },
+    "Grass-Fed Meat Products": { "Grass Fed Beef Patties": null },
+    "Prepared Meals": { "Italian Sausage and Peppers": null },
+    "Pork": { "Pork Chops": null },
+    "Processed Meats": { "Maple Breakfast Sausage": null },
+    "Marinated Meats": {
+      "Tandoori Chicken Skewers": null,
+      "Teriyaki Chicken Skewers": null
+    }
+  },
+  "Food - Cereal": {
+    "Oatmeal": { "Apple Cinnamon Instant Oatmeal": null },
+    "Granola": {
+      "Chocolate Hazelnut Granola": null,
+      "Nutty Granola Clusters": null
+    }
+  },
+  "Food - Grains": {
+    "Flavored Quinoa": { "Lemon Herb Quinoa": null },
+    "Seasoned Grains": { "Herbed Couscous": null },
+    "Flavored Rice Dishes": { "Cilantro Lime Rice": null },
+    "Whole Grains": { "Quinoa": null },
+    "Rice": { "Basmati Rice": null },
+    "Legumes": { "Red Lentils": null }
+  },
+  "Food - Vegetarian": { "Snacks": { "Baked Falafel": null } },
+  "Food - Sides": {
+    "Vegetable Sides": {
+      "Garlic Parmesan Roasted Potatoes": null,
+      "Mashed Sweet Potatoes": null
+    },
+    "Rice": { "Herb Seasoned Rice": null },
+    "Bread & Rolls": { "Garlic Breadsticks": null },
+    "Potatoes": { "Instant Mashed Potatoes": null }
+  },
+  "Food - Health/Protein": {
+    "Protein Supplements": { "Vanilla Protein Powder": null }
+  },
+  "Automotive": {
+    "Automotive Accessories": {
+      "Portable Jump Starter": null,
+      "Car Windshield Sun Shade": null,
+      "Car Trash Can": null,
+      "Car Sunshade": null
+    },
+    "Phone Accessories": { "Car Phone Mount": null },
+    "Car Interior Accessories": { "Car Seat Organizer": null }
+  },
+  "Food - Meal Kits": {
+    "Pasta & Rice Mixes": { "Beef Stroganoff Mix": null },
+    "Vegetarian Meal Kits": { "Pasta Primavera Kit": null }
+  },
+  "Food - Confectionery": {
+    "Cookies & Biscuits": { "Ginger Snaps": null },
+    "Chewy Candies": { "Caramel Apple Taffy": null }
+  },
+  "Food - Cheese": { "Specialty Cheeses": { "Herbed Goat Cheese": null } },
+  "Food - Vegetable": {
+    "Vegetable Snacks": { "Chilli Lime Corn on the Cob": null }
+  },
+  "Food - Meats": {
+    "Ground Meats": { "Classic Cheeseburger Mix": null },
+    "Breakfast Meats": { "Savory Breakfast Sausage": null }
+  },
+  "Food - Baking & Cooking": {
+    "Baking Ingredients": {
+      "Almond Flour Tortillas": null,
+      "Coconut Cream": null
+    }
+  },
+  "Food - Dressings": { "Dressings": { "Balsamic Vinaigrette": null } },
+  "Food - Breakfast": {
+    "Savory Breakfast Options": { "Savory Oats": null },
+    "Instant Breakfast": {
+      "Cranberry Orange Oatmeal": null,
+      "Flavored Instant Oatmeal": null
+    },
+    "Granola/Cereal": {
+      "Cranberry Almond Granola": null,
+      "Vanilla Almond Granola": null,
+      "Granola Cereal": null
+    },
+    "Pancakes & Waffles": {
+      "Buttermilk Pancakes": null,
+      "Pumpkin Waffles": null,
+      "Protein Pancake Mix": null
+    },
+    "Breakfast Cereals": {
+      "Organic Whole Grain Oats": null,
+      "Whole Grain Cereal": null
+    }
+  },
+  "Clothing - Shoes": { "Casual Footwear": { "Comfort Flats": null } },
+  "Food - Seafood": {
+    "Marinated Seafood": { "Chili Lime Shrimp": null },
+    "Prepared Seafood": {
+      "Lemon Garlic Shrimp": null,
+      "Spicy Tuna Salad": null
+    },
+    "Frozen Seafood": { "Garlic Butter Shrimp": null }
+  },
+  "Clothing - Outerwear": {
+    "Coats": { "Puffer Winter Coat": null },
+    "Knitwear": { "Cable Knit Cardigan": null },
+    "Jackets": {
+      "Leather Biker Jacket": null,
+      "Trendy Bomber Jacket": null,
+      "Luxe Velvet Blazer": null,
+      "Two-Tone Windbreaker": null
+    },
+    "Outerwear": { "Lightweight Rain Jacket": null },
+    "Hoodies": { "Graphic Hoodie": null }
+  },
+  "Clothing": {
+    "Outerwear": { "Winter Insulated Jacket": null, "Rain Jacket": null },
+    "Loungewear": { "Luxury Bathrobe": null, "Luxury Bath Robe": null },
+    "Hats & Headwear": { "Winter Knit Beanie": null }
+  },
+  "Clothing - Accessories": {
+    "Scarves": { "Ethical Wool Scarf": null, "Knitted Infinity Scarf": null },
+    "Headwear": { "Classic Baseball Cap": null },
+    "Bags": { "Fashionable Fanny Pack": null }
+  },
+  "Food - Frozen Vegetables": {
+    "Frozen Veggie Snacks": {
+      "Oven-Baked Parmesan Zucchini": null,
+      "Buffalo Style Cauliflower Bites": null
+    }
+  },
+  "Food - Health Foods": { "Superfoods": { "Organic Chia Seeds": null } },
+  "Food - Dairy Alternatives": {
+    "Plant-Based Yogurt": {
+      "Coconut Cashew Yogurt": null,
+      "Coconut Cream Pie Yogurt": null
+    },
+    "Plant-Based Cheese": { "Vegan Cheese": null },
+    "Plant-Based Beverages": { "Chocolate Almond Milk": null }
+  },
+  "Safety": {
+    "Hearing Protection": { "Noise Cancelling Ear Muffs": null },
+    "Personal Protective Equipment (PPE) & Disaster Preparedness": {
+      "Safety Goggles": null
+    },
+    "Self-Defense Tools": {
+      "Personal Security Alarm Keychain": null,
+      "Personal Safety Alarm": null
+    }
+  },
+  "Food - Baked Goods": {
+    "Cookies": { "Oatmeal Raisin Cookies": null },
+    "Pies and Tarts": { "Raspberry Tart": null }
+  },
+  "Storage": {
+    "Storage Devices": {
+      "Portable SSD": null,
+      "Memory Card": null,
+      "USB Flash Drive": null
+    }
+  },
+  "Food - Frozen Meals": {
+    "Frozen Asian Meals": {
+      "Honey Sesame Chicken Mix": null,
+      "Asian Stir-Fry Kit": null
+    },
+    "Frozen Pasta Dishes": {
+      "Marinara Parmesan Baked Ziti": null,
+      "Spinach and Cheese Stuffed Shells": null
+    },
+    "Frozen Dinner Kits": { "Beef Stroganoff Meal Kit": null },
+    "Frozen Grain Bowls": { "Vegetable Quinoa Bowl": null }
+  },
+  "Food - Frozen": {
+    "Frozen Appetizers": { "Cheddar & Bacon Potato Skins": null },
+    "Frozen Fruits": { "Frozen Acai Purée": null },
+    "Frozen Meals": { "Coconut Rice": null },
+    "Frozen Vegetables": { "Frozen Broccoli": null }
+  },
+  "Food - Dried Fruits": { "Dried Fruits": { "Californian Raisins": null } },
+  "Food - Pantry": { "Condiments": { "Nutritional Yeast": null } },
+  "Food - Frozen Food": {
+    "Frozen Fruits": { "Mixed Berry Smoothie Pack": null },
+    "Frozen Meals": {
+      "Vegetable Fried Rice Mix": null,
+      "Teriyaki Chicken Wings": null
+    }
+  },
+  "Food - Nuts": { "Seeds & Nuts": { "Sunflower Seeds": null } },
+  "Food - Frozen Desserts": {
+    "Dairy-Free Desserts": { "Coconut Milk Ice Cream": null },
+    "Ice Cream Flavors": { "Mint Chocolate Chip Ice Cream": null },
+    "Ice Cream": { "Organic Vanilla Bean Ice Cream": null }
+  },
+  "Food - Fruits": {
+    "Canned Fruits": { "Pineapple Chunks (canned)": null },
+    "Berries": { "Organic Blueberries": null }
+  },
+  "Food - Dips": {
+    "Vegetable Dips": {
+      "Sweet Pea Hummus": null,
+      "Roasted Red Pepper Hummus": null
+    }
+  },
+  "Home Security": { "Cameras": { "Digital Wireless Camera": null } },
+  "Food - Grab-and-Go": { "Noodles": { "Sesame Noodles": null } },
+  "Food - Supplements": { "Supplements": { "Elderberry Syrup": null } },
+  "Food - Marinades": { "Marinades": { "Garlic Herb Marinade": null } },
+  "Furniture": { "Office Furniture": { "Home Office Chair": null } },
+  "Food - Spreads": { "Fruit Spreads": { "Blueberry Chia Jam": null } },
+  "Food - Meat Substitutes": {
+    "Plant-Based Meats": { "Vegetarian Sausage Links": null }
+  },
+  "Apps": { "Productivity": { "Digital Bullet Journal": null } },
+  "Food - Fresh Produce": {
+    "Fruits": { "Fresh Lemons": null },
+    "Vegetable Mixes": { "Vegetable Stir Fry Mix": null }
+  },
+  "Food - Breakfast Foods": {
+    "Granola and Muesli": { "Cranberry Pecan Granola": null }
+  },
+  "Food - Cooking Essentials": { "Broths": { "Vegetable Stock": null } },
+  "Food - Cereals": { "Granola": { "Raisin Cinnamon Granola": null } },
+  "Food - Frozen Fruits": { "Frozen Fruits": { "Mango Chunks": null } },
+  "Food - Desserts": {
+    "Chocolate Desserts": { "Classic Vanilla Fudge": null },
+    "Baking Mixes": { "Classic Cheesecake Mix": null }
+  },
+  "Crafts": { "Craft Supplies": { "Electric Heat Press Machine": null } },
+  "Clothing - Bags": { "Handbags": { "Leather Crossbody Bag": null } },
+  "Food - Cooking Kits": { "Japanese Cooking Kits": { "Sushi Roll Kit": null } }
+}

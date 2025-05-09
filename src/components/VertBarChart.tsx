@@ -3,14 +3,15 @@
 import * as d3 from "d3"
 import { useEffect, useRef } from "react"
 
-import data from "../constants/data.json"
-
 const formatValue = (x: number) => (isNaN(x) ? "N/A" : x.toLocaleString("en"))
 
 export function VertBarChart({
+  data,
   reshaped,
   ageGroups,
 }: {
+  // state, age, pop
+  data: { month: string; expense: string; total: number }[]
   reshaped: Record<string, number | string>[]
   ageGroups: string[]
 }) {
@@ -35,8 +36,8 @@ export function VertBarChart({
       .domain(
         d3.groupSort(
           data,
-          (D) => -d3.sum(D, (d) => d.population),
-          (d) => d.state
+          (D) => -d3.sum(D, (d) => d.total),
+          (d) => d.month
         )
       )
       .range([marginLeft, width - marginRight])
@@ -51,8 +52,14 @@ export function VertBarChart({
     const color = d3
 
       .scaleOrdinal<string>()
-      .domain(series.map((d) => d.key!))
-      .range(d3.schemeSpectral[series.length])
+      .domain(
+        series.map((d) => {
+          return d.key!
+        })
+      )
+      // schemeSpectral only supports 3-9,
+      .range(d3.schemeSpectral[9])
+      // .range(d3.schemeSpectral[series.length])
       .unknown("#ccc")
 
     const svg = d3
@@ -110,7 +117,7 @@ export function VertBarChart({
       .data((D) => D.map((d) => (Object.assign(d, { key: D.key }), d)))
       .join("rect")
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .attr("x", (d) => xScaleBandFunc((d.data as any).state)!)
+      .attr("x", (d) => xScaleBandFunc((d.data as any).month)!)
       .attr("y", (d) => yScaleLinearFunc(d[1]))
       .attr("height", (d) => yScaleLinearFunc(d[0]) - yScaleLinearFunc(d[1]))
       .attr("width", xScaleBandFunc.bandwidth())
@@ -118,7 +125,9 @@ export function VertBarChart({
       .text(
         (d) =>
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          `${(d.data as any).state} ${(d as any).key}\n${formatValue(d[1] - d[0])}`
+          `${(d.data as any).month} ${(d as any).key}\n${formatValue(
+            d[1] - d[0]
+          )}`
       )
 
     // X Axis
@@ -142,7 +151,7 @@ export function VertBarChart({
       ref.current.innerHTML = ""
       ref.current.appendChild(svg.node()!)
     }
-  }, [reshaped, ageGroups])
+  }, [data, reshaped, ageGroups])
 
   return (
     <div

@@ -14,6 +14,7 @@ export function VertBarChartContainer() {
   // const groupedData: Record<string, number | string>[] = [];
 
   const stackedKeys: string[] = []
+
   const mappedData: Record<string, number | string>[] = []
 
   const ageSet = new Set<string>()
@@ -38,9 +39,25 @@ export function VertBarChartContainer() {
     mappedData.push(row)
   })
 
+
+  const mockData = [
+    { month: "Jan", expense: "audio", total: 34 },
+    { month: "Jan", expense: "home", total: 20 },
+    { month: "Feb", expense: "audio", total: 34 },
+    { month: "Feb", expense: "audio", total: 2 },
+  ]
+
   return (
     <>
-      <VertBarChart reshaped={mappedData} ageGroups={stackedKeys} />
+      <VertBarChart
+        data={mockData}
+        reshaped={[
+          { month: "Jan", audio: 34, home: 20 },
+          { month: "Feb", audio: 34, home: 2 },
+        ]}
+        ageGroups={["audio", "home"]}
+      />
+      {/* <VertBarChart data={data} reshaped={mappedData} ageGroups={stackedKeys} /> */}
     </>
   )
 }
