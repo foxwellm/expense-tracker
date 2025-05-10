@@ -46,6 +46,7 @@ export function VertBarChartContainer() {
     { month: 'Feb', expense: 'audio', total: 2 },
   ]
 
+  // loop over mockData to create reshaped and map keys
   return (
     <>
       <VertBarChart

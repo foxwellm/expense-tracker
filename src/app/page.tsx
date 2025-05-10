@@ -7,7 +7,11 @@ import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 import * as React from 'react'
 
-import { PaletteModeSwitch, VertBarChartContainer } from '@/components'
+import {
+  AddExpenseForm,
+  PaletteModeSwitch,
+  VertBarChartContainer,
+} from '@/components'
 
 const bull = (
   <Box
@@ -46,7 +50,9 @@ export default function RootPage() {
           <Button size="small">Learn More</Button>
         </CardActions>
       </Card>
+      <AddExpenseForm />
       <VertBarChartContainer />
     </Container>
   )
 }
+// NOTE: Needs to be downloaded every time database changes
