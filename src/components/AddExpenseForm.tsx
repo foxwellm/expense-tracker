@@ -6,7 +6,7 @@ import { useState } from 'react'
 export function AddExpenseForm() {
   const [date, setDate] = useState('2025-02-26')
   const [expense, setExpense] = useState('Home')
-  const [cost, setCost] = useState<number | ''>(23.45)
+  const [cost, setCost] = useState<number | string>(23.46)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
 
