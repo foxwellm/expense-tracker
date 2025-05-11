@@ -7,59 +7,34 @@ export type Json =
   | Json[]
 
 export type Database = {
-  graphql_public: {
-    Tables: {
-      [_ in never]: never
-    }
-    Views: {
-      [_ in never]: never
-    }
-    Functions: {
-      graphql: {
-        Args: {
-          operationName?: string
-          query?: string
-          variables?: Json
-          extensions?: Json
-        }
-        Returns: Json
-      }
-    }
-    Enums: {
-      [_ in never]: never
-    }
-    CompositeTypes: {
-      [_ in never]: never
-    }
-  }
   public: {
     Tables: {
       expenses: {
         Row: {
-          cost: number
-          created: string | null
+          cost_in_cents: number | null
+          created_at: string
           date: string
           expense: string
           id: string
-          updated_at: string | null
+          updated_at: string
           user_id: string
         }
         Insert: {
-          cost: number
-          created?: string | null
+          cost_in_cents?: number | null
+          created_at?: string
           date: string
           expense: string
           id?: string
-          updated_at?: string | null
+          updated_at?: string
           user_id: string
         }
         Update: {
-          cost?: number
-          created?: string | null
+          cost_in_cents?: number | null
+          created_at?: string
           date?: string
           expense?: string
           id?: string
-          updated_at?: string | null
+          updated_at?: string
           user_id?: string
         }
         Relationships: []
@@ -186,9 +161,6 @@ export type CompositeTypes<
     : never
 
 export const Constants = {
-  graphql_public: {
-    Enums: {},
-  },
   public: {
     Enums: {},
   },
