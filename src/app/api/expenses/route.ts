@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
 import { expenseSchema, expensesSchema } from '@/lib/schemas/expense'
-import { createServerSupabaseClient } from '@/utils/supabase'
+import { createServerSupabaseClient } from '@/lib/supabase'
 // import sanitizeHtml from 'sanitize-html'
 
 const sanitizeInput = (input: z.infer<typeof expenseSchema>) => {

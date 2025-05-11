@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import { expenseCategories } from '@/constants/expenses'
+import { expenseCategories } from '@/lib/constants/expenses'
 
 export const expenseSchema = z.object({
   date: z.string().date(), // yyyy-mm-dd

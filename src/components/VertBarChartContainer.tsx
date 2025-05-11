@@ -1,4 +1,4 @@
-import data from '../constants/data.json'
+import data from '../lib/constants/data.json'
 import { VertBarChart } from './VertBarChart'
 
 interface PopulationData {
