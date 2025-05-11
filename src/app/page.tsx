@@ -12,6 +12,7 @@ import {
   PaletteModeSwitch,
   VertBarChartContainer,
 } from '@/components'
+// import { AddMockExpenses } from '@/components/AddMockExpenses'
 
 const bull = (
   <Box
@@ -50,6 +51,7 @@ export default function RootPage() {
           <Button size="small">Learn More</Button>
         </CardActions>
       </Card>
+      {/* <AddMockExpenses /> */}
       <AddExpenseForm />
       <VertBarChartContainer />
     </Container>
