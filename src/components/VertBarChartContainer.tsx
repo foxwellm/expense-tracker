@@ -39,23 +39,23 @@ export function VertBarChartContainer() {
     mappedData.push(row)
   })
 
-  const mockData = [
-    { month: 'Jan', expense: 'audio', total: 34 },
-    { month: 'Jan', expense: 'home', total: 20 },
-    { month: 'Feb', expense: 'audio', total: 34 },
-    { month: 'Feb', expense: 'audio', total: 2 },
-  ]
+  // const mockData = [
+  //   { month: 'Jan', expense: 'Audio', total: 34 },
+  //   { month: 'Jan', expense: 'Home', total: 20 },
+  //   { month: 'Feb', expense: 'Audio', total: 34 },
+  //   { month: 'Feb', expense: 'Audio', total: 2 },
+  // ]
 
   // loop over mockData to create reshaped and map keys
   return (
     <>
       <VertBarChart
-        data={mockData}
+        // data={mockData}
         reshaped={[
-          { month: 'Jan', audio: 34, home: 20 },
-          { month: 'Feb', audio: 34, home: 2 },
+          { month: 'Jan 25', audio: 34, home: 20 },
+          { month: 'Feb 25', audio: 34, home: 2 },
         ]}
-        ageGroups={['audio', 'home']}
+        categories={['audio', 'home']}
       />
       {/* <VertBarChart data={data} reshaped={mappedData} ageGroups={stackedKeys} /> */}
     </>

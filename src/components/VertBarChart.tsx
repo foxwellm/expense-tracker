@@ -5,15 +5,18 @@ import { useEffect, useRef } from 'react'
 
 const formatValue = (x: number) => (isNaN(x) ? 'N/A' : x.toLocaleString('en'))
 
+function generateSpectralColors(n: number): string[] {
+  return Array.from({ length: n }, (_, i) =>
+    d3.interpolateSpectral(1 - i / (n - 1))
+  )
+}
+
 export function VertBarChart({
-  data,
   reshaped,
-  ageGroups,
+  categories,
 }: {
-  // state, age, pop
-  data: { month: string; expense: string; total: number }[]
   reshaped: Record<string, number | string>[]
-  ageGroups: string[]
+  categories: string[]
 }) {
   const ref = useRef<HTMLDivElement | null>(null)
 
@@ -26,20 +29,14 @@ export function VertBarChart({
     const marginLeft = 50
     const legendHeight = 40
 
-    const series = d3.stack<Record<string, number | string>>().keys(ageGroups)(
+    const series = d3.stack<Record<string, number | string>>().keys(categories)(
       reshaped as Record<string, number | string>[]
     )
 
-    // console.log("🚀 ~ VertBarChart.tsx:39 ~ renderChart ~ series:", series);
     const xScaleBandFunc = d3
       .scaleBand()
-      .domain(
-        d3.groupSort(
-          data,
-          (D) => -d3.sum(D, (d) => d.total),
-          (d) => d.month
-        )
-      )
+      // TODO: Build function to construct domain from data
+      .domain(['Dec 24', 'Jan 25', 'Feb 25', 'Mar 25'])
       .range([marginLeft, width - marginRight])
       .padding(0.1)
 
@@ -50,16 +47,9 @@ export function VertBarChart({
       .range([height - marginBottom, marginTop + legendHeight])
 
     const color = d3
-
       .scaleOrdinal<string>()
-      .domain(
-        series.map((d) => {
-          return d.key!
-        })
-      )
-      // schemeSpectral only supports 3-9,
-      .range(d3.schemeSpectral[9])
-      // .range(d3.schemeSpectral[series.length])
+      .domain(categories)
+      .range(generateSpectralColors(series.length))
       .unknown('#ccc')
 
     const svg = d3
@@ -100,7 +90,7 @@ export function VertBarChart({
         .append('text')
         .attr('x', 20)
         .attr('y', 12)
-        .text(s.key!)
+        .text(s.key!.charAt(0).toUpperCase() + s.key!.slice(1))
         .attr('font-size', '14px')
         // currentColor inherits from parent context
         .attr('fill', 'currentColor')
@@ -151,7 +141,7 @@ export function VertBarChart({
       ref.current.innerHTML = ''
       ref.current.appendChild(svg.node()!)
     }
-  }, [data, reshaped, ageGroups])
+  }, [reshaped, categories])
 
   return (
     <div
