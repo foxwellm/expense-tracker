@@ -1,14 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { z } from 'zod'
 
-import { expenseSchema, expensesSchema } from '@/lib/schemas/expense'
+import { expensesSchema } from '@/lib/schemas/expense'
 import { createServerSupabaseClient } from '@/lib/supabase'
+import { Expense } from '@/types/expense'
 // import sanitizeHtml from 'sanitize-html'
 
-const sanitizeInput = (input: z.infer<typeof expenseSchema>) => {
+const sanitizeExpense = (expense: Expense) => {
   return {
-    ...input,
-    // name: sanitizeHtml(input.name, {
+    ...expense,
+    // name: sanitizeHtml(expense.name, {
     //   allowedTags: [],
     //   allowedAttributes: {},
     // }),
@@ -38,8 +38,8 @@ export async function POST(request: NextRequest) {
     )
   }
 
-  const cleanedExpenses = parsedExpenses.map((expense) => ({
-    ...sanitizeInput(expense),
+  const cleanedExpenses = parsedExpenses.map((expense: Expense) => ({
+    ...sanitizeExpense(expense),
     user_id: user.id,
   }))
 
