@@ -66,16 +66,44 @@ function getMonthYear(stringDate: string) {
   return `${month} ${year}`
 }
 
-function transformExpenses(expenses: Expense[]) {
-  const transformedExpenses = expenses.map((exp) => {
-    const { cost, expense, date } = exp
-    return {
-      cost,
-      expense,
-      monthYear: getMonthYear(date),
+const groupedData: Record<string, { [key: string]: number }> = {}
+
+function combineMonthlyExpenses(expenses: Expense[]) {
+  const categories = new Set()
+  const monthYears = new Set()
+
+  expenses.forEach(({ date, expense, cost }) => {
+    const monthYear = getMonthYear(date)
+    const expenseCategory = expense.toLowerCase()
+
+    if (!groupedData[monthYear]) {
+      groupedData[monthYear] = {}
     }
+
+    if (groupedData[monthYear][expenseCategory]) {
+      groupedData[monthYear][expenseCategory] += cost
+    } else {
+      groupedData[monthYear][expenseCategory] = cost
+    }
+
+    categories.add(expenseCategory)
+    monthYears.add(monthYear)
   })
-  return transformedExpenses
+
+  const monthlyExpenses = Object.entries(groupedData).map(
+    ([month, categories]) => ({
+      month,
+      ...categories,
+    })
+  )
+
+  return {
+    monthlyExpenses,
+    categories: Array.from(categories).sort(),
+    // TODO: This needs to be sorted and have missing in between filled in
+    // Maybe easier to record earliest and latest date, and then create from there
+    monthYears: Array.from(monthYears),
+  }
 }
 
 export async function GET() {
@@ -105,10 +133,10 @@ export async function GET() {
 
   // const transformedExpenses = transformExpenses(rawExpenses)
   const rawExpenses = mockExpenses as Expense[]
-  const transformedExpenses = transformExpenses(rawExpenses)
+  const combinedMonthyExpenses = combineMonthlyExpenses(rawExpenses)
 
   return NextResponse.json({
     rawExpenses,
-    transformedExpenses,
+    combinedMonthyExpenses,
   })
 }

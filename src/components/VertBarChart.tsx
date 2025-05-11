@@ -3,7 +3,9 @@
 import * as d3 from 'd3'
 import { useEffect, useRef } from 'react'
 
-const formatValue = (x: number) => (isNaN(x) ? 'N/A' : x.toLocaleString('en'))
+function formatValue(x: number) {
+  return isNaN(x) ? 'N/A' : x.toLocaleString('en')
+}
 
 function generateSpectralColors(n: number): string[] {
   return Array.from({ length: n }, (_, i) =>
@@ -12,15 +14,16 @@ function generateSpectralColors(n: number): string[] {
 }
 
 export function VertBarChart({
-  reshaped,
+  monthlyExpenses,
   categories,
 }: {
-  reshaped: Record<string, number | string>[]
+  monthlyExpenses: Record<string, number | string>[]
   categories: string[]
 }) {
   const ref = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
+    // TODO: resize on clientWidth change
     const width = ref.current?.clientWidth ?? 928
     const height = 500
     const marginTop = 10
@@ -30,7 +33,7 @@ export function VertBarChart({
     const legendHeight = 40
 
     const series = d3.stack<Record<string, number | string>>().keys(categories)(
-      reshaped as Record<string, number | string>[]
+      monthlyExpenses as Record<string, number | string>[]
     )
 
     const xScaleBandFunc = d3
@@ -50,7 +53,7 @@ export function VertBarChart({
       .scaleOrdinal<string>()
       .domain(categories)
       .range(generateSpectralColors(series.length))
-      .unknown('#ccc')
+      .unknown('#999')
 
     const svg = d3
       .create('svg')
@@ -141,7 +144,7 @@ export function VertBarChart({
       ref.current.innerHTML = ''
       ref.current.appendChild(svg.node()!)
     }
-  }, [reshaped, categories])
+  }, [monthlyExpenses, categories])
 
   return (
     <div
