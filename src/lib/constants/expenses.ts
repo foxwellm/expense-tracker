@@ -5,3 +5,18 @@ export const expenseCategories = [
   'Fuel',
   'Entertainment',
 ] as const
+
+export const expenseDisplayMonths = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+]

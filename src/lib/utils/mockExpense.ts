@@ -1,4 +1,7 @@
-import { expenseCategories } from '@/lib/constants/expenses'
+import {
+  expenseCategories,
+  expenseDisplayMonths,
+} from '@/lib/constants/expenses'
 import { Expense } from '@/types/expense'
 
 function getDateTiimeXMonthsAgo(monthsAgo: number) {
@@ -7,7 +10,13 @@ function getDateTiimeXMonthsAgo(monthsAgo: number) {
   return date
 }
 
-function getRandomDate(startDate?: string, endDate?: string): string {
+function getRandomDate(
+  startDate?: string,
+  endDate?: string
+): {
+  date: string // yyyy-mm-dd
+  month: string
+} {
   const startDateTime: Date = startDate
     ? new Date(startDate)
     : getDateTiimeXMonthsAgo(3)
@@ -17,8 +26,12 @@ function getRandomDate(startDate?: string, endDate?: string): string {
     startDateTime.getTime() +
       Math.random() * (endDateTime.getTime() - startDateTime.getTime())
   )
+
+  const randomMonthValue: number = randomDateTime.getMonth()
+  const randomMonth = expenseDisplayMonths[randomMonthValue]
+
   const randomDate = randomDateTime.toISOString().split('T')[0]
-  return randomDate // yyyy-mm-dd
+  return { date: randomDate, month: randomMonth }
 }
 
 function getRandomExpense() {
@@ -26,12 +39,16 @@ function getRandomExpense() {
 }
 
 function getRandomCost() {
-  return parseFloat((Math.random() * (100 - 5) + 5).toFixed(2))
+  const maxCost = 100
+  const minCost = 5
+  return parseFloat((Math.random() * (maxCost - minCost) + minCost).toFixed(2))
 }
 
-export function mockExpense(): Expense {
+export function mockExpense(): Expense & { month: string } {
+  const { date, month } = getRandomDate()
   return {
-    date: getRandomDate(),
+    date,
+    month,
     expense: getRandomExpense(),
     cost: getRandomCost(),
   }

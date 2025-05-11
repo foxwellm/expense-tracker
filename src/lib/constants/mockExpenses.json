@@ -1,252 +1,302 @@
 [
   {
-    "date": "2025-04-29",
-    "expense": "Fuel",
-    "cost": 47.79
-  },
-  {
-    "date": "2025-04-10",
-    "expense": "Fuel",
-    "cost": 31.85
-  },
-  {
-    "date": "2025-04-23",
-    "expense": "Fuel",
-    "cost": 42.39
-  },
-  {
-    "date": "2025-02-15",
+    "date": "2025-04-16",
+    "month": "Apr",
     "expense": "Entertainment",
-    "cost": 68.42
+    "cost": 70.98
   },
   {
     "date": "2025-02-25",
-    "expense": "Food",
-    "cost": 71.62
-  },
-  {
-    "date": "2025-03-02",
-    "expense": "Food",
-    "cost": 63.26
-  },
-  {
-    "date": "2025-04-19",
-    "expense": "Clothing",
-    "cost": 15.57
-  },
-  {
-    "date": "2025-02-28",
-    "expense": "Clothing",
-    "cost": 65.95
-  },
-  {
-    "date": "2025-04-15",
-    "expense": "Food",
-    "cost": 18.12
-  },
-  {
-    "date": "2025-04-15",
+    "month": "Feb",
     "expense": "Entertainment",
-    "cost": 33.94
-  },
-  {
-    "date": "2025-02-16",
-    "expense": "Food",
-    "cost": 44.72
-  },
-  {
-    "date": "2025-02-20",
-    "expense": "Clothing",
-    "cost": 71.61
-  },
-  {
-    "date": "2025-03-31",
-    "expense": "Fuel",
-    "cost": 65.64
-  },
-  {
-    "date": "2025-02-24",
-    "expense": "Fuel",
-    "cost": 12.44
-  },
-  {
-    "date": "2025-04-25",
-    "expense": "Entertainment",
-    "cost": 25.02
-  },
-  {
-    "date": "2025-03-04",
-    "expense": "Clothing",
-    "cost": 54.09
-  },
-  {
-    "date": "2025-03-26",
-    "expense": "Food",
-    "cost": 7.25
+    "cost": 8.22
   },
   {
     "date": "2025-03-09",
-    "expense": "Food",
-    "cost": 53.97
-  },
-  {
-    "date": "2025-03-24",
-    "expense": "Food",
-    "cost": 20.58
-  },
-  {
-    "date": "2025-04-10",
-    "expense": "Entertainment",
-    "cost": 29.2
-  },
-  {
-    "date": "2025-04-05",
-    "expense": "Entertainment",
-    "cost": 76.74
-  },
-  {
-    "date": "2025-02-24",
-    "expense": "Entertainment",
-    "cost": 89.12
-  },
-  {
-    "date": "2025-04-03",
-    "expense": "Food",
-    "cost": 11.95
-  },
-  {
-    "date": "2025-03-22",
-    "expense": "Food",
-    "cost": 71.52
-  },
-  {
-    "date": "2025-04-14",
-    "expense": "Food",
-    "cost": 73.93
-  },
-  {
-    "date": "2025-03-24",
-    "expense": "Food",
-    "cost": 27.95
-  },
-  {
-    "date": "2025-03-14",
-    "expense": "Food",
-    "cost": 35.16
-  },
-  {
-    "date": "2025-03-23",
-    "expense": "Entertainment",
-    "cost": 61.56
-  },
-  {
-    "date": "2025-04-30",
-    "expense": "Fuel",
-    "cost": 54.55
-  },
-  {
-    "date": "2025-03-21",
-    "expense": "Entertainment",
-    "cost": 66.59
-  },
-  {
-    "date": "2025-03-09",
+    "month": "Mar",
     "expense": "Clothing",
-    "cost": 81.37
-  },
-  {
-    "date": "2025-04-18",
-    "expense": "Clothing",
-    "cost": 47.88
-  },
-  {
-    "date": "2025-02-17",
-    "expense": "Food",
-    "cost": 27.84
-  },
-  {
-    "date": "2025-02-26",
-    "expense": "Fuel",
-    "cost": 43.41
-  },
-  {
-    "date": "2025-04-26",
-    "expense": "Entertainment",
-    "cost": 96.38
-  },
-  {
-    "date": "2025-02-19",
-    "expense": "Entertainment",
-    "cost": 56.32
-  },
-  {
-    "date": "2025-04-01",
-    "expense": "Clothing",
-    "cost": 34.39
-  },
-  {
-    "date": "2025-03-07",
-    "expense": "Food",
-    "cost": 94.85
-  },
-  {
-    "date": "2025-04-23",
-    "expense": "Clothing",
-    "cost": 83.41
-  },
-  {
-    "date": "2025-03-01",
-    "expense": "Fuel",
-    "cost": 46.15
-  },
-  {
-    "date": "2025-04-22",
-    "expense": "Food",
-    "cost": 96.49
-  },
-  {
-    "date": "2025-03-08",
-    "expense": "Food",
-    "cost": 77.98
-  },
-  {
-    "date": "2025-03-07",
-    "expense": "Clothing",
-    "cost": 59.54
-  },
-  {
-    "date": "2025-04-07",
-    "expense": "Entertainment",
-    "cost": 54.7
-  },
-  {
-    "date": "2025-03-08",
-    "expense": "Fuel",
-    "cost": 68.64
-  },
-  {
-    "date": "2025-04-10",
-    "expense": "Food",
-    "cost": 78.38
+    "cost": 42.95
   },
   {
     "date": "2025-02-15",
+    "month": "Feb",
+    "expense": "Clothing",
+    "cost": 59.91
+  },
+  {
+    "date": "2025-02-14",
+    "month": "Feb",
     "expense": "Fuel",
-    "cost": 57.58
+    "cost": 28.5
+  },
+  {
+    "date": "2025-04-10",
+    "month": "Apr",
+    "expense": "Entertainment",
+    "cost": 26.41
+  },
+  {
+    "date": "2025-04-18",
+    "month": "Apr",
+    "expense": "Entertainment",
+    "cost": 44.86
+  },
+  {
+    "date": "2025-04-21",
+    "month": "Apr",
+    "expense": "Clothing",
+    "cost": 11.25
+  },
+  {
+    "date": "2025-04-11",
+    "month": "Apr",
+    "expense": "Fuel",
+    "cost": 51.98
+  },
+  {
+    "date": "2025-03-10",
+    "month": "Mar",
+    "expense": "Entertainment",
+    "cost": 89.74
   },
   {
     "date": "2025-03-29",
-    "expense": "Fuel",
-    "cost": 47.01
+    "month": "Mar",
+    "expense": "Clothing",
+    "cost": 31.77
   },
   {
-    "date": "2025-05-09",
+    "date": "2025-05-02",
+    "month": "May",
+    "expense": "Entertainment",
+    "cost": 51.84
+  },
+  {
+    "date": "2025-04-15",
+    "month": "Apr",
+    "expense": "Clothing",
+    "cost": 36.05
+  },
+  {
+    "date": "2025-02-16",
+    "month": "Feb",
+    "expense": "Entertainment",
+    "cost": 31.91
+  },
+  {
+    "date": "2025-04-29",
+    "month": "Apr",
+    "expense": "Clothing",
+    "cost": 22.85
+  },
+  {
+    "date": "2025-03-06",
+    "month": "Mar",
+    "expense": "Clothing",
+    "cost": 62.39
+  },
+  {
+    "date": "2025-04-18",
+    "month": "Apr",
+    "expense": "Entertainment",
+    "cost": 75.25
+  },
+  {
+    "date": "2025-03-01",
+    "month": "Mar",
     "expense": "Fuel",
-    "cost": 10.35
+    "cost": 49.81
+  },
+  {
+    "date": "2025-05-10",
+    "month": "May",
+    "expense": "Entertainment",
+    "cost": 78.95
+  },
+  {
+    "date": "2025-02-12",
+    "month": "Feb",
+    "expense": "Entertainment",
+    "cost": 92.24
+  },
+  {
+    "date": "2025-02-22",
+    "month": "Feb",
+    "expense": "Food",
+    "cost": 22.19
+  },
+  {
+    "date": "2025-04-10",
+    "month": "Apr",
+    "expense": "Food",
+    "cost": 79.41
+  },
+  {
+    "date": "2025-04-20",
+    "month": "Apr",
+    "expense": "Food",
+    "cost": 67.87
+  },
+  {
+    "date": "2025-04-18",
+    "month": "Apr",
+    "expense": "Clothing",
+    "cost": 63.78
+  },
+  {
+    "date": "2025-04-30",
+    "month": "Apr",
+    "expense": "Food",
+    "cost": 66.72
+  },
+  {
+    "date": "2025-03-25",
+    "month": "Mar",
+    "expense": "Entertainment",
+    "cost": 78.95
+  },
+  {
+    "date": "2025-03-01",
+    "month": "Mar",
+    "expense": "Food",
+    "cost": 90.4
+  },
+  {
+    "date": "2025-03-30",
+    "month": "Mar",
+    "expense": "Fuel",
+    "cost": 71.47
+  },
+  {
+    "date": "2025-05-02",
+    "month": "May",
+    "expense": "Fuel",
+    "cost": 71.4
+  },
+  {
+    "date": "2025-05-05",
+    "month": "May",
+    "expense": "Entertainment",
+    "cost": 98.35
+  },
+  {
+    "date": "2025-03-21",
+    "month": "Mar",
+    "expense": "Fuel",
+    "cost": 81.5
   },
   {
     "date": "2025-04-23",
+    "month": "Apr",
     "expense": "Clothing",
-    "cost": 41.2
+    "cost": 12.16
+  },
+  {
+    "date": "2025-02-20",
+    "month": "Feb",
+    "expense": "Food",
+    "cost": 50.97
+  },
+  {
+    "date": "2025-03-09",
+    "month": "Mar",
+    "expense": "Entertainment",
+    "cost": 95.16
+  },
+  {
+    "date": "2025-03-13",
+    "month": "Mar",
+    "expense": "Food",
+    "cost": 5.67
+  },
+  {
+    "date": "2025-03-22",
+    "month": "Mar",
+    "expense": "Clothing",
+    "cost": 14.39
+  },
+  {
+    "date": "2025-02-26",
+    "month": "Feb",
+    "expense": "Clothing",
+    "cost": 46.23
+  },
+  {
+    "date": "2025-03-27",
+    "month": "Mar",
+    "expense": "Food",
+    "cost": 28.98
+  },
+  {
+    "date": "2025-04-30",
+    "month": "Apr",
+    "expense": "Clothing",
+    "cost": 75.61
+  },
+  {
+    "date": "2025-04-16",
+    "month": "Apr",
+    "expense": "Entertainment",
+    "cost": 10.77
+  },
+  {
+    "date": "2025-03-21",
+    "month": "Mar",
+    "expense": "Entertainment",
+    "cost": 67.41
+  },
+  {
+    "date": "2025-04-03",
+    "month": "Apr",
+    "expense": "Food",
+    "cost": 46.67
+  },
+  {
+    "date": "2025-03-10",
+    "month": "Mar",
+    "expense": "Food",
+    "cost": 69.74
+  },
+  {
+    "date": "2025-04-17",
+    "month": "Apr",
+    "expense": "Fuel",
+    "cost": 74.5
+  },
+  {
+    "date": "2025-02-11",
+    "month": "Feb",
+    "expense": "Food",
+    "cost": 59.86
+  },
+  {
+    "date": "2025-02-14",
+    "month": "Feb",
+    "expense": "Food",
+    "cost": 16.76
+  },
+  {
+    "date": "2025-04-13",
+    "month": "Apr",
+    "expense": "Food",
+    "cost": 98.72
+  },
+  {
+    "date": "2025-02-25",
+    "month": "Feb",
+    "expense": "Fuel",
+    "cost": 59.67
+  },
+  {
+    "date": "2025-03-15",
+    "month": "Mar",
+    "expense": "Clothing",
+    "cost": 37.12
+  },
+  {
+    "date": "2025-04-03",
+    "month": "Apr",
+    "expense": "Food",
+    "cost": 92.97
   }
 ]
