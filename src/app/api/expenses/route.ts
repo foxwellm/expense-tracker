@@ -1,20 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
+import { expenseSchema, expensesSchema } from '@/lib/schemas/expense'
 import { createServerSupabaseClient } from '@/utils/supabase'
 // import sanitizeHtml from 'sanitize-html'
-
-// NOTE: Removing an expenseCategory must be handles in the database by renaming the category or removing those rows
-const expenseCategories = ['Clothing', 'Food', 'Fuel', 'Entertainment'] as const
-
-const expenseSchema = z.object({
-  date: z.string().date(), // yyyy-mm-dd
-  expense: z.enum(expenseCategories),
-  cost: z.number().positive(),
-  // name: z.string().max(100),
-})
-
-const expensesSchema = z.array(expenseSchema)
 
 const sanitizeInput = (input: z.infer<typeof expenseSchema>) => {
   return {

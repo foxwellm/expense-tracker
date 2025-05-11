@@ -21,11 +21,13 @@ export function AddExpenseForm() {
         'Content-Type': 'application/json',
       },
       credentials: 'include',
-      body: JSON.stringify({
-        date,
-        expense,
-        cost: typeof cost === 'string' ? parseFloat(cost) : cost,
-      }),
+      body: JSON.stringify([
+        {
+          date,
+          expense,
+          cost: typeof cost === 'string' ? parseFloat(cost) : cost,
+        },
+      ]),
     })
 
     const result = await res.json()
