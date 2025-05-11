@@ -1,8 +1,9 @@
-// import { mockExpense } from '@/lib/utils/mockExpense'
 import { Button } from '@mui/material'
 
+import { mockExpense } from '@/lib/utils/mockExpense'
+
 export function AddMockExpenses() {
-  // const mockExpenses = Array.from({ length: 50 }, () => mockExpense())
+  const mockExpenses = Array.from({ length: 50 }, () => mockExpense())
 
   // console.log(
   //   '🚀 ~ AddMockExpenses.tsx:6 ~ AddMockExpenses ~ mockExpenses:',
@@ -10,7 +11,7 @@ export function AddMockExpenses() {
   // )
   return (
     <>
-      <Button>Test</Button>
+      <Button>{mockExpenses[0].date}</Button>
     </>
   )
 }
