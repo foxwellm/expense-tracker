@@ -5,8 +5,8 @@ import { useState } from 'react'
 
 export function AddExpenseForm() {
   const [date, setDate] = useState('2025-02-26')
-  const [expense, setExpense] = useState('Home')
-  const [cost, setCost] = useState<number | string>(23.46)
+  const [expense, setExpense] = useState('Food')
+  const [cost, setCost] = useState<string>('23.46')
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
 
@@ -25,7 +25,7 @@ export function AddExpenseForm() {
         {
           date,
           expense,
-          cost: typeof cost === 'string' ? parseFloat(cost) : cost,
+          cost_in_cents: Math.round(parseFloat(cost) * 100),
         },
       ]),
     })

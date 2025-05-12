@@ -62,7 +62,7 @@ function getMonthYear(stringDate: string) {
   const date = new Date(stringDate)
   const monthValue = date.getMonth()
   const month = expenseDisplayMonths[monthValue]
-  const year = date.getFullYear()
+  const year = date.getFullYear().toString().slice(-2)
   return `${month} ${year}`
 }
 
@@ -72,7 +72,7 @@ function combineMonthlyExpenses(expenses: Expense[]) {
   const categories = new Set()
   const monthYears = new Set()
 
-  expenses.forEach(({ date, expense, cost }) => {
+  expenses.forEach(({ date, expense, cost_in_cents }) => {
     const monthYear = getMonthYear(date)
     const expenseCategory = expense.toLowerCase()
 
@@ -81,9 +81,9 @@ function combineMonthlyExpenses(expenses: Expense[]) {
     }
 
     if (groupedData[monthYear][expenseCategory]) {
-      groupedData[monthYear][expenseCategory] += cost
+      groupedData[monthYear][expenseCategory] += cost_in_cents
     } else {
-      groupedData[monthYear][expenseCategory] = cost
+      groupedData[monthYear][expenseCategory] = cost_in_cents
     }
 
     categories.add(expenseCategory)
@@ -132,6 +132,7 @@ export async function GET() {
   // }
 
   // const transformedExpenses = transformExpenses(rawExpenses)
+
   const rawExpenses = mockExpenses as Expense[]
   const combinedMonthyExpenses = combineMonthlyExpenses(rawExpenses)
 

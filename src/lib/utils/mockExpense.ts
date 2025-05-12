@@ -27,9 +27,9 @@ function getRandomExpense() {
 }
 
 function getRandomCost() {
-  const maxCost = 100
-  const minCost = 5
-  return parseFloat((Math.random() * (maxCost - minCost) + minCost).toFixed(2))
+  const maxCost = 100 * 100 // $100
+  const minCost = 5 * 100 // $5
+  return Math.round(Math.random() * (maxCost - minCost) + minCost)
 }
 
 export function mockExpense(): Expense {
@@ -37,6 +37,6 @@ export function mockExpense(): Expense {
   return {
     date,
     expense: getRandomExpense(),
-    cost: getRandomCost(),
+    cost_in_cents: getRandomCost(),
   }
 }
