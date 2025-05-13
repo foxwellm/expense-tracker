@@ -11,28 +11,28 @@ export type Database = {
     Tables: {
       expenses: {
         Row: {
+          category: string
           cost_in_cents: number | null
           created_at: string
           date: string
-          expense: string
           id: string
           updated_at: string
           user_id: string
         }
         Insert: {
+          category: string
           cost_in_cents?: number | null
           created_at?: string
           date: string
-          expense: string
           id?: string
           updated_at?: string
           user_id: string
         }
         Update: {
+          category?: string
           cost_in_cents?: number | null
           created_at?: string
           date?: string
-          expense?: string
           id?: string
           updated_at?: string
           user_id?: string

@@ -22,7 +22,7 @@ function getRandomDate(startDate?: string, endDate?: string): string {
   return randomDate
 }
 
-function getRandomExpense() {
+function getRandomCategory() {
   return expenseCategories[Math.floor(Math.random() * expenseCategories.length)]
 }
 
@@ -36,7 +36,7 @@ export function mockExpense(): Expense {
   const date = getRandomDate()
   return {
     date,
-    expense: getRandomExpense(),
+    category: getRandomCategory(),
     cost_in_cents: getRandomCost(),
   }
 }
