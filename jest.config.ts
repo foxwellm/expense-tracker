@@ -7,6 +7,7 @@ const config: Config = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
+  // map for path aliases
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },

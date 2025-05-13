@@ -1,5 +1,3 @@
-// src/lib/__tests__/combineMonthlyExpenses.test.ts
-
 import dayjs from 'dayjs'
 
 import { expenseDisplayMonths } from '@/lib/constants/expenses'

@@ -1,7 +1,11 @@
 import dayjs, { Dayjs } from 'dayjs'
 
 import { expenseDisplayMonths } from '@/lib/constants/expenses'
-import { Expense, ExpenseCategory } from '@/types/expense'
+import {
+  CombinedMonthlyExpenses,
+  Expense,
+  ExpenseCategory,
+} from '@/types/expense'
 
 // yyyy-mm-dd || Dayjs
 export function getMonthYear(fullDate: string | Dayjs) {
@@ -28,7 +32,9 @@ export function getMonthYearDomain(startDate: string, endDate: string) {
   return monthYearDomain
 }
 
-export function combineMonthlyExpenses(expenses: Expense[]) {
+export function combineMonthlyExpenses(
+  expenses: Expense[]
+): CombinedMonthlyExpenses {
   const groupedData: Record<
     string,
     Partial<Record<ExpenseCategory, number>>
