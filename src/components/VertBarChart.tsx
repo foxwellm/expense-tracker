@@ -1,24 +1,49 @@
 'use client'
 
-import * as d3 from 'd3'
+import {
+  axisBottom,
+  axisLeft,
+  create,
+  interpolateSpectral,
+  max,
+  scaleBand,
+  scaleLinear,
+  scaleOrdinal,
+  stack,
+} from 'd3'
+// import * as d3 from 'd3'
 import { useEffect, useRef } from 'react'
 
+import { expenseCategories } from '@/lib/constants/expenses'
+
+type ExpenseCategory = (typeof expenseCategories)[number]
+
+type MonthlyExpense = {
+  month: string
+} & Record<ExpenseCategory, number>
+
+interface ExtendedSeriesPoint extends d3.SeriesPoint<MonthlyExpense> {
+  key: string
+}
+
 function formatValue(x: number) {
-  return isNaN(x) ? 'N/A' : x.toLocaleString('en')
+  return isNaN(x) ? 'N/A' : `$${x.toFixed(2)}`
 }
 
 function generateSpectralColors(n: number): string[] {
   return Array.from({ length: n }, (_, i) =>
-    d3.interpolateSpectral(1 - i / (n - 1))
+    interpolateSpectral(1 - i / (n - 1))
   )
 }
 
 export function VertBarChart({
   monthlyExpenses,
   categories,
+  monthYearDomain,
 }: {
-  monthlyExpenses: Record<string, number | string>[]
+  monthlyExpenses: MonthlyExpense[]
   categories: string[]
+  monthYearDomain: string[]
 }) {
   const ref = useRef<HTMLDivElement | null>(null)
 
@@ -32,31 +57,24 @@ export function VertBarChart({
     const marginLeft = 50
     const legendHeight = 40
 
-    const series = d3.stack<Record<string, number | string>>().keys(categories)(
-      monthlyExpenses as Record<string, number | string>[]
-    )
+    const series = stack<MonthlyExpense>().keys(categories)(monthlyExpenses)
 
-    const xScaleBandFunc = d3
-      .scaleBand()
-      // TODO: Build function to construct domain from data
-      .domain(['Dec 24', 'Jan 25', 'Feb 25', 'Mar 25'])
+    const xScaleBandFunc = scaleBand()
+      .domain(monthYearDomain)
       .range([marginLeft, width - marginRight])
       .padding(0.1)
 
-    const yScaleLinearFunc = d3
-      .scaleLinear()
-      .domain([0, d3.max(series, (s) => d3.max(s, (d) => d[1]))!])
+    const yScaleLinearFunc = scaleLinear()
+      .domain([0, max(series, (s) => max(s, (d) => d[1] / 100))!])
       .nice()
       .range([height - marginBottom, marginTop + legendHeight])
 
-    const color = d3
-      .scaleOrdinal<string>()
+    const color = scaleOrdinal<string>()
       .domain(categories)
       .range(generateSpectralColors(series.length))
       .unknown('#999')
 
-    const svg = d3
-      .create('svg')
+    const svg = create('svg')
       .attr('width', width)
       .attr('height', height)
       .attr('viewBox', [0, 0, width, height])
@@ -105,29 +123,26 @@ export function VertBarChart({
       .selectAll('g')
       .data(series)
       .join('g')
-      .attr('fill', (d) => color(d.key!))
-      .selectAll('rect')
-      .data((D) => D.map((d) => (Object.assign(d, { key: D.key }), d)))
+      .attr('fill', (d) => color(d.key))
+      .selectAll<SVGRectElement, ExtendedSeriesPoint>('rect')
+      .data((D) => D.map((d) => ({ ...d, key: D.key })))
       .join('rect')
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .attr('x', (d) => xScaleBandFunc((d.data as any).month)!)
-      .attr('y', (d) => yScaleLinearFunc(d[1]))
-      .attr('height', (d) => yScaleLinearFunc(d[0]) - yScaleLinearFunc(d[1]))
+      .attr('x', (d) => xScaleBandFunc(d.data.month)!)
+      .attr('y', (d) => yScaleLinearFunc(d[1] / 100))
+      .attr('height', (d) => {
+        return yScaleLinearFunc(d[0] / 100) - yScaleLinearFunc(d[1] / 100)
+      })
       .attr('width', xScaleBandFunc.bandwidth())
       .append('title')
-      .text(
-        (d) =>
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          `${(d.data as any).month} ${(d as any).key}\n${formatValue(
-            d[1] - d[0]
-          )}`
-      )
+      .text((d) => {
+        return `${d.data.month}\n${d.key}\n${formatValue(d[1] / 100 - d[0] / 100)}`
+      })
 
     // X Axis
     svg
       .append('g')
       .attr('transform', `translate(0,${height - marginBottom})`)
-      .call(d3.axisBottom(xScaleBandFunc))
+      .call(axisBottom(xScaleBandFunc))
       .selectAll('text')
       .attr('transform', 'rotate(-45)')
       .style('text-anchor', 'end')
@@ -136,7 +151,7 @@ export function VertBarChart({
     svg
       .append('g')
       .attr('transform', `translate(${marginLeft},0)`)
-      .call(d3.axisLeft(yScaleLinearFunc))
+      .call(axisLeft(yScaleLinearFunc))
     // remove line around axis
     // .call((g) => g.selectAll(".domain").remove());
 
@@ -144,7 +159,7 @@ export function VertBarChart({
       ref.current.innerHTML = ''
       ref.current.appendChild(svg.node()!)
     }
-  }, [monthlyExpenses, categories])
+  }, [monthlyExpenses, categories, monthYearDomain])
 
   return (
     <div

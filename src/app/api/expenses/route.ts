@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
   return NextResponse.json({ data }, { status: 201 })
 }
 
-function getMonthYear(stringDate: string) {
+function getMonthYear(stringDate: string | Date) {
   const date = new Date(stringDate)
   const monthValue = date.getMonth()
   const month = expenseDisplayMonths[monthValue]
@@ -66,29 +66,53 @@ function getMonthYear(stringDate: string) {
   return `${month} ${year}`
 }
 
-const groupedData: Record<string, { [key: string]: number }> = {}
+function getMonthYearDomain(startDate: string, endDate: string) {
+  let monthYearDomain: string[] = []
+  const stopDateObj = new Date(endDate)
+  stopDateObj.setMonth(stopDateObj.getMonth() + 1)
+
+  const startDateObj = new Date(startDate)
+
+  let whileCount = 0
+  while (startDateObj < stopDateObj && whileCount < 12) {
+    monthYearDomain = [...monthYearDomain, getMonthYear(startDateObj)]
+    startDateObj.setMonth(startDateObj.getMonth() + 1)
+    whileCount++
+  }
+  return monthYearDomain
+}
 
 function combineMonthlyExpenses(expenses: Expense[]) {
+  const groupedData: Record<string, { [key: string]: number }> = {}
   const categories = new Set()
-  const monthYears = new Set()
 
-  expenses.forEach(({ date, expense, cost_in_cents }) => {
+  let expenseStartDate
+  let expenseEndDate
+
+  expenses.forEach(({ date, category, cost_in_cents }, i) => {
+    if (i === 0) {
+      expenseEndDate = date
+    }
+    if (i === expenses.length - 1) {
+      expenseStartDate = date
+    }
     const monthYear = getMonthYear(date)
-    const expenseCategory = expense.toLowerCase()
 
     if (!groupedData[monthYear]) {
       groupedData[monthYear] = {}
     }
 
-    if (groupedData[monthYear][expenseCategory]) {
-      groupedData[monthYear][expenseCategory] += cost_in_cents
+    // NOTE: category intentionaly left in Title Case to let d3 map over and avoid type conflicts
+    if (groupedData[monthYear][category]) {
+      groupedData[monthYear][category] += cost_in_cents
     } else {
-      groupedData[monthYear][expenseCategory] = cost_in_cents
+      groupedData[monthYear][category] = cost_in_cents
     }
 
-    categories.add(expenseCategory)
-    monthYears.add(monthYear)
+    categories.add(category)
   })
+
+  const monthYearDomain = getMonthYearDomain(expenseStartDate!, expenseEndDate!)
 
   const monthlyExpenses = Object.entries(groupedData).map(
     ([month, categories]) => ({
@@ -100,9 +124,7 @@ function combineMonthlyExpenses(expenses: Expense[]) {
   return {
     monthlyExpenses,
     categories: Array.from(categories).sort(),
-    // TODO: This needs to be sorted and have missing in between filled in
-    // Maybe easier to record earliest and latest date, and then create from there
-    monthYears: Array.from(monthYears),
+    monthYearDomain,
   }
 }
 
