@@ -14,13 +14,11 @@ import {
 // import * as d3 from 'd3'
 import { useEffect, useRef } from 'react'
 
-import { expenseCategories } from '@/lib/constants/expenses'
-
-type ExpenseCategory = (typeof expenseCategories)[number]
+import { ExpenseCategory } from '@/types/expense'
 
 type MonthlyExpense = {
   month: string
-} & Record<ExpenseCategory, number>
+} & Partial<Record<ExpenseCategory, number>>
 
 interface ExtendedSeriesPoint extends d3.SeriesPoint<MonthlyExpense> {
   key: string

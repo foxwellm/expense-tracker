@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-import { expenseDisplayMonths } from '@/lib/constants/expenses'
 // import sanitizeHtml from 'sanitize-html'
 import mockExpenses from '@/lib/constants/mockExpenses.json'
 import { expensesSchema } from '@/lib/schemas/expense'
 import { createServerSupabaseClient } from '@/lib/supabase'
 import { Expense } from '@/types/expense'
+
+import { combineMonthlyExpenses } from './utils'
 
 const sanitizeExpense = (expense: Expense) => {
   return {
@@ -56,76 +57,6 @@ export async function POST(request: NextRequest) {
   }
 
   return NextResponse.json({ data }, { status: 201 })
-}
-
-function getMonthYear(stringDate: string | Date) {
-  const date = new Date(stringDate)
-  const monthValue = date.getMonth()
-  const month = expenseDisplayMonths[monthValue]
-  const year = date.getFullYear().toString().slice(-2)
-  return `${month} ${year}`
-}
-
-function getMonthYearDomain(startDate: string, endDate: string) {
-  let monthYearDomain: string[] = []
-  const stopDateObj = new Date(endDate)
-  stopDateObj.setMonth(stopDateObj.getMonth() + 1)
-
-  const startDateObj = new Date(startDate)
-
-  let whileCount = 0
-  while (startDateObj < stopDateObj && whileCount < 12) {
-    monthYearDomain = [...monthYearDomain, getMonthYear(startDateObj)]
-    startDateObj.setMonth(startDateObj.getMonth() + 1)
-    whileCount++
-  }
-  return monthYearDomain
-}
-
-function combineMonthlyExpenses(expenses: Expense[]) {
-  const groupedData: Record<string, { [key: string]: number }> = {}
-  const categories = new Set()
-
-  let expenseStartDate
-  let expenseEndDate
-
-  expenses.forEach(({ date, category, cost_in_cents }, i) => {
-    if (i === 0) {
-      expenseEndDate = date
-    }
-    if (i === expenses.length - 1) {
-      expenseStartDate = date
-    }
-    const monthYear = getMonthYear(date)
-
-    if (!groupedData[monthYear]) {
-      groupedData[monthYear] = {}
-    }
-
-    // NOTE: category intentionaly left in Title Case to let d3 map over and avoid type conflicts
-    if (groupedData[monthYear][category]) {
-      groupedData[monthYear][category] += cost_in_cents
-    } else {
-      groupedData[monthYear][category] = cost_in_cents
-    }
-
-    categories.add(category)
-  })
-
-  const monthYearDomain = getMonthYearDomain(expenseStartDate!, expenseEndDate!)
-
-  const monthlyExpenses = Object.entries(groupedData).map(
-    ([month, categories]) => ({
-      month,
-      ...categories,
-    })
-  )
-
-  return {
-    monthlyExpenses,
-    categories: Array.from(categories).sort(),
-    monthYearDomain,
-  }
 }
 
 export async function GET() {

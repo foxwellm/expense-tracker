@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
     "build-start": "next build && next start",
-    "start": "next start",
-    "test": "jest",
+    "dev": "next dev",
     "lint": "next lint",
+    "prepare": "husky",
+    "start": "next start",
     "supabase:update": "brew upgrade supabase",
     "supabase:gen-types": "dotenv -- bash -c 'supabase gen types --lang typescript --project-id $SUPABASE_PROJECT_ID --schema public > ./src/types/supabase.ts'",
-    "prepare": "husky"
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
@@ -23,6 +25,7 @@
     "@supabase/supabase-js": "^2.49.4",
     "@types/sanitize-html": "^2.16.0",
     "d3": "^7.9.0",
+    "dayjs": "^1.11.13",
     "next": "^15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

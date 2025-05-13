@@ -26,7 +26,7 @@ function getRandomCategory() {
   return expenseCategories[Math.floor(Math.random() * expenseCategories.length)]
 }
 
-function getRandomCost() {
+function getRandomCostInCents() {
   const maxCost = 100 * 100 // $100
   const minCost = 5 * 100 // $5
   return Math.round(Math.random() * (maxCost - minCost) + minCost)
@@ -37,6 +37,6 @@ export function mockExpense(): Expense {
   return {
     date,
     category: getRandomCategory(),
-    cost_in_cents: getRandomCost(),
+    cost_in_cents: getRandomCostInCents(),
   }
 }
