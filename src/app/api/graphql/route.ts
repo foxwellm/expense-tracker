@@ -129,4 +129,9 @@ const server = new ApolloServer({
 
 const handler = startServerAndCreateNextHandler<NextRequest>(server)
 
-export { handler as GET, handler as POST }
+function withContext(handlerFn: typeof handler) {
+  return (req: NextRequest) => handlerFn(req)
+}
+
+export const GET = withContext(handler)
+export const POST = withContext(handler)
