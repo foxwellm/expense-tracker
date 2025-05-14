@@ -3,7 +3,7 @@
 import { useQuery } from '@apollo/client'
 import { Box, Skeleton } from '@mui/material'
 
-import { GET_COMBINED_EXPENSES } from '@/lib/graphql/queries'
+import { GET_COMBINED_EXPENSES } from '@/app/api/graphql/queries'
 
 import { ErrorMessage } from './ErrorMessage'
 import { VertBarChart } from './VertBarChart'

@@ -1,8 +1,12 @@
 'use client'
 
-import { ApolloProvider } from '@apollo/client'
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
 
-import { client } from '@/lib/apollo'
+export const client = new ApolloClient({
+  uri: '/api/graphql',
+  cache: new InMemoryCache(),
+  credentials: 'include', // To include cookies/session
+})
 
 export function ApolloProviderClient({
   children,

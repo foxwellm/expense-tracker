@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
+import { expenseSchema } from '@/app/api/graphql/schemas/expense'
 import { expenseCategories } from '@/lib/constants/expenses'
-import { expenseSchema } from '@/lib/schemas/expense'
 
 export type Expense = z.infer<typeof expenseSchema>
 

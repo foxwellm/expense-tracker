@@ -4,10 +4,10 @@ import { gql } from 'graphql-tag'
 import { NextRequest } from 'next/server'
 
 import mockExpenses from '@/lib/constants/mockExpenses.json'
-import { expensesSchema } from '@/lib/schemas/expense'
 import { createServerSupabaseClient } from '@/lib/supabase'
 import { Expense } from '@/types/expense'
 
+import { expensesSchema } from './schemas'
 import { combineMonthlyExpenses } from './utils'
 
 const sanitizeExpense = (expense: Expense) => {

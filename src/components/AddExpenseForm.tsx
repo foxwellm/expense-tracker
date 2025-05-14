@@ -4,7 +4,7 @@ import { useMutation } from '@apollo/client'
 import { Alert, Box, Button, Stack, TextField, Typography } from '@mui/material'
 import { useState } from 'react'
 
-import { ADD_EXPENSES } from '@/lib/graphql/mutations'
+import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
 
 export function AddExpenseForm() {
   const [date, setDate] = useState('2025-02-26')
