@@ -1,44 +1,48 @@
 'use client'
 
+import { useMutation } from '@apollo/client'
 import { Alert, Box, Button, Stack, TextField, Typography } from '@mui/material'
 import { useState } from 'react'
 
+import { ADD_EXPENSES } from '@/lib/graphql/mutations'
+
 export function AddExpenseForm() {
   const [date, setDate] = useState('2025-02-26')
-  const [expense, setExpense] = useState('Food')
+  const [category, setCategory] = useState('Food')
   const [cost, setCost] = useState<string>('23.46')
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
+
+  const [addExpenses, { loading }] = useMutation(ADD_EXPENSES)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
     setSuccess(false)
 
-    const res = await fetch('/api/expenses', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      credentials: 'include',
-      body: JSON.stringify([
-        {
-          date,
-          expense,
-          cost_in_cents: Math.round(parseFloat(cost) * 100),
+    try {
+      await addExpenses({
+        variables: {
+          expenses: [
+            {
+              date,
+              category,
+              cost_in_cents: Math.round(parseFloat(cost) * 100),
+            },
+          ],
         },
-      ]),
-    })
+      })
 
-    const result = await res.json()
-
-    if (!res.ok) {
-      setError(result.error || 'Failed to submit expense.')
-    } else {
       setSuccess(true)
       setDate('')
-      setExpense('')
+      setCategory('')
       setCost('')
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message)
+      } else {
+        setError('Failed to submit expense.')
+      }
     }
   }
 
@@ -67,8 +71,8 @@ export function AddExpenseForm() {
 
         <TextField
           label="Category"
-          value={expense}
-          onChange={(e) => setExpense(e.target.value)}
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
           required
         />
 
@@ -81,7 +85,7 @@ export function AddExpenseForm() {
           required
         />
 
-        <Button type="submit" variant="contained">
+        <Button type="submit" variant="contained" disabled={loading}>
           Submit
         </Button>
       </Stack>

@@ -51,8 +51,8 @@ export default function RootPage() {
         </CardActions>
       </Card>
       {/* <AddMockExpenses /> */}
-      <AddExpenseForm />
       <VertBarChartContainer />
+      <AddExpenseForm />
     </Container>
   )
 }
