@@ -1,11 +1,14 @@
 import { ApolloServer } from '@apollo/server'
 import { startServerAndCreateNextHandler } from '@as-integrations/next'
+import { AuthError, SupabaseClient, User } from '@supabase/supabase-js'
 import { gql } from 'graphql-tag'
 import { NextRequest } from 'next/server'
 
-import mockExpenses from '@/lib/constants/mockExpenses.json'
+// TESTING
+// import mockExpenses from '@/lib/constants/mockExpenses.json'
 import { createServerSupabaseClient } from '@/lib/supabase'
 import { Expense } from '@/types/expense'
+import { Database } from '@/types/supabase'
 
 import { expensesSchema } from './schemas'
 import { combineMonthlyExpenses } from './utils'
@@ -57,51 +60,74 @@ const typeDefs = gql`
   }
 `
 
+type ApolloContext = {
+  supabase: SupabaseClient<Database>
+  user: User | null
+  authError: AuthError | null
+}
+
+const getUserExpenses = async (
+  user: User,
+  supabase: SupabaseClient
+): Promise<Expense[]> => {
+  const { data, error } = await supabase
+    .from('expenses')
+    .select('date, category, cost_in_cents')
+    .eq('user_id', user.id)
+    .order('date', { ascending: false })
+
+  if (error) {
+    throw new Error('Failed to fetch expenses')
+  }
+
+  return data as Expense[]
+}
+
 const resolvers = {
-  // export async function GET(request: NextRequest) {
-  // const supabase = await createServerSupabaseClient();
-
-  // const {
-  //   data: { user },
-  //   error: authError,
-  // } = await supabase.auth.getUser();
-
-  // if (authError || !user) {
-  //   return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  // }
-
-  // TODO: query param date range
-  // const url = new URL(request.url);
-  // const transform = url.searchParams.get('transform') === 'true';
-  // const { data: rawExpenses, error } = await supabase
-  //   .from('expenses')
-  //   .select('date, expense, cost')
-  //   .eq('user_id', user.id);
-
-  // if (error) {
-  //   return NextResponse.json({ error: error.message }, { status: 500 });
-  // }
-
-  // const transformedExpenses = transformExpenses(rawExpenses)
   Query: {
-    rawExpenses: async () => {
-      return mockExpenses
+    rawExpenses: async (
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      _: any,
+      args: undefined,
+      { user, authError, supabase }: ApolloContext
+    ) => {
+      if (!user || authError) {
+        throw new Error('Unauthorized')
+      }
+
+      return await getUserExpenses(user, supabase)
+
+      // TESTING
+      // return mockExpenses
     },
-    combinedMonthlyExpenses: async () => {
-      const combined = combineMonthlyExpenses(mockExpenses as Expense[])
-      return combined
+    combinedMonthlyExpenses: async (
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      _: any,
+      args: undefined,
+      { user, authError, supabase }: ApolloContext
+    ) => {
+      if (!user || authError) {
+        throw new Error('Unauthorized')
+      }
+
+      const expenses = await getUserExpenses(user, supabase)
+      return combineMonthlyExpenses(expenses)
+
+      // TESTING
+      // const combined = combineMonthlyExpenses(mockExpenses as Expense[])
+      // return combined
     },
   },
   Mutation: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    addExpenses: async (_: any, args: { expenses: Expense[] }) => {
-      const supabase = await createServerSupabaseClient()
-      const {
-        data: { user },
-        error: authError,
-      } = await supabase.auth.getUser()
-
-      if (authError || !user) {
+    addExpenses: async (
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      _: any,
+      args: {
+        expenses: Expense[]
+      },
+      { user, authError, supabase }: ApolloContext
+    ) => {
+      if (!user || authError) {
         throw new Error('Unauthorized')
       }
 
@@ -122,12 +148,29 @@ const resolvers = {
   },
 }
 
-const server = new ApolloServer({
+const server = new ApolloServer<ApolloContext>({
   typeDefs,
   resolvers,
 })
 
-const handler = startServerAndCreateNextHandler<NextRequest>(server)
+const handler = startServerAndCreateNextHandler<NextRequest, ApolloContext>(
+  server,
+  {
+    context: async () => {
+      const supabase = await createServerSupabaseClient()
+      const {
+        data: { user },
+        error: authError,
+      } = await supabase.auth.getUser()
+
+      return {
+        supabase,
+        user,
+        authError,
+      }
+    },
+  }
+)
 
 function withContext(handlerFn: typeof handler) {
   return (req: NextRequest) => handlerFn(req)
