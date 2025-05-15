@@ -4,11 +4,11 @@ import { Box } from '@mui/material'
 import {
   axisBottom,
   axisLeft,
-  create,
   max,
   scaleBand,
   scaleLinear,
   scaleOrdinal,
+  select,
   stack,
 } from 'd3'
 import { useEffect, useRef } from 'react'
@@ -42,36 +42,36 @@ export function VertBarChart({
   categories,
   monthYearDomain,
 }: CombinedMonthlyExpenses) {
-  const ref = useRef<HTMLDivElement | null>(null)
+  const ref = useRef<SVGSVGElement | null>(null)
 
   useEffect(() => {
+    if (!ref.current) return
+    const svg = select(ref.current)
+
     const series = stack<MonthlyExpense>().keys(categories)(monthlyExpenses)
 
-    const xScaleBandFunc = scaleBand()
+    const x = scaleBand()
       .domain(monthYearDomain)
       .range([marginLeft, width - marginRight])
       .padding(0.04)
 
-    const yScaleLinearFunc = scaleLinear()
+    const y = scaleLinear()
       .domain([0, max(series, (s) => max(s, (d) => d[1] / 100))!])
       .nice()
       .range([height - marginBottom, marginTop + legendHeight])
 
+    // TODO: Refactor to use expenseCategoryColors mapping
     const color = scaleOrdinal<string>()
       .domain(categories)
       .range(Object.values(expenseCategoryColors))
       .unknown('#999')
 
-    const svg = create('svg')
-      .attr('width', width)
-      .attr('height', height)
-      .attr('viewBox', [0, 0, width, height])
-      .attr('style', 'max-width: 100%; height: auto; font-siz: 14px;')
-
     // LEGEND
+    // TODO: Legend can be in useEffect that only rerenders with just categories
+    // Can also be mapped over from categories
     const legendGroup = svg
-      // "g" group (container for grouping related items)
       .append('g')
+      .attr('class', 'legend')
       .attr('transform', `translate(${marginLeft}, 10)`)
 
     const numLegendItems = series.length
@@ -96,60 +96,105 @@ export function VertBarChart({
         .attr('y', legendRowTextBoxHeight)
         .text(s.key)
         .attr('font-size', `${legendFontSize}px`)
-        // currentColor inherits from parent context
         .attr('fill', 'currentColor')
     })
 
-    // Draw bars
-    svg
+    // BARS
+    const barGroups = svg
+      .selectAll<SVGGElement, d3.Series<MonthlyExpense, string>>('g.layer')
+      .data(series, (d) => d.key)
+
+    const barGroupsEnter = barGroups
+      .enter()
       .append('g')
-      .selectAll('g')
-      .data(series)
-      .join('g')
+      .attr('class', 'layer')
       .attr('fill', (d) => color(d.key))
-      .selectAll<SVGRectElement, ExtendedSeriesPoint>('rect')
-      .data((D) =>
-        D.map((d) => {
-          return { ...d, key: D.key }
-        })
+
+    const barGroupsMerge = barGroupsEnter.merge(barGroups)
+
+    barGroupsMerge.each(function (d) {
+      const group = select(this)
+      const rects = group
+        .selectAll<SVGRectElement, ExtendedSeriesPoint>('rect')
+        .data(
+          d.map((p) => ({ ...p, key: d.key })),
+          (d) => `${d.key}-${d.data.month}`
+        )
+
+      rects.join(
+        (enter) =>
+          enter
+            .append('rect')
+            .attr('x', (d) => x(d.data.month)!)
+            .attr('y', y(0))
+            .attr('width', x.bandwidth())
+            .attr('height', 0)
+            .call((enter) =>
+              enter
+                .transition()
+                .duration(600)
+                .attr('y', (d) => y(d[1] / 100))
+                .attr('height', (d) => y(d[0] / 100) - y(d[1] / 100))
+            )
+            .append('title')
+            .text(
+              (d) =>
+                `${d.data.month}\n${d.key}\n${formatValue(d[1] / 100 - d[0] / 100)}`
+            ),
+        (update) =>
+          update.call((update) =>
+            update
+              .transition()
+              .duration(600)
+              .attr('x', (d) => x(d.data.month)!)
+              .attr('y', (d) => y(d[1] / 100))
+              .attr('height', (d) => y(d[0] / 100) - y(d[1] / 100))
+          ),
+        (exit) =>
+          exit.call((exit) =>
+            exit
+              .transition()
+              .duration(600)
+              .attr('y', y(0))
+              .attr('height', 0)
+              .remove()
+          )
       )
-      .join('rect')
-      .attr('x', (d) => xScaleBandFunc(d.data.month)!)
-      .attr('y', (d) => yScaleLinearFunc(d[1] / 100))
-      .attr('height', (d) => {
-        return yScaleLinearFunc(d[0] / 100) - yScaleLinearFunc(d[1] / 100)
-      })
-      .attr('width', xScaleBandFunc.bandwidth())
-      .append('title')
-      .text((d) => {
-        return `${d.data.month}\n${d.key}\n${formatValue(d[1] / 100 - d[0] / 100)}`
-      })
+    })
 
-    // X Axis
+    barGroups.exit().remove()
+
+    // AXIS
+    svg.selectAll('.x-axis').remove()
     svg
       .append('g')
+      .attr('class', 'x-axis')
       .attr('transform', `translate(0,${height - marginBottom})`)
-      .call(axisBottom(xScaleBandFunc))
-      // remove line around axis
+      .call(axisBottom(x).tickSizeOuter(0))
       .call((g) => g.selectAll('.domain').remove())
       .selectAll('text')
       .attr('font-size', `${axisFontSize}px`)
 
-    // Y Axis
+    svg.selectAll('.y-axis').remove()
     svg
       .append('g')
+      .attr('class', 'y-axis')
       .attr('transform', `translate(${marginLeft},0)`)
-      .call(axisLeft(yScaleLinearFunc))
-      // remove line around axis
+      .call(axisLeft(y).ticks(null, '$~s'))
       .call((g) => g.selectAll('.domain').remove())
       .selectAll('text')
       .attr('font-size', `${axisFontSize}px`)
-
-    if (ref.current) {
-      ref.current.innerHTML = ''
-      ref.current.appendChild(svg.node()!)
-    }
   }, [monthlyExpenses, categories, monthYearDomain])
 
-  return <Box ref={ref} />
+  return (
+    <Box>
+      <svg
+        ref={ref}
+        width={width}
+        height={height}
+        viewBox={`0 0 ${width} ${height}`}
+        style={{ maxWidth: '100%', height: 'auto' }}
+      />
+    </Box>
+  )
 }
