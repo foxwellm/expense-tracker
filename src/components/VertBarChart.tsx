@@ -5,7 +5,6 @@ import {
   axisBottom,
   axisLeft,
   create,
-  interpolateSpectral,
   max,
   scaleBand,
   scaleLinear,
@@ -14,6 +13,7 @@ import {
 } from 'd3'
 import { useEffect, useRef } from 'react'
 
+import { expenseCategoryColors } from '@/lib/constants/expenses'
 import { CombinedMonthlyExpenses, MonthlyExpense } from '@/types/expense'
 
 interface ExtendedSeriesPoint extends d3.SeriesPoint<MonthlyExpense> {
@@ -22,12 +22,6 @@ interface ExtendedSeriesPoint extends d3.SeriesPoint<MonthlyExpense> {
 
 function formatValue(x: number) {
   return isNaN(x) ? 'N/A' : `$${x.toFixed(2)}`
-}
-
-function generateSpectralColors(n: number): string[] {
-  return Array.from({ length: n }, (_, i) =>
-    interpolateSpectral(1 - i / (n - 1))
-  )
 }
 
 const width = 1800
@@ -65,7 +59,7 @@ export function VertBarChart({
 
     const color = scaleOrdinal<string>()
       .domain(categories)
-      .range(generateSpectralColors(series.length))
+      .range(Object.values(expenseCategoryColors))
       .unknown('#999')
 
     const svg = create('svg')
