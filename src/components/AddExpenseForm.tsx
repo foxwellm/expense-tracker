@@ -1,19 +1,22 @@
 'use client'
 
-import { useMutation } from '@apollo/client'
 import { Alert, Box, Button, Stack, TextField, Typography } from '@mui/material'
 import { useState } from 'react'
 
-import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
+import { Expense, ExpenseCategory } from '@/types/expense'
 
-export function AddExpenseForm() {
+export function AddExpenseForm({
+  onSubmit,
+  loading,
+}: {
+  onSubmit: (expense: Expense) => Promise<void>
+  loading: boolean
+}) {
   const [date, setDate] = useState('2025-02-26')
-  const [category, setCategory] = useState('Food')
+  const [category, setCategory] = useState<ExpenseCategory>('Food')
   const [cost, setCost] = useState<string>('23.46')
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
-
-  const [addExpenses, { loading }] = useMutation(ADD_EXPENSES)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -21,22 +24,16 @@ export function AddExpenseForm() {
     setSuccess(false)
 
     try {
-      await addExpenses({
-        variables: {
-          expenses: [
-            {
-              date,
-              category,
-              cost_in_cents: Math.round(parseFloat(cost) * 100),
-            },
-          ],
-        },
+      await onSubmit({
+        date,
+        category,
+        cost_in_cents: Math.round(parseFloat(cost) * 100),
       })
 
       setSuccess(true)
-      setDate('')
-      setCategory('')
-      setCost('')
+      // setDate('')
+      // setCategory('')
+      // setCost('')
     } catch (err: unknown) {
       if (err instanceof Error) {
         setError(err.message)
@@ -72,7 +69,7 @@ export function AddExpenseForm() {
         <TextField
           label="Category"
           value={category}
-          onChange={(e) => setCategory(e.target.value)}
+          onChange={(e) => setCategory(e.target.value as ExpenseCategory)}
           required
         />
 

@@ -6,12 +6,7 @@ import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 
-import {
-  AddExpenseForm,
-  PaletteModeSwitch,
-  VertBarChartContainer,
-} from '@/components'
-// import { AddMockExpenses } from '@/components/AddMockExpenses'
+import { PaletteModeSwitch, VertBarChartContainer } from '@/components'
 
 const bull = (
   <Box
@@ -52,7 +47,6 @@ export default function RootPage() {
       </Card>
       {/* <AddMockExpenses /> */}
       <VertBarChartContainer />
-      <AddExpenseForm />
     </Container>
   )
 }
