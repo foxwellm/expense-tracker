@@ -29,6 +29,7 @@ export const getTheme = (mode: 'light' | 'dark') =>
       MuiCssBaseline: {
         styleOverrides: {
           body: {
+            overscrollBehaviorY: 'none',
             backgroundColor: mode === 'dark' ? '#0d0d0d' : '#fafafa',
             WebkitFontSmoothing: 'antialiased', // sharper font on MacOS
             MozOsxFontSmoothing: 'grayscale', // sharper font on Firefox
@@ -42,8 +43,12 @@ export const getTheme = (mode: 'light' | 'dark') =>
             transition: 'background-color 1.5s ease, color 0.3s ease',
           },
           html: {
+            overscrollBehaviorY: 'none',
             height: '100%',
             width: '100%',
+          },
+          '#__next': {
+            overscrollBehaviorY: 'none',
           },
           a: {
             color: 'inherit',

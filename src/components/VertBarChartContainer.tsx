@@ -31,8 +31,10 @@ export function VertBarChartContainer() {
       variables: { expenses: [newExpense] },
     })
 
-    const { data: updated } = await refetch()
-    updateCombinedMonthlyExpenses(updated.combinedMonthlyExpenses)
+    const { data } = await refetch()
+    if (data?.combinedMonthlyExpenses) {
+      updateCombinedMonthlyExpenses(data.combinedMonthlyExpenses)
+    }
   }
 
   return (
