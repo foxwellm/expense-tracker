@@ -2,11 +2,12 @@
 
 import { useMutation, useQuery } from '@apollo/client'
 import { Box, Skeleton } from '@mui/material'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
 import { GET_COMBINED_EXPENSES } from '@/app/api/graphql/queries'
-import { CombinedMonthlyExpenses, Expense } from '@/types/expense'
+import { useExpensesStore } from '@/store'
+import { Expense } from '@/types/expense'
 
 import { AddExpenseForm } from './AddExpenseForm'
 import { ErrorMessage } from './ErrorMessage'
@@ -14,16 +15,16 @@ import { VertBarChart } from './VertBarChart'
 
 export function VertBarChartContainer() {
   const { data, loading, error, refetch } = useQuery(GET_COMBINED_EXPENSES)
-  const [chartData, setChartData] = useState<CombinedMonthlyExpenses | null>(
-    null
-  )
   const [addExpenses] = useMutation(ADD_EXPENSES)
+
+  const { combinedMonthyExpenses, updateCombinedMonthlyExpenses } =
+    useExpensesStore((state) => state)
 
   useEffect(() => {
     if (data?.combinedMonthlyExpenses) {
-      setChartData(data.combinedMonthlyExpenses)
+      updateCombinedMonthlyExpenses(data.combinedMonthlyExpenses)
     }
-  }, [data])
+  }, [data, updateCombinedMonthlyExpenses])
 
   const handleAddExpense = async (newExpense: Expense) => {
     await addExpenses({
@@ -31,7 +32,7 @@ export function VertBarChartContainer() {
     })
 
     const { data: updated } = await refetch()
-    setChartData(updated.combinedMonthlyExpenses)
+    updateCombinedMonthlyExpenses(updated.combinedMonthlyExpenses)
   }
 
   return (
@@ -41,16 +42,10 @@ export function VertBarChartContainer() {
           <ErrorMessage message={error?.message} />
         ) : loading ? (
           <Skeleton variant="rectangular" height="100%" />
-        ) : !chartData?.monthlyExpenses ||
-          !chartData?.categories ||
-          !chartData?.monthYearDomain ? (
+        ) : !combinedMonthyExpenses ? (
           <ErrorMessage message="Incomplete data received." />
         ) : (
-          <VertBarChart
-            monthlyExpenses={chartData.monthlyExpenses}
-            categories={chartData.categories}
-            monthYearDomain={chartData.monthYearDomain}
-          />
+          <VertBarChart {...combinedMonthyExpenses} />
         )}
       </Box>
       <AddExpenseForm onSubmit={handleAddExpense} loading={loading} />
