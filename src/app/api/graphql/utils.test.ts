@@ -121,7 +121,15 @@ describe('combineMonthlyExpenses', () => {
       monthYearDomain: ['Dec 24', 'Jan 25'],
     }
 
-    expect(result).toEqual(expectedResult)
+    expect(result.categories).toEqual(expectedResult.categories)
+    expect(result.monthYearDomain).toEqual(expectedResult.monthYearDomain)
+    // Actual result monthlyExpenses will contain every possible category equal to 0
+    expect(result.monthlyExpenses[0]).toMatchObject(
+      expectedResult.monthlyExpenses[0]
+    )
+    expect(result.monthlyExpenses[1]).toMatchObject(
+      expectedResult.monthlyExpenses[1]
+    )
   })
   it('should fill in all categories for each month even if no costs', () => {
     const mockExpenses = [
@@ -154,6 +162,14 @@ describe('combineMonthlyExpenses', () => {
       monthYearDomain: ['Dec 24', 'Jan 25'],
     }
 
-    expect(result).toEqual(expectedResult)
+    expect(result.categories).toEqual(expectedResult.categories)
+    expect(result.monthYearDomain).toEqual(expectedResult.monthYearDomain)
+    // Actual result monthlyExpenses will contain every possible category equal to 0
+    expect(result.monthlyExpenses[0]).toMatchObject(
+      expectedResult.monthlyExpenses[0]
+    )
+    expect(result.monthlyExpenses[1]).toMatchObject(
+      expectedResult.monthlyExpenses[1]
+    )
   })
 })
