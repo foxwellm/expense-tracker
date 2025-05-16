@@ -5,10 +5,36 @@ export const GET_COMBINED_EXPENSES = gql`
     combinedMonthlyExpenses {
       monthlyExpenses {
         month
+        Accessories
+        Apps
+        Audio
+        Automotive
+        Baby
+        Bathroom
+        Beauty
+        Books
         Clothing
+        Crafts
+        Electronics
+        Fitness
         Food
-        Fuel
-        Entertainment
+        Furniture
+        Gaming
+        Garden
+        Health
+        Home
+        Kitchen
+        Music
+        Office
+        Outdoor
+        Pets
+        Photography
+        Safety
+        Sports
+        Storage
+        Tools
+        Toys
+        Travel
       }
       categories
       monthYearDomain

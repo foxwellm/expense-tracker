@@ -32,10 +32,36 @@ const typeDefs = gql`
 
   type MonthlyExpense {
     month: String!
+    Accessories: Int
+    Apps: Int
+    Audio: Int
+    Automotive: Int
+    Baby: Int
+    Bathroom: Int
+    Beauty: Int
+    Books: Int
     Clothing: Int
+    Crafts: Int
+    Electronics: Int
+    Fitness: Int
     Food: Int
-    Fuel: Int
-    Entertainment: Int
+    Furniture: Int
+    Gaming: Int
+    Garden: Int
+    Health: Int
+    Home: Int
+    Kitchen: Int
+    Music: Int
+    Office: Int
+    Outdoor: Int
+    Pets: Int
+    Photography: Int
+    Safety: Int
+    Sports: Int
+    Storage: Int
+    Tools: Int
+    Toys: Int
+    Travel: Int
   }
 
   type CombinedMonthlyExpenses {

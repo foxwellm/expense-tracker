@@ -1,6 +1,9 @@
 import dayjs, { Dayjs } from 'dayjs'
 
-import { expenseDisplayMonths } from '@/lib/constants/expenses'
+import {
+  expenseCategories,
+  expenseDisplayMonths,
+} from '@/lib/constants/expenses'
 import {
   CombinedMonthlyExpenses,
   Expense,
@@ -72,9 +75,9 @@ export function combineMonthlyExpenses(
 
   const monthlyExpenses = Object.entries(groupedData).map(
     ([month, categoryCosts]) => {
-      categories.forEach((category) => {
+      expenseCategories.forEach((category) => {
         if (!categoryCosts[category]) {
-          // d3.js charts require each iteration to have every available category, even if 0 cost
+          // d3.js charts require each iteration to have every available expense category, even if 0 cost
           categoryCosts = { ...categoryCosts, [category]: 0 }
         }
       })

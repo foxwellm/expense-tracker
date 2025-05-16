@@ -1,8 +1,8 @@
 // NOTE: Removing an expenseCategory must be handled in the database by renaming the category or removing those rows
+// Adding or Removing expenseCategory needs to be updated in GET_COMBINED_EXPENSES gql
 export const expenseCategories = [
   'Accessories',
   'Apps',
-  'Art Supplies',
   'Audio',
   'Automotive',
   'Baby',
@@ -19,9 +19,6 @@ export const expenseCategories = [
   'Garden',
   'Health',
   'Home',
-  'Home Appliances',
-  'Home Improvement',
-  'Home Security',
   'Kitchen',
   'Music',
   'Office',
@@ -29,19 +26,16 @@ export const expenseCategories = [
   'Pets',
   'Photography',
   'Safety',
-  'Smart Home',
   'Sports',
   'Storage',
   'Tools',
   'Toys',
   'Travel',
-  'Wearable Tech',
 ] as const
 
 export const expenseCategoryColors = {
   Accessories: '#FF6B6B',
   Apps: '#4ECDC4',
-  'Art Supplies': '#F7B801',
   Audio: '#A259FF',
   Automotive: '#FF5E3A',
   Baby: '#FFC3A0',
@@ -58,9 +52,6 @@ export const expenseCategoryColors = {
   Garden: '#70C1B3',
   Health: '#28C76F',
   Home: '#FFD166',
-  'Home Appliances': '#118AB2',
-  'Home Improvement': '#F3722C',
-  'Home Security': '#2A9D8F',
   Kitchen: '#FFB703',
   Music: '#D81159',
   Office: '#3D348B',
@@ -68,13 +59,11 @@ export const expenseCategoryColors = {
   Pets: '#FFB4A2',
   Photography: '#9D4EDD',
   Safety: '#FB5607',
-  'Smart Home': '#00B4D8',
   Sports: '#EF476F',
   Storage: '#6D597A',
   Tools: '#F9844A',
   Toys: '#FF7F50',
   Travel: '#1FAB89',
-  'Wearable Tech': '#9A031E',
 }
 
 export const expenseDisplayMonths = [
