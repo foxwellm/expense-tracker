@@ -1,3 +1,5 @@
+'use client'
+
 import MenuIcon from '@mui/icons-material/Menu'
 import AppBar from '@mui/material/AppBar'
 import Button from '@mui/material/Button'
@@ -6,12 +8,15 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 
 import { PaletteModeSwitch } from '@/components'
+import { useDrawerState } from '@/store'
 
 export function NavBar() {
+  const { openDrawer } = useDrawerState()
   return (
     <AppBar position="sticky">
       <Toolbar>
         <IconButton
+          onClick={openDrawer}
           size="large"
           edge="start"
           color="inherit"
