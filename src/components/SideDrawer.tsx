@@ -10,6 +10,8 @@ import { ReactNode } from 'react'
 
 import { useDrawerState } from '@/store'
 
+import { AddExpenseForm } from './AddExpenseForm'
+
 const drawerWidth = 240
 
 const DrawerHeader = styled('div')(({ theme }) => ({
@@ -69,7 +71,7 @@ export function SideDrawer({ children }: { children: ReactNode }) {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        Content
+        <AddExpenseForm />
       </Drawer>
 
       <Main open={isDrawerOpen}>{children}</Main>
