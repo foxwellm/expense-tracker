@@ -1,10 +1,16 @@
 'use client'
 
-import { Box, Button, Stack, TextField, Typography } from '@mui/material'
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import MenuItem from '@mui/material/MenuItem'
+import Stack from '@mui/material/Stack'
 import { useTheme } from '@mui/material/styles'
+import TextField from '@mui/material/TextField'
+import Typography from '@mui/material/Typography'
 import dayjs from 'dayjs'
 import { useState } from 'react'
 
+import { expenseCategories } from '@/lib/constants/expenses'
 import { useExpensesStore } from '@/store'
 import { ExpenseCategory } from '@/types/expense'
 
@@ -57,6 +63,7 @@ export function AddExpenseForm() {
         />
 
         <TextField
+          select
           label="Category"
           value={category}
           fullWidth
@@ -65,7 +72,13 @@ export function AddExpenseForm() {
           sx={{
             label: { color: 'inherit' },
           }}
-        />
+        >
+          {expenseCategories.map((expenseCategory) => (
+            <MenuItem key={expenseCategory} value={expenseCategory}>
+              {expenseCategory}
+            </MenuItem>
+          ))}
+        </TextField>
 
         <TextField
           label="Cost"
@@ -86,7 +99,7 @@ export function AddExpenseForm() {
           variant="contained"
           disabled={mutationLoading}
         >
-          Submit
+          Add
         </Button>
       </Stack>
     </Box>
