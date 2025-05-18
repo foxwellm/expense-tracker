@@ -44,3 +44,16 @@ export async function signup(formData: FormData) {
   revalidatePath('/', 'layout')
   redirect('/')
 }
+
+export async function anonymousSignup() {
+  const supabase = await createServerSupabaseClient()
+
+  const { error } = await supabase.auth.signInAnonymously()
+
+  if (error) {
+    redirect('/error')
+  }
+
+  revalidatePath('/', 'layout')
+  redirect('/')
+}
