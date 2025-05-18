@@ -1,15 +1,16 @@
 'use client'
 
 import { Box, Button, Stack, TextField, Typography } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 import { useState } from 'react'
 
 import { useExpensesStore } from '@/store'
 import { ExpenseCategory } from '@/types/expense'
-
 export function AddExpenseForm() {
-  const [date, setDate] = useState('2025-02-26')
+  const [date, setDate] = useState<string>('2025-02-26')
   const [category, setCategory] = useState<ExpenseCategory>('Food')
   const [cost, setCost] = useState<string>('23.46')
+  const theme = useTheme()
 
   const { mutationLoading, addExpense } = useExpensesStore()
 
@@ -24,13 +25,7 @@ export function AddExpenseForm() {
   }
 
   return (
-    <Box
-      component="form"
-      onSubmit={handleSubmit}
-      maxWidth={400}
-      mx="auto"
-      mt={4}
-    >
+    <Box component="form" onSubmit={handleSubmit} m={2}>
       <Stack spacing={3}>
         <Typography variant="h6">Add Expense</Typography>
 
@@ -43,8 +38,14 @@ export function AddExpenseForm() {
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          InputLabelProps={{ shrink: true }}
+          slotProps={{ inputLabel: { shrink: true } }}
           required
+          sx={{
+            '& input::-webkit-calendar-picker-indicator': {
+              filter: theme.palette.mode === 'dark' ? 'invert(1)' : 'invert(0)',
+            },
+            label: { color: 'inherit' },
+          }}
         />
 
         <TextField
@@ -52,15 +53,21 @@ export function AddExpenseForm() {
           value={category}
           onChange={(e) => setCategory(e.target.value as ExpenseCategory)}
           required
+          sx={{
+            label: { color: 'inherit' },
+          }}
         />
 
         <TextField
           label="Cost"
           type="number"
-          inputProps={{ step: '0.01' }}
+          slotProps={{ htmlInput: { step: '0.01' } }}
           value={cost}
           onChange={(e) => setCost(e.target.value)}
           required
+          sx={{
+            label: { color: 'inherit' },
+          }}
         />
 
         <Button type="submit" variant="contained" disabled={mutationLoading}>
