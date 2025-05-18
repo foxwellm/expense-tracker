@@ -19,7 +19,6 @@ export function NavBar() {
           onClick={openDrawer}
           size="large"
           edge="start"
-          color="inherit"
           aria-label="menu"
           sx={{ mr: 2 }}
         >

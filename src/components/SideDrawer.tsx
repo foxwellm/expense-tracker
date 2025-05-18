@@ -8,11 +8,10 @@ import Drawer from '@mui/material/Drawer'
 import IconButton from '@mui/material/IconButton'
 import { ReactNode } from 'react'
 
+import { drawerWidth, navBarHeight } from '@/lib/constants/dimensions'
 import { useDrawerState } from '@/store'
 
 import { AddExpenseForm } from './AddExpenseForm'
-
-const drawerWidth = 240
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -57,8 +56,7 @@ export function SideDrawer({ children }: { children: ReactNode }) {
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
-            top: '64px', // default AppBar height on desktop
-            height: 'calc(100% - 64px})', // subtract AppBar height
+            top: navBarHeight,
           },
         }}
         variant="persistent"
@@ -73,7 +71,6 @@ export function SideDrawer({ children }: { children: ReactNode }) {
         <Divider />
         <AddExpenseForm />
       </Drawer>
-
       <Main open={isDrawerOpen}>{children}</Main>
     </Box>
   )

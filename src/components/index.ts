@@ -1,5 +1,6 @@
 export * from './AddExpenseForm'
 export * from './PaletteModeSwitch'
 export * from './SideDrawer'
+export * from './SideDrawerFab'
 export * from './VertBarChart'
 export * from './VertBarChartContainer'
