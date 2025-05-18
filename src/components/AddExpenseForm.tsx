@@ -6,8 +6,9 @@ import { useState } from 'react'
 
 import { useExpensesStore } from '@/store'
 import { ExpenseCategory } from '@/types/expense'
+
 export function AddExpenseForm() {
-  const [date, setDate] = useState<string>('2025-02-26')
+  const [date, setDate] = useState('2025-02-26')
   const [category, setCategory] = useState<ExpenseCategory>('Food')
   const [cost, setCost] = useState<string>('23.46')
   const theme = useTheme()
@@ -25,7 +26,7 @@ export function AddExpenseForm() {
   }
 
   return (
-    <Box component="form" onSubmit={handleSubmit} m={2}>
+    <Box component="form" onSubmit={handleSubmit}>
       <Stack spacing={3}>
         <Typography variant="h6">Add Expense</Typography>
 
@@ -61,7 +62,7 @@ export function AddExpenseForm() {
         <TextField
           label="Cost"
           type="number"
-          slotProps={{ htmlInput: { step: '0.01' } }}
+          slotProps={{ htmlInput: { step: '0.01', min: '0.01' } }}
           value={cost}
           onChange={(e) => setCost(e.target.value)}
           required

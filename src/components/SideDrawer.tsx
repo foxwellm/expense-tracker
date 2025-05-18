@@ -1,30 +1,19 @@
 'use client'
 
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import { styled } from '@mui/material'
 import Box from '@mui/material/Box'
-import Divider from '@mui/material/Divider'
 import Drawer from '@mui/material/Drawer'
-import IconButton from '@mui/material/IconButton'
 import { ReactNode } from 'react'
 
 import { drawerWidth, navBarHeight } from '@/lib/constants/dimensions'
 import { useDrawerState } from '@/store'
 
-import { AddExpenseForm } from './AddExpenseForm'
-
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  padding: theme.spacing(0, 1),
-  justifyContent: 'flex-end',
-}))
+import { AddExpenses } from './AddExpenses'
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
   open?: boolean
 }>(({ theme }) => ({
   flexGrow: 1,
-  padding: theme.spacing(3),
   transition: theme.transitions.create('margin', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -45,7 +34,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
 }))
 
 export function SideDrawer({ children }: { children: ReactNode }) {
-  const { isDrawerOpen, closeDrawer } = useDrawerState()
+  const { isDrawerOpen } = useDrawerState()
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -63,13 +52,7 @@ export function SideDrawer({ children }: { children: ReactNode }) {
         anchor="left"
         open={isDrawerOpen}
       >
-        <DrawerHeader>
-          <IconButton onClick={closeDrawer}>
-            <ChevronLeftIcon />
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <AddExpenseForm />
+        <AddExpenses />
       </Drawer>
       <Main open={isDrawerOpen}>{children}</Main>
     </Box>

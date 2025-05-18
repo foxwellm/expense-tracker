@@ -13,7 +13,12 @@ import { useDrawerState } from '@/store'
 export function NavBar() {
   const { openDrawer } = useDrawerState()
   return (
-    <AppBar position="sticky">
+    <AppBar
+      position="sticky"
+      sx={{
+        backgroundColor: 'black',
+      }}
+    >
       <Toolbar>
         <IconButton
           onClick={openDrawer}
