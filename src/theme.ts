@@ -27,6 +27,10 @@ export const getTheme = (mode: 'light' | 'dark') =>
     },
     typography: {
       fontFamily: 'Roboto, sans-serif',
+      h6: {
+        fontSize: '1.1rem',
+        fontWeight: 500,
+      },
     },
     components: {
       MuiCssBaseline: {

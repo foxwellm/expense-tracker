@@ -14,7 +14,8 @@ export function SideDrawerFab() {
       sx={{
         position: 'fixed',
         top: navBarHeight,
-        padding: 2,
+        marginTop: 1,
+        marginLeft: 2,
         zIndex: (theme) => theme.zIndex.drawer + 1,
         transform: isDrawerOpen
           ? `translateX(${drawerWidth}px)`
