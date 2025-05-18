@@ -4,6 +4,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 
+import { NavBar } from '@/components/NavBar'
 import { ApolloProviderClient, ThemeProviderClient } from '@/providers'
 
 const roboto = Roboto({
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body>
         <ApolloProviderClient>
           <AppRouterCacheProvider>
-            <ThemeProviderClient>{children}</ThemeProviderClient>
+            <ThemeProviderClient>
+              <NavBar />
+              {children}
+            </ThemeProviderClient>
           </AppRouterCacheProvider>
         </ApolloProviderClient>
       </body>

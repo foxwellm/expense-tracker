@@ -16,6 +16,9 @@ export const getTheme = (mode: 'light' | 'dark') =>
       secondary: {
         main: '#f783ac',
       },
+      info: {
+        main: '#F07400',
+      },
       text: {
         primary: mode === 'dark' ? '#ededed' : '#111111',
         secondary: mode === 'dark' ? '#b0b0b0' : '#555555',

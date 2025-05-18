@@ -1,21 +1,26 @@
 import { Container } from '@mui/material'
+import { redirect } from 'next/navigation'
 
 import { SideDrawer, SideDrawerFab, VertBarChartContainer } from '@/components'
 import { ExpensesWrapper } from '@/components/ExpensesWrapper'
-import { NavBar } from '@/components/NavBar'
+import { createServerSupabaseClient } from '@/lib/supabase'
 
-export default function RootPage() {
+export default async function RootPage() {
+  const supabase = await createServerSupabaseClient()
+
+  const { data, error } = await supabase.auth.getUser()
+  if (error || !data?.user) {
+    redirect('/login')
+  }
+
   return (
-    <>
-      <NavBar />
-      <ExpensesWrapper>
-        <SideDrawerFab />
-        <SideDrawer>
-          <Container>
-            <VertBarChartContainer />
-          </Container>
-        </SideDrawer>
-      </ExpensesWrapper>
-    </>
+    <ExpensesWrapper>
+      <SideDrawerFab />
+      <SideDrawer>
+        <Container>
+          <VertBarChartContainer />
+        </Container>
+      </SideDrawer>
+    </ExpensesWrapper>
   )
 }
