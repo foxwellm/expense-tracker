@@ -1,6 +1,7 @@
 // NOTE: Prevents Flash of Unstyled Content (FOUC)
 // https://mui.com/material-ui/integrations/nextjs/#app-router
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
+import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 
@@ -35,6 +36,8 @@ export default function RootLayout({
             </ThemeProviderClient>
           </AppRouterCacheProvider>
         </ApolloProviderClient>
+        {/* NOTE: Vercel scripts can be blocked by ad-blockers */}
+        <Analytics />
       </body>
     </html>
   )
