@@ -42,7 +42,7 @@ function a11yProps(index: number) {
   }
 }
 
-export function AddExpenses() {
+export function TabManager() {
   const [value, setValue] = useState(0)
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {

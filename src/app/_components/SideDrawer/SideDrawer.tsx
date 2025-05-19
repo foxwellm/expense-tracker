@@ -8,7 +8,7 @@ import { ReactNode } from 'react'
 import { drawerWidth, navBarHeight } from '@/lib/constants/dimensions'
 import { useDrawerState } from '@/store'
 
-import { AddExpenses } from './AddExpenses'
+import { TabManager } from './TabManager'
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
   open?: boolean
@@ -52,7 +52,7 @@ export function SideDrawer({ children }: { children: ReactNode }) {
         anchor="left"
         open={isDrawerOpen}
       >
-        <AddExpenses />
+        <TabManager />
       </Drawer>
       <Main open={isDrawerOpen}>{children}</Main>
     </Box>
