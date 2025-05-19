@@ -1,4 +1,5 @@
 export * from './AuthHydrator'
+export * from './ExpensesWrapper'
 export * from './NavBar'
 export * from './PaletteModeSwitch'
 export * from './SideDrawer'

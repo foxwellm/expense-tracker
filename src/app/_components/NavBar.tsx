@@ -14,8 +14,9 @@ import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 import { logout } from '@/app/login/actions'
-import { PaletteModeSwitch } from '@/components'
 import { useAuthStore } from '@/store'
+
+import { PaletteModeSwitch } from './PaletteModeSwitch'
 
 const options = ['Logout'] as const
 type MenuOptions = (typeof options)[number]

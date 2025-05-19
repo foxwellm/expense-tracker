@@ -1,5 +1,3 @@
-'use server'
-
 import { createServerSupabaseClient } from '@/lib/supabase'
 
 import { AuthCollector } from './AuthCollector'

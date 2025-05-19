@@ -5,9 +5,9 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 
-import { NavBar } from '@/components'
-import { AuthHydrator } from '@/components'
-import { ApolloProviderClient, ThemeProviderClient } from '@/providers'
+import { ApolloProviderClient, ThemeProviderClient } from '@/app/_providers'
+
+import { AuthHydrator, NavBar } from './_components'
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],

@@ -3,7 +3,7 @@
 import { styled } from '@mui/material/styles'
 import Switch from '@mui/material/Switch'
 
-import { useThemeMode } from '@/contexts'
+import { useThemeMode } from '@/app/_contexts'
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,

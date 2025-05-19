@@ -1,9 +1,14 @@
 import { Container } from '@mui/material'
 import { redirect } from 'next/navigation'
 
-import { SideDrawer, SideDrawerFab, VertBarChartContainer } from '@/components'
-import { ExpensesWrapper } from '@/components/ExpensesWrapper'
 import { createServerSupabaseClient } from '@/lib/supabase'
+
+import {
+  ExpensesWrapper,
+  SideDrawer,
+  SideDrawerFab,
+  VertBarChartContainer,
+} from './_components'
 
 export default async function RootPage() {
   const supabase = await createServerSupabaseClient()
