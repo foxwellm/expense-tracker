@@ -32,35 +32,15 @@ const typeDefs = gql`
 
   type MonthlyExpense {
     month: String!
-    Accessories: Int
     Apps: Int
-    Audio: Int
     Automotive: Int
-    Baby: Int
-    Bathroom: Int
-    Beauty: Int
-    Books: Int
     Clothing: Int
-    Crafts: Int
-    Electronics: Int
-    Fitness: Int
     Food: Int
-    Furniture: Int
-    Gaming: Int
-    Garden: Int
     Health: Int
     Home: Int
-    Kitchen: Int
-    Music: Int
     Office: Int
-    Outdoor: Int
     Pets: Int
-    Photography: Int
-    Safety: Int
-    Sports: Int
-    Storage: Int
     Tools: Int
-    Toys: Int
     Travel: Int
   }
 
@@ -83,6 +63,10 @@ const typeDefs = gql`
 
   type Mutation {
     addExpenses(expenses: [ExpenseInput!]!): [Expense]
+  }
+
+  type Mutation {
+    deleteUserExpenses: Boolean!
   }
 `
 
@@ -170,6 +154,25 @@ const resolvers = {
 
       if (error) throw new Error(error.message)
       return data
+    },
+    deleteUserExpenses: async (
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      _: any,
+      args: undefined,
+      { user, authError, supabase }: ApolloContext
+    ) => {
+      if (!user || authError) {
+        throw new Error('Unauthorized')
+      }
+
+      const { error } = await supabase
+        .from('expenses')
+        .delete()
+        .eq('user_id', user.id)
+
+      if (error) throw new Error(error.message)
+
+      return true
     },
   },
 }

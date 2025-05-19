@@ -9,3 +9,9 @@ export const ADD_EXPENSES = gql`
     }
   }
 `
+
+export const DELETE_USER_EXPENSES = gql`
+  mutation DELETE_USER_EXPENSES {
+    deleteUserExpenses
+  }
+`

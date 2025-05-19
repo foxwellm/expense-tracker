@@ -11,6 +11,7 @@ import { SyntheticEvent, useState } from 'react'
 
 import { AddExpenseForm } from './AddExpenseForm'
 import { AddExpensesForm } from './AddExpensesForm'
+import { DeleteExpenses } from './DeleteExpenses'
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -80,7 +81,7 @@ export function TabManager() {
         <AddExpensesForm />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        {/* TODO: Delete Expenses */}
+        <DeleteExpenses />
       </TabPanel>
     </Box>
   )
