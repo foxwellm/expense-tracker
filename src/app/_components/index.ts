@@ -1,6 +1,4 @@
-export * from './ExpensesWrapper'
+export * from './ExpensesHydrator'
 export * from './NavBar'
 export * from './SideDrawer'
-export * from './SideDrawerFab'
-export * from './VertBarChart'
 export * from './VertBarChartContainer'

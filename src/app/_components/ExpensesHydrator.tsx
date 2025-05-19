@@ -1,15 +1,13 @@
 'use client'
 
 import { useMutation, useQuery } from '@apollo/client'
-import { Box } from '@mui/material'
 import { useEffect } from 'react'
-import { ReactNode } from 'react'
 
 import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
 import { GET_COMBINED_EXPENSES } from '@/app/api/graphql/queries'
 import { useExpensesStore } from '@/store'
 
-export function ExpensesWrapper({ children }: { children: ReactNode }) {
+export function ExpensesHydrator() {
   const { setQueryResult, setMutationResult } = useExpensesStore()
   // const { startDate, endDate, setQueryResult } = useExpensesStore((s) => ({
   //   startDate: s.startDate,
@@ -49,5 +47,5 @@ export function ExpensesWrapper({ children }: { children: ReactNode }) {
     })
   }, [data, loading, error, refetch, setQueryResult])
 
-  return <Box>{children}</Box>
+  return null
 }

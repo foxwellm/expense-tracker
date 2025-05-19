@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation'
 import { getAuthUser } from '@/lib/supabase/auth'
 
 import {
-  ExpensesWrapper,
+  ExpensesHydrator,
   SideDrawer,
   SideDrawerFab,
   VertBarChartContainer,
@@ -18,13 +18,14 @@ export default async function RootPage() {
   }
 
   return (
-    <ExpensesWrapper>
+    <>
+      <ExpensesHydrator />
       <SideDrawerFab />
       <SideDrawer>
         <Container>
           <VertBarChartContainer />
         </Container>
       </SideDrawer>
-    </ExpensesWrapper>
+    </>
   )
 }

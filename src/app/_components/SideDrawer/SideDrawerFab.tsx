@@ -9,6 +9,7 @@ import { useDrawerState } from '@/store'
 
 export function SideDrawerFab() {
   const { isDrawerOpen, openDrawer, closeDrawer } = useDrawerState()
+
   return (
     <Box
       sx={{
