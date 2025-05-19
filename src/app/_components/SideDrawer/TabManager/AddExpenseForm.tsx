@@ -3,6 +3,7 @@
 import { useMutation } from '@apollo/client'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
+import CircularProgress from '@mui/material/CircularProgress'
 import MenuItem from '@mui/material/MenuItem'
 import Stack from '@mui/material/Stack'
 import { useTheme } from '@mui/material/styles'
@@ -103,9 +104,28 @@ export function AddExpenseForm() {
           }}
         />
 
-        <Button fullWidth type="submit" variant="contained" disabled={loading}>
-          Add
-        </Button>
+        <Box width={'100%'} sx={{ position: 'relative' }}>
+          <Button
+            fullWidth
+            type="submit"
+            variant="contained"
+            disabled={loading}
+          >
+            Add
+          </Button>
+          {loading && (
+            <CircularProgress
+              size={24}
+              sx={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                marginTop: '-12px',
+                marginLeft: '-12px',
+              }}
+            />
+          )}
+        </Box>
       </Stack>
     </Box>
   )

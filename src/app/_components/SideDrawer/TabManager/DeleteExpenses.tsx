@@ -20,7 +20,7 @@ export function DeleteExpenses() {
     <Box>
       <Stack spacing={3} alignItems="center">
         <Typography variant="h6">Delete Expenses</Typography>
-        <Box sx={{ m: 1, position: 'relative' }}>
+        <Box width={'100%'} sx={{ position: 'relative' }}>
           <Button
             onClick={() => deleteUserExpenses()}
             fullWidth
