@@ -2,7 +2,7 @@
 // Adding or Removing expenseCategory needs to be updated in GET_COMBINED_EXPENSES gql
 export const expenseCategories = [
   'Apps',
-  'Automotive',
+  'Car',
   'Clothing',
   'Food',
   'Health',
@@ -15,15 +15,15 @@ export const expenseCategories = [
 
 export const expenseCategoryColors = {
   Apps: '#e6194B',
-  Automotive: '#f58231',
+  Car: '#f58231',
   Clothing: '#ffe119',
   Food: '#bfef45',
   Health: '#3cb44b',
   Home: '#42d4f4',
-  Office: '#911eb4',
-  Pets: '#f032e6',
-  Tools: '#a9a9a9',
-  Travel: '#4363d8',
+  Office: '#4363d8',
+  Pets: '#911eb4',
+  Tools: '#f032e6',
+  Travel: '#a9a9a9',
 }
 
 export const expenseDisplayMonths = [

@@ -7,14 +7,17 @@ import {
   max,
   scaleBand,
   scaleLinear,
-  scaleOrdinal,
   select,
   stack,
 } from 'd3'
 import { useEffect, useRef } from 'react'
 
 import { expenseCategoryColors } from '@/lib/constants/expenses'
-import { CombinedMonthlyExpenses, MonthlyExpense } from '@/types/expense'
+import {
+  CombinedMonthlyExpenses,
+  ExpenseCategory,
+  MonthlyExpense,
+} from '@/types/expense'
 
 interface ExtendedSeriesPoint extends d3.SeriesPoint<MonthlyExpense> {
   key: string
@@ -22,6 +25,10 @@ interface ExtendedSeriesPoint extends d3.SeriesPoint<MonthlyExpense> {
 
 function formatValue(x: number) {
   return isNaN(x) ? 'N/A' : `$${x.toFixed(2)}`
+}
+
+const color = (category: ExpenseCategory) => {
+  return expenseCategoryColors[category]
 }
 
 const width = 1800
@@ -35,7 +42,7 @@ const legendRowBox = 30
 const legendRowTextBoxHeight = 24
 const legendRowTextBoxWidth = 40
 const legendFontSize = 28
-const axisFontSize = 20
+const axisFontSize = 24
 
 export function BarChart({
   monthlyExpenses,
@@ -43,6 +50,41 @@ export function BarChart({
   monthYearDomain,
 }: CombinedMonthlyExpenses) {
   const ref = useRef<SVGSVGElement | null>(null)
+
+  useEffect(() => {
+    if (!ref.current) return
+    const svg = select(ref.current)
+
+    const legendGroup = svg
+      .append('g')
+      .attr('class', 'legend')
+      .attr('transform', `translate(${marginLeft}, 10)`)
+
+    const numLegendItems = categories.length
+    const legendItemWidth = width / numLegendItems
+    const padding = 10
+    const adjustedLegendItemWidth = legendItemWidth - padding
+
+    categories.forEach((category, i) => {
+      const legendRow = legendGroup
+        .append('g')
+        .attr('transform', `translate(${i * adjustedLegendItemWidth}, 0)`)
+
+      legendRow
+        .append('rect')
+        .attr('width', legendRowBox)
+        .attr('height', legendRowBox)
+        .attr('fill', color(category))
+
+      legendRow
+        .append('text')
+        .attr('x', legendRowTextBoxWidth)
+        .attr('y', legendRowTextBoxHeight)
+        .text(category)
+        .attr('font-size', `${legendFontSize}px`)
+        .attr('fill', 'currentColor')
+    })
+  }, [categories])
 
   useEffect(() => {
     if (!ref.current) return
@@ -59,46 +101,6 @@ export function BarChart({
       .domain([0, max(series, (s) => max(s, (d) => d[1] / 100))!])
       .nice()
       .range([height - marginBottom, marginTop + legendHeight])
-
-    // TODO: Refactor to use expenseCategoryColors mapping
-    const color = scaleOrdinal<string>()
-      .domain(categories)
-      .range(Object.values(expenseCategoryColors))
-      .unknown('#999')
-
-    // LEGEND
-    // TODO: Legend can be in useEffect that only rerenders with just categories
-    // Can also be mapped over from categories
-
-    const legendGroup = svg
-      .append('g')
-      .attr('class', 'legend')
-      .attr('transform', `translate(${marginLeft}, 10)`)
-
-    const numLegendItems = series.length
-    const legendItemWidth = width / numLegendItems
-    const padding = 10
-    const adjustedLegendItemWidth = legendItemWidth - padding
-
-    series.forEach((s, i) => {
-      const legendRow = legendGroup
-        .append('g')
-        .attr('transform', `translate(${i * adjustedLegendItemWidth}, 0)`)
-
-      legendRow
-        .append('rect')
-        .attr('width', legendRowBox)
-        .attr('height', legendRowBox)
-        .attr('fill', color(s.key!))
-
-      legendRow
-        .append('text')
-        .attr('x', legendRowTextBoxWidth)
-        .attr('y', legendRowTextBoxHeight)
-        .text(s.key)
-        .attr('font-size', `${legendFontSize}px`)
-        .attr('fill', 'currentColor')
-    })
 
     // AXIS
     svg
@@ -128,7 +130,7 @@ export function BarChart({
       .enter()
       .append('g')
       .attr('class', 'layer')
-      .attr('fill', (d) => color(d.key))
+      .attr('fill', (d) => color(d.key as ExpenseCategory))
 
     const barGroupsMerge = barGroupsEnter.merge(barGroups)
 

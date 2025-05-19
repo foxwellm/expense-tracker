@@ -6,7 +6,7 @@ export const GET_COMBINED_EXPENSES = gql`
       monthlyExpenses {
         month
         Apps
-        Automotive
+        Car
         Clothing
         Food
         Health

@@ -33,7 +33,7 @@ const typeDefs = gql`
   type MonthlyExpense {
     month: String!
     Apps: Int
-    Automotive: Int
+    Car: Int
     Clothing: Int
     Food: Int
     Health: Int
