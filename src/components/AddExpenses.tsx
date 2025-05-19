@@ -7,7 +7,6 @@ import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Tab from '@mui/material/Tab'
 import Tabs from '@mui/material/Tabs'
-import Typography from '@mui/material/Typography'
 import { SyntheticEvent, useState } from 'react'
 
 import { AddExpenseForm } from './AddExpenseForm'
@@ -31,11 +30,7 @@ function TabPanel(props: TabPanelProps) {
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 2 }}>{children}</Box>}
     </div>
   )
 }
