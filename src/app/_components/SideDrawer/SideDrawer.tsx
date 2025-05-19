@@ -5,6 +5,7 @@ import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import { PropsWithChildren } from 'react'
 
+import { useBreakpoint } from '@/app/_hooks'
 import { drawerWidth, navBarHeight } from '@/lib/constants/dimensions'
 import { useDrawerState } from '@/store'
 
@@ -35,6 +36,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
 
 export function SideDrawer({ children }: PropsWithChildren) {
   const { isDrawerOpen } = useDrawerState()
+  const { isMobile } = useBreakpoint()
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -54,7 +56,7 @@ export function SideDrawer({ children }: PropsWithChildren) {
       >
         <TabManager />
       </Drawer>
-      <Main open={isDrawerOpen}>{children}</Main>
+      <Main open={!isMobile && isDrawerOpen}>{children}</Main>
     </Box>
   )
 }
