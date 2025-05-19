@@ -3,7 +3,7 @@
 import { styled } from '@mui/material'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
-import { ReactNode } from 'react'
+import { PropsWithChildren } from 'react'
 
 import { drawerWidth, navBarHeight } from '@/lib/constants/dimensions'
 import { useDrawerState } from '@/store'
@@ -33,7 +33,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
   ],
 }))
 
-export function SideDrawer({ children }: { children: ReactNode }) {
+export function SideDrawer({ children }: PropsWithChildren) {
   const { isDrawerOpen } = useDrawerState()
 
   return (

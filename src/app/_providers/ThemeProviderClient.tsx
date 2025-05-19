@@ -2,12 +2,12 @@
 
 import { CssBaseline } from '@mui/material'
 import { ThemeProvider } from '@mui/material/styles'
-import { ReactNode, useMemo } from 'react'
+import { PropsWithChildren, useMemo } from 'react'
 
 import { ThemeProviderContext, useThemeMode } from '@/app/_contexts'
 import { getTheme } from '@/theme'
 
-function ThemeInner({ children }: { children: ReactNode }) {
+function ThemeInner({ children }: PropsWithChildren) {
   const { mode } = useThemeMode()
   const theme = useMemo(() => getTheme(mode), [mode])
 
@@ -19,7 +19,7 @@ function ThemeInner({ children }: { children: ReactNode }) {
   )
 }
 
-export function ThemeProviderClient({ children }: { children: ReactNode }) {
+export function ThemeProviderClient({ children }: PropsWithChildren) {
   return (
     <ThemeProviderContext>
       {/* NOTE: ThemeInner used so that useThemeMode can be inside ThemeProviderContext */}

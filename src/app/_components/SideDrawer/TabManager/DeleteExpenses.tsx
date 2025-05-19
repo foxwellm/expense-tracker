@@ -6,16 +6,31 @@ import Button from '@mui/material/Button'
 import CircularProgress from '@mui/material/CircularProgress'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
+import { useSnackbar } from 'notistack'
+import { useEffect } from 'react'
 
 import { DELETE_USER_EXPENSES } from '@/app/api/graphql/mutations'
 import { GET_COMBINED_EXPENSES } from '@/app/api/graphql/queries'
 
 export function DeleteExpenses() {
-  const [deleteUserExpenses, { loading }] = useMutation(DELETE_USER_EXPENSES, {
-    refetchQueries: [GET_COMBINED_EXPENSES],
-  })
+  const { enqueueSnackbar } = useSnackbar()
+  const [deleteUserExpenses, { data, loading, error }] = useMutation(
+    DELETE_USER_EXPENSES,
+    {
+      refetchQueries: [GET_COMBINED_EXPENSES],
+    }
+  )
 
-  // TODO: Snackbar error / data: true
+  useEffect(() => {
+    if (data) {
+      enqueueSnackbar('Expenses Deleted', { variant: 'success' })
+    }
+
+    if (error) {
+      enqueueSnackbar(error.message, { variant: 'error' })
+    }
+  }, [data, error, enqueueSnackbar])
+
   return (
     <Box>
       <Stack spacing={3} alignItems="center">

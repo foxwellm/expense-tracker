@@ -5,7 +5,11 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 
-import { ApolloProviderClient, ThemeProviderClient } from '@/app/_providers'
+import {
+  ApolloProviderClient,
+  SnackbarProviderClient,
+  ThemeProviderClient,
+} from '@/app/_providers'
 
 import { NavBar } from './_components'
 
@@ -32,8 +36,10 @@ export default function RootLayout({
         <ApolloProviderClient>
           <AppRouterCacheProvider>
             <ThemeProviderClient>
-              <NavBar />
-              {children}
+              <SnackbarProviderClient>
+                <NavBar />
+                {children}
+              </SnackbarProviderClient>
             </ThemeProviderClient>
           </AppRouterCacheProvider>
         </ApolloProviderClient>

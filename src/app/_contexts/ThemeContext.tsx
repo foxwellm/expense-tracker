@@ -1,6 +1,12 @@
 'use client'
 
-import { createContext, ReactNode, useContext, useMemo, useState } from 'react'
+import {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useMemo,
+  useState,
+} from 'react'
 
 type ThemeMode = 'light' | 'dark'
 
@@ -11,7 +17,7 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
-export function ThemeProviderContext({ children }: { children: ReactNode }) {
+export function ThemeProviderContext({ children }: PropsWithChildren) {
   const [mode, setMode] = useState<ThemeMode>('dark')
   const value = useMemo(() => ({ mode, setMode }), [mode])
 

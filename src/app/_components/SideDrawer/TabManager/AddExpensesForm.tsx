@@ -9,13 +9,16 @@ import { useTheme } from '@mui/material/styles'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import dayjs from 'dayjs'
-import { useState } from 'react'
+import { useSnackbar } from 'notistack'
+import { useEffect, useState } from 'react'
 
 import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
 import { GET_COMBINED_EXPENSES } from '@/app/api/graphql/queries'
 import { getMockExpenses } from '@/lib/utils/expense'
 
 export function AddExpensesForm() {
+  const theme = useTheme()
+  const { enqueueSnackbar } = useSnackbar()
   const currentDate = dayjs().format('YYYY-MM-DD')
   const furthestPastDate = dayjs().subtract(2, 'years').format('YYYY-MM-DD')
   const initialStartDate = dayjs().subtract(3, 'months').format('YYYY-MM-DD')
@@ -23,9 +26,8 @@ export function AddExpensesForm() {
   const [startDate, setStartDate] = useState(initialStartDate)
   const [endDate, setEndDate] = useState(currentDate)
   const [quantity, setQuantity] = useState<string>('20')
-  const theme = useTheme()
 
-  const [addExpenses, { loading }] = useMutation(ADD_EXPENSES, {
+  const [addExpenses, { data, loading, error }] = useMutation(ADD_EXPENSES, {
     refetchQueries: [GET_COMBINED_EXPENSES],
   })
 
@@ -41,6 +43,16 @@ export function AddExpensesForm() {
         },
       })
   }
+
+  useEffect(() => {
+    if (data) {
+      enqueueSnackbar('Expense Added', { variant: 'success' })
+    }
+
+    if (error) {
+      enqueueSnackbar(error.message, { variant: 'error' })
+    }
+  }, [data, error, enqueueSnackbar])
 
   return (
     <Box component="form" onSubmit={handleSubmit}>
