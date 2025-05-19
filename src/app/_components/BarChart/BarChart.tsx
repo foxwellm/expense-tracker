@@ -50,12 +50,12 @@ export function BarChart({
 
     const series = stack<MonthlyExpense>().keys(categories)(monthlyExpenses)
 
-    const x = scaleBand()
+    const xScaleBandFn = scaleBand()
       .domain(monthYearDomain)
       .range([marginLeft, width - marginRight])
       .padding(0.04)
 
-    const y = scaleLinear()
+    const yScaleLinearFn = scaleLinear()
       .domain([0, max(series, (s) => max(s, (d) => d[1] / 100))!])
       .nice()
       .range([height - marginBottom, marginTop + legendHeight])
@@ -69,6 +69,7 @@ export function BarChart({
     // LEGEND
     // TODO: Legend can be in useEffect that only rerenders with just categories
     // Can also be mapped over from categories
+
     const legendGroup = svg
       .append('g')
       .attr('class', 'legend')
@@ -99,6 +100,25 @@ export function BarChart({
         .attr('fill', 'currentColor')
     })
 
+    // AXIS
+    svg
+      .append('g')
+      .attr('class', 'x-axis')
+      .attr('transform', `translate(0,${height - marginBottom})`)
+      .call(axisBottom(xScaleBandFn).tickSizeOuter(0))
+      .call((g) => g.selectAll('.domain').remove())
+      .selectAll('text')
+      .attr('font-size', `${axisFontSize}px`)
+
+    svg
+      .append('g')
+      .attr('class', 'y-axis')
+      .attr('transform', `translate(${marginLeft},0)`)
+      .call(axisLeft(yScaleLinearFn).ticks(null, '$~s'))
+      .call((g) => g.selectAll('.domain').remove())
+      .selectAll('text')
+      .attr('font-size', `${axisFontSize}px`)
+
     // BARS
     const barGroups = svg
       .selectAll<SVGGElement, d3.Series<MonthlyExpense, string>>('g.layer')
@@ -125,16 +145,19 @@ export function BarChart({
         (enter) =>
           enter
             .append('rect')
-            .attr('x', (d) => x(d.data.month)!)
-            .attr('y', y(0))
-            .attr('width', x.bandwidth())
+            .attr('x', (d) => xScaleBandFn(d.data.month)!)
+            .attr('y', yScaleLinearFn(0))
+            .attr('width', xScaleBandFn.bandwidth())
             .attr('height', 0)
             .call((enter) =>
               enter
                 .transition()
                 .duration(600)
-                .attr('y', (d) => y(d[1] / 100))
-                .attr('height', (d) => y(d[0] / 100) - y(d[1] / 100))
+                .attr('y', (d) => yScaleLinearFn(d[1] / 100))
+                .attr(
+                  'height',
+                  (d) => yScaleLinearFn(d[0] / 100) - yScaleLinearFn(d[1] / 100)
+                )
             )
             .append('title')
             .text(
@@ -146,16 +169,20 @@ export function BarChart({
             update
               .transition()
               .duration(600)
-              .attr('x', (d) => x(d.data.month)!)
-              .attr('y', (d) => y(d[1] / 100))
-              .attr('height', (d) => y(d[0] / 100) - y(d[1] / 100))
+              .attr('x', (d) => xScaleBandFn(d.data.month)!)
+              .attr('y', (d) => yScaleLinearFn(d[1] / 100))
+              .attr(
+                'height',
+                (d) => yScaleLinearFn(d[0] / 100) - yScaleLinearFn(d[1] / 100)
+              )
+              .attr('width', xScaleBandFn.bandwidth())
           ),
         (exit) =>
           exit.call((exit) =>
             exit
               .transition()
               .duration(600)
-              .attr('y', y(0))
+              .attr('y', yScaleLinearFn(0))
               .attr('height', 0)
               .remove()
           )
@@ -164,26 +191,11 @@ export function BarChart({
 
     barGroups.exit().remove()
 
-    // AXIS
-    svg.selectAll('.x-axis').remove()
-    svg
-      .append('g')
-      .attr('class', 'x-axis')
-      .attr('transform', `translate(0,${height - marginBottom})`)
-      .call(axisBottom(x).tickSizeOuter(0))
-      .call((g) => g.selectAll('.domain').remove())
-      .selectAll('text')
-      .attr('font-size', `${axisFontSize}px`)
-
-    svg.selectAll('.y-axis').remove()
-    svg
-      .append('g')
-      .attr('class', 'y-axis')
-      .attr('transform', `translate(${marginLeft},0)`)
-      .call(axisLeft(y).ticks(null, '$~s'))
-      .call((g) => g.selectAll('.domain').remove())
-      .selectAll('text')
-      .attr('font-size', `${axisFontSize}px`)
+    return () => {
+      svg.selectAll('.x-axis').remove()
+      svg.selectAll('.y-axis').remove()
+      svg.selectAll('.legend').remove()
+    }
   }, [monthlyExpenses, categories, monthYearDomain])
 
   return (
