@@ -1,12 +1,12 @@
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
 
 import { getAuthUser } from '@/lib/supabase/auth'
 
 import { HomeButton } from './HomeButton'
 import { PaletteModeSwitch } from './PaletteModeSwitch'
 import { ProfileButton } from './ProfileButton'
+import { Title } from './Title'
 
 export async function NavBar() {
   const { user } = await getAuthUser()
@@ -14,9 +14,7 @@ export async function NavBar() {
     <AppBar position="sticky">
       <Toolbar sx={{ marginX: 4 }}>
         <HomeButton />
-        <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-          Foxwell Expense Tracker
-        </Typography>
+        <Title />
         <PaletteModeSwitch />
         <ProfileButton user={user} />
       </Toolbar>
