@@ -1,4 +1,3 @@
-export * from './AuthHydrator'
 export * from './ExpensesWrapper'
 export * from './NavBar'
 export * from './SideDrawer'

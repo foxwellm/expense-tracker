@@ -7,7 +7,7 @@ import { Roboto } from 'next/font/google'
 
 import { ApolloProviderClient, ThemeProviderClient } from '@/app/_providers'
 
-import { AuthHydrator, NavBar } from './_components'
+import { NavBar } from './_components'
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -32,7 +32,6 @@ export default function RootLayout({
         <ApolloProviderClient>
           <AppRouterCacheProvider>
             <ThemeProviderClient>
-              <AuthHydrator />
               <NavBar />
               {children}
             </ThemeProviderClient>
