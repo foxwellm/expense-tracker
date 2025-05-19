@@ -4,10 +4,10 @@ import { redirect } from 'next/navigation'
 import { getAuthUser } from '@/lib/supabase/auth'
 
 import {
+  BarChartContainer,
   ExpensesHydrator,
   SideDrawer,
   SideDrawerFab,
-  VertBarChartContainer,
 } from './_components'
 
 export default async function RootPage() {
@@ -23,7 +23,7 @@ export default async function RootPage() {
       <SideDrawerFab />
       <SideDrawer>
         <Container>
-          <VertBarChartContainer />
+          <BarChartContainer />
         </Container>
       </SideDrawer>
     </>

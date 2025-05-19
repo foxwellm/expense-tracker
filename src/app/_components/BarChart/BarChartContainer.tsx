@@ -4,10 +4,10 @@ import { Box, Skeleton, Typography, useTheme } from '@mui/material'
 
 import { useExpensesStore } from '@/store'
 
-import { ErrorMessage } from './ErrorMessage'
-import { VertBarChart } from './VertBarChart'
+import { ErrorMessage } from '../ErrorMessage'
+import { BarChart } from './BarChart'
 
-export function VertBarChartContainer() {
+export function BarChartContainer() {
   const { data, loading, error } = useExpensesStore()
   const theme = useTheme()
 
@@ -38,7 +38,7 @@ export function VertBarChartContainer() {
           </Typography>
         </Box>
       ) : (
-        <VertBarChart {...data} />
+        <BarChart {...data} />
       )}
     </Box>
   )

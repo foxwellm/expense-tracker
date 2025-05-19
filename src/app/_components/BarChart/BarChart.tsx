@@ -37,7 +37,7 @@ const legendRowTextBoxWidth = 40
 const legendFontSize = 28
 const axisFontSize = 20
 
-export function VertBarChart({
+export function BarChart({
   monthlyExpenses,
   categories,
   monthYearDomain,
