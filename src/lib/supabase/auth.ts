@@ -1,11 +1,13 @@
-import { User } from '@supabase/supabase-js'
+import { AuthError, User } from '@supabase/supabase-js'
 
-import { createBrowserSupabaseClient } from './client'
+import { createServerSupabaseClient } from './server'
 
-export const getAuthUser = async (): Promise<User | null> => {
-  const supabase = createBrowserSupabaseClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-  return user
+export const getAuthUser = async (): Promise<{
+  user: User | null
+  error: AuthError | null
+}> => {
+  const supabase = await createServerSupabaseClient()
+  const { data, error } = await supabase.auth.getUser()
+
+  return { user: data?.user, error }
 }

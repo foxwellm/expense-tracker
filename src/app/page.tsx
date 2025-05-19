@@ -1,7 +1,7 @@
 import { Container } from '@mui/material'
 import { redirect } from 'next/navigation'
 
-import { createServerSupabaseClient } from '@/lib/supabase'
+import { getAuthUser } from '@/lib/supabase/auth'
 
 import {
   ExpensesWrapper,
@@ -11,10 +11,9 @@ import {
 } from './_components'
 
 export default async function RootPage() {
-  const supabase = await createServerSupabaseClient()
+  const { user, error } = await getAuthUser()
 
-  const { data, error } = await supabase.auth.getUser()
-  if (error || !data?.user) {
+  if (error || !user) {
     redirect('/login')
   }
 
