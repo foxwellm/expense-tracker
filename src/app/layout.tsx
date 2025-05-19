@@ -5,7 +5,8 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 
-import { NavBar } from '@/components/NavBar'
+import { NavBar } from '@/components'
+import { AuthHydrator } from '@/components'
 import { ApolloProviderClient, ThemeProviderClient } from '@/providers'
 
 const roboto = Roboto({
@@ -31,6 +32,7 @@ export default function RootLayout({
         <ApolloProviderClient>
           <AppRouterCacheProvider>
             <ThemeProviderClient>
+              <AuthHydrator />
               <NavBar />
               {children}
             </ThemeProviderClient>

@@ -1,3 +1,5 @@
+export * from './AuthHydrator'
+export * from './NavBar'
 export * from './PaletteModeSwitch'
 export * from './SideDrawer'
 export * from './SideDrawerFab'

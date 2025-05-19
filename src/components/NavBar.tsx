@@ -9,21 +9,20 @@ import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
-import { User } from '@supabase/supabase-js'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { logout } from '@/app/login/actions'
 import { PaletteModeSwitch } from '@/components'
-import { getAuthUser } from '@/lib/supabase/auth'
+import { useAuthStore } from '@/store'
 
 const options = ['Logout'] as const
 type MenuOptions = (typeof options)[number]
 
 export function NavBar() {
   const router = useRouter()
-  const [user, setUser] = useState<User | null>(null)
+  const user = useAuthStore((s) => s.user)
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
@@ -45,15 +44,6 @@ export function NavBar() {
   const handleClose = () => {
     setAnchorEl(null)
   }
-
-  useEffect(() => {
-    const getUser = async () => {
-      const authUser = await getAuthUser()
-      setUser(authUser)
-    }
-
-    getUser()
-  }, [])
 
   return (
     <AppBar position="sticky">

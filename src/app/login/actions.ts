@@ -1,6 +1,5 @@
 'use server'
 
-import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 
 import { createServerSupabaseClient } from '@/lib/supabase'
@@ -21,7 +20,6 @@ export async function login(formData: FormData) {
     redirect('/error')
   }
 
-  revalidatePath('/', 'layout')
   redirect('/')
 }
 
@@ -41,7 +39,6 @@ export async function signup(formData: FormData) {
     redirect('/error')
   }
 
-  revalidatePath('/', 'layout')
   redirect('/')
 }
 
@@ -54,7 +51,6 @@ export async function anonymousSignup() {
     redirect('/error')
   }
 
-  revalidatePath('/', 'layout')
   redirect('/')
 }
 
@@ -67,6 +63,5 @@ export async function logout() {
     redirect('/error')
   }
 
-  revalidatePath('/', 'layout')
   redirect('/login')
 }
