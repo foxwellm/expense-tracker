@@ -1,5 +1,6 @@
 'use client'
 
+import { useMutation } from '@apollo/client'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
@@ -10,8 +11,9 @@ import Typography from '@mui/material/Typography'
 import dayjs from 'dayjs'
 import { useState } from 'react'
 
+import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
+import { GET_COMBINED_EXPENSES } from '@/app/api/graphql/queries'
 import { expenseCategories } from '@/lib/constants/expenses'
-import { useExpensesStore } from '@/store'
 import { ExpenseCategory } from '@/types/expense'
 
 export function AddExpenseForm() {
@@ -23,15 +25,23 @@ export function AddExpenseForm() {
   const [cost, setCost] = useState<string>('23.46')
   const theme = useTheme()
 
-  const { mutationLoading, addExpense } = useExpensesStore()
+  const [addExpense, { loading }] = useMutation(ADD_EXPENSES, {
+    refetchQueries: [GET_COMBINED_EXPENSES],
+  })
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     addExpense({
-      date,
-      category,
-      cost_in_cents: Math.round(parseFloat(cost) * 100),
+      variables: {
+        expenses: [
+          {
+            date,
+            category,
+            cost_in_cents: Math.round(parseFloat(cost) * 100),
+          },
+        ],
+      },
     })
   }
 
@@ -93,12 +103,7 @@ export function AddExpenseForm() {
           }}
         />
 
-        <Button
-          fullWidth
-          type="submit"
-          variant="contained"
-          disabled={mutationLoading}
-        >
+        <Button fullWidth type="submit" variant="contained" disabled={loading}>
           Add
         </Button>
       </Stack>
