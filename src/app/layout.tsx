@@ -7,6 +7,7 @@ import { Roboto } from 'next/font/google'
 
 import {
   ApolloProviderClient,
+  DatePickerProvider,
   SnackbarProviderClient,
   ThemeProviderClient,
 } from '@/app/_providers'
@@ -37,8 +38,10 @@ export default function RootLayout({
           <AppRouterCacheProvider>
             <ThemeProviderClient>
               <SnackbarProviderClient>
-                <NavBar />
-                {children}
+                <DatePickerProvider>
+                  <NavBar />
+                  {children}
+                </DatePickerProvider>
               </SnackbarProviderClient>
             </ThemeProviderClient>
           </AppRouterCacheProvider>
