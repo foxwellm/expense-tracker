@@ -1,0 +1,3938 @@
+[
+  {
+    "Cat": "Food - Household",
+    "Name": "Laundry Detergent",
+    "Sub": "Household Supplies"
+  },
+  {
+    "Cat": "Clothing - Shirts",
+    "Name": "Striped Long Sleeve Shirt",
+    "Sub": "Casual Shirts"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Cold Brew Coffee Maker",
+    "Sub": "Coffee Equipment"
+  },
+  { "Cat": "Music", "Name": "Guitar Tuner", "Sub": "Accessories" },
+  {
+    "Cat": "Travel",
+    "Name": "Travel Orthopedic Pillow",
+    "Sub": "Travel Accessories"
+  },
+  {
+    "Cat": "Gaming",
+    "Name": "Wireless Gaming Mouse",
+    "Sub": "Gaming Accessories"
+  },
+  { "Cat": "Outdoor", "Name": "Pocket Blanket", "Sub": "Camping Equipment" },
+  {
+    "Cat": "Office",
+    "Name": "Customizable Name Plate",
+    "Sub": "Office Supplies"
+  },
+  { "Cat": "Pets", "Name": "Pet Bed", "Sub": "Pet Accessories" },
+  {
+    "Cat": "Fitness",
+    "Name": "High-Quality Yoga Block",
+    "Sub": "Yoga Equipment"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Portable Hammock with Stand",
+    "Sub": "Camping Equipment"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Natural Soy Candles",
+    "Sub": "Home Fragrance & Accessories"
+  },
+  {
+    "Cat": "Clothing - Coats",
+    "Name": "Faux Fur Coat",
+    "Sub": "Outerwear - Faux Fur"
+  },
+  {
+    "Cat": "Food - Pasta",
+    "Name": "Black Bean Spaghetti",
+    "Sub": "Specialty Pasta"
+  },
+  {
+    "Cat": "Pets",
+    "Name": "Personalized Pet ID Tags",
+    "Sub": "Pet Accessories"
+  },
+  {
+    "Cat": "Food - Canned Soups",
+    "Name": "Spiced Pumpkin Soup",
+    "Sub": "Soups"
+  },
+  { "Cat": "Home", "Name": "Wire Shelving Unit", "Sub": "Home Organization" },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Puffed Rice Cake",
+    "Sub": "Savory Snacks"
+  },
+  { "Cat": "Food - Pasta", "Name": "Ramen Noodles", "Sub": "Noodles" },
+  {
+    "Cat": "Food - Salad Toppings",
+    "Name": "Herb Seasoned Croutons",
+    "Sub": "Croutons"
+  },
+  {
+    "Cat": "Art Supplies",
+    "Name": "Art Supplies Organizer",
+    "Sub": "Storage & Organization"
+  },
+  {
+    "Cat": "Clothing - Activewear",
+    "Name": "Athletic Compression Tights",
+    "Sub": "Sports Apparel"
+  },
+  { "Cat": "Food - Dairy", "Name": "Cheddar Cheese Slices", "Sub": "Cheese" },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Frozen Pizza",
+    "Sub": "Frozen Meals"
+  },
+  { "Cat": "Food - Beverages", "Name": "Apple Juice", "Sub": "Juice" },
+  { "Cat": "Food - Sauces", "Name": "Honey Garlic Sauce", "Sub": "Condiments" },
+  {
+    "Cat": "Clothing - Footwear",
+    "Name": "Trainers with Mesh Inserts",
+    "Sub": "Athletic Footwear"
+  },
+  {
+    "Cat": "Health",
+    "Name": "Essential Oil Roller Bottles",
+    "Sub": "Aromatherapy & Wellness"
+  },
+  {
+    "Cat": "Food - Vegetables",
+    "Name": "Sweet Potatoes (organic)",
+    "Sub": "Vegetables"
+  },
+  {
+    "Cat": "Food - Prepared Meals",
+    "Name": "Fettuccine Alfredo Dinner Kit",
+    "Sub": "Meal Kits - Pasta"
+  },
+  { "Cat": "Food - Beverages", "Name": "Cranberry Juice", "Sub": "Juice" },
+  { "Cat": "Outdoor", "Name": "Folding Table", "Sub": "Camping Equipment" },
+  {
+    "Cat": "Travel",
+    "Name": "Compressible Packing Cubes",
+    "Sub": "Travel Accessories"
+  },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Mediterranean Flatbread",
+    "Sub": "Flatbreads"
+  },
+  { "Cat": "Kitchen", "Name": "Travel Mug", "Sub": "Drinkware" },
+  {
+    "Cat": "Clothing - Activewear",
+    "Name": "Running Shorts",
+    "Sub": "Running Shorts"
+  },
+  {
+    "Cat": "Food - Produce",
+    "Name": "Sliced Avocado",
+    "Sub": "Fresh Cut Fruits"
+  },
+  {
+    "Cat": "Food - Deli Meats",
+    "Name": "Sliced Turkey Breast",
+    "Sub": "Deli Meats"
+  },
+  {
+    "Cat": "Pets",
+    "Name": "Collapsible Pet Dog Bowl",
+    "Sub": "Pet Accessories"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Smart Air Purifier",
+    "Sub": "Air Quality & Purification"
+  },
+  {
+    "Cat": "Baby",
+    "Name": "Baby Safety Corner Guards",
+    "Sub": "Safety Equipment"
+  },
+  { "Cat": "Home", "Name": "Suction Cup Hooks", "Sub": "Home Organization" },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Tuscan Bean Soup",
+    "Sub": "Soups & Broths"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Digital Wireless Meat Thermometer",
+    "Sub": "Cooking Tools & Utensils"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Chipotle Lime Salsa",
+    "Sub": "Salsas"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Pumpkin Puree",
+    "Sub": "Vegetable Purees"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Classic Chicken Noodle Soup",
+    "Sub": "Soups & Broths"
+  },
+  {
+    "Cat": "Home Appliances",
+    "Name": "Portable Air Conditioner",
+    "Sub": "Cooling Appliances"
+  },
+  {
+    "Cat": "Food - Baking",
+    "Name": "Organic Brown Sugar",
+    "Sub": "Sweeteners"
+  },
+  { "Cat": "Pets", "Name": "Cat Tree", "Sub": "Cat Furniture" },
+  { "Cat": "Food - Condiments", "Name": "Balsamic Vinegar", "Sub": "Vinegars" },
+  {
+    "Cat": "Toys",
+    "Name": "Educational STEM Kit",
+    "Sub": "STEM Learning Toys"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Handmade Wooden Utensil Set",
+    "Sub": "Cooking Tools & Utensils"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Mushroom Soup (canned)",
+    "Sub": "Soups & Broths"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Maple Chipotle Glaze",
+    "Sub": "Sauces"
+  },
+  { "Cat": "Kitchen", "Name": "Stainless Steel Cutlery Set", "Sub": "Cutlery" },
+  {
+    "Cat": "Garden",
+    "Name": "Plant Growing Kit",
+    "Sub": "Indoor Gardening Supplies"
+  },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Mediterranean Flatbread",
+    "Sub": "Flatbreads"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Almond Joy Protein Bars",
+    "Sub": "Protein Snacks"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Wall-Mounted Bookshelf",
+    "Sub": "Home Furnishings"
+  },
+  { "Cat": "Outdoor", "Name": "Air Mattress", "Sub": "Camping Equipment" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Sesame Ginger Dressing",
+    "Sub": "Dressing"
+  },
+  {
+    "Cat": "Beauty",
+    "Name": "Jennifer's Amazing Lip Balm Kit",
+    "Sub": "Lip Care"
+  },
+  {
+    "Cat": "Food - Freezer",
+    "Name": "Cauliflower Crust Pizza",
+    "Sub": "Frozen Meals"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Teriyaki Stir-Fry Sauce",
+    "Sub": "Sauces"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Cocktail Shaker and Mixing Glass Set",
+    "Sub": "Barware"
+  },
+  { "Cat": "Food - Dairy", "Name": "Sliced Provolone Cheese", "Sub": "Cheese" },
+  {
+    "Cat": "Audio",
+    "Name": "Bluetooth Headphones",
+    "Sub": "Wireless Audio Accessories"
+  },
+  {
+    "Cat": "Toys",
+    "Name": "Wooden Children's Play Kitchen",
+    "Sub": "Pretend Play Toys"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Classic Caesar Dressing",
+    "Sub": "Dressing"
+  },
+  {
+    "Cat": "Fitness",
+    "Name": "Eco-Friendly Yoga Blocks",
+    "Sub": "Yoga Equipment"
+  },
+  {
+    "Cat": "Food - Soups",
+    "Name": "Savory Pumpkin Soup",
+    "Sub": "Specialty Soups"
+  },
+  { "Cat": "Garden", "Name": "Gardening Gloves", "Sub": "Garden Tools" },
+  {
+    "Cat": "Outdoor",
+    "Name": "Outdoor Camping Hammock",
+    "Sub": "Camping Equipment"
+  },
+  { "Cat": "Food - Dairy", "Name": "Cream Cheese", "Sub": "Dairy Spreads" },
+  {
+    "Cat": "Outdoor",
+    "Name": "Solar Garden Lights",
+    "Sub": "Outdoor Accessories"
+  },
+  {
+    "Cat": "Food - Baking Goods",
+    "Name": "Organic Whole Wheat Flour",
+    "Sub": "Baking Ingredients"
+  },
+  {
+    "Cat": "Food - Produce",
+    "Name": "Organic Baby Spinach",
+    "Sub": "Fresh Vegetables"
+  },
+  { "Cat": "Kitchen", "Name": "Herbal Tea Infuser", "Sub": "Coffee Equipment" },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Pepper Jack Cheese Sticks",
+    "Sub": "Savory Snacks"
+  },
+  {
+    "Cat": "Food - Salads",
+    "Name": "Curried Lentil Salad",
+    "Sub": "Vegetarian Salads"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Sweet Potato Chips",
+    "Sub": "Savory Snacks"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Dried Cranberries",
+    "Sub": "Dried Fruits"
+  },
+  {
+    "Cat": "Books",
+    "Name": "Plant-Based Cookbook",
+    "Sub": "Cookbooks & Nutrition"
+  },
+  {
+    "Cat": "Food - Dairy",
+    "Name": "Low-Fat Cottage Cheese",
+    "Sub": "Cottage Cheese"
+  },
+  {
+    "Cat": "Accessories",
+    "Name": "Phone Screen Protector",
+    "Sub": "Mobile Accessories"
+  },
+  { "Cat": "Sports", "Name": "Training Soccer Ball", "Sub": "Soccer" },
+  {
+    "Cat": "Home",
+    "Name": "Wall-Mounted Wine Rack",
+    "Sub": "Wine Storage Solutions"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Aged White Cheddar Popcorn",
+    "Sub": "Gourmet Snacks"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Sweet Chili Dipping Sauce",
+    "Sub": "Dips"
+  },
+  {
+    "Cat": "Bathroom",
+    "Name": "Thermostatic Shower Valve Kit",
+    "Sub": "Shower Fixtures"
+  },
+  { "Cat": "Kitchen", "Name": "Electric Can Opener", "Sub": "Kitchen Gadget" },
+  {
+    "Cat": "Clothing - Dresses",
+    "Name": "Satin Slip Dress",
+    "Sub": "Evening Wear"
+  },
+  { "Cat": "Food - Bakery", "Name": "Caraway Rye Bread", "Sub": "Breads" },
+  {
+    "Cat": "Food - Meat & Seafood",
+    "Name": "Spicy Italian Sausage",
+    "Sub": "Meat Products"
+  },
+  { "Cat": "Clothing - Tops", "Name": "Golf Polo Shirt", "Sub": "Activewear" },
+  {
+    "Cat": "Clothing - Tops",
+    "Name": "Graphic Sweatshirt",
+    "Sub": "Graphic Tees"
+  },
+  {
+    "Cat": "Clothing - Pants",
+    "Name": "Faux Leather Leggings",
+    "Sub": "Leggings"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Faux Fur Throw Blanket",
+    "Sub": "Bedding & Linens"
+  },
+  { "Cat": "Food - Snacks", "Name": "Coconut Chips", "Sub": "Healthy Snacks" },
+  { "Cat": "Food - Baking", "Name": "Artisan Cornbread Mix", "Sub": "Mixes" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Mango Chutney",
+    "Sub": "Fruit Chutneys"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Memory Foam Mattress Pad",
+    "Sub": "Bedding & Linens"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Coffee Capsule Dispenser",
+    "Sub": "Coffee Accessories"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Multicolored LED Strip Lights",
+    "Sub": "Lighting & Lamps"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Portable Leaf Blower",
+    "Sub": "Garden Supplies"
+  },
+  { "Cat": "Gaming", "Name": "Gaming Mousepad", "Sub": "Gaming Accessories" },
+  {
+    "Cat": "Electronics",
+    "Name": "Video Camera",
+    "Sub": "Cameras & Photography"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Orange Ginger Vinaigrette",
+    "Sub": "Dressing"
+  },
+  { "Cat": "Food", "Name": "Home Brewing Starter Kit", "Sub": "Beverages" },
+  { "Cat": "Tools", "Name": "Folding Pocket Knife", "Sub": "Hand Tools" },
+  {
+    "Cat": "Food - Deli",
+    "Name": "Balsamic Salad Dressing",
+    "Sub": "Dips/Spreads"
+  },
+  {
+    "Cat": "Food - Spices",
+    "Name": "Cajun Seasoning",
+    "Sub": "Seasoning Blends"
+  },
+  { "Cat": "Food - Bakery", "Name": "Peanut Butter Cookies", "Sub": "Cookies" },
+  {
+    "Cat": "Home",
+    "Name": "Decorative Throw Blanket",
+    "Sub": "Bedding & Linens"
+  },
+  {
+    "Cat": "Tools",
+    "Name": "Repair Tool Set for Home Improvement",
+    "Sub": "Hand Tools"
+  },
+  { "Cat": "Food - Baking", "Name": "Almond Flour Brownies", "Sub": "Mixes" },
+  { "Cat": "Books", "Name": "Cookbook", "Sub": "Cookbooks & Nutrition" },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Almond Flour Cookies",
+    "Sub": "Gluten-Free Treats"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Digital Photo Frame",
+    "Sub": "Decorative Wall Art & Accessories"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Electric Food Slicer",
+    "Sub": "Food Preparation Tools"
+  },
+  {
+    "Cat": "Clothing - Footwear",
+    "Name": "High-Top Leather Boots",
+    "Sub": "Boots"
+  },
+  { "Cat": "Garden", "Name": "Herb Garden Planter Box", "Sub": "Planters" },
+  {
+    "Cat": "Photography",
+    "Name": "Smartphone Tripod with Remote",
+    "Sub": "Tripods & Accessories"
+  },
+  {
+    "Cat": "Food - Prepared Foods",
+    "Name": "Chicken Fajita Kit",
+    "Sub": "Meal Kits"
+  },
+  {
+    "Cat": "Food - Produce",
+    "Name": "Sliced Cucumbers",
+    "Sub": "Fresh Cut Vegetables"
+  },
+  { "Cat": "Food - Dairy", "Name": "Eggs (dozen)", "Sub": "Eggs" },
+  {
+    "Cat": "Home Improvement",
+    "Name": "Pressure Washer Accessories Kit",
+    "Sub": "Outdoor Cleaning"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Almond Flour Pizza Crust",
+    "Sub": "Frozen Pizza Crusts"
+  },
+  {
+    "Cat": "Food - Gourmet Rice",
+    "Name": "Savory Mushroom Risotto",
+    "Sub": "Gourmet Rice"
+  },
+  {
+    "Cat": "Food - Baking",
+    "Name": "Chocolate Fudge Brownie Mix",
+    "Sub": "Mixes"
+  },
+  {
+    "Cat": "Office",
+    "Name": "Under Desk Footrest",
+    "Sub": "Office Accessories"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Video Camera",
+    "Sub": "Cameras & Photography"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Frozen Hash Browns",
+    "Sub": "Frozen Potato Products"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Kettle Chip Variety Pack",
+    "Sub": "Chips and Crisps"
+  },
+  {
+    "Cat": "Food - Meat Alternatives",
+    "Name": "Tofu",
+    "Sub": "Plant-Based Proteins"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Electric Ice Cream Maker",
+    "Sub": "Cooking Appliances"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Eco-Friendly Beeswax Wraps",
+    "Sub": "Food Storage Solutions"
+  },
+  {
+    "Cat": "Clothing - Bottoms",
+    "Name": "Wrap Front Midi Skirt",
+    "Sub": "Bottoms"
+  },
+  { "Cat": "Food - Oils", "Name": "Herb-Infused Olive Oil", "Sub": "Oils" },
+  { "Cat": "Food - Produce", "Name": "Grapes (red)", "Sub": "Fruits" },
+  {
+    "Cat": "Food - Sauces",
+    "Name": "Tomato Basil Pasta Sauce",
+    "Sub": "Pasta Sauces"
+  },
+  {
+    "Cat": "Garden",
+    "Name": "Smart Plant Monitor",
+    "Sub": "Garden Technology"
+  },
+  {
+    "Cat": "Fitness",
+    "Name": "Adjustable Yoga Mat Strap",
+    "Sub": "Yoga Equipment"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Mango Chia Pudding",
+    "Sub": "Healthy Snacks"
+  },
+  {
+    "Cat": "Food - Canned Soups",
+    "Name": "Lentil Vegetable Stew",
+    "Sub": "Soups"
+  },
+  { "Cat": "Kitchen", "Name": "Ice Cream Scoop", "Sub": "Kitchen Gadgets" },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Vegetable Fried Rice",
+    "Sub": "Frozen Meals"
+  },
+  {
+    "Cat": "Wearable Tech",
+    "Name": "Samsung Galaxy Smartwatch",
+    "Sub": "Smartwatches"
+  },
+  {
+    "Cat": "Tools",
+    "Name": "Cordless Electric Screwdriver",
+    "Sub": "Power Tools"
+  },
+  { "Cat": "Accessories", "Name": "Backpack", "Sub": "Bags" },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Garden Vegetable Chips",
+    "Sub": "Vegetable Snacks"
+  },
+  {
+    "Cat": "Smart Home",
+    "Name": "Smart Light Switch",
+    "Sub": "Smart Lighting"
+  },
+  {
+    "Cat": "Food - Meat",
+    "Name": "Honey mustard chicken tenders",
+    "Sub": "Prepared Poultry"
+  },
+  {
+    "Cat": "Food - Cereal",
+    "Name": "Apple Cinnamon Instant Oatmeal",
+    "Sub": "Oatmeal"
+  },
+  { "Cat": "Food - Vegetables", "Name": "Cabbage Slaw Mix", "Sub": "Salads" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Sriracha Chili Sauce",
+    "Sub": "Hot Sauces"
+  },
+  {
+    "Cat": "Fitness",
+    "Name": "Fitness Balance Ball",
+    "Sub": "Fitness Equipment"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Fruit and Nut Medley",
+    "Sub": "Nuts and Trail Mix"
+  },
+  { "Cat": "Food - Baking", "Name": "Samoas Cookie Mix", "Sub": "Mixes" },
+  {
+    "Cat": "Fitness",
+    "Name": "Bodyweight Resistance Bands",
+    "Sub": "Strength Training Equipment"
+  },
+  { "Cat": "Kitchen", "Name": "Pressure Cooker", "Sub": "Cooking Appliances" },
+  { "Cat": "Toys", "Name": "Kids' Art Easel", "Sub": "Creative Toys" },
+  {
+    "Cat": "Office",
+    "Name": "Workstation Laptop Stand",
+    "Sub": "Laptop Accessories"
+  },
+  {
+    "Cat": "Food - Grains",
+    "Name": "Lemon Herb Quinoa",
+    "Sub": "Flavored Quinoa"
+  },
+  { "Cat": "Food - Vegetarian", "Name": "Baked Falafel", "Sub": "Snacks" },
+  {
+    "Cat": "Outdoor",
+    "Name": "LED Camping Lantern with USB Charging",
+    "Sub": "Camping Equipment"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Honey Roasted Peanuts",
+    "Sub": "Nuts and Seeds"
+  },
+  {
+    "Cat": "Food - Meat",
+    "Name": "Pineapple Teriyaki Chicken Mix",
+    "Sub": "Marinades and Sauces"
+  },
+  {
+    "Cat": "Bathroom",
+    "Name": "Handheld Shower Head",
+    "Sub": "Shower Accessories"
+  },
+  { "Cat": "Outdoor", "Name": "Telescope", "Sub": "Outdoor Accessories" },
+  {
+    "Cat": "Food - Produce",
+    "Name": "Sweet Cherry Tomatoes",
+    "Sub": "Fruits & Vegetables"
+  },
+  {
+    "Cat": "Clothing - Tops",
+    "Name": "Chunky Knit Sweater",
+    "Sub": "Sweaters"
+  },
+  {
+    "Cat": "Food - Sides",
+    "Name": "Garlic Parmesan Roasted Potatoes",
+    "Sub": "Vegetable Sides"
+  },
+  {
+    "Cat": "Food - Health/Protein",
+    "Name": "Vanilla Protein Powder",
+    "Sub": "Protein Supplements"
+  },
+  {
+    "Cat": "Food - Prepared Foods",
+    "Name": "Stuffed Grape Leaves",
+    "Sub": "International Cuisine"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Electric Fondue Pot",
+    "Sub": "Small Appliances"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Sweet Potato Tots",
+    "Sub": "Frozen Snacks"
+  },
+  { "Cat": "Wearable Tech", "Name": "Smartwatch", "Sub": "Fitness Monitors" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Pasta Maker Machine",
+    "Sub": "Cooking Appliances"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Honey Roasted Peanuts",
+    "Sub": "Nuts and Seeds"
+  },
+  {
+    "Cat": "Audio",
+    "Name": "Noise Reduction Headphones",
+    "Sub": "Headphones & Earbuds"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Snap-On Tupperware Set",
+    "Sub": "Food Storage Solutions"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Portable Projector",
+    "Sub": "Home Entertainment Equipment"
+  },
+  {
+    "Cat": "Car",
+    "Name": "Portable Jump Starter",
+    "Sub": "Car Accessories"
+  },
+  { "Cat": "Food - Snacks", "Name": "Pretzel Bites", "Sub": "Savory Snacks" },
+  { "Cat": "Food - Beverages", "Name": "Fruit Medley Juice", "Sub": "Juice" },
+  {
+    "Cat": "Food - Meal Kits",
+    "Name": "Beef Stroganoff Mix",
+    "Sub": "Pasta & Rice Mixes"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Organic Cereal Bars",
+    "Sub": "Healthy Snacks"
+  },
+  {
+    "Cat": "Clothing - Activewear",
+    "Name": "Athletic Compression Tights",
+    "Sub": "Sports Apparel"
+  },
+  {
+    "Cat": "Art Supplies",
+    "Name": "Art Supplies Organizer",
+    "Sub": "Storage & Organization"
+  },
+  { "Cat": "Food - Pasta", "Name": "Ramen Noodles", "Sub": "Noodles" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Eco-Friendly Beeswax Wraps",
+    "Sub": "Food Storage Solutions"
+  },
+  {
+    "Cat": "Fitness",
+    "Name": "Jump Rope with Counter",
+    "Sub": "Cardio Equipment"
+  },
+  {
+    "Cat": "Clothing - Activewear",
+    "Name": "Sporty Leggings",
+    "Sub": "Fitness Apparel"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Portable Bluetooth Keyboard",
+    "Sub": "Computer Accessories"
+  },
+  {
+    "Cat": "Toys",
+    "Name": "Kids' Craft Supplies Set",
+    "Sub": "Creative Arts & Crafts"
+  },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Green Smoothie Mix",
+    "Sub": "Health Drinks"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Silicone Cooking Utensils Set",
+    "Sub": "Cooking Tools & Utensils"
+  },
+  {
+    "Cat": "Fitness",
+    "Name": "Fitness Tracker with Heart Rate Monitor",
+    "Sub": "Wearable Technology"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Decorative LED Neon Sign",
+    "Sub": "Lighting & Lamps"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Kids' Educational Tablet",
+    "Sub": "Tablets for Kids"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Fishing Tackle Box",
+    "Sub": "Fishing Equipment"
+  },
+  {
+    "Cat": "Accessories",
+    "Name": "Portable Phone Charger",
+    "Sub": "Mobile Accessories"
+  },
+  { "Cat": "Kitchen", "Name": "Non-Stick Grill Pan", "Sub": "Cookware" },
+  {
+    "Cat": "Clothing - Shirts",
+    "Name": "Classic Slim Fit Shirt",
+    "Sub": "Dress Shirts"
+  },
+  {
+    "Cat": "Food - Confectionery",
+    "Name": "Ginger Snaps",
+    "Sub": "Cookies & Biscuits"
+  },
+  {
+    "Cat": "Car",
+    "Name": "Car Phone Mount",
+    "Sub": "Phone Accessories"
+  },
+  {
+    "Cat": "Food - Cheese",
+    "Name": "Herbed Goat Cheese",
+    "Sub": "Specialty Cheeses"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Bamboo Utensil Holder",
+    "Sub": "Kitchen Storage & Organization"
+  },
+  {
+    "Cat": "Pets",
+    "Name": "Pet Food Storage Container",
+    "Sub": "Pet Accessories"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Bamboo Memory Foam Pillow",
+    "Sub": "Bedding & Linens"
+  },
+  { "Cat": "Food - Oils", "Name": "Herb-Infused Olive Oil", "Sub": "Oils" },
+  { "Cat": "Food - Dairy", "Name": "Cream Cheese", "Sub": "Dairy Spreads" },
+  { "Cat": "Food - Beverages", "Name": "Fruit Medley Juice", "Sub": "Juice" },
+  {
+    "Cat": "Health",
+    "Name": "Wrist Support Brace",
+    "Sub": "Injury Prevention & Recovery"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Spinach Artichoke Dip",
+    "Sub": "Dips and Spreads"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Heat-Resistant Silicone Mat",
+    "Sub": "Baking Accessories"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Portable Bluetooth Keyboard",
+    "Sub": "Computer Accessories"
+  },
+  {
+    "Cat": "Clothing - Activewear",
+    "Name": "Mesh Sports Leggings",
+    "Sub": "Leggings"
+  },
+  {
+    "Cat": "Food - Vegetable",
+    "Name": "Chilli Lime Corn on the Cob",
+    "Sub": "Vegetable Snacks"
+  },
+  {
+    "Cat": "Food - Meats",
+    "Name": "Classic Cheeseburger Mix",
+    "Sub": "Ground Meats"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Freestanding Wine Rack",
+    "Sub": "Home Organization"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Foldable Picnic Table",
+    "Sub": "Outdoor Furniture"
+  },
+  {
+    "Cat": "Food - Baking & Cooking",
+    "Name": "Almond Flour Tortillas",
+    "Sub": "Baking Ingredients"
+  },
+  {
+    "Cat": "Food - Dressings",
+    "Name": "Balsamic Vinaigrette",
+    "Sub": "Dressings"
+  },
+  {
+    "Cat": "Health",
+    "Name": "Rechargeable Electric Toothbrush",
+    "Sub": "Oral Care & Hygiene"
+  },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Chocolate Chip Pancake Mix",
+    "Sub": "Baking Mixes"
+  },
+  {
+    "Cat": "Food - Dressings",
+    "Name": "Balsamic Vinaigrette",
+    "Sub": "Dressings"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Savory Oats",
+    "Sub": "Savory Breakfast Options"
+  },
+  {
+    "Cat": "Clothing - Shoes",
+    "Name": "Comfort Flats",
+    "Sub": "Casual Footwear"
+  },
+  {
+    "Cat": "Beauty",
+    "Name": "Jennifer's Amazing Lip Balm Kit",
+    "Sub": "Lip Care"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Portable Projector",
+    "Sub": "Home Entertainment Equipment"
+  },
+  {
+    "Cat": "Toys",
+    "Name": "Sustainable Wooden Toys",
+    "Sub": "Eco-Friendly Toys"
+  },
+  { "Cat": "Food - Bakery", "Name": "Sourdough Bread", "Sub": "Breads" },
+  {
+    "Cat": "Food - Seafood",
+    "Name": "Chili Lime Shrimp",
+    "Sub": "Marinated Seafood"
+  },
+  {
+    "Cat": "Food - Spices",
+    "Name": "Vegan Taco Seasoning",
+    "Sub": "Plant-Based Seasonings"
+  },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Green Smoothie Mix",
+    "Sub": "Health Drinks"
+  },
+  {
+    "Cat": "Food - Confectionery",
+    "Name": "Ginger Snaps",
+    "Sub": "Cookies & Biscuits"
+  },
+  {
+    "Cat": "Food - Baking",
+    "Name": "Organic Almond Flour",
+    "Sub": "Flours & Meals"
+  },
+  {
+    "Cat": "Food - Grains",
+    "Name": "Herbed Couscous",
+    "Sub": "Seasoned Grains"
+  },
+  {
+    "Cat": "Clothing - Outerwear",
+    "Name": "Puffer Winter Coat",
+    "Sub": "Coats"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Vegan Mayonnaise",
+    "Sub": "Plant-Based Condiments"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Honey Mustard Pretzel Bites",
+    "Sub": "Savory Snacks"
+  },
+  { "Cat": "Toys", "Name": "Magnetic Chess Set", "Sub": "Board Games" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Electric Meat Grinder",
+    "Sub": "Small Appliances"
+  },
+  { "Cat": "Food - Oils", "Name": "Herb-Infused Olive Oil", "Sub": "Oils" },
+  { "Cat": "Beauty", "Name": "Skincare Set", "Sub": "Skincare" },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Roasted Garlic Mashed Potatoes",
+    "Sub": "Frozen Vegetables"
+  },
+  { "Cat": "Clothing", "Name": "Winter Insulated Jacket", "Sub": "Outerwear" },
+  {
+    "Cat": "Food - Spices",
+    "Name": "Garlic and Herb Rub",
+    "Sub": "Herb Blends"
+  },
+  { "Cat": "Fitness", "Name": "Non-Slip Yoga Socks", "Sub": "Yoga Equipment" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Honey Mustard Dip",
+    "Sub": "Dips & Spreads"
+  },
+  { "Cat": "Food - Beverages", "Name": "Apple Juice", "Sub": "Juice" },
+  { "Cat": "Food - Meat", "Name": "Ground Turkey", "Sub": "Poultry" },
+  { "Cat": "Food - Bakery", "Name": "Puff Pastry", "Sub": "Pastry Products" },
+  {
+    "Cat": "Garden",
+    "Name": "Plant Watering Spikes",
+    "Sub": "Garden Supplies"
+  },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Herbal Tea Variety Pack",
+    "Sub": "Herbal Tea"
+  },
+  {
+    "Cat": "Smart Home",
+    "Name": "Smart Wi-Fi Light Bulbs",
+    "Sub": "Smart Lighting"
+  },
+  {
+    "Cat": "Home Appliances",
+    "Name": "Home Cleaning Robot",
+    "Sub": "Robotic Cleaners"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Bock Beer Mustard",
+    "Sub": "Mustards"
+  },
+  { "Cat": "Kitchen", "Name": "Ice Cream Maker", "Sub": "Small Appliances" },
+  {
+    "Cat": "Food - Cereal",
+    "Name": "Chocolate Hazelnut Granola",
+    "Sub": "Granola"
+  },
+  { "Cat": "Tools", "Name": "Electric Screwdriver", "Sub": "Power Tools" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Zesty Cilantro Lime Dressing",
+    "Sub": "Dressing"
+  },
+  {
+    "Cat": "Clothing - Outerwear",
+    "Name": "Cable Knit Cardigan",
+    "Sub": "Knitwear"
+  },
+  {
+    "Cat": "Fitness",
+    "Name": "Adjustable Dumbbells",
+    "Sub": "Strength Training Equipment"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Tomato Paste",
+    "Sub": "Sauces & Condiments"
+  },
+  {
+    "Cat": "Clothing - Accessories",
+    "Name": "Ethical Wool Scarf",
+    "Sub": "Scarves"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Collapsible Folding Chair",
+    "Sub": "Camping Equipment"
+  },
+  {
+    "Cat": "Clothing - Accessories",
+    "Name": "Classic Baseball Cap",
+    "Sub": "Headwear"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Wireless HDMI Receiver",
+    "Sub": "Wireless Video Transmission"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Bamboo Cutting Board",
+    "Sub": "Cutting Boards & Utensils"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Window Bird Feeder with Suction Cups",
+    "Sub": "Bird Feeding Accessories"
+  },
+  {
+    "Cat": "Food - Frozen Vegetables",
+    "Name": "Oven-Baked Parmesan Zucchini",
+    "Sub": "Frozen Veggie Snacks"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Wall Art",
+    "Sub": "Decorative Wall Art & Accessories"
+  },
+  {
+    "Cat": "Clothing - Dresses",
+    "Name": "Ribbed Knit Dress",
+    "Sub": "Casual Dresses"
+  },
+  {
+    "Cat": "Food - Grains",
+    "Name": "Cilantro Lime Rice",
+    "Sub": "Flavored Rice Dishes"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Pasta Maker Machine",
+    "Sub": "Cooking Appliances"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Smart Air Purifier",
+    "Sub": "Air Quality & Purification"
+  },
+  { "Cat": "Clothing - Bottoms", "Name": "Blue Denim Jeans", "Sub": "Bottoms" },
+  {
+    "Cat": "Outdoor",
+    "Name": "Portable Grill Cover",
+    "Sub": "Grilling Accessories"
+  },
+  {
+    "Cat": "Food - Prepared Meals",
+    "Name": "Fettuccine Alfredo Dinner Kit",
+    "Sub": "Meal Kits - Pasta"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Portable Projector",
+    "Sub": "Home Entertainment Equipment"
+  },
+  { "Cat": "Outdoor", "Name": "Backpacking Tent", "Sub": "Camping Equipment" },
+  { "Cat": "Music", "Name": "Guitar Tuner", "Sub": "Accessories" },
+  {
+    "Cat": "Fitness",
+    "Name": "Foam Roller for Muscle Recovery",
+    "Sub": "Recovery Tools"
+  },
+  { "Cat": "Food - Condiments", "Name": "Tahini", "Sub": "Nut Butters" },
+  {
+    "Cat": "Food - Health Foods",
+    "Name": "Organic Chia Seeds",
+    "Sub": "Superfoods"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Dried Fruit Medley",
+    "Sub": "Sweet Snacks"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Cranberry Orange Oatmeal",
+    "Sub": "Instant Breakfast"
+  },
+  {
+    "Cat": "Food - Dairy Alternatives",
+    "Name": "Coconut Cashew Yogurt",
+    "Sub": "Plant-Based Yogurt"
+  },
+  { "Cat": "Kitchen", "Name": "Ceramic Knife Set", "Sub": "Cutlery" },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Savory Oats",
+    "Sub": "Savory Breakfast Options"
+  },
+  {
+    "Cat": "Art Supplies",
+    "Name": "Paint By Numbers Kit",
+    "Sub": "Painting Kits"
+  },
+  {
+    "Cat": "Food - Dairy Alternatives",
+    "Name": "Vegan Cheese",
+    "Sub": "Plant-Based Cheese"
+  },
+  {
+    "Cat": "Safety",
+    "Name": "Noise Cancelling Ear Muffs",
+    "Sub": "Hearing Protection"
+  },
+  { "Cat": "Pets", "Name": "Pet Grooming Glove", "Sub": "Grooming Supplies" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Cooking Utensil Set",
+    "Sub": "Cooking Tools & Utensils"
+  },
+  {
+    "Cat": "Health",
+    "Name": "Electric Razor",
+    "Sub": "Personal Care & Grooming"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Compact Electric Kettle",
+    "Sub": "Small Appliances"
+  },
+  { "Cat": "Smart Home", "Name": "Smart Wi-Fi Camera", "Sub": "Home Security" },
+  { "Cat": "Food - Pasta", "Name": "Chickpea Pasta", "Sub": "Specialty Pasta" },
+  {
+    "Cat": "Home",
+    "Name": "Over-the-Door Shoe Organizer",
+    "Sub": "Home Organization"
+  },
+  { "Cat": "Food - Grains", "Name": "Quinoa", "Sub": "Whole Grains" },
+  {
+    "Cat": "Food - Prepared Foods",
+    "Name": "Mediterranean Chickpea Bowl",
+    "Sub": "Plant-Based Meals"
+  },
+  { "Cat": "Kitchen", "Name": "Oven Mitts", "Sub": "Cookware Accessories" },
+  {
+    "Cat": "Fitness",
+    "Name": "Fitness Tracker Band",
+    "Sub": "Wearable Technology"
+  },
+  { "Cat": "Fitness", "Name": "Yoga Mat Carrier", "Sub": "Yoga Equipment" },
+  {
+    "Cat": "Food - Meat",
+    "Name": "Lemon Dill Chicken Skewers",
+    "Sub": "Marinated Poultry"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Portable Solar Path Lights",
+    "Sub": "Garden Supplies"
+  },
+  {
+    "Cat": "Food - Baking",
+    "Name": "Organic Brown Sugar",
+    "Sub": "Sweeteners"
+  },
+  {
+    "Cat": "Smart Home",
+    "Name": "Smart Wi-Fi Light Bulbs",
+    "Sub": "Smart Lighting"
+  },
+  {
+    "Cat": "Food - Baked Goods",
+    "Name": "Oatmeal Raisin Cookies",
+    "Sub": "Cookies"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Vegan Tacos",
+    "Sub": "Frozen Vegan Meals"
+  },
+  {
+    "Cat": "Clothing - Pants",
+    "Name": "Faux Leather Leggings",
+    "Sub": "Leggings"
+  },
+  { "Cat": "Storage", "Name": "Portable SSD", "Sub": "Storage Devices" },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Nutty Trail Mix",
+    "Sub": "Healthy Snacks"
+  },
+  {
+    "Cat": "Accessories",
+    "Name": "Phone Screen Protector",
+    "Sub": "Mobile Accessories"
+  },
+  { "Cat": "Kitchen", "Name": "Sous Vide Cooker", "Sub": "Cooking Appliances" },
+  { "Cat": "Food - Bakery", "Name": "Artisan Bread", "Sub": "Breads" },
+  { "Cat": "Food - Bakery", "Name": "Artisan Flatbreads", "Sub": "Breads" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Measuring Cups Set",
+    "Sub": "Baking Accessories"
+  },
+  {
+    "Cat": "Garden",
+    "Name": "Heavy Duty Gardening Tool Set",
+    "Sub": "Garden Tools"
+  },
+  {
+    "Cat": "Accessories",
+    "Name": "Handcrafted Wooden Jewelry Box",
+    "Sub": "Jewelry Storage"
+  },
+  {
+    "Cat": "Food - Frozen Meals",
+    "Name": "Honey Sesame Chicken Mix",
+    "Sub": "Frozen Asian Meals"
+  },
+  {
+    "Cat": "Food - Spices",
+    "Name": "Vegan Taco Seasoning",
+    "Sub": "Plant-Based Seasonings"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Digital Alarm Clock",
+    "Sub": "Smart Home & Security"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Canned Black Beans",
+    "Sub": "Canned Legumes"
+  },
+  { "Cat": "Clothing", "Name": "Rain Jacket", "Sub": "Outerwear" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Electric Pressure Cooker",
+    "Sub": "Small Appliances"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Chili Beans (canned)",
+    "Sub": "Canned Vegetables"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Organic Brown Rice Cakes",
+    "Sub": "Healthy Snacks"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Set of Decorative Storage Bins",
+    "Sub": "Home Organization"
+  },
+  { "Cat": "Outdoor", "Name": "Portable Campfire", "Sub": "Camping Equipment" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Reusable Food Storage Bags",
+    "Sub": "Food Storage Solutions"
+  },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Ginger Turmeric Tea",
+    "Sub": "Herbal Tea"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Fruit and Nut Energy Bites",
+    "Sub": "Healthy Snacks"
+  },
+  {
+    "Cat": "Food - Frozen Meals",
+    "Name": "Asian Stir-Fry Kit",
+    "Sub": "Frozen Asian Meals"
+  },
+  {
+    "Cat": "Office",
+    "Name": "Leather Notebook Cover",
+    "Sub": "Office Accessories"
+  },
+  { "Cat": "Toys", "Name": "Magnetic Chess Set", "Sub": "Board Games" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Himalayan Pink Salt",
+    "Sub": "Specialty Salts"
+  },
+  { "Cat": "Food - Snacks", "Name": "Rice Cakes", "Sub": "Healthy Snacks" },
+  { "Cat": "Home", "Name": "Compact Shoe Rack", "Sub": "Home Furnishings" },
+  {
+    "Cat": "Home",
+    "Name": "Biodegradable Trash Bags",
+    "Sub": "Eco-Friendly Home Products"
+  },
+  { "Cat": "Beauty", "Name": "Electric Nail File Kit", "Sub": "Nail Care" },
+  { "Cat": "Food - Beverages", "Name": "Apple Juice", "Sub": "Juice" },
+  {
+    "Cat": "Health",
+    "Name": "Self-Massaging Pillow",
+    "Sub": "Sleep & Relaxation"
+  },
+  { "Cat": "Home", "Name": "LED Desk Lamp", "Sub": "Lighting & Lamps" },
+  {
+    "Cat": "Electronics",
+    "Name": "Portable USB-C Monitor",
+    "Sub": "Computer Accessories"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "LED Flashlight with Rechargeable Batteries",
+    "Sub": "Camping Equipment"
+  },
+  {
+    "Cat": "Garden",
+    "Name": "Multi-Purpose Plant Care Tool",
+    "Sub": "Garden Tools"
+  },
+  { "Cat": "Food - Snacks", "Name": "Coconut Chips", "Sub": "Healthy Snacks" },
+  {
+    "Cat": "Accessories",
+    "Name": "Magnet Travel Fridge Magnets",
+    "Sub": "Travel Souvenirs"
+  },
+  {
+    "Cat": "Garden",
+    "Name": "Gardening Gloves with Claws",
+    "Sub": "Garden Tools"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Cauliflower Gnocchi",
+    "Sub": "Frozen Vegetarian Meals"
+  },
+  { "Cat": "Food - Baking", "Name": "Brown Sugar", "Sub": "Sweeteners" },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Vegetarian Chili",
+    "Sub": "Soups & Broths"
+  },
+  { "Cat": "Beauty", "Name": "Travel Makeup Organizer", "Sub": "Makeup" },
+  { "Cat": "Kitchen", "Name": "Heart-Shaped Baking Molds", "Sub": "Cookware" },
+  {
+    "Cat": "Outdoor",
+    "Name": "Stainless Steel BBQ Grill Set",
+    "Sub": "Grilling Accessories"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Wireless HDMI Receiver",
+    "Sub": "Wireless Video Transmission"
+  },
+  {
+    "Cat": "Home Appliances",
+    "Name": "Portable Air Conditioner",
+    "Sub": "Cooling Appliances"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Smashed Avocado with Lime",
+    "Sub": "Guacamole"
+  },
+  { "Cat": "Food - Condiments", "Name": "Marinara Sauce", "Sub": "Sauces" },
+  {
+    "Cat": "Clothing - Accessories",
+    "Name": "Ethical Wool Scarf",
+    "Sub": "Scarves"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Frozen Berry Blend",
+    "Sub": "Frozen Fruits"
+  },
+  {
+    "Cat": "Toys",
+    "Name": "Educational STEM Kit",
+    "Sub": "STEM Learning Toys"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Portable Hammock with Stand",
+    "Sub": "Camping Equipment"
+  },
+  {
+    "Cat": "Food - Prepared Foods",
+    "Name": "BBQ Jackfruit",
+    "Sub": "Plant-Based Meals"
+  },
+  {
+    "Cat": "Toys",
+    "Name": "Children's Educational Puzzle",
+    "Sub": "Educational Toys"
+  },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Vegan chocolate chip cookies",
+    "Sub": "Vegan Baked Goods"
+  },
+  { "Cat": "Outdoor", "Name": "Camping Chair", "Sub": "Outdoor Furniture" },
+  {
+    "Cat": "Fitness",
+    "Name": "Fitness Activity Journal",
+    "Sub": "Health & Wellness Tools"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Digital Wireless Meat Thermometer",
+    "Sub": "Cooking Tools & Utensils"
+  },
+  { "Cat": "Food - Soups", "Name": "Miso Soup Mix", "Sub": "Instant Soups" },
+  {
+    "Cat": "Food - Frozen",
+    "Name": "Cheddar & Bacon Potato Skins",
+    "Sub": "Frozen Appetizers"
+  },
+  {
+    "Cat": "Food - Sauces",
+    "Name": "Sesame Garlic Stir-Fry Sauce",
+    "Sub": "Asian Sauces"
+  },
+  {
+    "Cat": "Food - Baking",
+    "Name": "Sooji (Semolina)",
+    "Sub": "Baking Ingredients"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Insulated Lunch Box",
+    "Sub": "Food Storage Solutions"
+  },
+  {
+    "Cat": "Safety",
+    "Name": "Safety Goggles",
+    "Sub": "Personal Protective Equipment (PPE) & Disaster Preparedness"
+  },
+  {
+    "Cat": "Travel",
+    "Name": "Lightweight Travel Backpack",
+    "Sub": "Travel Accessories"
+  },
+  {
+    "Cat": "Home",
+    "Name": "LED Under Cabinet Lighting",
+    "Sub": "Lighting & Lamps"
+  },
+  {
+    "Cat": "Food - Cereal",
+    "Name": "Chocolate Hazelnut Granola",
+    "Sub": "Granola"
+  },
+  { "Cat": "Garden", "Name": "Herb Garden Planter Box", "Sub": "Planters" },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Chili Lime Corn Chips",
+    "Sub": "Savory Snacks"
+  },
+  { "Cat": "Food - Condiments", "Name": "BBQ Sauce", "Sub": "Sauces" },
+  { "Cat": "Food - Dairy", "Name": "Greek Feta Cheese", "Sub": "Cheese" },
+  {
+    "Cat": "Home",
+    "Name": "Digital Thermostat",
+    "Sub": "Smart Home & Security"
+  },
+  { "Cat": "Food - Condiments", "Name": "Sliced Olives", "Sub": "Olives" },
+  {
+    "Cat": "Food - Seafood",
+    "Name": "Lemon Garlic Shrimp",
+    "Sub": "Prepared Seafood"
+  },
+  {
+    "Cat": "Clothing - Footwear",
+    "Name": "Sporty Slide Sandals",
+    "Sub": "Casual Footwear"
+  },
+  {
+    "Cat": "Food - Dried Fruits",
+    "Name": "Californian Raisins",
+    "Sub": "Dried Fruits"
+  },
+  { "Cat": "Electronics", "Name": "Drone", "Sub": "Drones & Accessories" },
+  {
+    "Cat": "Gaming",
+    "Name": "Ergonomic Gaming Chair",
+    "Sub": "Gaming Accessories"
+  },
+  { "Cat": "Food - Bakery", "Name": "Banana Nut Muffins", "Sub": "Muffins" },
+  {
+    "Cat": "Health",
+    "Name": "Breathable Face Mask Set",
+    "Sub": "Safety & Protection"
+  },
+  {
+    "Cat": "Accessories",
+    "Name": "Wireless Charging Pad",
+    "Sub": "Mobile Accessories"
+  },
+  {
+    "Cat": "Accessories",
+    "Name": "Personalized Keychain",
+    "Sub": "Custom Accessories"
+  },
+  {
+    "Cat": "Clothing - Bottoms",
+    "Name": "Cotton Sweatpants",
+    "Sub": "Bottoms"
+  },
+  { "Cat": "Outdoor", "Name": "Portable Campfire", "Sub": "Camping Equipment" },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Nut Butter Cups",
+    "Sub": "Nut-Based Snacks"
+  },
+  {
+    "Cat": "Food - Seafood",
+    "Name": "Chili Lime Shrimp",
+    "Sub": "Marinated Seafood"
+  },
+  { "Cat": "Pets", "Name": "Dog Training Whistle", "Sub": "Training Supplies" },
+  { "Cat": "Home", "Name": "Over-the-Door Hooks", "Sub": "Home Organization" },
+  { "Cat": "Food - Meat", "Name": "Beef Stew Meat", "Sub": "Red Meat" },
+  { "Cat": "Food - Pantry", "Name": "Nutritional Yeast", "Sub": "Condiments" },
+  { "Cat": "Clothing - Bottoms", "Name": "Linen Trousers", "Sub": "Trousers" },
+  {
+    "Cat": "Car",
+    "Name": "Car Windshield Sun Shade",
+    "Sub": "Car Accessories"
+  },
+  { "Cat": "Pets", "Name": "Dog Walking Waist Pack", "Sub": "Dog Accessories" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Sweet BBQ Dipping Sauce",
+    "Sub": "Marinades and Sauces"
+  },
+  {
+    "Cat": "Food - Meat",
+    "Name": "Grass Fed Beef Patties",
+    "Sub": "Grass-Fed Meat Products"
+  },
+  {
+    "Cat": "Food - Salads",
+    "Name": "Classic Caesar Salad Kit",
+    "Sub": "Salad Kits"
+  },
+  {
+    "Cat": "Food - Frozen Food",
+    "Name": "Mixed Berry Smoothie Pack",
+    "Sub": "Frozen Fruits"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Cranberry Almond Granola",
+    "Sub": "Granola/Cereal"
+  },
+  {
+    "Cat": "Art Supplies",
+    "Name": "Paint By Numbers Kit",
+    "Sub": "Painting Kits"
+  },
+  {
+    "Cat": "Clothing - Tops",
+    "Name": "Bamboo Cotton Tank Top",
+    "Sub": "Sustainable Fashion"
+  },
+  { "Cat": "Clothing - Footwear", "Name": "Ankle Boots", "Sub": "Boots" },
+  { "Cat": "Food - Nuts", "Name": "Sunflower Seeds", "Sub": "Seeds & Nuts" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Stainless Steel Grater",
+    "Sub": "Kitchen Gadgets"
+  },
+  {
+    "Cat": "Food - Grains",
+    "Name": "Lemon Herb Quinoa",
+    "Sub": "Flavored Quinoa"
+  },
+  { "Cat": "Kitchen", "Name": "Oven Mitts", "Sub": "Cookware Accessories" },
+  { "Cat": "Food - Produce", "Name": "Organic Apples", "Sub": "Fruits" },
+  { "Cat": "Food - Bakery", "Name": "Hot Dog Buns", "Sub": "Breads" },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Buttermilk Pancakes",
+    "Sub": "Pancakes & Waffles"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Portable Hammock Swing",
+    "Sub": "Outdoor Furniture"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Frozen Cauliflower Rice",
+    "Sub": "Frozen Vegetables"
+  },
+  { "Cat": "Beauty", "Name": "Luxury Rolling Makeup Case", "Sub": "Makeup" },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Green Smoothie Mix",
+    "Sub": "Health Drinks"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Hummus Trio Pack",
+    "Sub": "Dips and Spreads"
+  },
+  { "Cat": "Clothing", "Name": "Luxury Bathrobe", "Sub": "Loungewear" },
+  {
+    "Cat": "Food - Prepared Foods",
+    "Name": "Chicken Salad Kit",
+    "Sub": "Salads"
+  },
+  {
+    "Cat": "Art Supplies",
+    "Name": "Paint By Numbers Kit",
+    "Sub": "Painting Kits"
+  },
+  {
+    "Cat": "Health",
+    "Name": "Essential Oils Diffuser Necklace",
+    "Sub": "Aromatherapy & Wellness"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Spinach Artichoke Dip",
+    "Sub": "Dips and Spreads"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Coconut Milk",
+    "Sub": "Coconut Products"
+  },
+  {
+    "Cat": "Food - Baked Goods",
+    "Name": "Raspberry Tart",
+    "Sub": "Pies and Tarts"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Mini Projector for Smartphones",
+    "Sub": "Portable Projectors"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Tropical Fruit Bowl",
+    "Sub": "Dried Fruits"
+  },
+  { "Cat": "Outdoor", "Name": "Kettle BBQ Grill", "Sub": "Grills and Smokers" },
+  {
+    "Cat": "Food - Soups",
+    "Name": "Classic Minestrone Soup",
+    "Sub": "Canned Soups"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Indian Curry Sauce",
+    "Sub": "Dressing"
+  },
+  { "Cat": "Sports", "Name": "Ski Goggles", "Sub": "Snow Sports" },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Almond Joy Protein Bars",
+    "Sub": "Protein Snacks"
+  },
+  {
+    "Cat": "Photography",
+    "Name": "Underwater Camera",
+    "Sub": "Marine Photography Equipment"
+  },
+  { "Cat": "Food - Snacks", "Name": "Taro Chips", "Sub": "Savory Snacks" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Mediterranean Olives",
+    "Sub": "Olive Products"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Magnetic Spice Containers",
+    "Sub": "Kitchen Storage & Organization"
+  },
+  {
+    "Cat": "Garden",
+    "Name": "Herbal Garden Starter Kit",
+    "Sub": "Gardening Kits"
+  },
+  {
+    "Cat": "Food - Meat",
+    "Name": "Italian Sausage and Peppers",
+    "Sub": "Prepared Meals"
+  },
+  { "Cat": "Toys", "Name": "Puzzle Game Set", "Sub": "Board Games" },
+  {
+    "Cat": "Toys",
+    "Name": "Foam Building Blocks for Kids",
+    "Sub": "Building Toys"
+  },
+  {
+    "Cat": "Food - Sauces",
+    "Name": "Italian Marinara Sauce",
+    "Sub": "Pasta Sauces"
+  },
+  {
+    "Cat": "Pets",
+    "Name": "Pet Waterer with Filtration",
+    "Sub": "Pet Supplies"
+  },
+  { "Cat": "Clothing", "Name": "Luxury Bath Robe", "Sub": "Loungewear" },
+  { "Cat": "Kitchen", "Name": "Electric Knife", "Sub": "Small Appliances" },
+  { "Cat": "Outdoor", "Name": "Backpacking Tent", "Sub": "Camping Equipment" },
+  {
+    "Cat": "Food - Meat",
+    "Name": "Honey mustard chicken tenders",
+    "Sub": "Prepared Poultry"
+  },
+  {
+    "Cat": "Clothing - Tops",
+    "Name": "Relaxed Fit Henley Shirt",
+    "Sub": "Shirts"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Honey Mustard Dip",
+    "Sub": "Dips & Spreads"
+  },
+  { "Cat": "Beauty", "Name": "Hair Dryer", "Sub": "Hair Care Tools" },
+  { "Cat": "Home", "Name": "Luminous Night Light", "Sub": "Lighting & Lamps" },
+  {
+    "Cat": "Home",
+    "Name": "Electric Wax Warmer",
+    "Sub": "Home Fragrance & Accessories"
+  },
+  { "Cat": "Food - Pasta", "Name": "Ramen Noodles", "Sub": "Noodles" },
+  {
+    "Cat": "Car",
+    "Name": "Car Trash Can",
+    "Sub": "Car Accessories"
+  },
+  { "Cat": "Kitchen", "Name": "Hand Crank Blender", "Sub": "Small Appliances" },
+  {
+    "Cat": "Outdoor",
+    "Name": "Portable Grill Cover",
+    "Sub": "Grilling Accessories"
+  },
+  { "Cat": "Beauty", "Name": "Nail Polish Set", "Sub": "Nail Care" },
+  {
+    "Cat": "Food - Prepared Foods",
+    "Name": "Herbed Mushroom Risotto",
+    "Sub": "Frozen Meals"
+  },
+  { "Cat": "Health", "Name": "Ice Pack", "Sub": "Wellness & Relaxation" },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Matcha Green Tea Powder",
+    "Sub": "Tea"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Avocado Lime Dressing",
+    "Sub": "Dressing"
+  },
+  {
+    "Cat": "Food - Soups",
+    "Name": "Classic Minestrone Soup",
+    "Sub": "Canned Soups"
+  },
+  {
+    "Cat": "Food - Frozen Desserts",
+    "Name": "Coconut Milk Ice Cream",
+    "Sub": "Dairy-Free Desserts"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Canned Black Beans",
+    "Sub": "Canned Legumes"
+  },
+  { "Cat": "Art Supplies", "Name": "Crafting Kit", "Sub": "Craft Kits" },
+  {
+    "Cat": "Clothing - Bottoms",
+    "Name": "Comfortable Jogger Pants",
+    "Sub": "Bottoms"
+  },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Whole Grain Hamburger Buns",
+    "Sub": "Breads"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Electric Meat Grinder",
+    "Sub": "Small Appliances"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Foldable Electric Scooter",
+    "Sub": "Outdoor Accessories"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Roasted Garlic Butter",
+    "Sub": "Flavored Butters"
+  },
+  {
+    "Cat": "Photography",
+    "Name": "Smartphone Gimbal Stabilizer",
+    "Sub": "Gimbals & Stabilizers"
+  },
+  {
+    "Cat": "Food - Produce",
+    "Name": "Vegetable Medley",
+    "Sub": "Mixed Vegetables"
+  },
+  {
+    "Cat": "Clothing - Tops",
+    "Name": "Classic White T-Shirt",
+    "Sub": "T-Shirts"
+  },
+  {
+    "Cat": "Food - Salads",
+    "Name": "Chipotle Black Bean Salad",
+    "Sub": "Bean Salads"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Snap-On Tupperware Set",
+    "Sub": "Food Storage Solutions"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Coconut Granola",
+    "Sub": "Healthy Snacks"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Multi-Function Meat Tenderizer",
+    "Sub": "Kitchen Gadgets"
+  },
+  { "Cat": "Outdoor", "Name": "Rolling Cooler", "Sub": "Outdoor Accessories" },
+  {
+    "Cat": "Food - Sides",
+    "Name": "Garlic Parmesan Roasted Potatoes",
+    "Sub": "Vegetable Sides"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Vanilla Almond Granola",
+    "Sub": "Granola/Cereal"
+  },
+  { "Cat": "Music", "Name": "Acoustic Guitar", "Sub": "Instruments" },
+  {
+    "Cat": "Beauty",
+    "Name": "Jennifer's Amazing Lip Balm Kit",
+    "Sub": "Lip Care"
+  },
+  {
+    "Cat": "Pets",
+    "Name": "Pet Hair Vacuum Cleaner Attachment",
+    "Sub": "Grooming Supplies"
+  },
+  { "Cat": "Kitchen", "Name": "Herbal Tea Infuser", "Sub": "Coffee Equipment" },
+  {
+    "Cat": "Clothing - Dresses",
+    "Name": "Ribbed Knit Dress",
+    "Sub": "Casual Dresses"
+  },
+  {
+    "Cat": "Baby",
+    "Name": "Multifunctional Baby Bottle Warmer",
+    "Sub": "Feeding Accessories"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Chicken Broth",
+    "Sub": "Soups & Broths"
+  },
+  {
+    "Cat": "Food - Fruits",
+    "Name": "Pineapple Chunks (canned)",
+    "Sub": "Canned Fruits"
+  },
+  { "Cat": "Food - Dips", "Name": "Sweet Pea Hummus", "Sub": "Vegetable Dips" },
+  {
+    "Cat": "Food - Frozen",
+    "Name": "Frozen Acai Purée",
+    "Sub": "Frozen Fruits"
+  },
+  {
+    "Cat": "Home Security",
+    "Name": "Digital Wireless Camera",
+    "Sub": "Cameras"
+  },
+  {
+    "Cat": "Food - Baking",
+    "Name": "Organic Coconut Flour",
+    "Sub": "Baking Ingredients"
+  },
+  {
+    "Cat": "Food - Salads",
+    "Name": "Quinoa and Kale Salad Kit",
+    "Sub": "Meal Kits"
+  },
+  { "Cat": "Food - Dairy", "Name": "Almond Milk", "Sub": "Dairy Alternatives" },
+  {
+    "Cat": "Outdoor",
+    "Name": "Outdoor Camping Lantern",
+    "Sub": "Camping Equipment"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Black Olives",
+    "Sub": "Canned Vegetables"
+  },
+  {
+    "Cat": "Baby",
+    "Name": "Multifunctional Baby Bottle Warmer",
+    "Sub": "Feeding Accessories"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Sweet and Spicy Barbecue Sauce",
+    "Sub": "BBQ Sauces"
+  },
+  { "Cat": "Home", "Name": "LED Table Lamp", "Sub": "Lighting & Lamps" },
+  {
+    "Cat": "Home",
+    "Name": "Wall-Mounted Bookshelf",
+    "Sub": "Home Furnishings"
+  },
+  { "Cat": "Home", "Name": "Bamboo Bathtub Caddy", "Sub": "Home Organization" },
+  { "Cat": "Food - Meat", "Name": "Beef Stew Meat", "Sub": "Red Meat" },
+  { "Cat": "Fitness", "Name": "Cork Yoga Mat", "Sub": "Yoga Equipment" },
+  {
+    "Cat": "Health",
+    "Name": "Home Delivery Food Journal",
+    "Sub": "Nutrition & Fitness"
+  },
+  {
+    "Cat": "Fitness",
+    "Name": "Fitness Resistance Bands Set",
+    "Sub": "Strength Training Equipment"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Bamboo Memory Foam Pillow",
+    "Sub": "Bedding & Linens"
+  },
+  { "Cat": "Home", "Name": "LED Desk Lamp", "Sub": "Lighting & Lamps" },
+  {
+    "Cat": "Photography",
+    "Name": "Smartphone Gimbal Stabilizer",
+    "Sub": "Gimbals & Stabilizers"
+  },
+  { "Cat": "Outdoor", "Name": "Portable Air Pump", "Sub": "Camping Equipment" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Smashed Avocado with Lime",
+    "Sub": "Guacamole"
+  },
+  { "Cat": "Fitness", "Name": "Fitness Mat", "Sub": "Fitness Accessories" },
+  {
+    "Cat": "Pets",
+    "Name": "LED Flashing Pet Collar",
+    "Sub": "Pet Accessories"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Organic Whole Grain Oats",
+    "Sub": "Breakfast Cereals"
+  },
+  { "Cat": "Art Supplies", "Name": "Crafting Kit", "Sub": "Craft Kits" },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Chili Lime Corn Chips",
+    "Sub": "Savory Snacks"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Oven-Baked Cheese Crisps",
+    "Sub": "Savory Snacks"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Portable Camping Stove",
+    "Sub": "Camping Equipment"
+  },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Pumpkin Spice Cookies",
+    "Sub": "Seasonal Items"
+  },
+  { "Cat": "Food - Grab-and-Go", "Name": "Sesame Noodles", "Sub": "Noodles" },
+  { "Cat": "Outdoor", "Name": "Camping Chair", "Sub": "Outdoor Furniture" },
+  {
+    "Cat": "Clothing - Dresses",
+    "Name": "Party Mini Dress",
+    "Sub": "Cocktail Dresses"
+  },
+  {
+    "Cat": "Food - Vegetables",
+    "Name": "Sweet Potatoes (organic)",
+    "Sub": "Vegetables"
+  },
+  {
+    "Cat": "Food - Cereal",
+    "Name": "Nutty Granola Clusters",
+    "Sub": "Granola"
+  },
+  {
+    "Cat": "Food - Baking",
+    "Name": "Sooji (Semolina)",
+    "Sub": "Baking Ingredients"
+  },
+  {
+    "Cat": "Clothing - Tops",
+    "Name": "Classic White T-Shirt",
+    "Sub": "T-Shirts"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Hiking Water Bottle with Filter",
+    "Sub": "Outdoor Accessories"
+  },
+  {
+    "Cat": "Food - Sauces",
+    "Name": "Pesto Pasta Sauce",
+    "Sub": "Pasta Sauces"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Sweet Chili Thai Sauce",
+    "Sub": "Sauces"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Kettle Chip Variety Pack",
+    "Sub": "Chips and Crisps"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Mediterranean Olives",
+    "Sub": "Olive Products"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Outdoor Adventure Kit",
+    "Sub": "Camping Equipment"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Thai Peanut Dressing",
+    "Sub": "Dressing"
+  },
+  { "Cat": "Fitness", "Name": "Blender Bottle", "Sub": "Hydration Gear" },
+  { "Cat": "Home", "Name": "Photo Album", "Sub": "Home Organization" },
+  {
+    "Cat": "Safety",
+    "Name": "Personal Security Alarm Keychain",
+    "Sub": "Self-Defense Tools"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Collapsible Storage Crates",
+    "Sub": "Home Organization"
+  },
+  { "Cat": "Food - Condiments", "Name": "Fire Roasted Salsa", "Sub": "Salsas" },
+  { "Cat": "Food - Condiments", "Name": "BBQ Sauce", "Sub": "Sauces" },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Organic Whole Grain Oats",
+    "Sub": "Breakfast Cereals"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Wall-Mounted Wine Rack",
+    "Sub": "Wine Storage Solutions"
+  },
+  { "Cat": "Smart Home", "Name": "Smart Doorbell", "Sub": "Home Security" },
+  {
+    "Cat": "Garden",
+    "Name": "Plant Pot Drip Trays",
+    "Sub": "Gardening Accessories"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Organic Whole Grain Oats",
+    "Sub": "Breakfast Cereals"
+  },
+  {
+    "Cat": "Food - Vegetable",
+    "Name": "Chilli Lime Corn on the Cob",
+    "Sub": "Vegetable Snacks"
+  },
+  {
+    "Cat": "Fitness",
+    "Name": "Fitbit Activity Tracker",
+    "Sub": "Wearable Technology"
+  },
+  { "Cat": "Kitchen", "Name": "Air Fryer", "Sub": "Small Appliances" },
+  { "Cat": "Food", "Name": "Home Brewing Starter Kit", "Sub": "Beverages" },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Vegetable Spring Rolls",
+    "Sub": "Frozen Appetizers"
+  },
+  {
+    "Cat": "Accessories",
+    "Name": "USB Wall Charger",
+    "Sub": "Power Accessories"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Digital Wireless Meat Thermometer",
+    "Sub": "Cooking Tools & Utensils"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Almond Flour Pizza Crust",
+    "Sub": "Frozen Pizza Crusts"
+  },
+  {
+    "Cat": "Accessories",
+    "Name": "Bluetooth Tracker",
+    "Sub": "Tech Accessories"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Veggie Chips Variety Pack",
+    "Sub": "Healthy Snacks"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Bamboo Charcoal Air Purifier Bags",
+    "Sub": "Air Quality & Purification"
+  },
+  {
+    "Cat": "Food - Baking",
+    "Name": "Cocoa Powder",
+    "Sub": "Baking Ingredients"
+  },
+  {
+    "Cat": "Food - Salads",
+    "Name": "Mediterranean Couscous Salad",
+    "Sub": "Grain Salads"
+  },
+  { "Cat": "Fitness", "Name": "Yoga Strap", "Sub": "Yoga Equipment" },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Spicy Garlic Edamame",
+    "Sub": "Savory Snacks"
+  },
+  {
+    "Cat": "Office",
+    "Name": "Adjustable Height Standing Desk Converter",
+    "Sub": "Furniture"
+  },
+  { "Cat": "Food - Sides", "Name": "Herb Seasoned Rice", "Sub": "Rice" },
+  { "Cat": "Pets", "Name": "Pet Grooming Kit", "Sub": "Grooming Supplies" },
+  {
+    "Cat": "Food - Sauces",
+    "Name": "Lemon Basil Pasta Sauce",
+    "Sub": "Pasta Sauces"
+  },
+  {
+    "Cat": "Clothing - Outerwear",
+    "Name": "Leather Biker Jacket",
+    "Sub": "Jackets"
+  },
+  {
+    "Cat": "Accessories",
+    "Name": "Travel Jewelry Case",
+    "Sub": "Jewelry Storage"
+  },
+  {
+    "Cat": "Food - Supplements",
+    "Name": "Elderberry Syrup",
+    "Sub": "Supplements"
+  },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Rustic Italian Breads",
+    "Sub": "Artisan Bread"
+  },
+  {
+    "Cat": "Travel",
+    "Name": "Lightweight Travel Backpack",
+    "Sub": "Travel Accessories"
+  },
+  {
+    "Cat": "Pets",
+    "Name": "Portable Pet Bathing Tool",
+    "Sub": "Grooming Supplies"
+  },
+  {
+    "Cat": "Food - Freezer",
+    "Name": "Buffalo Cauliflower Bites",
+    "Sub": "Frozen Snacks"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Banana Peanut Butter Smoothie",
+    "Sub": "Frozen Smoothies"
+  },
+  {
+    "Cat": "Home Improvement",
+    "Name": "Electric Pressure Washer",
+    "Sub": "Outdoor Cleaning"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Over-The-Door Shoe Organizer",
+    "Sub": "Home Organization"
+  },
+  {
+    "Cat": "Food - Prepared Meals",
+    "Name": "Teriyaki Tofu Stir-Fry",
+    "Sub": "Vegetarian Meals"
+  },
+  {
+    "Cat": "Clothing - Outerwear",
+    "Name": "Trendy Bomber Jacket",
+    "Sub": "Jackets"
+  },
+  {
+    "Cat": "Food - Marinades",
+    "Name": "Garlic Herb Marinade",
+    "Sub": "Marinades"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Eco-Friendly Disposable Plates",
+    "Sub": "Sustainable Tableware"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Granola Cereal",
+    "Sub": "Granola/Cereal"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Decorative Throw Blanket",
+    "Sub": "Bedding & Linens"
+  },
+  { "Cat": "Home", "Name": "LED Desk Light", "Sub": "Lighting & Lamps" },
+  { "Cat": "Food - Bakery", "Name": "Whole Wheat Bread", "Sub": "Breads" },
+  {
+    "Cat": "Food - Sauces",
+    "Name": "Vegetable Stir-Fry Sauce",
+    "Sub": "Asian Sauces"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Chili Beans (canned)",
+    "Sub": "Canned Vegetables"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Chipotle Sauce",
+    "Sub": "Spicy Sauces"
+  },
+  {
+    "Cat": "Food - Prepared Foods",
+    "Name": "BBQ Jackfruit",
+    "Sub": "Plant-Based Meals"
+  },
+  {
+    "Cat": "Food - Vegetables",
+    "Name": "Zucchini Noodle Pasta",
+    "Sub": "Pasta Alternatives"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Bamboo Charcoal Air Purifier Bags",
+    "Sub": "Air Quality & Purification"
+  },
+  { "Cat": "Kitchen", "Name": "Portable Ice Maker", "Sub": "Small Appliances" },
+  {
+    "Cat": "Food - Health Foods",
+    "Name": "Organic Chia Seeds",
+    "Sub": "Superfoods"
+  },
+  {
+    "Cat": "Food - Seafood",
+    "Name": "Spicy Tuna Salad",
+    "Sub": "Prepared Seafood"
+  },
+  { "Cat": "Clothing - Tops", "Name": "High-Low Hem Tee", "Sub": "T-Shirts" },
+  {
+    "Cat": "Clothing - Bottoms",
+    "Name": "Comfortable Jogger Pants",
+    "Sub": "Bottoms"
+  },
+  { "Cat": "Food - Meat", "Name": "Pork Chops", "Sub": "Pork" },
+  {
+    "Cat": "Food - Meat",
+    "Name": "Maple Breakfast Sausage",
+    "Sub": "Processed Meats"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Peanut Butter Pretzel Nuggets",
+    "Sub": "Candy"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Wireless Keyboard and Mouse Combo",
+    "Sub": "Computer Accessories"
+  },
+  {
+    "Cat": "Food - Sauces",
+    "Name": "Pesto Pasta Sauce",
+    "Sub": "Pasta Sauces"
+  },
+  { "Cat": "Food - Condiments", "Name": "Olive Oil", "Sub": "Cooking Oils" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Eco-Friendly Disposable Plates",
+    "Sub": "Sustainable Tableware"
+  },
+  {
+    "Cat": "Home",
+    "Name": "LED Under Cabinet Lighting",
+    "Sub": "Lighting & Lamps"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Spinach Pizza Rolls",
+    "Sub": "Frozen Snacks"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Vegetarian Stir Fry Sauce",
+    "Sub": "Marinades and Sauces"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Caramel Apple Chips",
+    "Sub": "Sweet Snacks"
+  },
+  { "Cat": "Garden", "Name": "Adjustable Garden Rake", "Sub": "Garden Tools" },
+  { "Cat": "Food - Beverages", "Name": "Honey Lemon Tea", "Sub": "Herbal Tea" },
+  { "Cat": "Home", "Name": "LED Desk Light", "Sub": "Lighting & Lamps" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Vegan Mayonnaise",
+    "Sub": "Plant-Based Condiments"
+  },
+  { "Cat": "Food - Grains", "Name": "Basmati Rice", "Sub": "Rice" },
+  {
+    "Cat": "Health",
+    "Name": "Deluxe First Aid Kit",
+    "Sub": "Emergency Preparedness & First Aid"
+  },
+  {
+    "Cat": "Health",
+    "Name": "Electric Heating Pad",
+    "Sub": "Pain Relief & Therapy"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Classic BBQ Sauce",
+    "Sub": "BBQ Sauces"
+  },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Cranberry Almond Cookies",
+    "Sub": "Cookies"
+  },
+  {
+    "Cat": "Food - Salads",
+    "Name": "Kale & Quinoa Salad Mix",
+    "Sub": "Ready-to-Eat Salads"
+  },
+  {
+    "Cat": "Fitness",
+    "Name": "High-Quality Yoga Block",
+    "Sub": "Yoga Equipment"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Fruit and Nut Bars",
+    "Sub": "Healthy Snacks"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Natural Soy Candles",
+    "Sub": "Home Fragrance & Accessories"
+  },
+  {
+    "Cat": "Food - Spices",
+    "Name": "Ground Cinnamon",
+    "Sub": "Herbs and Spices"
+  },
+  {
+    "Cat": "Accessories",
+    "Name": "Smartphone Hand Grip",
+    "Sub": "Mobile Accessories"
+  },
+  { "Cat": "Home", "Name": "Electric Blanket", "Sub": "Bedding & Linens" },
+  { "Cat": "Health", "Name": "Portable Massage Gun", "Sub": "Massage Therapy" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Blackberry Compote",
+    "Sub": "Fruit Spreads"
+  },
+  {
+    "Cat": "Food - Frozen Meals",
+    "Name": "Marinara Parmesan Baked Ziti",
+    "Sub": "Frozen Pasta Dishes"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Whole Grain Cereal",
+    "Sub": "Breakfast Cereals"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Apple Sauce",
+    "Sub": "Sauces & Condiments"
+  },
+  { "Cat": "Kitchen", "Name": "Ceramic Bakeware Set", "Sub": "Cookware" },
+  { "Cat": "Food - Condiments", "Name": "Salsa Verde", "Sub": "Sauces" },
+  {
+    "Cat": "Health",
+    "Name": "Portable Massage Table",
+    "Sub": "Massage Therapy"
+  },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Sparkling Blood Orange Soda",
+    "Sub": "Sparkling Beverages"
+  },
+  {
+    "Cat": "Food - Dips",
+    "Name": "Roasted Red Pepper Hummus",
+    "Sub": "Vegetable Dips"
+  },
+  {
+    "Cat": "Food - Sauces",
+    "Name": "Vegetable Stir-Fry Sauce",
+    "Sub": "Asian Sauces"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Measuring Cups Set",
+    "Sub": "Baking Accessories"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Cinnamon Spiced Almonds",
+    "Sub": "Nuts and Trail Mix"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Organic Tomato Ketchup",
+    "Sub": "Natural Sauces"
+  },
+  {
+    "Cat": "Safety",
+    "Name": "Personal Security Alarm Keychain",
+    "Sub": "Self-Defense Tools"
+  },
+  { "Cat": "Garden", "Name": "Garden Kneeler and Seat", "Sub": "Garden Tools" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Silicone Baking Cups",
+    "Sub": "Baking Accessories"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Electric Stir Fry Pan",
+    "Sub": "Cooking Appliances"
+  },
+  {
+    "Cat": "Photography",
+    "Name": "Underwater Camera",
+    "Sub": "Marine Photography Equipment"
+  },
+  {
+    "Cat": "Food - Sides",
+    "Name": "Garlic Breadsticks",
+    "Sub": "Bread & Rolls"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Coconut Curry Lentil Soup",
+    "Sub": "Soups & Broths"
+  },
+  {
+    "Cat": "Garden",
+    "Name": "Gardening Fairy Figurines",
+    "Sub": "Garden Decor"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Siphon Coffee Maker",
+    "Sub": "Coffee Equipment"
+  },
+  {
+    "Cat": "Furniture",
+    "Name": "Home Office Chair",
+    "Sub": "Office Furniture"
+  },
+  { "Cat": "Garden", "Name": "Garden Hose Reel", "Sub": "Garden Tools" },
+  { "Cat": "Accessories", "Name": "Classic Watch", "Sub": "Watches" },
+  {
+    "Cat": "Food - Spreads",
+    "Name": "Blueberry Chia Jam",
+    "Sub": "Fruit Spreads"
+  },
+  {
+    "Cat": "Books",
+    "Name": "Children's Educational Workbook",
+    "Sub": "Children's Educational Books"
+  },
+  {
+    "Cat": "Food - Meat Substitutes",
+    "Name": "Vegetarian Sausage Links",
+    "Sub": "Plant-Based Meats"
+  },
+  {
+    "Cat": "Food - Sides",
+    "Name": "Mashed Sweet Potatoes",
+    "Sub": "Vegetable Sides"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Dark Chocolate Raisins",
+    "Sub": "Chocolate Snacks"
+  },
+  {
+    "Cat": "Food - Baking & Cooking",
+    "Name": "Almond Flour Tortillas",
+    "Sub": "Baking Ingredients"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Portable Water Filter",
+    "Sub": "Camping Equipment"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Almond Joy Munch Bars",
+    "Sub": "Healthy Snacks"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Stainless Steel Water Pitcher",
+    "Sub": "Drinkware"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Sweet and Spicy Barbecue Sauce",
+    "Sub": "BBQ Sauces"
+  },
+  { "Cat": "Fitness", "Name": "Yoga Mat", "Sub": "Yoga Equipment" },
+  { "Cat": "Outdoor", "Name": "Tactical Backpack", "Sub": "Camping Equipment" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Insulated Lunch Bag",
+    "Sub": "Food Storage Solutions"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Baked Potato Chips",
+    "Sub": "Healthy Snacks"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Savory Oats",
+    "Sub": "Savory Breakfast Options"
+  },
+  { "Cat": "Garden", "Name": "Self-Watering Planters", "Sub": "Planters" },
+  { "Cat": "Food - Bakery", "Name": "Caraway Rye Bread", "Sub": "Breads" },
+  {
+    "Cat": "Electronics",
+    "Name": "Multi-Function Smartphone Holder",
+    "Sub": "Mobile Accessories"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Scented Candle Set",
+    "Sub": "Home Fragrance & Accessories"
+  },
+  {
+    "Cat": "Food - Baking",
+    "Name": "Chocolate Mint Cookies",
+    "Sub": "Cookies"
+  },
+  { "Cat": "Food - Frozen", "Name": "Coconut Rice", "Sub": "Frozen Meals" },
+  {
+    "Cat": "Clothing - Dresses",
+    "Name": "Party Mini Dress",
+    "Sub": "Cocktail Dresses"
+  },
+  { "Cat": "Home", "Name": "Over-the-Door Hooks", "Sub": "Home Organization" },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Almond Flour Pizza Crust",
+    "Sub": "Frozen Pizza Crusts"
+  },
+  { "Cat": "Outdoor", "Name": "Camping Lantern", "Sub": "Camping Equipment" },
+  {
+    "Cat": "Electronics",
+    "Name": "Video Camera",
+    "Sub": "Cameras & Photography"
+  },
+  { "Cat": "Fitness", "Name": "Foldable Yoga Mat", "Sub": "Yoga Equipment" },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Garden Vegetable Soup",
+    "Sub": "Soups & Broths"
+  },
+  { "Cat": "Kitchen", "Name": "Cocktail Shaker Set", "Sub": "Barware" },
+  {
+    "Cat": "Clothing - Accessories",
+    "Name": "Classic Baseball Cap",
+    "Sub": "Headwear"
+  },
+  {
+    "Cat": "Food - Prepared Foods",
+    "Name": "Spicy Vegetable Sushi Rolls",
+    "Sub": "Vegetarian Meals"
+  },
+  {
+    "Cat": "Food - Meat",
+    "Name": "Tandoori Chicken Skewers",
+    "Sub": "Marinated Meats"
+  },
+  { "Cat": "Food - Produce", "Name": "Spaghetti Squash", "Sub": "Vegetables" },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Apple Cinnamon Breakfast Muffins",
+    "Sub": "Muffins"
+  },
+  { "Cat": "Office", "Name": "Desk Lamp with USB Port", "Sub": "Lighting" },
+  {
+    "Cat": "Food - Sauces",
+    "Name": "Classic Pesto Sauce",
+    "Sub": "Italian Sauces"
+  },
+  { "Cat": "Toys", "Name": "Kids' Art Easel", "Sub": "Creative Toys" },
+  {
+    "Cat": "Food - Prepared Foods",
+    "Name": "Chicken Salad Kit",
+    "Sub": "Salads"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Avocado Lime Dressing",
+    "Sub": "Dressing"
+  },
+  {
+    "Cat": "Food - Sides",
+    "Name": "Instant Mashed Potatoes",
+    "Sub": "Potatoes"
+  },
+  { "Cat": "Food - Bakery", "Name": "Caraway Rye Bread", "Sub": "Breads" },
+  {
+    "Cat": "Office",
+    "Name": "Adjustable Laptop Stand",
+    "Sub": "Laptop Accessories"
+  },
+  { "Cat": "Pets", "Name": "Dog Frisbee Toy", "Sub": "Dog Toys" },
+  {
+    "Cat": "Food - Confectionery",
+    "Name": "Caramel Apple Taffy",
+    "Sub": "Chewy Candies"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Cotton Quilted Throw Blanket",
+    "Sub": "Bedding & Linens"
+  },
+  {
+    "Cat": "Fitness",
+    "Name": "Electrolyte Water Bottle",
+    "Sub": "Hydration Gear"
+  },
+  { "Cat": "Food - Meat", "Name": "Spicy Chicken Wings", "Sub": "Poultry" },
+  {
+    "Cat": "Fitness",
+    "Name": "Adjustable Skipping Rope",
+    "Sub": "Cardio Equipment"
+  },
+  { "Cat": "Food - Condiments", "Name": "Balsamic Vinegar", "Sub": "Vinegars" },
+  { "Cat": "Food - Bakery", "Name": "Jalapeño Cornbread", "Sub": "Breads" },
+  { "Cat": "Food - Condiments", "Name": "Tahini", "Sub": "Nut Butters" },
+  {
+    "Cat": "Food - Prepared Meals",
+    "Name": "Spicy Tuna Sushi Kit",
+    "Sub": "Kits - Sushi"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Nut Butter Cups",
+    "Sub": "Nut-Based Snacks"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Streaming Device",
+    "Sub": "Home Entertainment Equipment"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Cranberry Orange Oatmeal",
+    "Sub": "Instant Breakfast"
+  },
+  { "Cat": "Accessories", "Name": "Classic Watch", "Sub": "Watches" },
+  { "Cat": "Food - Bakery", "Name": "Artisan Flatbreads", "Sub": "Breads" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Indian Curry Sauce",
+    "Sub": "Dressing"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Measuring Cups Set",
+    "Sub": "Baking Accessories"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Smart LED Light Strip",
+    "Sub": "Smart Home & Security"
+  },
+  {
+    "Cat": "Audio",
+    "Name": "Noise Reduction Headphones",
+    "Sub": "Headphones & Earbuds"
+  },
+  {
+    "Cat": "Clothing - Outerwear",
+    "Name": "Lightweight Rain Jacket",
+    "Sub": "Outerwear"
+  },
+  {
+    "Cat": "Food - Dairy Alternatives",
+    "Name": "Coconut Cream Pie Yogurt",
+    "Sub": "Plant-Based Yogurt"
+  },
+  {
+    "Cat": "Garden",
+    "Name": "Heavy Duty Gardening Tool Set",
+    "Sub": "Garden Tools"
+  },
+  { "Cat": "Kitchen", "Name": "Non-Stick Grill Pan", "Sub": "Cookware" },
+  { "Cat": "Food - Frozen", "Name": "Coconut Rice", "Sub": "Frozen Meals" },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Classic Beef Chili",
+    "Sub": "Soups & Broths"
+  },
+  {
+    "Cat": "Toys",
+    "Name": "Sustainable Wooden Toys",
+    "Sub": "Eco-Friendly Toys"
+  },
+  {
+    "Cat": "Pets",
+    "Name": "Portable Pet Bathing Tool",
+    "Sub": "Grooming Supplies"
+  },
+  { "Cat": "Food - Bakery", "Name": "French Bread", "Sub": "Breads" },
+  {
+    "Cat": "Food - Prepared Foods",
+    "Name": "Herbed Mushroom Risotto",
+    "Sub": "Frozen Meals"
+  },
+  { "Cat": "Toys", "Name": "Children's Art Set", "Sub": "Creative Toys" },
+  {
+    "Cat": "Home",
+    "Name": "LED Christmas Lights",
+    "Sub": "Seasonal Home Decor"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Bamboo Utensil Holder",
+    "Sub": "Kitchen Storage & Organization"
+  },
+  {
+    "Cat": "Clothing - Outerwear",
+    "Name": "Luxe Velvet Blazer",
+    "Sub": "Jackets"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Spicy Avocado Salsa",
+    "Sub": "Salsas"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Mushroom Soup (canned)",
+    "Sub": "Soups & Broths"
+  },
+  { "Cat": "Apps", "Name": "Digital Bullet Journal", "Sub": "Productivity" },
+  {
+    "Cat": "Food - Prepared Meals",
+    "Name": "Basil Pesto Pasta",
+    "Sub": "Cuisine - Italian"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Cinnamon Sugar Popcorn",
+    "Sub": "Savory Snacks"
+  },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Pumpkin Spice Muffins",
+    "Sub": "Seasonal Items"
+  },
+  { "Cat": "Pets", "Name": "Pet Carrier", "Sub": "Travel Accessories" },
+  {
+    "Cat": "Food - Baking & Cooking",
+    "Name": "Coconut Cream",
+    "Sub": "Baking Ingredients"
+  },
+  {
+    "Cat": "Home Improvement",
+    "Name": "Electric Pressure Washer",
+    "Sub": "Outdoor Cleaning"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Frozen Pizza",
+    "Sub": "Frozen Meals"
+  },
+  {
+    "Cat": "Clothing - Shoes",
+    "Name": "Comfort Flats",
+    "Sub": "Casual Footwear"
+  },
+  { "Cat": "Outdoor", "Name": "Tactical Backpack", "Sub": "Camping Equipment" },
+  {
+    "Cat": "Food - Salads",
+    "Name": "Nutty Quinoa Salad",
+    "Sub": "Grain Salads"
+  },
+  {
+    "Cat": "Safety",
+    "Name": "Personal Safety Alarm",
+    "Sub": "Self-Defense Tools"
+  },
+  { "Cat": "Food - Salads", "Name": "Kale Salad Kit", "Sub": "Salad Kits" },
+  {
+    "Cat": "Health",
+    "Name": "First Aid Kit",
+    "Sub": "Emergency Preparedness & First Aid"
+  },
+  {
+    "Cat": "Accessories",
+    "Name": "Portable Hand Warmer",
+    "Sub": "Tech Accessories"
+  },
+  { "Cat": "Food - Produce", "Name": "Avocados", "Sub": "Fruits" },
+  {
+    "Cat": "Outdoor",
+    "Name": "Overnight Hiking Backpack",
+    "Sub": "Camping Equipment"
+  },
+  { "Cat": "Storage", "Name": "Memory Card", "Sub": "Storage Devices" },
+  {
+    "Cat": "Outdoor",
+    "Name": "LED Canopy Lights",
+    "Sub": "Outdoor Accessories"
+  },
+  { "Cat": "Health", "Name": "Portable Air Purifier", "Sub": "Health Devices" },
+  {
+    "Cat": "Outdoor",
+    "Name": "Foldable Picnic Table",
+    "Sub": "Outdoor Furniture"
+  },
+  {
+    "Cat": "Food - Frozen Meals",
+    "Name": "Beef Stroganoff Meal Kit",
+    "Sub": "Frozen Dinner Kits"
+  },
+  { "Cat": "Toys", "Name": "Wooden Puzzle Game", "Sub": "Puzzles" },
+  { "Cat": "Food - Fresh Produce", "Name": "Fresh Lemons", "Sub": "Fruits" },
+  {
+    "Cat": "Audio",
+    "Name": "Bluetooth Shower Speaker",
+    "Sub": "Portable Speakers"
+  },
+  {
+    "Cat": "Clothing - Tops",
+    "Name": "Basic V-Neck T-Shirt",
+    "Sub": "T-Shirts"
+  },
+  { "Cat": "Food - Beverages", "Name": "Ginger Tea", "Sub": "Herbal Tea" },
+  {
+    "Cat": "Food - Prepared Foods",
+    "Name": "Creamy Spinach Dip",
+    "Sub": "Dips and Spreads"
+  },
+  { "Cat": "Outdoor", "Name": "Backpacking Tent", "Sub": "Camping Equipment" },
+  {
+    "Cat": "Food - Pasta",
+    "Name": "Black Bean Spaghetti",
+    "Sub": "Specialty Pasta"
+  },
+  {
+    "Cat": "Food - Frozen Food",
+    "Name": "Vegetable Fried Rice Mix",
+    "Sub": "Frozen Meals"
+  },
+  {
+    "Cat": "Garden",
+    "Name": "Children's Garden Tool Set",
+    "Sub": "Gardening Tools"
+  },
+  {
+    "Cat": "Food - Breakfast Foods",
+    "Name": "Cranberry Pecan Granola",
+    "Sub": "Granola and Muesli"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Portable Bluetooth Keyboard",
+    "Sub": "Computer Accessories"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Frozen Spinach",
+    "Sub": "Frozen Vegetables"
+  },
+  { "Cat": "Food - Deli", "Name": "Spicy Hummus", "Sub": "Dips/Spreads" },
+  {
+    "Cat": "Home",
+    "Name": "Bamboo Charcoal Air Purifier Bags",
+    "Sub": "Air Quality & Purification"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Frozen Cauliflower Rice",
+    "Sub": "Frozen Vegetables"
+  },
+  { "Cat": "Food - Snacks", "Name": "Radish Chips", "Sub": "Savory Snacks" },
+  {
+    "Cat": "Food - Dairy",
+    "Name": "Pepper Jack Cheese Slices",
+    "Sub": "Cheese"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Cinnamon Roll Protein Bar",
+    "Sub": "Protein Snacks"
+  },
+  {
+    "Cat": "Smart Home",
+    "Name": "Smart Light Switch",
+    "Sub": "Smart Lighting"
+  },
+  {
+    "Cat": "Clothing - Outerwear",
+    "Name": "Puffer Winter Coat",
+    "Sub": "Coats"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Pumpkin Waffles",
+    "Sub": "Pancakes & Waffles"
+  },
+  {
+    "Cat": "Office",
+    "Name": "Computer Monitor Stand",
+    "Sub": "Office Accessories"
+  },
+  { "Cat": "Food - Beverages", "Name": "Peach Green Tea", "Sub": "Tea" },
+  {
+    "Cat": "Food - Cooking Essentials",
+    "Name": "Vegetable Stock",
+    "Sub": "Broths"
+  },
+  {
+    "Cat": "Clothing - Accessories",
+    "Name": "Knitted Infinity Scarf",
+    "Sub": "Scarves"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Lightweight Backpacking Tent",
+    "Sub": "Camping Equipment"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Frozen Berry Blend",
+    "Sub": "Frozen Fruits"
+  },
+  { "Cat": "Clothing", "Name": "Winter Knit Beanie", "Sub": "Hats & Headwear" },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Nut Butter Cups",
+    "Sub": "Nut-Based Snacks"
+  },
+  { "Cat": "Health", "Name": "Weighted Blanket", "Sub": "Sleep & Relaxation" },
+  { "Cat": "Food - Snacks", "Name": "Pumpkin Seeds", "Sub": "Nuts and Seeds" },
+  { "Cat": "Food - Nuts", "Name": "Sunflower Seeds", "Sub": "Seeds & Nuts" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Coffee Capsule Dispenser",
+    "Sub": "Coffee Accessories"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Sweet Potato Mash",
+    "Sub": "Frozen Vegetables"
+  },
+  { "Cat": "Office", "Name": "Wireless Printer", "Sub": "Printers & Scanners" },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Cauliflower Gnocchi",
+    "Sub": "Frozen Vegetarian Meals"
+  },
+  { "Cat": "Food - Beverages", "Name": "Raspberry Limeade", "Sub": "Juice" },
+  {
+    "Cat": "Beauty",
+    "Name": "Jennifer's Amazing Lip Balm Kit",
+    "Sub": "Lip Care"
+  },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Cranberry Lime Sparkling Water",
+    "Sub": "Sparkling Beverages"
+  },
+  { "Cat": "Beauty", "Name": "Body Wash", "Sub": "Bath & Body" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Chopping Board",
+    "Sub": "Cutting Boards & Utensils"
+  },
+  {
+    "Cat": "Car",
+    "Name": "Car Seat Organizer",
+    "Sub": "Car Interior Accessories"
+  },
+  { "Cat": "Clothing - Outerwear", "Name": "Graphic Hoodie", "Sub": "Hoodies" },
+  {
+    "Cat": "Clothing - Outerwear",
+    "Name": "Two-Tone Windbreaker",
+    "Sub": "Jackets"
+  },
+  {
+    "Cat": "Food - Meat",
+    "Name": "Teriyaki Chicken Skewers",
+    "Sub": "Marinated Meats"
+  },
+  {
+    "Cat": "Health",
+    "Name": "Smartphone UV Sanitizer",
+    "Sub": "Personal Care & Grooming"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Cauliflower Gnocchi",
+    "Sub": "Frozen Vegetarian Meals"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Flavored Instant Oatmeal",
+    "Sub": "Instant Breakfast"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Collapsible Folding Chair",
+    "Sub": "Camping Equipment"
+  },
+  {
+    "Cat": "Food - Meat",
+    "Name": "Honey mustard chicken tenders",
+    "Sub": "Prepared Poultry"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Chicken Broth",
+    "Sub": "Soups & Broths"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Crispy Potato Tots",
+    "Sub": "Frozen Snacks"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Wireless Mouse",
+    "Sub": "Computer Accessories"
+  },
+  { "Cat": "Toys", "Name": "Puzzle Game Set", "Sub": "Board Games" },
+  {
+    "Cat": "Pets",
+    "Name": "Pet Bed with Removable Cover",
+    "Sub": "Pet Supplies"
+  },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Mediterranean Flatbread",
+    "Sub": "Flatbreads"
+  },
+  {
+    "Cat": "Food - Meat Alternatives",
+    "Name": "Grilled Veggie Burgers",
+    "Sub": "Plant-Based Proteins"
+  },
+  { "Cat": "Storage", "Name": "USB Flash Drive", "Sub": "Storage Devices" },
+  {
+    "Cat": "Pets",
+    "Name": "Pet Hair Vacuum Cleaner Attachment",
+    "Sub": "Grooming Supplies"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Dried Fruit Medley",
+    "Sub": "Sweet Snacks"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Frozen Hash Browns",
+    "Sub": "Frozen Potato Products"
+  },
+  { "Cat": "Food - Produce", "Name": "Avocados", "Sub": "Fruits" },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Mushroom Soup (canned)",
+    "Sub": "Soups & Broths"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Indian Curry Sauce",
+    "Sub": "Dressing"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Outdoor Sports Backpack",
+    "Sub": "Outdoor Accessories"
+  },
+  {
+    "Cat": "Food - Cereals",
+    "Name": "Raisin Cinnamon Granola",
+    "Sub": "Granola"
+  },
+  { "Cat": "Fitness", "Name": "Sports Bottle", "Sub": "Hydration Gear" },
+  {
+    "Cat": "Outdoor",
+    "Name": "Outdoor Fire Pit",
+    "Sub": "Outdoor Accessories"
+  },
+  {
+    "Cat": "Toys",
+    "Name": "Customizable Name Puzzle",
+    "Sub": "Educational Toys"
+  },
+  { "Cat": "Accessories", "Name": "Backpack", "Sub": "Bags" },
+  { "Cat": "Audio", "Name": "Over-Ear Headphones", "Sub": "Headphones" },
+  {
+    "Cat": "Food - Spices",
+    "Name": "Organic Italian Seasoning",
+    "Sub": "Herbs and Spices"
+  },
+  {
+    "Cat": "Pets",
+    "Name": "Cat Scratching Post with Toys",
+    "Sub": "Cat Furniture"
+  },
+  {
+    "Cat": "Fitness",
+    "Name": "Fitness Tracker Band",
+    "Sub": "Wearable Technology"
+  },
+  { "Cat": "Pets", "Name": "Self-Cleaning Cat Litter Box", "Sub": "Cat Care" },
+  {
+    "Cat": "Food - Soups",
+    "Name": "Organic Lentil Soup",
+    "Sub": "Canned Soups"
+  },
+  {
+    "Cat": "Food - Frozen Fruits",
+    "Name": "Mango Chunks",
+    "Sub": "Frozen Fruits"
+  },
+  { "Cat": "Storage", "Name": "Portable SSD", "Sub": "Storage Devices" },
+  {
+    "Cat": "Home",
+    "Name": "Self-Adhesive Wallpaper",
+    "Sub": "Decorative Wall Art & Accessories"
+  },
+  {
+    "Cat": "Food - Prepared Meals",
+    "Name": "Teriyaki Tofu Stir-Fry",
+    "Sub": "Vegetarian Meals"
+  },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Peach Mango Smoothie",
+    "Sub": "Smoothies"
+  },
+  {
+    "Cat": "Food - Dairy Alternatives",
+    "Name": "Chocolate Almond Milk",
+    "Sub": "Plant-Based Beverages"
+  },
+  {
+    "Cat": "Food - Seafood",
+    "Name": "Garlic Butter Shrimp",
+    "Sub": "Frozen Seafood"
+  },
+  {
+    "Cat": "Food - Desserts",
+    "Name": "Classic Vanilla Fudge",
+    "Sub": "Chocolate Desserts"
+  },
+  {
+    "Cat": "Pets",
+    "Name": "Pet Water Bottle",
+    "Sub": "Pet Hydration Supplies"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Wireless Range Extender",
+    "Sub": "Networking Equipment"
+  },
+  { "Cat": "Food - Dairy", "Name": "Sliced Provolone Cheese", "Sub": "Cheese" },
+  {
+    "Cat": "Travel",
+    "Name": "Compressed Towel Tablets",
+    "Sub": "Travel Accessories"
+  },
+  {
+    "Cat": "Health",
+    "Name": "Portable UV Sterilizer",
+    "Sub": "Health Devices"
+  },
+  {
+    "Cat": "Clothing - Tops",
+    "Name": "Relaxed Fit Henley Shirt",
+    "Sub": "Shirts"
+  },
+  {
+    "Cat": "Food - Desserts",
+    "Name": "Classic Cheesecake Mix",
+    "Sub": "Baking Mixes"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Solar Charger",
+    "Sub": "Portable Power Solutions"
+  },
+  {
+    "Cat": "Wearable Tech",
+    "Name": "Fitness Smartwatch",
+    "Sub": "Fitness Monitors"
+  },
+  {
+    "Cat": "Food - Frozen Desserts",
+    "Name": "Mint Chocolate Chip Ice Cream",
+    "Sub": "Ice Cream Flavors"
+  },
+  { "Cat": "Food - Condiments", "Name": "Roasted Garlic Aioli", "Sub": "Dips" },
+  { "Cat": "Food - Dairy", "Name": "Greek Yogurt", "Sub": "Yogurt" },
+  {
+    "Cat": "Home",
+    "Name": "Two-Tier Fruit Basket",
+    "Sub": "Kitchen Accessories"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Ice Cube Tray with Lid",
+    "Sub": "Ice Cube Trays"
+  },
+  {
+    "Cat": "Food - Baking",
+    "Name": "Chocolate Chip Cookie Mix",
+    "Sub": "Mixes"
+  },
+  {
+    "Cat": "Smart Home",
+    "Name": "Smart Wi-Fi Light Bulbs",
+    "Sub": "Smart Lighting"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Habanero Hot Sauce",
+    "Sub": "Spicy Sauces"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Decorative Throw Blanket",
+    "Sub": "Bedding & Linens"
+  },
+  {
+    "Cat": "Food - Frozen Food",
+    "Name": "Teriyaki Chicken Wings",
+    "Sub": "Frozen Meals"
+  },
+  { "Cat": "Home", "Name": "Fleece Throw Blanket", "Sub": "Bedding & Linens" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Reusable Produce Bags Set",
+    "Sub": "Eco-Friendly Kitchen Products"
+  },
+  {
+    "Cat": "Pets",
+    "Name": "Portable Pet Bathing Tool",
+    "Sub": "Grooming Supplies"
+  },
+  {
+    "Cat": "Crafts",
+    "Name": "Electric Heat Press Machine",
+    "Sub": "Craft Supplies"
+  },
+  { "Cat": "Home", "Name": "Magnetic Curtain Tiebacks", "Sub": "Home Decor" },
+  {
+    "Cat": "Electronics",
+    "Name": "Portable Bluetooth Keyboard",
+    "Sub": "Computer Accessories"
+  },
+  {
+    "Cat": "Food - Dairy",
+    "Name": "Hummus Variety Pack",
+    "Sub": "Dairy Alternatives"
+  },
+  { "Cat": "Garden", "Name": "Indoor Plants", "Sub": "Houseplants" },
+  { "Cat": "Kitchen", "Name": "Juice Extractor", "Sub": "Blenders & Juicers" },
+  { "Cat": "Food - Bakery", "Name": "Hot Dog Buns", "Sub": "Breads" },
+  {
+    "Cat": "Food - Produce",
+    "Name": "Carrot Sticks",
+    "Sub": "Vegetable Snacks"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Black Bean Salsa",
+    "Sub": "Salsas and Dips"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Quality Chef Apron",
+    "Sub": "Cooking Tools & Utensils"
+  },
+  { "Cat": "Food - Fruits", "Name": "Organic Blueberries", "Sub": "Berries" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Electric Pressure Cooker",
+    "Sub": "Small Appliances"
+  },
+  {
+    "Cat": "Food - Frozen Meals",
+    "Name": "Vegetable Quinoa Bowl",
+    "Sub": "Frozen Grain Bowls"
+  },
+  {
+    "Cat": "Food - Frozen",
+    "Name": "Frozen Broccoli",
+    "Sub": "Frozen Vegetables"
+  },
+  { "Cat": "Office", "Name": "Sturdy Bookends", "Sub": "Office Accessories" },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Frozen Cauliflower Rice",
+    "Sub": "Frozen Vegetables"
+  },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Cranberry Almond Biscotti",
+    "Sub": "Cookies"
+  },
+  {
+    "Cat": "Food - Baking & Cooking",
+    "Name": "Almond Flour Tortillas",
+    "Sub": "Baking Ingredients"
+  },
+  { "Cat": "Kitchen", "Name": "Portable Ice Maker", "Sub": "Small Appliances" },
+  { "Cat": "Kitchen", "Name": "Waffle Maker", "Sub": "Small Appliances" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Dual Function Electric Skillet",
+    "Sub": "Cookware"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Peach Slices in Syrup",
+    "Sub": "Canned Fruits"
+  },
+  {
+    "Cat": "Food - Breakfast",
+    "Name": "Protein Pancake Mix",
+    "Sub": "Pancakes & Waffles"
+  },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Kombucha Drink",
+    "Sub": "Health Drinks"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Sriracha Chili Sauce",
+    "Sub": "Hot Sauces"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Electric Rice Cooker with Steamer",
+    "Sub": "Small Appliances"
+  },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Peach Mango Smoothie Mix",
+    "Sub": "Smoothies"
+  },
+  {
+    "Cat": "Clothing - Tops",
+    "Name": "Vintage Graphic Tee",
+    "Sub": "Graphic Tees"
+  },
+  {
+    "Cat": "Food - Bakery",
+    "Name": "Sea Salt Caramel Brownie",
+    "Sub": "Desserts"
+  },
+  {
+    "Cat": "Food - Meal Kits",
+    "Name": "Pasta Primavera Kit",
+    "Sub": "Vegetarian Meal Kits"
+  },
+  {
+    "Cat": "Food - Produce",
+    "Name": "Sliced Cucumbers",
+    "Sub": "Fresh Cut Vegetables"
+  },
+  {
+    "Cat": "Food - Produce",
+    "Name": "Vegetable Stir-Fry Kit",
+    "Sub": "Pre-Packaged Produce Kits"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Oven Thermometer",
+    "Sub": "Cooking Tools & Utensils"
+  },
+  { "Cat": "Food - Pasta", "Name": "Lentil Pasta", "Sub": "Specialty Pasta" },
+  {
+    "Cat": "Food - Dairy",
+    "Name": "Raspberry Vanilla Greek Yogurt",
+    "Sub": "Flavored Yogurt"
+  },
+  { "Cat": "Fitness", "Name": "Yoga Strap", "Sub": "Yoga Equipment" },
+  { "Cat": "Food - Dairy", "Name": "Almond Milk", "Sub": "Dairy Alternatives" },
+  {
+    "Cat": "Pets",
+    "Name": "Pet Hair Vacuum Cleaner Attachment",
+    "Sub": "Grooming Supplies"
+  },
+  { "Cat": "Food - Canned Soups", "Name": "Basil Tomato Soup", "Sub": "Soups" },
+  { "Cat": "Fitness", "Name": "Fitness Tracker", "Sub": "Wearable Technology" },
+  {
+    "Cat": "Smart Home",
+    "Name": "Wi-Fi Enabled Smart Light Switch",
+    "Sub": "Smart Lighting"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Instant Read Meat Thermometer",
+    "Sub": "Cooking Tools & Utensils"
+  },
+  { "Cat": "Beauty", "Name": "Luxury Bath Salts", "Sub": "Bath & Body" },
+  { "Cat": "Food - Baking", "Name": "Cinnamon Roll Kit", "Sub": "Baking Kits" },
+  {
+    "Cat": "Clothing - Shirts",
+    "Name": "Striped Long Sleeve Shirt",
+    "Sub": "Casual Shirts"
+  },
+  { "Cat": "Beauty", "Name": "Skincare Fridge", "Sub": "Skincare" },
+  {
+    "Cat": "Food - Frozen Vegetables",
+    "Name": "Buffalo Style Cauliflower Bites",
+    "Sub": "Frozen Veggie Snacks"
+  },
+  {
+    "Cat": "Travel",
+    "Name": "Travel Size Toiletry Bottles",
+    "Sub": "Travel Accessories"
+  },
+  {
+    "Cat": "Food - Prepared Foods",
+    "Name": "Herbed Mushroom Risotto",
+    "Sub": "Frozen Meals"
+  },
+  {
+    "Cat": "Food - Salads",
+    "Name": "Harvest Grain Salad",
+    "Sub": "Grain Salads"
+  },
+  {
+    "Cat": "Tools",
+    "Name": "Rechargeable Electric Screwdriver",
+    "Sub": "Power Tools"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Honey Mustard Dip",
+    "Sub": "Dips & Spreads"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Organic Brown Rice Cakes",
+    "Sub": "Healthy Snacks"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Video Camera",
+    "Sub": "Cameras & Photography"
+  },
+  { "Cat": "Clothing - Bottoms", "Name": "Chino Shorts", "Sub": "Bottoms" },
+  {
+    "Cat": "Clothing - Tops",
+    "Name": "Classic White T-Shirt",
+    "Sub": "T-Shirts"
+  },
+  {
+    "Cat": "Food - Soups",
+    "Name": "Miso Soup Starter",
+    "Sub": "Specialty Soups"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Silicone Ice Cube Tray",
+    "Sub": "Ice Cube Trays"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Portable Projector",
+    "Sub": "Home Entertainment Equipment"
+  },
+  {
+    "Cat": "Car",
+    "Name": "Car Sunshade",
+    "Sub": "Car Accessories"
+  },
+  { "Cat": "Food - Fresh Produce", "Name": "Fresh Lemons", "Sub": "Fruits" },
+  {
+    "Cat": "Food - Baking",
+    "Name": "Vegan Chocolate Cake Mix",
+    "Sub": "Mixes"
+  },
+  { "Cat": "Audio", "Name": "Portable Speakers", "Sub": "Wireless Speakers" },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Chickpeas",
+    "Sub": "Canned Legumes"
+  },
+  {
+    "Cat": "Food - Meats",
+    "Name": "Savory Breakfast Sausage",
+    "Sub": "Breakfast Meats"
+  },
+  {
+    "Cat": "Clothing - Dresses",
+    "Name": "Floral Summer Dress",
+    "Sub": "Casual Dresses"
+  },
+  { "Cat": "Clothing - Tops", "Name": "Cotton Basic Tank", "Sub": "Tank Tops" },
+  {
+    "Cat": "Outdoor",
+    "Name": "Lockable Bicycle Chain",
+    "Sub": "Cycling Accessories"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Frozen Fruit Medley",
+    "Sub": "Frozen Fruits"
+  },
+  {
+    "Cat": "Food - Dairy",
+    "Name": "Maple Almond Yogurt",
+    "Sub": "Flavored Yogurt"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Smartphone Projector Kit",
+    "Sub": "Home Entertainment Equipment"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Honey Wheat Pretzels",
+    "Sub": "Savory Snacks"
+  },
+  { "Cat": "Garden", "Name": "Garden Hose", "Sub": "Garden Supplies" },
+  {
+    "Cat": "Food - Dairy",
+    "Name": "Low-Fat Cottage Cheese",
+    "Sub": "Cottage Cheese"
+  },
+  {
+    "Cat": "Food - Soups",
+    "Name": "Cheesy Broccoli Soup Mix",
+    "Sub": "Creamy Soups"
+  },
+  {
+    "Cat": "Home Appliances",
+    "Name": "Home Cleaning Robot",
+    "Sub": "Robotic Cleaners"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Spicy Beef Taco Mix",
+    "Sub": "Seasoning Blends"
+  },
+  { "Cat": "Kitchen", "Name": "Hand Crank Blender", "Sub": "Small Appliances" },
+  {
+    "Cat": "Clothing - Accessories",
+    "Name": "Fashionable Fanny Pack",
+    "Sub": "Bags"
+  },
+  {
+    "Cat": "Food - Household",
+    "Name": "Toilet Paper (12 rolls)",
+    "Sub": "Household Supplies"
+  },
+  {
+    "Cat": "Food - Prepared Meals",
+    "Name": "Teriyaki Chicken Bowl",
+    "Sub": "Cuisine - Asian"
+  },
+  {
+    "Cat": "Food - Baking",
+    "Name": "Vegan Chocolate Cake Mix",
+    "Sub": "Mixes"
+  },
+  {
+    "Cat": "Food - Canned Goods",
+    "Name": "Coconut Milk",
+    "Sub": "Coconut Products"
+  },
+  {
+    "Cat": "Clothing - Outerwear",
+    "Name": "Puffer Winter Coat",
+    "Sub": "Coats"
+  },
+  { "Cat": "Food - Grains", "Name": "Red Lentils", "Sub": "Legumes" },
+  { "Cat": "Clothing - Tops", "Name": "Golf Polo Shirt", "Sub": "Activewear" },
+  { "Cat": "Food - Condiments", "Name": "Balsamic Vinegar", "Sub": "Vinegars" },
+  { "Cat": "Kitchen", "Name": "Hand Mixer", "Sub": "Blenders & Juicers" },
+  {
+    "Cat": "Pets",
+    "Name": "Personalized Pet ID Tags",
+    "Sub": "Pet Accessories"
+  },
+  { "Cat": "Office", "Name": "Wireless Printer", "Sub": "Printers & Scanners" },
+  {
+    "Cat": "Food - Salads",
+    "Name": "Mediterranean Chickpea Salad",
+    "Sub": "Healthy Salads"
+  },
+  {
+    "Cat": "Tools",
+    "Name": "Rechargeable Electric Screwdriver",
+    "Sub": "Power Tools"
+  },
+  {
+    "Cat": "Food - Produce",
+    "Name": "Organic Sweet Potatoes",
+    "Sub": "Vegetables"
+  },
+  { "Cat": "Office", "Name": "Wireless Printer", "Sub": "Printers & Scanners" },
+  { "Cat": "Home", "Name": "LED Desk Lamp", "Sub": "Lighting & Lamps" },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Roasted Garlic",
+    "Sub": "Garlic-Based Sauces"
+  },
+  {
+    "Cat": "Food - Frozen Food",
+    "Name": "Mixed Berry Smoothie Pack",
+    "Sub": "Frozen Fruits"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Margherita Pizza",
+    "Sub": "Frozen Pizza"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Shatterproof Wine Glasses",
+    "Sub": "Outdoor Accessories"
+  },
+  { "Cat": "Pets", "Name": "Pet Travel Carrier", "Sub": "Travel Accessories" },
+  { "Cat": "Food", "Name": "Coffee Subscription Service", "Sub": "Beverages" },
+  { "Cat": "Clothing - Bottoms", "Name": "Chino Shorts", "Sub": "Bottoms" },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Green Tea Matcha Powder",
+    "Sub": "Tea"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Scent Diffuser Oil",
+    "Sub": "Home Fragrance & Accessories"
+  },
+  { "Cat": "Storage", "Name": "Portable SSD", "Sub": "Storage Devices" },
+  {
+    "Cat": "Accessories",
+    "Name": "Travel Jewelry Organizer",
+    "Sub": "Jewelry Storage"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Habanero Hot Sauce",
+    "Sub": "Spicy Sauces"
+  },
+  {
+    "Cat": "Clothing - Tops",
+    "Name": "Active Racerback Tank",
+    "Sub": "Activewear"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Vegan Mayonnaise",
+    "Sub": "Plant-Based Condiments"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Electric Hot Water Dispenser",
+    "Sub": "Small Appliances"
+  },
+  { "Cat": "Food - Baking", "Name": "Samoas Cookie Mix", "Sub": "Mixes" },
+  {
+    "Cat": "Toys",
+    "Name": "Mini Hand Gesture Drone",
+    "Sub": "Remote Control Drones"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Roasted Garlic Butter",
+    "Sub": "Flavored Butters"
+  },
+  {
+    "Cat": "Clothing - Outerwear",
+    "Name": "Puffer Winter Coat",
+    "Sub": "Coats"
+  },
+  {
+    "Cat": "Food - Snacks",
+    "Name": "Rainbow Veggie Chips",
+    "Sub": "Healthy Snacks"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Asian Stir-Fry Vegetables",
+    "Sub": "Frozen Vegetables"
+  },
+  {
+    "Cat": "Outdoor",
+    "Name": "Hydration Backpack",
+    "Sub": "Outdoor Accessories"
+  },
+  {
+    "Cat": "Food - Frozen Desserts",
+    "Name": "Mint Chocolate Chip Ice Cream",
+    "Sub": "Ice Cream Flavors"
+  },
+  {
+    "Cat": "Electronics",
+    "Name": "Multi-Port USB Hub",
+    "Sub": "Computer Accessories"
+  },
+  {
+    "Cat": "Food - Beverages",
+    "Name": "Cucumber Lime Sparkling Water",
+    "Sub": "Sparkling Beverages"
+  },
+  { "Cat": "Outdoor", "Name": "Telescope", "Sub": "Outdoor Accessories" },
+  {
+    "Cat": "Kitchen",
+    "Name": "Compact Electric Kettle",
+    "Sub": "Small Appliances"
+  },
+  {
+    "Cat": "Food - Fresh Produce",
+    "Name": "Vegetable Stir Fry Mix",
+    "Sub": "Vegetable Mixes"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Electric Kettle with Temperature Control",
+    "Sub": "Coffee Equipment"
+  },
+  {
+    "Cat": "Food - Frozen Desserts",
+    "Name": "Organic Vanilla Bean Ice Cream",
+    "Sub": "Ice Cream"
+  },
+  { "Cat": "Food - Pantry", "Name": "Nutritional Yeast", "Sub": "Condiments" },
+  {
+    "Cat": "Clothing - Bags",
+    "Name": "Leather Crossbody Bag",
+    "Sub": "Handbags"
+  },
+  {
+    "Cat": "Food - Condiments",
+    "Name": "Peach Preserves",
+    "Sub": "Fruit Spreads"
+  },
+  {
+    "Cat": "Kitchen",
+    "Name": "Pasta Maker Machine",
+    "Sub": "Cooking Appliances"
+  },
+  {
+    "Cat": "Food - Canned Soups",
+    "Name": "Spiced Pumpkin Soup",
+    "Sub": "Soups"
+  },
+  {
+    "Cat": "Food - Frozen Foods",
+    "Name": "Vegetarian Pizza",
+    "Sub": "Frozen Vegetarian Meals"
+  },
+  { "Cat": "Toys", "Name": "Kids' Building Blocks", "Sub": "Building Toys" },
+  { "Cat": "Food - Grains", "Name": "Red Lentils", "Sub": "Legumes" },
+  {
+    "Cat": "Home",
+    "Name": "Cushion Covers",
+    "Sub": "Decorative Wall Art & Accessories"
+  },
+  {
+    "Cat": "Food - Frozen Meals",
+    "Name": "Spinach and Cheese Stuffed Shells",
+    "Sub": "Frozen Pasta Dishes"
+  },
+  {
+    "Cat": "Food - Cooking Kits",
+    "Name": "Sushi Roll Kit",
+    "Sub": "Japanese Cooking Kits"
+  },
+  {
+    "Cat": "Food - Pasta",
+    "Name": "Red Lentil Pasta",
+    "Sub": "Specialty Pasta"
+  },
+  {
+    "Cat": "Home",
+    "Name": "Memory Foam Mattress Topper",
+    "Sub": "Bedding & Linens"
+  },
+  { "Cat": "Outdoor", "Name": "Picnic Blanket", "Sub": "Outdoor Accessories" }
+]

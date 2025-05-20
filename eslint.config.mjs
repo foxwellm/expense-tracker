@@ -44,6 +44,14 @@ const eslintConfig = [
       ...tseslint.configs.strictTypeChecked.rules,
     },
   },
+
+  // JS-specific
+  {
+    files: ['**/*.js'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+    },
+  },
 ]
 
 export default eslintConfig
