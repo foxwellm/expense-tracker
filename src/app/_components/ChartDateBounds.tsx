@@ -2,60 +2,62 @@
 
 import Box from '@mui/material/Box'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
-import { PickerValue } from '@mui/x-date-pickers/internals'
 import dayjs from 'dayjs'
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
-import { useState } from 'react'
+
+import { useExpensesStore } from '@/store'
+
+import { useBreakpoint } from '../_hooks'
 dayjs.extend(isSameOrAfter)
 
 export function ChartDateBounds() {
-  const currentDate = dayjs()
+  const { isTablet } = useBreakpoint()
+  const startDayjsDate = useExpensesStore((s) => s.startDayjsDate)
+  const endDayjsDate = useExpensesStore((s) => s.endDayjsDate)
+  const setStartDayjsDate = useExpensesStore((s) => s.setStartDayjsDate)
+  const setEndDayjsDate = useExpensesStore((s) => s.setEndDayjsDate)
+
   const furthestPastDate = dayjs().subtract(2, 'years')
-  const initialStartDate = dayjs().subtract(3, 'months')
-
-  const [startDate, setStartDate] = useState<PickerValue>(initialStartDate)
-  const [endDate, setEndDate] = useState<PickerValue>(currentDate)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-
-    if (!startDate || !endDate || startDate.isSameOrAfter(endDate)) return
-
-    // TODO: update date state
-  }
 
   return (
     <Box
-      component="form"
       display="flex"
+      flexDirection={isTablet ? 'column' : 'row'}
       justifyContent="space-evenly"
-      marginTop={8}
-      onSubmit={handleSubmit}
+      alignItems={'center'}
+      marginTop={isTablet ? 9 : 2}
     >
       <DatePicker
         views={['month', 'year']}
-        value={startDate}
-        onChange={(newValue) => setStartDate(newValue)}
+        value={startDayjsDate}
+        onChange={(newValue) => setStartDayjsDate(newValue)}
         disableFuture
         minDate={furthestPastDate}
         label="Start Date"
         slotProps={{
           textField: {
             required: true,
+            sx: {
+              width: '200px',
+            },
           },
         }}
       />
 
       <DatePicker
         views={['month', 'year']}
-        value={endDate}
-        onChange={(newValue) => setEndDate(newValue)}
+        value={endDayjsDate}
+        onChange={(newValue) => setEndDayjsDate(newValue)}
         disableFuture
         minDate={furthestPastDate}
         label="End Date"
         slotProps={{
           textField: {
             required: true,
+            sx: {
+              width: '200px',
+              mt: isTablet ? 2 : 0,
+            },
           },
         }}
       />

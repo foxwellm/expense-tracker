@@ -10,14 +10,19 @@ import { useSnackbar } from 'notistack'
 import { useEffect } from 'react'
 
 import { DELETE_USER_EXPENSES } from '@/app/api/graphql/mutations'
-import { GET_COMBINED_EXPENSES } from '@/app/api/graphql/queries'
+import { useExpensesStore } from '@/store'
 
 export function DeleteExpenses() {
   const { enqueueSnackbar } = useSnackbar()
+  const { refetch } = useExpensesStore()
   const [deleteUserExpenses, { data, loading, error }] = useMutation(
     DELETE_USER_EXPENSES,
     {
-      refetchQueries: [GET_COMBINED_EXPENSES],
+      onCompleted: (data) => {
+        if (refetch && data) {
+          refetch()
+        }
+      },
     }
   )
 

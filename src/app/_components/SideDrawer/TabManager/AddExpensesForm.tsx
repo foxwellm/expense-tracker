@@ -15,12 +15,13 @@ import { useSnackbar } from 'notistack'
 import { useEffect, useState } from 'react'
 
 import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
-import { GET_COMBINED_EXPENSES } from '@/app/api/graphql/queries'
 import { getMockExpenses } from '@/lib/utils/expense'
+import { useExpensesStore } from '@/store'
 dayjs.extend(isSameOrAfter)
 
 export function AddExpensesForm() {
   const { enqueueSnackbar } = useSnackbar()
+  const { refetch } = useExpensesStore()
   const currentDate = dayjs()
   const furthestPastDate = dayjs().subtract(2, 'years')
   const initialStartDate = dayjs().subtract(3, 'months')
@@ -30,7 +31,11 @@ export function AddExpensesForm() {
   const [quantity, setQuantity] = useState<string>('20')
 
   const [addExpenses, { data, loading, error }] = useMutation(ADD_EXPENSES, {
-    refetchQueries: [GET_COMBINED_EXPENSES],
+    onCompleted: (data) => {
+      if (refetch && data) {
+        refetch()
+      }
+    },
   })
 
   const handleSubmit = async (e: React.FormEvent) => {

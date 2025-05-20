@@ -1,12 +1,17 @@
 import { ApolloError } from '@apollo/client'
+import { PickerValue } from '@mui/x-date-pickers/internals'
+import dayjs from 'dayjs'
 import { create } from 'zustand'
 
 import { CombinedMonthlyExpenses } from '@/types/expense'
 
 type ExpensesStore = {
-  startDate: string
-  endDate: string
-  setDateRange: (start: string, end: string) => void
+  startDayjsDate: PickerValue
+  endDayjsDate: PickerValue
+  startDateBound: string | null
+  endDateBound: string | null
+  setStartDayjsDate: (startDayjsDate: PickerValue) => void
+  setEndDayjsDate: (endDayjsDate: PickerValue) => void
   setQueryResult: (result: {
     data:
       | { combinedMonthlyExpenses: CombinedMonthlyExpenses }
@@ -23,15 +28,26 @@ type ExpensesStore = {
 }
 
 export const useExpensesStore = create<ExpensesStore>((set) => ({
-  startDate: '2025-01-01',
-  endDate: '2025-01-31',
-  setDateRange: (start, end) => set({ startDate: start, endDate: end }),
-  setQueryResult: (result) =>
+  startDayjsDate: dayjs().subtract(3, 'months'),
+  endDayjsDate: dayjs(),
+  startDateBound: dayjs().subtract(3, 'months').format('YYYY-MM-DD'),
+  endDateBound: dayjs().format('YYYY-MM-DD'),
+  setStartDayjsDate: (startDayjsDate: PickerValue) =>
     set({
-      data: result.data?.combinedMonthlyExpenses,
-      loading: result.loading,
-      error: result.error,
-      refetch: result.refetch,
+      startDayjsDate,
+      startDateBound: startDayjsDate?.startOf('month').format('YYYY-MM-DD'),
+    }),
+  setEndDayjsDate: (endDayjsDate: PickerValue) =>
+    set({
+      endDayjsDate,
+      endDateBound: endDayjsDate?.endOf('month').format('YYYY-MM-DD'),
+    }),
+  setQueryResult: ({ data, loading, error, refetch }) =>
+    set({
+      data: data?.combinedMonthlyExpenses,
+      loading,
+      error,
+      refetch,
     }),
   data: null,
   loading: true,

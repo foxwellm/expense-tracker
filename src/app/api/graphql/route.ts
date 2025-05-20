@@ -52,7 +52,10 @@ const typeDefs = gql`
 
   type Query {
     rawExpenses: [Expense]
-    combinedMonthlyExpenses: CombinedMonthlyExpenses
+    combinedMonthlyExpenses(
+      startDate: String!
+      endDate: String!
+    ): CombinedMonthlyExpenses
   }
 
   input ExpenseInput {
@@ -78,12 +81,16 @@ type ApolloContext = {
 
 const getUserExpenses = async (
   user: User,
-  supabase: SupabaseClient
+  supabase: SupabaseClient,
+  startDate: string,
+  endDate: string
 ): Promise<Expense[]> => {
   const { data, error } = await supabase
     .from('expenses')
     .select('date, category, cost_in_cents')
     .eq('user_id', user.id)
+    .gte('date', startDate)
+    .lte('date', endDate)
     .order('date', { ascending: false })
 
   if (error) {
@@ -96,31 +103,29 @@ const getUserExpenses = async (
 const resolvers = {
   Query: {
     rawExpenses: async (
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      _: any,
-      args: undefined,
+      _parent: undefined,
+      { startDate, endDate }: { startDate: string; endDate: string },
       { user, authError, supabase }: ApolloContext
     ) => {
       if (!user || authError) {
         throw new Error('Unauthorized')
       }
 
-      return await getUserExpenses(user, supabase)
+      return await getUserExpenses(user, supabase, startDate, endDate)
 
       // TESTING
       // return mockExpenses
     },
     combinedMonthlyExpenses: async (
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      _: any,
-      args: undefined,
+      _parent: undefined,
+      { startDate, endDate }: { startDate: string; endDate: string },
       { user, authError, supabase }: ApolloContext
     ) => {
       if (!user || authError) {
         throw new Error('Unauthorized')
       }
 
-      const expenses = await getUserExpenses(user, supabase)
+      const expenses = await getUserExpenses(user, supabase, startDate, endDate)
       return combineMonthlyExpenses(expenses)
 
       // TESTING
@@ -130,18 +135,15 @@ const resolvers = {
   },
   Mutation: {
     addExpenses: async (
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      _: any,
-      args: {
-        expenses: Expense[]
-      },
+      _parent: undefined,
+      { expenses }: { expenses: Expense[] },
       { user, authError, supabase }: ApolloContext
     ) => {
       if (!user || authError) {
         throw new Error('Unauthorized')
       }
 
-      const parsedExpenses = expensesSchema.parse(args.expenses)
+      const parsedExpenses = expensesSchema.parse(expenses)
       const cleanedExpenses = parsedExpenses.map((expense: Expense) => ({
         ...sanitizeExpense(expense),
         user_id: user.id,
@@ -156,9 +158,8 @@ const resolvers = {
       return data
     },
     deleteUserExpenses: async (
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      _: any,
-      args: undefined,
+      _parent: undefined,
+      _args: undefined,
       { user, authError, supabase }: ApolloContext
     ) => {
       if (!user || authError) {

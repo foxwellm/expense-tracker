@@ -7,14 +7,14 @@ import { GET_COMBINED_EXPENSES } from '@/app/api/graphql/queries'
 import { useExpensesStore } from '@/store'
 
 export function ExpensesHydrator() {
-  const { setQueryResult } = useExpensesStore()
-  // const { startDate, endDate, setQueryResult } = useExpensesStore((s) => ({
-  //   startDate: s.startDate,
-  //   endDate: s.endDate,
-  //   setQueryResult: s.setQueryResult,
-  // }))
+  const { startDateBound, endDateBound, setQueryResult } = useExpensesStore()
 
-  const { data, loading, error, refetch } = useQuery(GET_COMBINED_EXPENSES)
+  const { data, loading, error, refetch } = useQuery(GET_COMBINED_EXPENSES, {
+    variables: {
+      startDate: startDateBound,
+      endDate: endDateBound,
+    },
+  })
 
   useEffect(() => {
     setQueryResult({
