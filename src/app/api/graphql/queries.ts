@@ -5,7 +5,6 @@ export const GET_COMBINED_EXPENSES = gql`
     combinedMonthlyExpenses(startDate: $startDate, endDate: $endDate) {
       monthlyExpenses {
         month
-        Apps
         Car
         Clothing
         Food
@@ -14,6 +13,7 @@ export const GET_COMBINED_EXPENSES = gql`
         Office
         Pets
         Tools
+        Toys
         Travel
       }
       categories

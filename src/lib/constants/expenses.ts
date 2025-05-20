@@ -1,7 +1,6 @@
 // NOTE: Removing an expenseCategory must be handled in the database by renaming the category or removing those rows
 // Adding or Removing expenseCategory needs to be updated in GET_COMBINED_EXPENSES gql
 export const expenseCategories = [
-  'Apps',
   'Car',
   'Clothing',
   'Food',
@@ -10,11 +9,11 @@ export const expenseCategories = [
   'Office',
   'Pets',
   'Tools',
+  'Toys',
   'Travel',
 ] as const
 
 export const expenseCategoryColors = {
-  Apps: '#e6194B',
   Car: '#f58231',
   Clothing: '#ffe119',
   Food: '#bfef45',
@@ -23,6 +22,7 @@ export const expenseCategoryColors = {
   Office: '#4363d8',
   Pets: '#911eb4',
   Tools: '#f032e6',
+  Toys: '#e6194B',
   Travel: '#a9a9a9',
 }
 
