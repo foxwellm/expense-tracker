@@ -10,12 +10,14 @@ import Typography from '@mui/material/Typography'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import { PickerValue } from '@mui/x-date-pickers/internals'
 import dayjs from 'dayjs'
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 import { useSnackbar } from 'notistack'
 import { useEffect, useState } from 'react'
 
 import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
 import { GET_COMBINED_EXPENSES } from '@/app/api/graphql/queries'
 import { getMockExpenses } from '@/lib/utils/expense'
+dayjs.extend(isSameOrAfter)
 
 export function AddExpensesForm() {
   const { enqueueSnackbar } = useSnackbar()
@@ -34,7 +36,7 @@ export function AddExpensesForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    if (!startDate || !endDate) return
+    if (!startDate || !endDate || startDate.isSameOrAfter(endDate)) return
 
     const formattedStartDate = startDate.format('YYYY-MM-DD')
     const formattedEndDate = endDate.format('YYYY-MM-DD')
@@ -115,7 +117,11 @@ export function AddExpensesForm() {
             type="submit"
             variant="contained"
             disabled={
-              !startDate || !endDate || parseFloat(quantity) === 0 || loading
+              !startDate ||
+              !endDate ||
+              startDate.isSameOrAfter(endDate) ||
+              parseFloat(quantity) === 0 ||
+              loading
             }
           >
             Add

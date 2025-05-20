@@ -12,7 +12,7 @@ export function BarChartContainer() {
   const theme = useTheme()
 
   return (
-    <Box sx={{ aspectRatio: '16 / 9', marginY: 10 }}>
+    <Box sx={{ aspectRatio: '16 / 9', marginY: 4 }}>
       {error ? (
         <ErrorMessage message={error?.message} />
       ) : loading ? (

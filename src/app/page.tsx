@@ -2,6 +2,7 @@ import { Container } from '@mui/material'
 
 import {
   BarChartContainer,
+  ChartDateBounds,
   ExpensesHydrator,
   SideDrawer,
   SideDrawerFab,
@@ -14,6 +15,7 @@ export default async function RootPage() {
       <SideDrawerFab />
       <SideDrawer>
         <Container>
+          <ChartDateBounds />
           <BarChartContainer />
         </Container>
       </SideDrawer>
