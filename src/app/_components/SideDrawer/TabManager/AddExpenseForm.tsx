@@ -6,9 +6,10 @@ import Button from '@mui/material/Button'
 import CircularProgress from '@mui/material/CircularProgress'
 import MenuItem from '@mui/material/MenuItem'
 import Stack from '@mui/material/Stack'
-import { useTheme } from '@mui/material/styles'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
+import { DatePicker } from '@mui/x-date-pickers/DatePicker'
+import { PickerValue } from '@mui/x-date-pickers/internals'
 import dayjs from 'dayjs'
 import { useSnackbar } from 'notistack'
 import { useEffect, useState } from 'react'
@@ -19,12 +20,11 @@ import { expenseCategories } from '@/lib/constants/expenses'
 import { ExpenseCategory } from '@/types/expense'
 
 export function AddExpenseForm() {
-  const theme = useTheme()
   const { enqueueSnackbar } = useSnackbar()
-  const currentDate = dayjs().format('YYYY-MM-DD')
-  const furthestPastDate = dayjs().subtract(2, 'years').format('YYYY-MM-DD')
+  const currentDate = dayjs()
+  const furthestPastDate = dayjs().subtract(2, 'years')
 
-  const [date, setDate] = useState(currentDate)
+  const [date, setDate] = useState<PickerValue>(currentDate)
   const [category, setCategory] = useState<ExpenseCategory>('Food')
   const [cost, setCost] = useState<string>('23.46')
 
@@ -35,11 +35,15 @@ export function AddExpenseForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
+    if (!date) return
+
+    const formattedDate = date.format('YYYY-MM-DD')
+
     addExpense({
       variables: {
         expenses: [
           {
-            date,
+            date: formattedDate,
             category,
             cost_in_cents: Math.round(parseFloat(cost) * 100),
           },
@@ -62,26 +66,18 @@ export function AddExpenseForm() {
     <Box component="form" onSubmit={handleSubmit}>
       <Stack spacing={3} alignItems="center">
         <Typography variant="h6">Add Expense</Typography>
-        {/* TODO: add success and error to a Snackbar */}
-        {/* {error && <Alert severity="error">{error}</Alert>}
-        {success && <Alert severity="success">Expense added!</Alert>} */}
 
-        <TextField
-          label="Date"
-          type="date"
+        <DatePicker
           value={date}
-          fullWidth
-          onChange={(e) => setDate(e.target.value)}
+          onChange={(newValue) => setDate(newValue)}
+          disableFuture
+          minDate={furthestPastDate}
+          label="Date"
           slotProps={{
-            inputLabel: { shrink: true },
-            htmlInput: { max: currentDate, min: furthestPastDate },
-          }}
-          required
-          sx={{
-            '& input::-webkit-calendar-picker-indicator': {
-              filter: theme.palette.mode === 'dark' ? 'invert(1)' : 'invert(0)',
+            textField: {
+              fullWidth: true,
+              required: true,
             },
-            label: { color: 'inherit' },
           }}
         />
 
@@ -121,7 +117,7 @@ export function AddExpenseForm() {
             fullWidth
             type="submit"
             variant="contained"
-            disabled={loading}
+            disabled={!date || parseFloat(cost) === 0 || loading}
           >
             Add
           </Button>
