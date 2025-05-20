@@ -178,6 +178,11 @@ export function BarChart({
                 (d) => yScaleLinearFn(d[0] / 100) - yScaleLinearFn(d[1] / 100)
               )
               .attr('width', xScaleBandFn.bandwidth())
+              .select('title')
+              .text(
+                (d) =>
+                  `${d.data.month}\n${d.key}\n${formatValue(d[1] / 100 - d[0] / 100)}`
+              )
           ),
         (exit) =>
           exit.call((exit) =>
