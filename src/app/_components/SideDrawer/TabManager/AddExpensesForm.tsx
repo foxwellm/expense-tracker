@@ -5,9 +5,10 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import CircularProgress from '@mui/material/CircularProgress'
 import Stack from '@mui/material/Stack'
-import { useTheme } from '@mui/material/styles'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
+import { DatePicker } from '@mui/x-date-pickers/DatePicker'
+import { PickerValue } from '@mui/x-date-pickers/internals'
 import dayjs from 'dayjs'
 import { useSnackbar } from 'notistack'
 import { useEffect, useState } from 'react'
@@ -17,14 +18,13 @@ import { GET_COMBINED_EXPENSES } from '@/app/api/graphql/queries'
 import { getMockExpenses } from '@/lib/utils/expense'
 
 export function AddExpensesForm() {
-  const theme = useTheme()
   const { enqueueSnackbar } = useSnackbar()
-  const currentDate = dayjs().format('YYYY-MM-DD')
-  const furthestPastDate = dayjs().subtract(2, 'years').format('YYYY-MM-DD')
-  const initialStartDate = dayjs().subtract(3, 'months').format('YYYY-MM-DD')
+  const currentDate = dayjs()
+  const furthestPastDate = dayjs().subtract(2, 'years')
+  const initialStartDate = dayjs().subtract(3, 'months')
 
-  const [startDate, setStartDate] = useState(initialStartDate)
-  const [endDate, setEndDate] = useState(currentDate)
+  const [startDate, setStartDate] = useState<PickerValue>(initialStartDate)
+  const [endDate, setEndDate] = useState<PickerValue>(currentDate)
   const [quantity, setQuantity] = useState<string>('20')
 
   const [addExpenses, { data, loading, error }] = useMutation(ADD_EXPENSES, {
@@ -34,7 +34,16 @@ export function AddExpensesForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    const mockExpenses = getMockExpenses(parseInt(quantity), startDate, endDate)
+    if (!startDate || !endDate) return
+
+    const formattedStartDate = startDate.format('YYYY-MM-DD')
+    const formattedEndDate = endDate.format('YYYY-MM-DD')
+
+    const mockExpenses = getMockExpenses(
+      parseInt(quantity),
+      formattedStartDate,
+      formattedEndDate
+    )
 
     if (mockExpenses)
       addExpenses({
@@ -59,10 +68,6 @@ export function AddExpensesForm() {
       <Stack spacing={3} alignItems="center">
         <Typography variant="h6">Add Random Expenses</Typography>
 
-        {/* TODO: add success and error to a Snackbar */}
-        {/* {error && <Alert severity="error">{error}</Alert>}
-        {success && <Alert severity="success">Expense added!</Alert>} */}
-
         <TextField
           label="Quantity"
           type="number"
@@ -76,41 +81,31 @@ export function AddExpensesForm() {
           }}
         />
 
-        <TextField
-          label="Start Date"
-          type="date"
-          fullWidth
+        <DatePicker
           value={startDate}
-          onChange={(e) => setStartDate(e.target.value)}
+          onChange={(newValue) => setStartDate(newValue)}
+          disableFuture
+          minDate={furthestPastDate}
+          label="Start Date"
           slotProps={{
-            inputLabel: { shrink: true },
-            htmlInput: { max: currentDate, min: furthestPastDate },
-          }}
-          required
-          sx={{
-            '& input::-webkit-calendar-picker-indicator': {
-              filter: theme.palette.mode === 'dark' ? 'invert(1)' : 'invert(0)',
+            textField: {
+              fullWidth: true,
+              required: true,
             },
-            label: { color: 'inherit' },
           }}
         />
 
-        <TextField
-          label="End Date"
-          type="date"
-          fullWidth
+        <DatePicker
           value={endDate}
-          onChange={(e) => setEndDate(e.target.value)}
+          onChange={(newValue) => setEndDate(newValue)}
+          disableFuture
+          minDate={furthestPastDate}
+          label="End Date"
           slotProps={{
-            inputLabel: { shrink: true },
-            htmlInput: { max: currentDate, min: furthestPastDate },
-          }}
-          required
-          sx={{
-            '& input::-webkit-calendar-picker-indicator': {
-              filter: theme.palette.mode === 'dark' ? 'invert(1)' : 'invert(0)',
+            textField: {
+              fullWidth: true,
+              required: true,
             },
-            label: { color: 'inherit' },
           }}
         />
 
@@ -119,7 +114,9 @@ export function AddExpensesForm() {
             fullWidth
             type="submit"
             variant="contained"
-            disabled={loading}
+            disabled={
+              !startDate || !endDate || parseFloat(quantity) === 0 || loading
+            }
           >
             Add
           </Button>
