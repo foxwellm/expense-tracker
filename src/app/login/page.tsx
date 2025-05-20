@@ -1,20 +1,33 @@
+'use client'
+
 import { Box, Button, TextField, Typography } from '@mui/material'
 
+import { useBreakpoint } from '../_hooks'
 import { anonymousSignup, login, signup } from './actions'
 
 export default function LoginPage() {
+  const { isMobile } = useBreakpoint()
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: isMobile ? 'column' : 'row',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        pb: 4,
+      }}
+    >
       <Box
         component="form"
         sx={{
           display: 'flex',
           flexDirection: 'column',
+          justifyContent: 'space-evenly',
           gap: 2,
-          width: 300,
-          mx: 'auto',
+          width: 280,
           mt: 4,
-          p: 4,
+          py: 3,
+          px: 4,
           border: '1px solid',
           borderColor: 'divider',
           borderRadius: 2,
@@ -64,12 +77,12 @@ export default function LoginPage() {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          // gap: 2,
-          justifyContent: 'space-between',
-          width: 300,
-          mx: 'auto',
+          justifyContent: 'space-evenly',
+          gap: 2,
+          width: 280,
           mt: 4,
-          p: 4,
+          py: 3,
+          px: 4,
           border: '1px solid',
           borderColor: 'divider',
           borderRadius: 2,
@@ -81,8 +94,8 @@ export default function LoginPage() {
         <Typography variant="subtitle2" color="info">
           *** If you do not feel comfortable using your credentials, you can log
           in anonymously to view and test the application. However, once you
-          close the browser you will not be able to log back in and lose your
-          data. ***
+          close the browser you will not be able to log back in and therefore
+          lose your data. ***
         </Typography>
         <Button onClick={anonymousSignup} variant="contained" color="secondary">
           Log in anonymously
