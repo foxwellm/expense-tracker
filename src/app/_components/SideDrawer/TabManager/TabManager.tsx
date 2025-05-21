@@ -44,7 +44,7 @@ function a11yProps(index: number) {
 }
 
 export function TabManager() {
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(1)
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue)

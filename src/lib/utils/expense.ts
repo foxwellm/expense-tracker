@@ -1,12 +1,33 @@
 import dayjs from 'dayjs'
 
 import { expenseCategories } from '@/lib/constants/expenses'
-import { Expense } from '@/types/expense'
+import { Expense, ExpenseCategory } from '@/types/expense'
 
+import { expenseSubCategories } from '../constants/expenseSubCategories'
 import { getRandomDateBetween } from './date'
 
-function getRandomCategory() {
+type ExpenseSubCategories = typeof expenseSubCategories
+type Category = keyof ExpenseSubCategories
+type SubCategory<C extends Category> = keyof ExpenseSubCategories[C]
+
+function getRandomCategory(): ExpenseCategory {
   return expenseCategories[Math.floor(Math.random() * expenseCategories.length)]
+}
+
+export function getSubCategories(category: ExpenseCategory) {
+  return Object.keys(expenseSubCategories[category]) as SubCategory<Category>[]
+}
+
+function getRandomSubCategory(category: ExpenseCategory) {
+  const potentialSubCategories = getSubCategories(category)
+  return potentialSubCategories[
+    Math.floor(Math.random() * potentialSubCategories.length)
+  ]
+}
+
+function getRandomNote(category: Category, subCategory: SubCategory<Category>) {
+  const potentialNotes: string[] = expenseSubCategories[category][subCategory]
+  return potentialNotes[Math.floor(Math.random() * potentialNotes.length)]
 }
 
 function getRandomCostInCents() {
@@ -16,10 +37,15 @@ function getRandomCostInCents() {
 }
 
 export function getMockExpense(startDate: string, endDate: string): Expense {
+  const category = getRandomCategory()
+  const subCategory = getRandomSubCategory(category)
+  const note = getRandomNote(category, subCategory)
   return {
     date: getRandomDateBetween(startDate, endDate),
-    category: getRandomCategory(),
+    category,
+    sub_category: subCategory,
     cost_in_cents: getRandomCostInCents(),
+    note,
   }
 }
 

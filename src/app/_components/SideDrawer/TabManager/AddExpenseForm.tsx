@@ -16,6 +16,7 @@ import { useEffect, useState } from 'react'
 
 import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
 import { expenseCategories } from '@/lib/constants/expenses'
+import { getSubCategories } from '@/lib/utils/expense'
 import { useExpensesStore } from '@/store'
 import { ExpenseCategory } from '@/types/expense'
 
@@ -27,7 +28,9 @@ export function AddExpenseForm() {
 
   const [date, setDate] = useState<PickerValue>(currentDate)
   const [category, setCategory] = useState<ExpenseCategory>('Food')
+  const [subCategory, setSubCategory] = useState<string>('Soups')
   const [cost, setCost] = useState<string>('23.46')
+  const [note, setNote] = useState<string>('')
 
   const [addExpense, { data, loading, error }] = useMutation(ADD_EXPENSES, {
     onCompleted: (data) => {
@@ -40,7 +43,7 @@ export function AddExpenseForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    if (!date) return
+    if (!date || !subCategory.length) return
 
     const formattedDate = date.format('YYYY-MM-DD')
 
@@ -50,7 +53,9 @@ export function AddExpenseForm() {
           {
             date: formattedDate,
             category,
+            sub_category: subCategory,
             cost_in_cents: Math.round(parseFloat(cost) * 100),
+            note: note.trim().length ? note : undefined,
           },
         ],
       },
@@ -105,6 +110,24 @@ export function AddExpenseForm() {
         </TextField>
 
         <TextField
+          select
+          label="Sub Category"
+          value={subCategory}
+          fullWidth
+          onChange={(e) => setSubCategory(e.target.value)}
+          required
+          sx={{
+            label: { color: 'inherit' },
+          }}
+        >
+          {getSubCategories(category).map((expenseCategory) => (
+            <MenuItem key={expenseCategory} value={expenseCategory}>
+              {expenseCategory}
+            </MenuItem>
+          ))}
+        </TextField>
+
+        <TextField
           label="Cost"
           type="number"
           fullWidth
@@ -117,12 +140,30 @@ export function AddExpenseForm() {
           }}
         />
 
+        <TextField
+          label="Note"
+          fullWidth
+          multiline
+          value={note}
+          onChange={(e) => setNote(e.target.value)}
+          sx={{
+            label: { color: 'inherit' },
+          }}
+          slotProps={{
+            htmlInput: {
+              maxLength: 100,
+            },
+          }}
+        />
+
         <Box width={'100%'} sx={{ position: 'relative' }}>
           <Button
             fullWidth
             type="submit"
             variant="contained"
-            disabled={!date || parseFloat(cost) === 0 || loading}
+            disabled={
+              !date || parseFloat(cost) === 0 || !subCategory.length || loading
+            }
           >
             Add
           </Button>

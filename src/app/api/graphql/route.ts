@@ -3,6 +3,7 @@ import { startServerAndCreateNextHandler } from '@as-integrations/next'
 import { AuthError, SupabaseClient, User } from '@supabase/supabase-js'
 import { gql } from 'graphql-tag'
 import { NextRequest } from 'next/server'
+import sanitizeHtml from 'sanitize-html'
 
 import { createServerSupabaseClient } from '@/lib/supabase'
 import { Expense } from '@/types/expense'
@@ -11,12 +12,13 @@ import { Database } from '@/types/supabase'
 import { expensesSchema } from './schemas'
 
 const sanitizeExpense = (expense: Expense) => {
+  if (!expense?.note) return expense
   return {
     ...expense,
-    // name: sanitizeHtml(expense.name, {
-    //   allowedTags: [],
-    //   allowedAttributes: {},
-    // }),
+    note: sanitizeHtml(expense.note, {
+      allowedTags: [],
+      allowedAttributes: {},
+    }),
   }
 }
 
@@ -24,13 +26,17 @@ const typeDefs = gql`
   type Expense {
     date: String
     category: String
+    sub_category: String
     cost_in_cents: Int
+    note: String
   }
 
   input ExpenseInput {
     date: String!
     category: String!
+    sub_category: String!
     cost_in_cents: Int!
+    note: String
   }
 
   type Mutation {
@@ -60,7 +66,7 @@ const getUserExpenses = async (
 ): Promise<Expense[]> => {
   const { data, error } = await supabase
     .from('expenses')
-    .select('date, category, cost_in_cents')
+    .select('date, category, sub_category, cost_in_cents, note')
     .eq('user_id', user.id)
     .gte('date', startDate)
     .lte('date', endDate)

@@ -5,7 +5,9 @@ export const ADD_EXPENSES = gql`
     addExpenses(expenses: $expenses) {
       date
       category
+      sub_category
       cost_in_cents
+      note
     }
   }
 `
