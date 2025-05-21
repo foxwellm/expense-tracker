@@ -18,9 +18,7 @@ interface SunburstNode {
 import { expenseCategoryColors } from '@/lib/constants/expenses'
 import { ExpenseCategory } from '@/types/expense'
 
-import { data } from './data'
-
-const radius = 928 / 2
+const radius = 330
 
 function getTopLevelAncestorName(node: d3.HierarchyNode<SunburstNode>): string {
   while (node.depth > 1) {
@@ -37,19 +35,18 @@ function getColor(node: d3.HierarchyNode<SunburstNode>): string {
   if (node.depth === 0) return '#fff' // root node
   const topLevel =
     node.depth === 1 ? node.data.name : getTopLevelAncestorName(node)
-  // return '#3a3a3a'
   return categoryColor(topLevel as ExpenseCategory)
 }
 
-export function SunburstChart() {
+export function SunburstChart(sunburstNode: SunburstNode) {
   const ref = useRef<SVGSVGElement | null>(null)
 
   useEffect(() => {
-    if (!ref.current || !data) return
+    if (!ref.current || !sunburstNode) return
     const svg = select(ref.current)
 
     const root = d3Partition<SunburstNode>().size([2 * Math.PI, radius])(
-      hierarchy(data as SunburstNode)
+      hierarchy(sunburstNode)
         .sum((d) => d.value ?? 0)
         .sort((a, b) => (b.value ?? 0) - (a.value ?? 0))
     )
@@ -62,7 +59,7 @@ export function SunburstChart() {
       .innerRadius((d) => d.y0)
       .outerRadius((d) => d.y1 - 1)
 
-    const g = svg.append('g').attr('fill-opacity', 0.6)
+    const g = svg.append('g')
 
     g.selectAll('path')
       .data(root.descendants().filter((d) => d.depth))
@@ -84,8 +81,7 @@ export function SunburstChart() {
       .append('g')
       .attr('pointer-events', 'none')
       .attr('text-anchor', 'middle')
-      .attr('font-size', 10)
-      .attr('font-family', 'sans-serif')
+      .attr('font-size', 8)
 
     textGroup
       .selectAll('text')
@@ -105,11 +101,21 @@ export function SunburstChart() {
 
     const { x, y, width, height } = svg.node()!.getBBox()
     svg.attr('viewBox', [x, y, width, height].join(' '))
-  }, [])
+
+    return () => {
+      svg.selectAll('text').remove()
+      svg.selectAll('*').remove()
+    }
+  }, [sunburstNode])
 
   return (
     <Box>
-      <svg ref={ref} width={928} height={928} style={{ maxWidth: '100%' }} />
+      <svg
+        ref={ref}
+        width={1200}
+        height={1200}
+        style={{ maxWidth: '100%', height: '100%' }}
+      />
     </Box>
   )
 }
