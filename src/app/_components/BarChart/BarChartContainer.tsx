@@ -6,11 +6,12 @@ import { useExpensesStore } from '@/store'
 
 import { ErrorMessage } from '../ErrorMessage'
 import { BarChart } from './BarChart'
-import { combineMonthlyExpenses } from './utils/chartData'
+import { combineMonthlyExpenses, getMonthYearDomain } from './utils/chartData'
 
 export function BarChartContainer() {
   const theme = useTheme()
-  const { userExpenses, loading, error } = useExpensesStore()
+  const { userExpenses, loading, error, startDateBound, endDateBound } =
+    useExpensesStore()
 
   if (error || !userExpenses) return <ErrorMessage message={error?.message} />
 
@@ -36,15 +37,15 @@ export function BarChartContainer() {
     )
   }
 
+  const monthYearDomain = getMonthYearDomain(startDateBound, endDateBound)
+
+  if (!monthYearDomain) return <ErrorMessage message="Incorrect dates." />
+
   const chartData = combineMonthlyExpenses(userExpenses)
 
-  if (
-    !chartData?.categories ||
-    !chartData?.monthYearDomain ||
-    !chartData?.monthlyExpenses
-  ) {
+  if (!chartData?.categories || !chartData?.monthlyExpenses) {
     return <ErrorMessage message="Incomplete data received." />
   }
 
-  return <BarChart {...chartData} />
+  return <BarChart {...chartData} monthYearDomain={monthYearDomain} />
 }

@@ -48,7 +48,7 @@ export function BarChart({
   monthlyExpenses,
   categories,
   monthYearDomain,
-}: CombinedMonthlyExpenses) {
+}: CombinedMonthlyExpenses & { monthYearDomain: string[] }) {
   const ref = useRef<SVGSVGElement | null>(null)
 
   useEffect(() => {
