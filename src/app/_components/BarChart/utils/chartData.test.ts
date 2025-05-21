@@ -7,7 +7,7 @@ import {
   combineMonthlyExpenses,
   getMonthYear,
   getMonthYearDomain,
-} from './utils'
+} from './chartData'
 
 describe('getMonthYear', () => {
   it('should return `[Month (3 char display)] [2 digit year]` when given yyyy-mm-dd string or Date object', () => {

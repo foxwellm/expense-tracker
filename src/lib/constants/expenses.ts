@@ -1,5 +1,5 @@
 // NOTE: Removing an expenseCategory must be handled in the database by renaming the category or removing those rows
-// Adding or Removing expenseCategory needs to be updated in GET_COMBINED_EXPENSES gql
+// Adding or Removing expenseCategory needs to be updated in GET_USER_EXPENSES gql
 export const expenseCategories = [
   'Car',
   'Clothing',

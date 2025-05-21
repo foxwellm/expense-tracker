@@ -4,14 +4,11 @@ import { AuthError, SupabaseClient, User } from '@supabase/supabase-js'
 import { gql } from 'graphql-tag'
 import { NextRequest } from 'next/server'
 
-// TESTING
-// import mockExpenses from '@/lib/constants/mockExpenses.json'
 import { createServerSupabaseClient } from '@/lib/supabase'
 import { Expense } from '@/types/expense'
 import { Database } from '@/types/supabase'
 
 import { expensesSchema } from './schemas'
-import { combineMonthlyExpenses } from './utils'
 
 const sanitizeExpense = (expense: Expense) => {
   return {
@@ -30,34 +27,6 @@ const typeDefs = gql`
     cost_in_cents: Int
   }
 
-  type MonthlyExpense {
-    month: String!
-    Car: Int
-    Clothing: Int
-    Food: Int
-    Health: Int
-    Home: Int
-    Office: Int
-    Pets: Int
-    Tools: Int
-    Toys: Int
-    Travel: Int
-  }
-
-  type CombinedMonthlyExpenses {
-    monthlyExpenses: [MonthlyExpense!]!
-    categories: [String!]!
-    monthYearDomain: [String!]!
-  }
-
-  type Query {
-    rawExpenses: [Expense]
-    combinedMonthlyExpenses(
-      startDate: String!
-      endDate: String!
-    ): CombinedMonthlyExpenses
-  }
-
   input ExpenseInput {
     date: String!
     category: String!
@@ -70,6 +39,10 @@ const typeDefs = gql`
 
   type Mutation {
     deleteUserExpenses: Boolean!
+  }
+
+  type Query {
+    userExpenses(startDate: String!, endDate: String!): [Expense]
   }
 `
 
@@ -102,7 +75,7 @@ const getUserExpenses = async (
 
 const resolvers = {
   Query: {
-    rawExpenses: async (
+    userExpenses: async (
       _parent: undefined,
       { startDate, endDate }: { startDate: string; endDate: string },
       { user, authError, supabase }: ApolloContext
@@ -112,25 +85,6 @@ const resolvers = {
       }
 
       return await getUserExpenses(user, supabase, startDate, endDate)
-
-      // TESTING
-      // return mockExpenses
-    },
-    combinedMonthlyExpenses: async (
-      _parent: undefined,
-      { startDate, endDate }: { startDate: string; endDate: string },
-      { user, authError, supabase }: ApolloContext
-    ) => {
-      if (!user || authError) {
-        throw new Error('Unauthorized')
-      }
-
-      const expenses = await getUserExpenses(user, supabase, startDate, endDate)
-      return combineMonthlyExpenses(expenses)
-
-      // TESTING
-      // const combined = combineMonthlyExpenses(mockExpenses as Expense[])
-      // return combined
     },
   },
   Mutation: {

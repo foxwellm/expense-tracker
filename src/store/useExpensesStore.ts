@@ -3,7 +3,7 @@ import { PickerValue } from '@mui/x-date-pickers/internals'
 import dayjs from 'dayjs'
 import { create } from 'zustand'
 
-import { CombinedMonthlyExpenses } from '@/types/expense'
+import { Expense } from '@/types/expense'
 
 type ExpensesStore = {
   startDayjsDate: PickerValue
@@ -13,15 +13,12 @@ type ExpensesStore = {
   setStartDayjsDate: (startDayjsDate: PickerValue) => void
   setEndDayjsDate: (endDayjsDate: PickerValue) => void
   setQueryResult: (result: {
-    data:
-      | { combinedMonthlyExpenses: CombinedMonthlyExpenses }
-      | null
-      | undefined
+    data: { userExpenses: Expense[] } | null | undefined
     loading: boolean
     error: ApolloError | undefined
     refetch: () => void
   }) => void
-  data: CombinedMonthlyExpenses | null | undefined
+  userExpenses: Expense[] | null | undefined
   loading: boolean
   error: ApolloError | undefined
   refetch: () => void
@@ -44,12 +41,12 @@ export const useExpensesStore = create<ExpensesStore>((set) => ({
     }),
   setQueryResult: ({ data, loading, error, refetch }) =>
     set({
-      data: data?.combinedMonthlyExpenses,
+      userExpenses: data?.userExpenses,
       loading,
       error,
       refetch,
     }),
-  data: null,
+  userExpenses: null,
   loading: true,
   error: undefined,
   refetch: () => {},

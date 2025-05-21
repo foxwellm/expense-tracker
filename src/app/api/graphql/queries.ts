@@ -1,23 +1,11 @@
 import { gql } from '@apollo/client'
 
-export const GET_COMBINED_EXPENSES = gql`
-  query GetCombinedExpenses($startDate: String!, $endDate: String!) {
-    combinedMonthlyExpenses(startDate: $startDate, endDate: $endDate) {
-      monthlyExpenses {
-        month
-        Car
-        Clothing
-        Food
-        Health
-        Home
-        Office
-        Pets
-        Tools
-        Toys
-        Travel
-      }
-      categories
-      monthYearDomain
+export const GET_USER_EXPENSES = gql`
+  query GetUserExpenses($startDate: String!, $endDate: String!) {
+    userExpenses(startDate: $startDate, endDate: $endDate) {
+      date
+      category
+      cost_in_cents
     }
   }
 `
