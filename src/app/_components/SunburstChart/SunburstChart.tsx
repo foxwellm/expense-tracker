@@ -112,8 +112,8 @@ export function SunburstChart(sunburstNode: SunburstNode) {
     <Box>
       <svg
         ref={ref}
-        width={1200}
-        height={1200}
+        width={1600}
+        height={1000}
         style={{ maxWidth: '100%', height: '100%' }}
       />
     </Box>

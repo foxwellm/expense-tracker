@@ -4,19 +4,21 @@ import AddIcon from '@mui/icons-material/Add'
 import Box from '@mui/material/Box'
 import Fab from '@mui/material/Fab'
 
-import { drawerWidth, navBarHeight } from '@/lib/constants/dimensions'
+import { useBreakpoint } from '@/app/_hooks'
+import { drawerWidth } from '@/lib/constants/dimensions'
 import { useDrawerState } from '@/store'
 
 export function SideDrawerFab() {
   const { isDrawerOpen, openDrawer, closeDrawer } = useDrawerState()
+  const { navHeight } = useBreakpoint()
 
   return (
     <Box
       sx={{
         position: 'fixed',
-        top: navBarHeight,
+        top: navHeight + 4,
         marginTop: 1,
-        marginLeft: 2,
+        marginLeft: 1.5,
         zIndex: (theme) => theme.zIndex.drawer + 1,
         transform: isDrawerOpen
           ? `translateX(${drawerWidth}px)`

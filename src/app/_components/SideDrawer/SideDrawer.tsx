@@ -39,7 +39,7 @@ export function SideDrawer({ children }: PropsWithChildren) {
   const { isMobile, navHeight } = useBreakpoint()
 
   return (
-    <Box>
+    <Box display={'flex'}>
       <Drawer
         sx={{
           width: drawerWidth,
