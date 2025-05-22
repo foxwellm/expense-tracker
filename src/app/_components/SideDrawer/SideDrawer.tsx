@@ -6,7 +6,7 @@ import Drawer from '@mui/material/Drawer'
 import { PropsWithChildren } from 'react'
 
 import { useBreakpoint } from '@/app/_hooks'
-import { drawerWidth, navBarHeight } from '@/lib/constants/dimensions'
+import { drawerWidth } from '@/lib/constants/dimensions'
 import { useDrawerState } from '@/store'
 
 import { TabManager } from './TabManager'
@@ -36,10 +36,10 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
 
 export function SideDrawer({ children }: PropsWithChildren) {
   const { isDrawerOpen } = useDrawerState()
-  const { isMobile } = useBreakpoint()
+  const { isMobile, navHeight } = useBreakpoint()
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box>
       <Drawer
         sx={{
           width: drawerWidth,
@@ -47,7 +47,8 @@ export function SideDrawer({ children }: PropsWithChildren) {
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
-            top: navBarHeight,
+            top: navHeight + 8,
+            borderTopRightRadius: 8,
           },
         }}
         variant="persistent"
