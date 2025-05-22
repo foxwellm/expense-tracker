@@ -14,7 +14,7 @@ import { CombinedMonthlyExpenses } from '@/types/expense'
 
 import { ErrorMessage } from '../ErrorMessage'
 import { BarChart } from './BarChart'
-import { combineMonthlyExpenses } from './utils/chartData'
+import { combineMonthlyExpenses, getMonthYearDomain } from './utils/chartData'
 
 export function BarChartContainer() {
   const theme = useTheme()
@@ -26,14 +26,17 @@ export function BarChartContainer() {
   const error = useExpensesStore((s) => s.error)
 
   const [chartData, setChartData] = useState<
-    CombinedMonthlyExpenses | undefined
+    (CombinedMonthlyExpenses & { monthYearDomain: string[] }) | undefined
   >(undefined)
 
   useEffect(() => {
     if (!userExpenses || !isRenderReady) return
     const newChartData = combineMonthlyExpenses(userExpenses)
+    const monthYearDomain = getMonthYearDomain(startDateBound, endDateBound)
 
-    setChartData({ ...newChartData })
+    if (!monthYearDomain) return // TODO: Set local error
+
+    setChartData({ ...newChartData, monthYearDomain })
   }, [userExpenses, startDateBound, endDateBound, isRenderReady])
 
   if (error) return <ErrorMessage message={error?.message} />
