@@ -1,5 +1,5 @@
 import { SunburstChartContainer } from '../../_components'
 
-export default function BarChartPage() {
+export default function SunburstChartPage() {
   return <SunburstChartContainer />
 }

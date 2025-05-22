@@ -23,7 +23,6 @@ export function BarChartContainer() {
   const startDateBound = useExpensesStore((s) => s.startDateBound)
   const endDateBound = useExpensesStore((s) => s.endDateBound)
   const isRenderReady = useExpensesStore((s) => s.isRenderReady)
-  const loading = useExpensesStore((s) => s.loading)
   const error = useExpensesStore((s) => s.error)
 
   const [chartData, setChartData] = useState<
@@ -46,7 +45,7 @@ export function BarChartContainer() {
   return (
     <Box sx={{ position: 'relative' }}>
       <BarChart {...chartData} />
-      {loading && (
+      {!isRenderReady && (
         <LinearProgress
           sx={{
             position: 'absolute',

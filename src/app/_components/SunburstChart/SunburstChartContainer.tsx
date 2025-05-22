@@ -17,7 +17,6 @@ export function SunburstChartContainer() {
   const theme = useTheme()
   const userExpenses = useExpensesStore((s) => s.userExpenses)
   const isRenderReady = useExpensesStore((s) => s.isRenderReady)
-  const loading = useExpensesStore((s) => s.loading)
   const error = useExpensesStore((s) => s.error)
 
   interface SunburstNode {
@@ -47,7 +46,7 @@ export function SunburstChartContainer() {
   return (
     <Box sx={{ position: 'relative' }}>
       <SunburstChart {...chartData} />
-      {loading && (
+      {!isRenderReady && (
         <LinearProgress
           sx={{
             position: 'absolute',

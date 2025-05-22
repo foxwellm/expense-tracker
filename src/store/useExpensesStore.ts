@@ -18,6 +18,7 @@ type ExpensesStore = {
     error: ApolloError | undefined
     refetch: () => void
   }) => void
+  setIsRenderReady: (isRenderReady: boolean) => void
   userExpenses: Expense[] | null | undefined
   loading: boolean
   error: ApolloError | undefined
@@ -35,13 +36,13 @@ export const useExpensesStore = create<ExpensesStore>((set) => ({
     .format('YYYY-MM-DD'),
   endDayjsDate: dayjs(),
   endDateBound: dayjs().endOf('month').format('YYYY-MM-DD'),
-  setStartDayjsDate: (startDayjsDate: PickerValue) =>
+  setStartDayjsDate: (startDayjsDate) =>
     set({
       startDayjsDate,
       startDateBound: startDayjsDate?.startOf('month').format('YYYY-MM-DD'),
       isRenderReady: false,
     }),
-  setEndDayjsDate: (endDayjsDate: PickerValue) =>
+  setEndDayjsDate: (endDayjsDate) =>
     set({
       endDayjsDate,
       endDateBound: endDayjsDate?.endOf('month').format('YYYY-MM-DD'),
@@ -55,6 +56,7 @@ export const useExpensesStore = create<ExpensesStore>((set) => ({
       refetch,
       isRenderReady: loading === false,
     }),
+  setIsRenderReady: (isRenderReady) => set({ isRenderReady }),
   userExpenses: null,
   loading: true,
   error: undefined,

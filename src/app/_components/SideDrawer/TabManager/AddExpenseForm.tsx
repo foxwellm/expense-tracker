@@ -22,7 +22,8 @@ import { ExpenseCategory } from '@/types/expense'
 
 export function AddExpenseForm() {
   const { enqueueSnackbar } = useSnackbar()
-  const { refetch } = useExpensesStore()
+  const refetch = useExpensesStore((s) => s.refetch)
+  const setIsRenderReady = useExpensesStore((s) => s.setIsRenderReady)
   const currentDate = dayjs()
   const furthestPastDate = dayjs().subtract(2, 'years')
 
@@ -35,6 +36,7 @@ export function AddExpenseForm() {
   const [addExpense, { data, loading, error }] = useMutation(ADD_EXPENSES, {
     onCompleted: (data) => {
       if (refetch && data) {
+        setIsRenderReady(false)
         refetch()
       }
     },

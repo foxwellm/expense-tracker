@@ -14,12 +14,14 @@ import { useExpensesStore } from '@/store'
 
 export function DeleteExpenses() {
   const { enqueueSnackbar } = useSnackbar()
-  const { refetch } = useExpensesStore()
+  const refetch = useExpensesStore((s) => s.refetch)
+  const setIsRenderReady = useExpensesStore((s) => s.setIsRenderReady)
   const [deleteUserExpenses, { data, loading, error }] = useMutation(
     DELETE_USER_EXPENSES,
     {
       onCompleted: (data) => {
         if (refetch && data) {
+          setIsRenderReady(false)
           refetch()
         }
       },

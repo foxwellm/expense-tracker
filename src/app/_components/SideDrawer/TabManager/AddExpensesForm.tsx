@@ -21,7 +21,9 @@ dayjs.extend(isSameOrAfter)
 
 export function AddExpensesForm() {
   const { enqueueSnackbar } = useSnackbar()
-  const { refetch } = useExpensesStore()
+  const refetch = useExpensesStore((s) => s.refetch)
+  const setIsRenderReady = useExpensesStore((s) => s.setIsRenderReady)
+
   const currentDate = dayjs()
   const furthestPastDate = dayjs().subtract(2, 'years')
   const initialStartDate = dayjs().subtract(3, 'months')
@@ -33,6 +35,7 @@ export function AddExpensesForm() {
   const [addExpenses, { data, loading, error }] = useMutation(ADD_EXPENSES, {
     onCompleted: (data) => {
       if (refetch && data) {
+        setIsRenderReady(false)
         refetch()
       }
     },
