@@ -1,30 +1,14 @@
-import dayjs, { Dayjs } from 'dayjs'
+import dayjs from 'dayjs'
 
-import {
-  expenseCategories,
-  expenseDisplayMonths,
-} from '@/lib/constants/expenses'
+import { expenseCategories } from '@/lib/constants/expenses'
+import { getMonthYear } from '@/lib/utils/date'
 import {
   CombinedMonthlyExpenses,
   Expense,
   ExpenseCategory,
 } from '@/types/expense'
 
-// yyyy-mm-dd || Dayjs
-export function getMonthYear(fullDate: string | Dayjs) {
-  const date = dayjs(fullDate)
-  const monthValue = date.month()
-  const month = expenseDisplayMonths[monthValue]
-  const year = date.year().toString().slice(-2)
-  return `${month} ${year}`
-}
-
-export function getMonthYearDomain(
-  startDate: string | null,
-  endDate: string | null
-) {
-  if (!startDate || !endDate) return undefined
-
+export function getMonthYearDomain(startDate: string, endDate: string) {
   let monthYearDomain: string[] = []
   // setting dates to 1st of the month to protect against going to next month from 31st and Feb
   let startDateObj = dayjs(startDate).set('date', 1)
@@ -49,7 +33,16 @@ export function combineMonthlyExpenses(
   > = {}
   const categoriesSet = new Set<ExpenseCategory>()
 
-  expenses.forEach(({ date, category, cost_in_cents }) => {
+  let expenseStartDate
+  let expenseEndDate
+
+  expenses.forEach(({ date, category, cost_in_cents }, i) => {
+    if (i === 0) {
+      expenseEndDate = date
+    }
+    if (i === expenses.length - 1) {
+      expenseStartDate = date
+    }
     const monthYear = getMonthYear(date)
 
     if (!groupedData[monthYear]) {
@@ -66,6 +59,7 @@ export function combineMonthlyExpenses(
     categoriesSet.add(category)
   })
 
+  const monthYearDomain = getMonthYearDomain(expenseStartDate!, expenseEndDate!)
   const categories = Array.from(categoriesSet).sort()
 
   const monthlyExpenses = Object.entries(groupedData).map(
@@ -86,5 +80,6 @@ export function combineMonthlyExpenses(
   return {
     monthlyExpenses,
     categories,
+    monthYearDomain,
   }
 }

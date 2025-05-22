@@ -62,7 +62,7 @@ export function AddExpensesForm() {
 
   useEffect(() => {
     if (data) {
-      enqueueSnackbar('Expense Added', { variant: 'success' })
+      enqueueSnackbar('Expenses Added', { variant: 'success' })
     }
 
     if (error) {

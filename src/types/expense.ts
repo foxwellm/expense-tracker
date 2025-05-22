@@ -14,4 +14,5 @@ export type MonthlyExpense = {
 export interface CombinedMonthlyExpenses {
   monthlyExpenses: MonthlyExpense[]
   categories: ExpenseCategory[]
+  monthYearDomain: string[]
 }

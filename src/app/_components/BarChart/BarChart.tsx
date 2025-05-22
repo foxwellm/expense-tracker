@@ -48,7 +48,9 @@ export function BarChart({
   monthlyExpenses,
   categories,
   monthYearDomain,
-}: CombinedMonthlyExpenses & { monthYearDomain: string[] }) {
+}: CombinedMonthlyExpenses & {
+  monthYearDomain: string[]
+}) {
   const ref = useRef<SVGSVGElement | null>(null)
 
   useEffect(() => {
@@ -108,7 +110,7 @@ export function BarChart({
       .attr('class', 'x-axis')
       .attr('transform', `translate(0,${height - marginBottom})`)
       .call(axisBottom(xScaleBandFn).tickSizeOuter(0))
-      .call((g) => g.selectAll('.domain').remove())
+      .call((g) => monthlyExpenses.length && g.selectAll('.domain').remove())
       .selectAll('text')
       .attr('font-size', `${axisFontSize}px`)
 
@@ -117,7 +119,7 @@ export function BarChart({
       .attr('class', 'y-axis')
       .attr('transform', `translate(${marginLeft},0)`)
       .call(axisLeft(yScaleLinearFn).ticks(null, '$~s'))
-      .call((g) => g.selectAll('.domain').remove())
+      .call((g) => monthlyExpenses.length && g.selectAll('.domain').remove())
       .selectAll('text')
       .attr('font-size', `${axisFontSize}px`)
 

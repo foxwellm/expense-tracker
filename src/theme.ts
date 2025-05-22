@@ -37,7 +37,6 @@ export const getTheme = (mode: 'light' | 'dark') =>
         styleOverrides: {
           body: {
             overscrollBehaviorY: 'none',
-            backgroundColor: mode === 'dark' ? '#0d0d0d' : '#fafafa',
             WebkitFontSmoothing: 'antialiased', // sharper font on MacOS
             MozOsxFontSmoothing: 'grayscale', // sharper font on Firefox
             margin: 0,

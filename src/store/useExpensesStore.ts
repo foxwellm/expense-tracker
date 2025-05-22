@@ -22,22 +22,30 @@ type ExpensesStore = {
   loading: boolean
   error: ApolloError | undefined
   refetch: () => void
+  // isRenderReady prevents double render from date state change and then
+  // userExpenses updating from refetch
+  isRenderReady: boolean
 }
 
 export const useExpensesStore = create<ExpensesStore>((set) => ({
-  startDayjsDate: dayjs().subtract(3, 'months'),
+  startDayjsDate: dayjs().subtract(2, 'months'),
+  startDateBound: dayjs()
+    .startOf('month')
+    .subtract(2, 'months')
+    .format('YYYY-MM-DD'),
   endDayjsDate: dayjs(),
-  startDateBound: dayjs().subtract(3, 'months').format('YYYY-MM-DD'),
-  endDateBound: dayjs().format('YYYY-MM-DD'),
+  endDateBound: dayjs().endOf('month').format('YYYY-MM-DD'),
   setStartDayjsDate: (startDayjsDate: PickerValue) =>
     set({
       startDayjsDate,
       startDateBound: startDayjsDate?.startOf('month').format('YYYY-MM-DD'),
+      isRenderReady: false,
     }),
   setEndDayjsDate: (endDayjsDate: PickerValue) =>
     set({
       endDayjsDate,
       endDateBound: endDayjsDate?.endOf('month').format('YYYY-MM-DD'),
+      isRenderReady: false,
     }),
   setQueryResult: ({ data, loading, error, refetch }) =>
     set({
@@ -45,9 +53,11 @@ export const useExpensesStore = create<ExpensesStore>((set) => ({
       loading,
       error,
       refetch,
+      isRenderReady: loading === false,
     }),
   userExpenses: null,
   loading: true,
   error: undefined,
   refetch: () => {},
+  isRenderReady: false,
 }))

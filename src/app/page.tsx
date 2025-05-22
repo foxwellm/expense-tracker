@@ -3,10 +3,12 @@ import Container from '@mui/material/Container'
 
 import {
   BarChartContainer,
-  ChartDateBounds,
+  DateRangeSliderContainer,
+  // ChartDateBounds,
   ExpensesHydrator,
   SideDrawer,
   SideDrawerFab,
+  // SunburstChartContainer,
 } from './_components'
 
 export default async function RootPage() {
@@ -16,18 +18,37 @@ export default async function RootPage() {
       <SideDrawerFab />
       <SideDrawer>
         <Container>
-          <ChartDateBounds />
-          <Box sx={{ aspectRatio: '16 / 9', marginY: 4 }}>
-            <BarChartContainer />
-          </Box>
-
-          {/* <Box
+          <Box
+            sx={{ aspectRatio: '16 / 9', marginTop: 4 }}
             display={'flex'}
-            justifyContent={'center'}
-            sx={{  marginY: 4, maxHeight:800 }}
+            alignItems={'center'}
           >
-            <SunburstChartContainer />
-          </Box> */}
+            <BarChartContainer />
+            <Box height={'100%'} paddingY={4}>
+              <DateRangeSliderContainer />
+            </Box>
+          </Box>
+          {/* <Box
+                display={'flex'}
+                justifyContent={'center'}
+                sx={{ marginY: 4, maxHeight: 700 }}
+              >
+                <SunburstChartContainer />
+              </Box> */}
+          {/* </Box> */}
+          {/* <Box overflow="visible">
+              <Box
+                position="sticky"
+                top={100} // NavBar
+              >
+                <Box  display={'flex'} justifyContent={'center'}>
+                  <Box height={500} minWidth={100}>
+                    <DateRangeSlider />
+                  </Box>
+                </Box>
+              </Box>
+            </Box> */}
+          {/* </Box> */}
         </Container>
       </SideDrawer>
     </>
