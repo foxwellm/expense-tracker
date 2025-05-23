@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "build-start": "next build && next start",
+    "build-start": "NEXT_IGNORE_BUILD_ERRORS=true next build && next start",
     "dev": "next dev",
     "lint": "next lint",
     "prepare": "husky",

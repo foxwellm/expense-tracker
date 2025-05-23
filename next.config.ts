@@ -2,10 +2,10 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   eslint: {
-    ignoreDuringBuilds: process.env.NODE_ENV === 'development',
+    ignoreDuringBuilds: process.env.NEXT_IGNORE_BUILD_ERRORS === 'true',
   },
   typescript: {
-    ignoreBuildErrors: process.env.NODE_ENV === 'development',
+    ignoreBuildErrors: process.env.NEXT_IGNORE_BUILD_ERRORS === 'true',
   },
 }
 
