@@ -51,8 +51,8 @@ export function TabManager() {
   }
 
   return (
-    <Box sx={{ bgcolor: 'background.paper' }}>
-      <AppBar position="static">
+    <Box>
+      <AppBar position="static" color="default">
         <Tabs
           value={value}
           onChange={handleChange}
