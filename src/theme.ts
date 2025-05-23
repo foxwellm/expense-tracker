@@ -82,5 +82,12 @@ export const getTheme = (mode: 'light' | 'dark') =>
           },
         },
       },
+      MuiTypography: {
+        styleOverrides: {
+          root: {
+            cursor: 'default',
+          },
+        },
+      },
     },
   })
