@@ -30,5 +30,14 @@ export const useBreakpoint = () => {
       ? headers.h4
       : headers.h3
 
-  return { isMobile, isTablet, navHeight, largeHeader, mediumHeader }
+  const logoDimension = isTablet ? 20 : 34
+
+  return {
+    isMobile,
+    isTablet,
+    navHeight,
+    largeHeader,
+    mediumHeader,
+    logoDimension,
+  }
 }
