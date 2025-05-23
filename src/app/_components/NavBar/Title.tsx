@@ -1,20 +1,43 @@
 'use client'
 
 import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
-import { useBreakpoint } from '@/app/_hooks/useBreakpoint'
+import { useBreakpoint } from '@/app/_hooks'
 
 export function Title() {
-  const { isMobile } = useBreakpoint()
-
-  if (isMobile) {
-    return <Box sx={{ flexGrow: 1 }}></Box>
-  }
+  const router = useRouter()
+  const { largeHeader, logoDimension } = useBreakpoint()
 
   return (
-    <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-      Expense Tracker
-    </Typography>
+    <Box
+      onClick={() => router.push('/')}
+      display={'flex'}
+      alignItems={'center'}
+      sx={{ cursor: 'pointer' }}
+    >
+      <Button
+        disableRipple
+        sx={{
+          borderRadius: 2,
+          '&:hover': {
+            backgroundColor: 'inherit',
+          },
+        }}
+      >
+        <Image
+          src="/FETIcon.png"
+          alt="FETIcon"
+          width={logoDimension}
+          height={logoDimension}
+        />
+      </Button>
+      <Typography variant={largeHeader} component="div">
+        Foxwell Expense Tracker
+      </Typography>
+    </Box>
   )
 }
