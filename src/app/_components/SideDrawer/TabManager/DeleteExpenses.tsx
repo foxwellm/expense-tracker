@@ -9,11 +9,13 @@ import Typography from '@mui/material/Typography'
 import { useSnackbar } from 'notistack'
 import { useEffect } from 'react'
 
+import { useBreakpoint } from '@/app/_hooks'
 import { DELETE_USER_EXPENSES } from '@/app/api/graphql/mutations'
 import { useExpensesStore } from '@/store'
 
 export function DeleteExpenses() {
   const { enqueueSnackbar } = useSnackbar()
+  const { mediumHeader } = useBreakpoint()
   const refetch = useExpensesStore((s) => s.refetch)
   const setIsRenderReady = useExpensesStore((s) => s.setIsRenderReady)
   const [deleteUserExpenses, { data, loading, error }] = useMutation(
@@ -41,7 +43,7 @@ export function DeleteExpenses() {
   return (
     <Box>
       <Stack spacing={3} alignItems="center">
-        <Typography variant="h6">Delete Expenses</Typography>
+        <Typography variant={mediumHeader}>Delete Expenses</Typography>
         <Box width={'100%'} sx={{ position: 'relative' }}>
           <Button
             onClick={() => deleteUserExpenses()}

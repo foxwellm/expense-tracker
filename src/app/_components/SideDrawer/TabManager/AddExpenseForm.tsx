@@ -14,6 +14,7 @@ import dayjs from 'dayjs'
 import { useSnackbar } from 'notistack'
 import { useEffect, useState } from 'react'
 
+import { useBreakpoint } from '@/app/_hooks'
 import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
 import { expenseCategories } from '@/lib/constants/expenses'
 import { getSubCategories } from '@/lib/utils/expense'
@@ -22,6 +23,7 @@ import { ExpenseCategory } from '@/types/expense'
 
 export function AddExpenseForm() {
   const { enqueueSnackbar } = useSnackbar()
+  const { mediumHeader } = useBreakpoint()
   const refetch = useExpensesStore((s) => s.refetch)
   const setIsRenderReady = useExpensesStore((s) => s.setIsRenderReady)
   const currentDate = dayjs()
@@ -77,7 +79,7 @@ export function AddExpenseForm() {
   return (
     <Box component="form" onSubmit={handleSubmit}>
       <Stack spacing={3} alignItems="center">
-        <Typography variant="h6">Add Expense</Typography>
+        <Typography variant={mediumHeader}>Add Expense</Typography>
 
         <DatePicker
           value={date}

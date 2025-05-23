@@ -14,6 +14,7 @@ import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 import { useSnackbar } from 'notistack'
 import { useEffect, useState } from 'react'
 
+import { useBreakpoint } from '@/app/_hooks'
 import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
 import { getMockExpenses } from '@/lib/utils/expense'
 import { useExpensesStore } from '@/store'
@@ -21,6 +22,7 @@ dayjs.extend(isSameOrAfter)
 
 export function AddExpensesForm() {
   const { enqueueSnackbar } = useSnackbar()
+  const { mediumHeader } = useBreakpoint()
   const refetch = useExpensesStore((s) => s.refetch)
   const setIsRenderReady = useExpensesStore((s) => s.setIsRenderReady)
 
@@ -76,7 +78,7 @@ export function AddExpensesForm() {
   return (
     <Box component="form" onSubmit={handleSubmit}>
       <Stack spacing={3} alignItems="center">
-        <Typography variant="h6">Add Random Expenses</Typography>
+        <Typography variant={mediumHeader}>Add Random Expenses</Typography>
 
         <TextField
           label="Quantity"
