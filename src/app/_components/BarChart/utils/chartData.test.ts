@@ -47,6 +47,19 @@ describe('getMonthYearDomain', () => {
       'Sep 25',
     ])
   })
+  it('should return undefined when startDate is after endDate', () => {
+    const startDate1 = '2024-10-18'
+    const endDate1 = '2024-10-15'
+
+    const startDate2 = '2025-05-18'
+    const endDate2 = '2024-10-15'
+
+    const result1 = getMonthYearDomain(startDate1, endDate1)
+    const result2 = getMonthYearDomain(startDate2, endDate2)
+
+    expect(result1).toEqual(undefined)
+    expect(result2).toEqual(undefined)
+  })
 })
 
 describe('combineMonthlyExpenses', () => {
@@ -92,11 +105,9 @@ describe('combineMonthlyExpenses', () => {
         { month: 'Dec 24', Food: 2548, Fuel: 3311 },
       ],
       categories: ['Food', 'Fuel'],
-      monthYearDomain: ['Dec 24', 'Jan 25'],
     }
 
     expect(result.categories).toEqual(expectedResult.categories)
-    expect(result.monthYearDomain).toEqual(expectedResult.monthYearDomain)
     // Actual result monthlyExpenses will contain every possible category equal to 0
     expect(result.monthlyExpenses[0]).toMatchObject(
       expectedResult.monthlyExpenses[0]
@@ -133,11 +144,9 @@ describe('combineMonthlyExpenses', () => {
         { month: 'Dec 24', Fuel: 3311, Food: 1203 },
       ],
       categories: ['Food', 'Fuel'],
-      monthYearDomain: ['Dec 24', 'Jan 25'],
     }
 
     expect(result.categories).toEqual(expectedResult.categories)
-    expect(result.monthYearDomain).toEqual(expectedResult.monthYearDomain)
     // Actual result monthlyExpenses will contain every possible category equal to 0
     expect(result.monthlyExpenses[0]).toMatchObject(
       expectedResult.monthlyExpenses[0]

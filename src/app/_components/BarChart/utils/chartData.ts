@@ -1,4 +1,5 @@
 import dayjs from 'dayjs'
+import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
 
 import { expenseCategories } from '@/lib/constants/expenses'
 import { getMonthYear } from '@/lib/utils/date'
@@ -7,6 +8,7 @@ import {
   Expense,
   ExpenseCategory,
 } from '@/types/expense'
+dayjs.extend(isSameOrBefore)
 
 export function getMonthYearDomain(
   startDate: string | null,
@@ -14,10 +16,15 @@ export function getMonthYearDomain(
 ) {
   if (!startDate || !endDate) return
 
+  const givenStartDate = dayjs(startDate)
+  const givenEndDate = dayjs(endDate)
+
+  if (givenEndDate.isSameOrBefore(givenStartDate)) return
+
   let monthYearDomain: string[] = []
   // setting dates to 1st of the month to protect against going to next month from 31st and Feb
-  let startDateObj = dayjs(startDate).set('date', 1)
-  const stopDateObj = dayjs(endDate).set('date', 1).add(1, 'month')
+  let startDateObj = givenStartDate.startOf('month')
+  const stopDateObj = givenEndDate.startOf('month').add(1, 'month')
 
   let whileCount = 0
   while (startDateObj < stopDateObj && whileCount < 12) {
