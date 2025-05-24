@@ -1,5 +1,7 @@
-import { ChartContainerClient } from '../../_components'
-import { DateRangeSliderContainer } from '../../_components/DateRangeSlider'
+import {
+  ChartContainerClient,
+  DateRangeSliderContainer,
+} from '../../_components'
 import { SunburstChartContainer } from './SunburstChart'
 
 export function SunburstChartContainerServer() {
