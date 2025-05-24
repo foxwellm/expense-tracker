@@ -1,8 +1,9 @@
-import { BarChartContainer, DateRangeSliderContainer } from '@/app/_components'
+import { DateRangeSliderContainer } from '@/app/_components'
 
-import ChartContainerClient from '../../_components/ChartContainerClient'
+import { ChartContainerClient } from '../../_components'
+import { BarChartContainer } from './BarChart'
 
-export function ChartContainerServer() {
+export function BarChartContainerServer() {
   // NOTE: DateRangeSliderContainer needs to be imported server side
   return (
     <ChartContainerClient slider={<DateRangeSliderContainer />}>

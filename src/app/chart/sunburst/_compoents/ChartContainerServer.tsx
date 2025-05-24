@@ -3,7 +3,7 @@ import {
   SunburstChartContainer,
 } from '@/app/_components'
 
-import ChartContainerClient from '../../_components/ChartContainerClient'
+import { ChartContainerClient } from '../../_components'
 
 export function ChartContainerServer() {
   // NOTE: DateRangeSliderContainer needs to be imported server side

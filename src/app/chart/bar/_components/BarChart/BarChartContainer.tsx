@@ -6,10 +6,11 @@ import Skeleton from '@mui/material/Skeleton'
 import Typography from '@mui/material/Typography'
 import { useEffect, useState } from 'react'
 
+import { ErrorMessage } from '@/app/_components/ErrorMessage'
 import { useExpensesStore } from '@/store'
 import { CombinedMonthlyExpenses } from '@/types/expense'
 
-import { ErrorMessage } from '../ErrorMessage'
+// import { ErrorMessage } from '../ErrorMessage'
 import { BarChart } from './BarChart'
 import { combineMonthlyExpenses, getMonthYearDomain } from './utils/chartData'
 

@@ -5,7 +5,7 @@ import { ReactNode } from 'react'
 
 import { useBreakpoint } from '@/app/_hooks'
 
-export default function ChartContainerClient({
+export function ChartContainerClient({
   children,
   slider,
 }: {

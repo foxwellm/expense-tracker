@@ -1,4 +1,3 @@
-export * from './BarChart'
 export * from './ChartDateBounds'
 export * from './DateRangeSlider'
 export * from './ExpensesHydrator'
