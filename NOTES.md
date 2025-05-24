@@ -9,3 +9,7 @@ https://supabase.com/docs/guides/auth/server-side/nextjs
 ## lint-staged
 
 `npx lint-staged` - test locally without commiting
+
+## Material-UI
+
+Use `(theme) => theme.zIndex.drawer` rather than importing from useTheme() so it can default be used server side.
