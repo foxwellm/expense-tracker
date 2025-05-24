@@ -10,13 +10,10 @@ import {
 } from 'd3'
 import { useEffect, useRef } from 'react'
 
-interface SunburstNode {
-  name: string
-  value?: number
-  children?: SunburstNode[]
-}
 import { expenseCategoryColors } from '@/lib/constants/expenses'
 import { ExpenseCategory } from '@/types/expense'
+
+import { SunburstNode } from '../../_types'
 
 const radius = 330
 

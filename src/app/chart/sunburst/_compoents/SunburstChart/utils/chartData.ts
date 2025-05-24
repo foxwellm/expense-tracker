@@ -1,16 +1,6 @@
-interface SunburstNode {
-  name: string
-  value?: number
-  children?: SunburstNode[]
-}
+import { Expense } from '@/types/expense'
 
-// TODO: Use shared Expense once sub_category implemented
-interface Expense {
-  date: string
-  category: string
-  sub_category: string
-  cost_in_cents: number
-}
+import { SunburstNode } from '../../../_types'
 
 export function sunburstNode(expenses: Expense[]): SunburstNode {
   const root: SunburstNode = {
