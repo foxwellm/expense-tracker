@@ -64,9 +64,9 @@ export function SunburstChart({
       .innerRadius((d) => d.y0)
       .outerRadius((d) => d.y1 - 1)
 
-    const g = svg.append('g')
-
-    g.selectAll('path')
+    svg
+      .append('g')
+      .selectAll('path')
       .data(root.descendants().filter((d) => d.depth))
       .join('path')
       .attr('fill', (d) => getColor(d))
@@ -82,13 +82,10 @@ export function SunburstChart({
       )
 
     // Printed Text
-    const textGroup = svg
+    svg
       .append('g')
       .attr('pointer-events', 'none')
       .attr('text-anchor', 'middle')
-      .attr('font-size', 8)
-
-    textGroup
       .selectAll('text')
       .data(
         root
@@ -103,6 +100,11 @@ export function SunburstChart({
       })
       .attr('dy', '0.35em')
       .text((d) => d.data.name)
+      .attr('font-size', (d) => {
+        if (expenseCategoryColors[d.data.name as ExpenseCategory]) return 16
+        if (d.data.name.length > 25) return 7
+        return 8
+      })
 
     const { x, y, width, height } = svg.node()!.getBBox()
     svg.attr('viewBox', [x, y, width, height].join(' '))
