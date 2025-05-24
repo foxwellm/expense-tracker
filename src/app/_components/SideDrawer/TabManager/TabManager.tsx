@@ -56,7 +56,7 @@ export function TabManager() {
         <Tabs
           value={value}
           onChange={handleChange}
-          indicatorColor="primary" // TODO: change for light
+          indicatorColor="primary"
           textColor="inherit"
           variant="fullWidth"
           aria-label="expenses tabs"

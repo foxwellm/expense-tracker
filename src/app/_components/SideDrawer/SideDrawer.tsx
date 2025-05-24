@@ -1,6 +1,7 @@
 'use client'
 
 import { styled } from '@mui/material'
+import Backdrop from '@mui/material/Backdrop'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import { PropsWithChildren } from 'react'
@@ -35,7 +36,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
 }))
 
 export function SideDrawer({ children }: PropsWithChildren) {
-  const { isDrawerOpen } = useDrawerState()
+  const { isDrawerOpen, closeDrawer } = useDrawerState()
   const { isMobile, navHeight } = useBreakpoint()
 
   return (
@@ -47,7 +48,7 @@ export function SideDrawer({ children }: PropsWithChildren) {
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
-            top: navHeight + 8,
+            top: isMobile ? navHeight * 2 + 8 : navHeight + 8,
             borderTopRightRadius: 8,
           },
         }}
@@ -57,6 +58,13 @@ export function SideDrawer({ children }: PropsWithChildren) {
       >
         <TabManager />
       </Drawer>
+      {isMobile && (
+        <Backdrop
+          open={isDrawerOpen}
+          onClick={closeDrawer}
+          sx={{ zIndex: (theme) => theme.zIndex.appBar - 1 }}
+        />
+      )}
       <Main open={!isMobile && isDrawerOpen}>{children}</Main>
     </Box>
   )
