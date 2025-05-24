@@ -1,6 +1,5 @@
-import { DateRangeSliderContainer } from '@/app/_components'
-
 import { ChartContainerClient } from '../../_components'
+import { DateRangeSliderContainer } from '../../_components/DateRangeSlider'
 import { BarChartContainer } from './BarChart'
 
 export function BarChartContainerServer() {

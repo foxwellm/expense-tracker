@@ -1,5 +1,4 @@
 export * from './ChartDateBounds'
-export * from './DateRangeSlider'
 export * from './ExpensesHydrator'
 export * from './NavBar'
 export * from './SideDrawer'
