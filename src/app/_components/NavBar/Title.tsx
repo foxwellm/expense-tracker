@@ -35,7 +35,11 @@ export function Title() {
           height={logoDimension}
         />
       </Button>
-      <Typography variant={largeHeader} component="div">
+      <Typography
+        variant={largeHeader}
+        component="div"
+        sx={{ pointerEvents: 'none' }}
+      >
         Foxwell Expense Tracker
       </Typography>
     </Box>
