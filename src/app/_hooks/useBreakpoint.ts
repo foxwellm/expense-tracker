@@ -22,7 +22,7 @@ export const useBreakpoint = () => {
   const largeHeader: HeaderLevel = isMobile
     ? headers.h5
     : isTablet
-      ? headers.h2
+      ? headers.h3
       : headers.h1
   const mediumHeader: HeaderLevel = isMobile
     ? headers.h6

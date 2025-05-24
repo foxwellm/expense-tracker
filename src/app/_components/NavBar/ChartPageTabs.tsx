@@ -6,13 +6,16 @@ import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
+import { useBreakpoint } from '@/app/_hooks'
+
 const barChartPath = '/chart/bar'
 const sunburstChartPath = '/chart/sunburst'
 
-export default function ChartPageTabs() {
+export function ChartPageTabs() {
   const router = useRouter()
   const pathname = usePathname()
-  const [value, setValue] = useState(0)
+  const { isMobile } = useBreakpoint()
+  const [value, setValue] = useState<number | 'none'>('none')
 
   useEffect(() => {
     switch (pathname) {
@@ -23,7 +26,7 @@ export default function ChartPageTabs() {
         setValue(2)
         break
       default:
-        setValue(0)
+        setValue('none')
     }
   }, [pathname])
 
@@ -41,8 +44,13 @@ export default function ChartPageTabs() {
   }
 
   return (
-    <Tabs value={value} onChange={handleChange} aria-label="expense chart tabs">
-      <Tab sx={{ display: 'none' }} value="none" />
+    <Tabs
+      variant={isMobile ? 'fullWidth' : 'standard'}
+      value={value}
+      onChange={handleChange}
+      aria-label="expense chart tabs"
+    >
+      <Tab sx={{ display: 'none' }} value={'none'} />
       <Tab
         id="bar-chart-tab"
         aria-controls="tabpanel-bar-chart"

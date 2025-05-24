@@ -12,7 +12,7 @@ import {
   ThemeProviderClient,
 } from '@/app/_providers'
 
-import { NavBar } from './_components'
+import { NavBarContainer } from './_components'
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -39,7 +39,7 @@ export default function RootLayout({
             <ThemeProviderClient>
               <SnackbarProviderClient>
                 <DatePickerProvider>
-                  <NavBar />
+                  <NavBarContainer />
                   {children}
                 </DatePickerProvider>
               </SnackbarProviderClient>
