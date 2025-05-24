@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'
 import { useEffect, useState } from 'react'
 
 import { ErrorMessage } from '@/app/_components/ErrorMessage'
+import { useBreakpoint } from '@/app/_hooks'
 import {
   ChartLoadingProgress,
   Loading,
@@ -12,7 +13,6 @@ import {
 import { useExpensesStore } from '@/store'
 import { CombinedMonthlyExpenses } from '@/types/expense'
 
-// import { ErrorMessage } from '../ErrorMessage'
 import { BarChart } from './BarChart'
 import { combineMonthlyExpenses, getMonthYearDomain } from './utils/chartData'
 
@@ -22,6 +22,7 @@ export function BarChartContainer() {
   const endDateBound = useExpensesStore((s) => s.endDateBound)
   const isRenderReady = useExpensesStore((s) => s.isRenderReady)
   const error = useExpensesStore((s) => s.error)
+  const { chartWidth, chartHeight } = useBreakpoint()
 
   const [chartData, setChartData] = useState<
     (CombinedMonthlyExpenses & { monthYearDomain: string[] }) | undefined
@@ -32,7 +33,7 @@ export function BarChartContainer() {
     const newChartData = combineMonthlyExpenses(userExpenses)
     const monthYearDomain = getMonthYearDomain(startDateBound, endDateBound)
 
-    if (!monthYearDomain) return // TODO: Set local error
+    if (!monthYearDomain) return
 
     setChartData({ ...newChartData, monthYearDomain })
   }, [userExpenses, startDateBound, endDateBound, isRenderReady])
@@ -40,11 +41,15 @@ export function BarChartContainer() {
   if (error) return <ErrorMessage message={error?.message} />
 
   // Initial Loading
-  if (!chartData) return <Loading width={1800} height={1000} />
+  if (!chartData) return <Loading width={chartWidth} height={chartHeight} />
 
   return (
     <Box sx={{ position: 'relative' }}>
-      <BarChart {...chartData} />
+      <BarChart
+        {...chartData}
+        chartWidth={chartWidth}
+        chartHeight={chartHeight}
+      />
       {!isRenderReady && <ChartLoadingProgress />}
       {!chartData.monthlyExpenses.length && <NoExxpensesInfo />}
     </Box>

@@ -9,8 +9,10 @@ export const getTheme = (mode: 'light' | 'dark') =>
         xs: 600, // Mobile
         sm: 750, // Small Tablet
         md: 900, // Tablet
-        lg: 1200,
-        xl: 1536,
+        lg: 1280,
+        xl: 1536, // Desktop
+        xxl: 1728,
+        xxxl: 2100,
       },
     },
     palette: {

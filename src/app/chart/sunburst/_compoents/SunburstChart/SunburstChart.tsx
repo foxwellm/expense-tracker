@@ -35,7 +35,15 @@ function getColor(node: d3.HierarchyNode<SunburstNode>): string {
   return categoryColor(topLevel as ExpenseCategory)
 }
 
-export function SunburstChart(sunburstNode: SunburstNode) {
+export function SunburstChart({
+  sunburstNode,
+  chartWidth,
+  chartHeight,
+}: {
+  sunburstNode: SunburstNode
+  chartWidth: number
+  chartHeight: number
+}) {
   const ref = useRef<SVGSVGElement | null>(null)
 
   useEffect(() => {
@@ -109,8 +117,8 @@ export function SunburstChart(sunburstNode: SunburstNode) {
     <Box>
       <svg
         ref={ref}
-        width={700}
-        height={700}
+        width={chartWidth}
+        height={chartHeight}
         style={{ maxWidth: '100%', height: '100%' }}
       />
     </Box>

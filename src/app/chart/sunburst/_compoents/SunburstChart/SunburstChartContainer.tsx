@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'
 import { useEffect, useState } from 'react'
 
 import { ErrorMessage } from '@/app/_components/ErrorMessage'
+import { useBreakpoint } from '@/app/_hooks'
 import {
   ChartLoadingProgress,
   Loading,
@@ -19,6 +20,7 @@ export function SunburstChartContainer() {
   const userExpenses = useExpensesStore((s) => s.userExpenses)
   const isRenderReady = useExpensesStore((s) => s.isRenderReady)
   const error = useExpensesStore((s) => s.error)
+  const { chartWidth, chartHeight } = useBreakpoint()
 
   const [chartData, setChartData] = useState<SunburstNode | undefined>(
     undefined
@@ -35,11 +37,15 @@ export function SunburstChartContainer() {
   if (error) return <ErrorMessage message={error?.message} />
 
   // Initial Loading
-  if (!chartData) return <Loading width={700} height={700} />
+  if (!chartData) return <Loading width={chartWidth} height={chartHeight} />
 
   return (
     <Box sx={{ position: 'relative' }}>
-      <SunburstChart {...chartData} />
+      <SunburstChart
+        sunburstNode={chartData}
+        chartWidth={chartWidth}
+        chartHeight={chartHeight}
+      />
       {!isRenderReady && <ChartLoadingProgress />}
       {chartData?.children && !chartData.children?.length && (
         <NoExxpensesInfo />

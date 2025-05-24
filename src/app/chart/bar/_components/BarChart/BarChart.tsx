@@ -31,8 +31,6 @@ const color = (category: ExpenseCategory) => {
   return expenseCategoryColors[category]
 }
 
-const width = 1800
-const height = 1000
 const marginTop = 20
 const marginBottom = 80
 const marginRight = 0
@@ -48,8 +46,12 @@ export function BarChart({
   monthlyExpenses,
   categories,
   monthYearDomain,
+  chartWidth,
+  chartHeight,
 }: CombinedMonthlyExpenses & {
   monthYearDomain: string[]
+  chartWidth: number
+  chartHeight: number
 }) {
   const ref = useRef<SVGSVGElement | null>(null)
 
@@ -63,7 +65,7 @@ export function BarChart({
       .attr('transform', `translate(${marginLeft}, 10)`)
 
     const numLegendItems = categories.length
-    const legendItemWidth = width / numLegendItems
+    const legendItemWidth = chartWidth / numLegendItems
     const padding = 10
     const adjustedLegendItemWidth = legendItemWidth - padding
 
@@ -86,7 +88,7 @@ export function BarChart({
         .attr('font-size', `${legendFontSize}px`)
         .attr('fill', 'currentColor')
     })
-  }, [categories])
+  }, [categories, chartWidth])
 
   useEffect(() => {
     if (!ref.current) return
@@ -96,19 +98,19 @@ export function BarChart({
 
     const xScaleBandFn = scaleBand()
       .domain(monthYearDomain)
-      .range([marginLeft, width - marginRight])
+      .range([marginLeft, chartWidth - marginRight])
       .padding(0.04)
 
     const yScaleLinearFn = scaleLinear()
       .domain([0, max(series, (s) => max(s, (d) => d[1] / 100))!])
       .nice()
-      .range([height - marginBottom, marginTop + legendHeight])
+      .range([chartHeight - marginBottom, marginTop + legendHeight])
 
     // AXIS
     svg
       .append('g')
       .attr('class', 'x-axis')
-      .attr('transform', `translate(0,${height - marginBottom})`)
+      .attr('transform', `translate(0,${chartHeight - marginBottom})`)
       .call(axisBottom(xScaleBandFn).tickSizeOuter(0))
       .call((g) => monthlyExpenses.length && g.selectAll('.domain').remove())
       .selectAll('text')
@@ -205,15 +207,15 @@ export function BarChart({
       svg.selectAll('.y-axis').remove()
       svg.selectAll('.legend').remove()
     }
-  }, [monthlyExpenses, categories, monthYearDomain])
+  }, [monthlyExpenses, categories, monthYearDomain, chartWidth, chartHeight])
 
   return (
     <Box>
       <svg
         ref={ref}
-        width={width}
-        height={height}
-        viewBox={`0 0 ${width} ${height}`}
+        width={chartWidth}
+        height={chartHeight}
+        viewBox={`0 0 ${chartWidth} ${chartHeight}`}
         style={{ maxWidth: '100%', height: 'auto' }}
       />
     </Box>
