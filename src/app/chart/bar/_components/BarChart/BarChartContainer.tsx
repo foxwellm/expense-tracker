@@ -3,7 +3,7 @@
 import Box from '@mui/material/Box'
 import { useEffect, useState } from 'react'
 
-import { ErrorMessage } from '@/app/_components/ErrorMessage'
+import { ErrorMessage } from '@/app/_components'
 import { useBreakpoint } from '@/app/_hooks'
 import {
   ChartLoadingProgress,

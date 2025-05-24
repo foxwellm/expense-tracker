@@ -77,8 +77,9 @@ export function SunburstChart({
           `${d
             .ancestors()
             .reverse()
+            .slice(1)
             .map((d) => d.data.name)
-            .join('/')}\n${d3Format(',d')(d.value ?? 0)}`
+            .join(' > ')}\n${d3Format('$.2f')(d.value ? d.value / 100 : 0)}`
       )
 
     // Printed Text

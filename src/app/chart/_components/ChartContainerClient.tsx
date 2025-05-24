@@ -19,7 +19,7 @@ export function ChartContainerClient({
       <Box
         sx={{
           display: 'flex',
-          marginTop: 8,
+          marginY: 8,
         }}
       >
         <Box
