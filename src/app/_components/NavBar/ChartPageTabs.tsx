@@ -14,7 +14,7 @@ const sunburstChartPath = '/chart/sunburst'
 export function ChartPageTabs() {
   const router = useRouter()
   const pathname = usePathname()
-  const { isMobile } = useBreakpoint()
+  const { isSmallTablet } = useBreakpoint()
   const [value, setValue] = useState<number | 'none'>('none')
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export function ChartPageTabs() {
 
   return (
     <Tabs
-      variant={isMobile ? 'fullWidth' : 'standard'}
+      variant={isSmallTablet ? 'fullWidth' : 'standard'}
       value={value}
       onChange={handleChange}
       aria-label="expense chart tabs"

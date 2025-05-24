@@ -15,25 +15,32 @@ type HeaderLevel = (typeof headers)[keyof typeof headers]
 
 export const useBreakpoint = () => {
   const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'), { noSsr: true })
+  const isMobile = useMediaQuery(theme.breakpoints.down('xs'), { noSsr: true })
+  const isSmallTablet = useMediaQuery(theme.breakpoints.down('sm'), {
+    noSsr: true,
+  })
   const isTablet = useMediaQuery(theme.breakpoints.down('md'), { noSsr: true })
 
-  const navHeight = isMobile ? 56 : 64
-  const largeHeader: HeaderLevel = isMobile
-    ? headers.h5
-    : isTablet
-      ? headers.h3
-      : headers.h1
-  const mediumHeader: HeaderLevel = isMobile
-    ? headers.h6
-    : isTablet
-      ? headers.h4
-      : headers.h3
-
+  const navHeight = isSmallTablet ? 56 : 64
   const logoDimension = isTablet ? 20 : 34
+
+  let largeHeader: HeaderLevel
+  let mediumHeader: HeaderLevel
+
+  if (isMobile) {
+    largeHeader = headers.h5
+    mediumHeader = headers.h4
+  } else if (isTablet) {
+    largeHeader = headers.h3
+    mediumHeader = headers.h4
+  } else {
+    largeHeader = headers.h1
+    mediumHeader = headers.h3
+  }
 
   return {
     isMobile,
+    isSmallTablet,
     isTablet,
     navHeight,
     largeHeader,

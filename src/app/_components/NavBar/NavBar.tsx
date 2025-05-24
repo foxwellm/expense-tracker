@@ -13,18 +13,18 @@ import { ProfileButton } from './ProfileButton'
 import { Title } from './Title'
 
 export function NavBar({ user }: { user: User | null }) {
-  const { isMobile } = useBreakpoint()
+  const { isSmallTablet } = useBreakpoint()
   return (
     <AppBar position="sticky" color="default">
       <Toolbar>
         <Box display={'flex'} flex={1}>
           <Title />
         </Box>
-        {!isMobile && <ChartPageTabs />}
+        {!isSmallTablet && <ChartPageTabs />}
         <PaletteModeSwitch />
         <ProfileButton user={user} />
       </Toolbar>
-      {isMobile && (
+      {isSmallTablet && (
         <Toolbar>
           <Box sx={{ width: '100%' }}>
             <ChartPageTabs />

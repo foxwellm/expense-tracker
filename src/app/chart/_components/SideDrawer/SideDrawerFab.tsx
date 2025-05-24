@@ -10,13 +10,13 @@ import { useDrawerState } from '@/store'
 
 export function SideDrawerFab() {
   const { isDrawerOpen, openDrawer, closeDrawer } = useDrawerState()
-  const { isMobile, navHeight } = useBreakpoint()
+  const { isSmallTablet, navHeight } = useBreakpoint()
 
   return (
     <Box
       sx={{
         position: 'fixed',
-        top: isMobile ? navHeight * 2 + 4 : navHeight + 4,
+        top: isSmallTablet ? navHeight * 2 + 4 : navHeight + 4,
         marginTop: 1,
         marginLeft: 1.5,
         zIndex: (theme) => theme.zIndex.drawer + 1,

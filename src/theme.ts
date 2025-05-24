@@ -4,6 +4,15 @@ import { createTheme } from '@mui/material/styles'
 
 export const getTheme = (mode: 'light' | 'dark') =>
   createTheme({
+    breakpoints: {
+      values: {
+        xs: 600, // Mobile
+        sm: 750, // Small Tablet
+        md: 900, // Tablet
+        lg: 1200,
+        xl: 1536,
+      },
+    },
     palette: {
       mode,
       background: {

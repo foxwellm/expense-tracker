@@ -37,7 +37,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
 
 export function SideDrawer({ children }: PropsWithChildren) {
   const { isDrawerOpen, closeDrawer } = useDrawerState()
-  const { isMobile, navHeight } = useBreakpoint()
+  const { isSmallTablet, navHeight } = useBreakpoint()
 
   return (
     <Box display={'flex'}>
@@ -48,7 +48,7 @@ export function SideDrawer({ children }: PropsWithChildren) {
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
-            top: isMobile ? navHeight * 2 + 8 : navHeight + 8,
+            top: isSmallTablet ? navHeight * 2 + 8 : navHeight + 8,
             borderTopRightRadius: 8,
           },
         }}
@@ -58,14 +58,14 @@ export function SideDrawer({ children }: PropsWithChildren) {
       >
         <TabManager />
       </Drawer>
-      {isMobile && (
+      {isSmallTablet && (
         <Backdrop
           open={isDrawerOpen}
           onClick={closeDrawer}
           sx={{ zIndex: (theme) => theme.zIndex.appBar - 1 }}
         />
       )}
-      <Main open={!isMobile && isDrawerOpen}>{children}</Main>
+      <Main open={!isSmallTablet && isDrawerOpen}>{children}</Main>
     </Box>
   )
 }
