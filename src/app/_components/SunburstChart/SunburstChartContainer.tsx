@@ -1,6 +1,5 @@
 'use client'
 
-import { useTheme } from '@mui/material'
 import Box from '@mui/material/Box'
 import LinearProgress from '@mui/material/LinearProgress'
 import Skeleton from '@mui/material/Skeleton'
@@ -14,7 +13,6 @@ import { SunburstChart } from './SunburstChart'
 import { sunburstNode } from './utils/chartData'
 
 export function SunburstChartContainer() {
-  const theme = useTheme()
   const userExpenses = useExpensesStore((s) => s.userExpenses)
   const isRenderReady = useExpensesStore((s) => s.isRenderReady)
   const error = useExpensesStore((s) => s.error)
@@ -41,7 +39,33 @@ export function SunburstChartContainer() {
 
   // Initial Loading
   if (!chartData)
-    return <Skeleton variant="rectangular" height="100%" width={'100%'} />
+    return (
+      <Box
+        sx={{
+          display: 'flex',
+          flex: 1,
+          position: 'relative',
+        }}
+      >
+        <svg
+          width={700}
+          height={700}
+          viewBox={`0 0 ${700} ${700}`}
+          style={{ maxWidth: '100%', height: 'auto' }}
+        />
+        <Skeleton
+          variant="rectangular"
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            borderRadius: 4,
+          }}
+        />
+      </Box>
+    )
 
   return (
     <Box sx={{ position: 'relative' }}>
@@ -65,7 +89,7 @@ export function SunburstChartContainer() {
             transform: 'translate(-35%, -50%)',
             p: 2,
             border: '1px dashed',
-            borderColor: theme.palette.info.main,
+            borderColor: (theme) => theme.palette.info.main,
             borderRadius: 2,
           }}
         >
