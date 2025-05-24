@@ -1,5 +1,5 @@
-import { ChartContainerServer } from './_compoents'
+import { SunburstChartContainerServer } from './_compoents'
 
 export default function SunburstChartPage() {
-  return <ChartContainerServer />
+  return <SunburstChartContainerServer />
 }

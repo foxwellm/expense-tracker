@@ -6,9 +6,9 @@ import Skeleton from '@mui/material/Skeleton'
 import Typography from '@mui/material/Typography'
 import { useEffect, useState } from 'react'
 
+import { ErrorMessage } from '@/app/_components/ErrorMessage'
 import { useExpensesStore } from '@/store'
 
-import { ErrorMessage } from '../ErrorMessage'
 import { SunburstChart } from './SunburstChart'
 import { sunburstNode } from './utils/chartData'
 
