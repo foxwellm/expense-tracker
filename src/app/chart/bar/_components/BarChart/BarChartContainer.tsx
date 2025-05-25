@@ -1,6 +1,5 @@
 'use client'
 
-import Box from '@mui/material/Box'
 import { useEffect, useState } from 'react'
 
 import { ErrorMessage } from '@/app/_components'
@@ -47,15 +46,13 @@ export function BarChartContainer() {
 
   return (
     <ChartLayout slider={<DateRangeSliderContainer />}>
-      <Box sx={{ position: 'relative' }}>
-        <BarChart
-          {...chartData}
-          chartWidth={chartWidth}
-          chartHeight={chartHeight}
-        />
-        {!isRenderReady && <ChartLoadingProgress />}
-        {!chartData.monthlyExpenses.length && <NoExxpensesInfo />}
-      </Box>
+      <BarChart
+        {...chartData}
+        chartWidth={chartWidth}
+        chartHeight={chartHeight}
+      />
+      {!isRenderReady && <ChartLoadingProgress />}
+      {!chartData.monthlyExpenses.length && <NoExxpensesInfo />}
     </ChartLayout>
   )
 }

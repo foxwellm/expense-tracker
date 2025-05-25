@@ -1,6 +1,5 @@
 'use client'
 
-import Box from '@mui/material/Box'
 import { useEffect, useState } from 'react'
 
 import { ErrorMessage } from '@/app/_components'
@@ -43,17 +42,15 @@ export function SunburstChartContainer() {
 
   return (
     <ChartLayout slider={<DateRangeSliderContainer />}>
-      <Box sx={{ position: 'relative' }}>
-        <SunburstChart
-          sunburstNode={chartData}
-          chartWidth={chartWidth}
-          chartHeight={chartHeight}
-        />
-        {!isRenderReady && <ChartLoadingProgress />}
-        {chartData?.children && !chartData.children?.length && (
-          <NoExxpensesInfo />
-        )}
-      </Box>
+      <SunburstChart
+        sunburstNode={chartData}
+        chartWidth={chartWidth}
+        chartHeight={chartHeight}
+      />
+      {!isRenderReady && <ChartLoadingProgress />}
+      {chartData?.children && !chartData.children?.length && (
+        <NoExxpensesInfo />
+      )}
     </ChartLayout>
   )
 }

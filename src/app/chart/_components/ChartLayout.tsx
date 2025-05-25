@@ -28,6 +28,7 @@ export function ChartLayout({
             flex: 1,
             display: 'flex',
             justifyContent: 'center',
+            position: 'relative',
           }}
         >
           {children}
@@ -35,7 +36,8 @@ export function ChartLayout({
 
         <Box
           sx={{
-            px: 3,
+            mx: 3,
+            position: 'relative',
           }}
         >
           {slider}
