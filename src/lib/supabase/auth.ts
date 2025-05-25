@@ -1,3 +1,5 @@
+'use server'
+
 import { AuthError, User } from '@supabase/supabase-js'
 
 import { createServerSupabaseClient } from './server'

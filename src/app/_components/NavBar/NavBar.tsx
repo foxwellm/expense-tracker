@@ -7,7 +7,7 @@ import { User } from '@supabase/supabase-js'
 
 import { useBreakpoint } from '@/app/_hooks'
 
-import { ChartPageTabs } from './ChartPageTabs'
+import { ChartPageButtons } from './ChartPageButtons'
 import { PaletteModeSwitch } from './PaletteModeSwitch'
 import { ProfileButton } from './ProfileButton'
 import { Title } from './Title'
@@ -20,14 +20,14 @@ export function NavBar({ user }: { user: User | null }) {
         <Box display={'flex'} flex={1}>
           <Title />
         </Box>
-        {!isSmallTablet && <ChartPageTabs />}
+        {!isSmallTablet && <ChartPageButtons />}
         <PaletteModeSwitch />
         <ProfileButton user={user} />
       </Toolbar>
       {isSmallTablet && (
         <Toolbar>
           <Box sx={{ width: '100%' }}>
-            <ChartPageTabs />
+            <ChartPageButtons />
           </Box>
         </Toolbar>
       )}
