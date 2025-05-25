@@ -2,7 +2,7 @@
 
 import { Box, Button, ButtonGroup } from '@mui/material'
 import { usePathname, useRouter } from 'next/navigation'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 const options = {
   'Bar Chart': '/chart/bar',
@@ -19,40 +19,49 @@ export const ChartPageButtons = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 })
 
+  const underlineButton = useCallback(
+    (label: ChartType) => {
+      if (!containerRef.current) return
+
+      const targetBtn = containerRef.current.querySelector(
+        `button[data-label="${label}"]`
+      ) as HTMLElement
+
+      if (!targetBtn) return
+
+      const { offsetLeft, offsetWidth } = targetBtn
+
+      if (active === null) {
+        const center = offsetLeft + offsetWidth / 2
+        setUnderlineStyle({ left: center, width: 0 })
+
+        requestAnimationFrame(() => {
+          setUnderlineStyle({ left: offsetLeft, width: offsetWidth })
+        })
+      } else {
+        setUnderlineStyle({ left: offsetLeft, width: offsetWidth })
+      }
+    },
+    [active, containerRef]
+  )
+
   useEffect(() => {
     switch (pathname) {
       case options['Bar Chart']:
+        underlineButton('Bar Chart')
         setActive('Bar Chart')
         break
       case options['Sunburst Chart']:
+        underlineButton('Sunburst Chart')
         setActive('Sunburst Chart')
         break
       default:
         setActive(null)
     }
-  }, [pathname])
+  }, [pathname, underlineButton])
 
   const handleClick = (label: ChartType) => {
-    if (!containerRef.current) return
-    const targetBtn = containerRef.current.querySelector(
-      `button[data-label="${label}"]`
-    ) as HTMLElement
-
-    if (!targetBtn) return
-
-    const { offsetLeft, offsetWidth } = targetBtn
-
-    if (active === null) {
-      const center = offsetLeft + offsetWidth / 2
-      setUnderlineStyle({ left: center, width: 0 })
-
-      requestAnimationFrame(() => {
-        setUnderlineStyle({ left: offsetLeft, width: offsetWidth })
-      })
-    } else {
-      setUnderlineStyle({ left: offsetLeft, width: offsetWidth })
-    }
-
+    underlineButton(label)
     setActive(label)
     router.push(options[label])
   }
