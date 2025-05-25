@@ -1,6 +1,20 @@
 'use client'
 
+import '@mui/material/styles'
+
 import { useMediaQuery, useTheme } from '@mui/material'
+
+declare module '@mui/material/styles' {
+  interface BreakpointOverrides {
+    xs: true
+    sm: true
+    md: true
+    lg: true
+    xl: true
+    xxl: true
+    xxxl: true
+  }
+}
 
 const headers = {
   h1: 'h1',

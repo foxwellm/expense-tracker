@@ -1,5 +1,5 @@
-import { BarChartContainerServer } from './_components'
+import { BarChartContainer } from './_components'
 
 export default function BarChartPage() {
-  return <BarChartContainerServer />
+  return <BarChartContainer />
 }

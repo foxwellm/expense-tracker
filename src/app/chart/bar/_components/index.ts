@@ -1,1 +1,1 @@
-export * from './BarChartContainerServer'
+export * from './BarChart'

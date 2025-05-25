@@ -1,4 +1,4 @@
-export * from './ChartContainerClient'
+export * from './ChartLayout'
 export * from './ChartLoadingProgress'
 export * from './DateRangeSlider'
 export * from './ExpensesHydrator'

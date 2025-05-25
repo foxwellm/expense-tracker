@@ -5,7 +5,7 @@ import { ReactNode } from 'react'
 
 import { useBreakpoint } from '@/app/_hooks'
 
-export function ChartContainerClient({
+export function ChartLayout({
   children,
   slider,
 }: {
@@ -19,6 +19,7 @@ export function ChartContainerClient({
       <Box
         sx={{
           display: 'flex',
+          flexDirection: isTablet ? 'column' : 'row',
           marginY: 8,
         }}
       >
@@ -32,18 +33,14 @@ export function ChartContainerClient({
           {children}
         </Box>
 
-        {!isTablet && (
-          <Box
-            sx={{
-              px: 2,
-            }}
-          >
-            {slider}
-          </Box>
-        )}
+        <Box
+          sx={{
+            px: 3,
+          }}
+        >
+          {slider}
+        </Box>
       </Box>
-
-      {isTablet && <Box marginX={3}>{slider}</Box>}
     </>
   )
 }

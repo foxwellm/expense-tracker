@@ -6,7 +6,9 @@ import { useEffect, useState } from 'react'
 import { ErrorMessage } from '@/app/_components'
 import { useBreakpoint } from '@/app/_hooks'
 import {
+  ChartLayout,
   ChartLoadingProgress,
+  DateRangeSliderContainer,
   Loading,
   NoExxpensesInfo,
 } from '@/app/chart/_components'
@@ -44,14 +46,16 @@ export function BarChartContainer() {
   if (!chartData) return <Loading width={chartWidth} height={chartHeight} />
 
   return (
-    <Box sx={{ position: 'relative' }}>
-      <BarChart
-        {...chartData}
-        chartWidth={chartWidth}
-        chartHeight={chartHeight}
-      />
-      {!isRenderReady && <ChartLoadingProgress />}
-      {!chartData.monthlyExpenses.length && <NoExxpensesInfo />}
-    </Box>
+    <ChartLayout slider={<DateRangeSliderContainer />}>
+      <Box sx={{ position: 'relative' }}>
+        <BarChart
+          {...chartData}
+          chartWidth={chartWidth}
+          chartHeight={chartHeight}
+        />
+        {!isRenderReady && <ChartLoadingProgress />}
+        {!chartData.monthlyExpenses.length && <NoExxpensesInfo />}
+      </Box>
+    </ChartLayout>
   )
 }
