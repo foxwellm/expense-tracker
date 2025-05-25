@@ -61,8 +61,6 @@ export const ChartPageButtons = () => {
   }, [pathname, underlineButton])
 
   const handleClick = (label: ChartType) => {
-    underlineButton(label)
-    setActive(label)
     router.push(options[label])
   }
 
