@@ -4,6 +4,12 @@ import { redirect } from 'next/navigation'
 
 import { createServerSupabaseClient } from '@/lib/supabase'
 
+const isProd = process.env.NODE_ENV === 'production'
+
+const siteUrl = isProd
+  ? 'https://www.foxwellexpensetracker.com'
+  : 'http://localhost:3000'
+
 export async function login(formData: FormData) {
   const supabase = await createServerSupabaseClient()
 
@@ -20,7 +26,7 @@ export async function login(formData: FormData) {
     redirect('/error')
   }
 
-  redirect('/')
+  redirect('/chart/bar?sidebar=open')
 }
 
 export async function signup(formData: FormData) {
@@ -31,6 +37,10 @@ export async function signup(formData: FormData) {
   const data = {
     email: formData.get('email') as string,
     password: formData.get('password') as string,
+    options: {
+      // captchaToken: '',
+      emailRedirectTo: siteUrl,
+    },
   }
 
   const { error } = await supabase.auth.signUp(data)
@@ -39,7 +49,7 @@ export async function signup(formData: FormData) {
     redirect('/error')
   }
 
-  redirect('/')
+  redirect('/') // after signup - check email (unlock from auth)
 }
 
 export async function anonymousSignup() {
@@ -51,7 +61,7 @@ export async function anonymousSignup() {
     redirect('/error')
   }
 
-  redirect('/')
+  redirect('/chart/bar?sidebar=open')
 }
 
 export async function logout() {
