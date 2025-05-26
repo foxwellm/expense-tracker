@@ -1,15 +1,19 @@
 'use client'
 
-import { useSearchParams } from 'next/navigation'
-import { useEffect } from 'react'
+import { use, useEffect } from 'react'
 
 import { useDrawerState } from '@/store'
 
 import { BarChartContainer } from './_components'
 
-export default function BarChartPage() {
-  const searchParams = useSearchParams()
-  const shouldOpneSidebar = searchParams.get('sidebar') === 'open'
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>
+
+export default function BarChartPage({
+  searchParams,
+}: {
+  searchParams: SearchParams
+}) {
+  const shouldOpneSidebar = use(searchParams).sidebar === 'open'
   const openDrawer = useDrawerState((s) => s.openDrawer)
 
   useEffect(() => {
