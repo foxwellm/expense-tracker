@@ -1,78 +1,20 @@
-'use client'
+import { Box, Button, Typography } from '@mui/material'
 
-import { Box, Button, TextField, Typography } from '@mui/material'
-
-import { useBreakpoint } from '../_hooks'
+import { LogInForm, SignupForm } from './_components'
 import { anonymousSignup, login, signup } from './actions'
 
 export default function LoginPage() {
-  const { isMobile } = useBreakpoint()
   return (
     <Box
       sx={{
         display: 'flex',
-        flexDirection: isMobile ? 'column' : 'row',
         justifyContent: 'space-evenly',
-        alignItems: 'center',
-        pb: 4,
+        flexWrap: 'wrap',
+        gap: 4,
+        px: 4,
       }}
     >
-      <Box
-        component="form"
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-evenly',
-          gap: 2,
-          width: 280,
-          mt: 4,
-          py: 3,
-          px: 4,
-          border: '1px solid',
-          borderColor: 'divider',
-          borderRadius: 2,
-        }}
-      >
-        <Typography variant="h5" align="center">
-          Log in/Sign up
-        </Typography>
-
-        <TextField
-          id="email"
-          name="email"
-          label="Email"
-          type="email"
-          required
-          fullWidth
-        />
-
-        <TextField
-          id="password"
-          name="password"
-          label="Password"
-          type="password"
-          required
-          fullWidth
-        />
-
-        <Button
-          type="submit"
-          formAction={login}
-          variant="contained"
-          color="primary"
-        >
-          Log in
-        </Button>
-
-        <Button
-          type="submit"
-          formAction={signup}
-          variant="outlined"
-          color="secondary"
-        >
-          Sign up
-        </Button>
-      </Box>
+      <SignupForm onSignup={signup} />
       <Box
         sx={{
           display: 'flex',
@@ -88,7 +30,7 @@ export default function LoginPage() {
           borderRadius: 2,
         }}
       >
-        <Typography variant="h5" align="center">
+        <Typography variant="h4" align="center">
           Log in Anonymously
         </Typography>
         <Typography variant="subtitle2" color="info">
@@ -101,6 +43,7 @@ export default function LoginPage() {
           Log in anonymously
         </Button>
       </Box>
+      <LogInForm onLogIn={login} />
     </Box>
   )
 }
