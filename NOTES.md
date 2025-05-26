@@ -12,4 +12,4 @@ https://supabase.com/docs/guides/auth/server-side/nextjs
 
 ## Material-UI
 
-Use `(theme) => theme.zIndex.drawer` rather than importing from useTheme() so it can default be used server side.
+Use `(theme) => theme.zIndex.drawer` rather than importing from useTheme() to avoid importing hook. Both still need to be client side. Use `borderColor: 'success.main'` for server side

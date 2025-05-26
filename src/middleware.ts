@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server'
 
 import { updateSession } from '@/lib/supabase/middleware'
 
-const PUBLIC_PATHS = ['/error', '/auth/confirm']
+const PUBLIC_PATHS = ['/error', '/auth/confirm', '/auth/check-email']
 
 function isPublicPath(pathname: string): boolean {
   return PUBLIC_PATHS.some(

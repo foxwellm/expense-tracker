@@ -13,8 +13,7 @@ const siteUrl = isProd
 export async function login(formData: FormData) {
   const supabase = await createServerSupabaseClient()
 
-  // type-casting here for convenience
-  // TODO: in practice, you should validate your inputs
+  // TODO: validate inputs
   const data = {
     email: formData.get('email') as string,
     password: formData.get('password') as string,
@@ -32,8 +31,7 @@ export async function login(formData: FormData) {
 export async function signup(formData: FormData) {
   const supabase = await createServerSupabaseClient()
 
-  // type-casting here for convenience
-  // TODO: in practice, you should validate your inputs
+  // TODO: validate inputs
   const data = {
     email: formData.get('email') as string,
     password: formData.get('password') as string,
@@ -49,7 +47,7 @@ export async function signup(formData: FormData) {
     redirect('/error')
   }
 
-  redirect('/') // after signup - check email (unlock from auth)
+  redirect('/auth/check-email') // TODO: after signup - check email (unlock from auth)
 }
 
 export async function anonymousSignup() {
