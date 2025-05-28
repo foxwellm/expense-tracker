@@ -14,10 +14,10 @@ export function getMonthYearDomain(
   startDate: string | null,
   endDate: string | null
 ) {
-  if (!startDate || !endDate) return
-
   const givenStartDate = dayjs(startDate)
   const givenEndDate = dayjs(endDate)
+
+  if (!givenStartDate.isValid() || !givenEndDate.isValid()) return
 
   if (givenEndDate.isSameOrBefore(givenStartDate)) return
 

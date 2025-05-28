@@ -60,6 +60,26 @@ describe('getMonthYearDomain', () => {
     expect(result1).toEqual(undefined)
     expect(result2).toEqual(undefined)
   })
+  it('should return undefined when startDate or endDate is null', () => {
+    const startDate = '2024-10-18'
+    const endDate = '2025-02-15'
+
+    const result1 = getMonthYearDomain(startDate, null)
+    const result2 = getMonthYearDomain(null, endDate)
+
+    expect(result1).toEqual(undefined)
+    expect(result2).toEqual(undefined)
+  })
+  it('should return undefined when startDate or endDate is not a valid date', () => {
+    const startDate = '2024-10-18'
+    const endDate = '2025-02-15'
+
+    const result1 = getMonthYearDomain(startDate, 'not-a-valid-date')
+    const result2 = getMonthYearDomain('not-a-valid-date', endDate)
+
+    expect(result1).toEqual(undefined)
+    expect(result2).toEqual(undefined)
+  })
 })
 
 describe('combineMonthlyExpenses', () => {
