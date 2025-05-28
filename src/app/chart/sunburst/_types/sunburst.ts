@@ -1,5 +1,10 @@
+interface SunburstNodeChildren {
+  name: string
+  value: number
+  children: SunburstNodeChildren[]
+}
+
 export interface SunburstNode {
   name: string
-  value?: number
-  children?: SunburstNode[]
+  children: SunburstNodeChildren[]
 }

@@ -8,17 +8,17 @@ export function sunburstNode(expenses: Expense[]): SunburstNode {
     children: [],
   }
 
-  const categoryMap = new Map<string, SunburstNode>()
-
   for (const expense of expenses) {
-    let categoryNode = categoryMap.get(expense.category)
+    let categoryNode = root.children.find(
+      (child) => child.name === expense.category
+    )
+
     if (!categoryNode) {
-      categoryNode = { name: expense.category, children: [] }
-      categoryMap.set(expense.category, categoryNode)
-      root.children!.push(categoryNode)
+      categoryNode = { name: expense.category, value: 0, children: [] }
+      root.children.push(categoryNode)
     }
 
-    let subCategoryNode = categoryNode.children!.find(
+    let subCategoryNode = categoryNode.children.find(
       (child) => child.name === expense.sub_category
     )
 
@@ -26,11 +26,11 @@ export function sunburstNode(expenses: Expense[]): SunburstNode {
       subCategoryNode = {
         name: expense.sub_category,
         value: expense.cost_in_cents,
+        children: [],
       }
-      categoryNode.children!.push(subCategoryNode)
+      categoryNode.children.push(subCategoryNode)
     } else {
-      subCategoryNode.value =
-        (subCategoryNode.value || 0) + expense.cost_in_cents
+      subCategoryNode.value = subCategoryNode.value + expense.cost_in_cents
     }
   }
 
