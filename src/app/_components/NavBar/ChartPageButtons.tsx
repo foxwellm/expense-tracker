@@ -48,19 +48,23 @@ export const ChartPageButtons = () => {
   useEffect(() => {
     switch (pathname) {
       case options['Bar Chart']:
+        if (active === 'Bar Chart') break
         underlineButton('Bar Chart')
         setActive('Bar Chart')
         break
       case options['Sunburst Chart']:
+        if (active === 'Sunburst Chart') break
         underlineButton('Sunburst Chart')
         setActive('Sunburst Chart')
         break
       default:
         setActive(null)
     }
-  }, [pathname, underlineButton])
+  }, [pathname, underlineButton, active])
 
   const handleClick = (label: ChartType) => {
+    underlineButton(label)
+    setActive(label)
     router.push(options[label])
   }
 
