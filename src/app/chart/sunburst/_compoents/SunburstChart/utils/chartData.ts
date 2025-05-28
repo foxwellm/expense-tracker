@@ -5,6 +5,7 @@ import { SunburstNode } from '../../../_types'
 export function sunburstNode(expenses: Expense[]): SunburstNode {
   const root: SunburstNode = {
     name: 'Expenses',
+    value: 0,
     children: [],
   }
 
