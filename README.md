@@ -1,1 +1,5 @@
-NOTE: Database needs to be downloaded every time database changes
+# Foxwell Expense Tracker
+
+## Test Coverage
+
+![Test Coverage](./assets/TestCoverage.png)

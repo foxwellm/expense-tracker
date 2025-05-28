@@ -6,6 +6,8 @@ components inside app/ default to server side, outside app/ default to client si
 
 https://supabase.com/docs/guides/auth/server-side/nextjs
 
+Database Type needs to be downloaded every time database changes
+
 ## lint-staged
 
 `npx lint-staged` - test locally without commiting
