@@ -51,7 +51,7 @@ export function TabManager() {
   }
 
   return (
-    <Box>
+    <>
       <AppBar position="static" color="default">
         <Tabs
           value={value}
@@ -60,18 +60,16 @@ export function TabManager() {
           textColor="inherit"
           variant="fullWidth"
           aria-label="expenses tabs"
+          // NOTE: Needed fo mobile simulator
+          // sx={{
+          //   '& .MuiTabs-indicator': {
+          //     backgroundColor: 'transparent',
+          //   },
+          // }}
         >
-          <Tab icon={<ReceiptIcon />} sx={{ minWidth: 0 }} {...a11yProps(0)} />
-          <Tab
-            icon={<ReceiptLongIcon />}
-            sx={{ minWidth: 0 }}
-            {...a11yProps(1)}
-          />
-          <Tab
-            icon={<DeleteSweepIcon />}
-            sx={{ minWidth: 0 }}
-            {...a11yProps(2)}
-          />
+          <Tab icon={<ReceiptIcon />} {...a11yProps(0)} />
+          <Tab icon={<ReceiptLongIcon />} {...a11yProps(1)} />
+          <Tab icon={<DeleteSweepIcon />} {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
@@ -83,6 +81,6 @@ export function TabManager() {
       <TabPanel value={value} index={2}>
         <DeleteExpenses />
       </TabPanel>
-    </Box>
+    </>
   )
 }
