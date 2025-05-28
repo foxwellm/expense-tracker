@@ -2,10 +2,9 @@
 
 import Slider from '@mui/material/Slider'
 import { Dayjs } from 'dayjs'
-import { useState } from 'react'
 
 import { useBreakpoint } from '@/app/_hooks'
-import { useExpensesStore } from '@/store'
+import { useDateRangeStore, useExpensesStore } from '@/store'
 
 export function DateRangeSlider({
   marks,
@@ -15,7 +14,8 @@ export function DateRangeSlider({
   const { isMobile, isTablet } = useBreakpoint()
   const setStartDayjsDate = useExpensesStore((s) => s.setStartDayjsDate)
   const setEndDayjsDate = useExpensesStore((s) => s.setEndDayjsDate)
-  const [range, setRange] = useState<[number, number]>([9, 11])
+  const range = useDateRangeStore((s) => s.range)
+  const setRange = useDateRangeStore((s) => s.setRange)
 
   const onSubmit = () => {
     setStartDayjsDate(marks[range[0]].date)
