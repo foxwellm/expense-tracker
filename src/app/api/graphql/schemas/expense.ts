@@ -1,9 +1,10 @@
-import { z } from 'zod'
+import { z } from 'zod/v4'
 
 import { expenseCategories } from '@/lib/constants/expenses'
 
 export const expenseSchema = z.object({
-  date: z.string().date(), // yyyy-mm-dd
+  id: z.uuid(),
+  date: z.iso.date(), // yyyy-mm-dd
   category: z.enum(expenseCategories),
   sub_category: z.string(),
   cost_in_cents: z.number().positive().multipleOf(1),

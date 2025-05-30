@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z } from 'zod/v4'
 
 import { expenseSchema } from '@/app/api/graphql/schemas/expense'
 import { expenseCategories } from '@/lib/constants/expenses'
