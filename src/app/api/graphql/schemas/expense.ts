@@ -2,8 +2,7 @@ import { z } from 'zod/v4'
 
 import { expenseCategories } from '@/lib/constants/expenses'
 
-export const expenseSchema = z.object({
-  id: z.uuid(),
+export const baseExpenseSchema = z.object({
   date: z.iso.date(), // yyyy-mm-dd
   category: z.enum(expenseCategories),
   sub_category: z.string(),
@@ -11,4 +10,10 @@ export const expenseSchema = z.object({
   note: z.string().max(100).optional(),
 })
 
-export const expensesSchema = z.array(expenseSchema)
+export const expenseSchema = baseExpenseSchema.extend({
+  id: z.uuid(),
+})
+
+export const createExpenseSchema = baseExpenseSchema
+
+export const createExpensesSchema = z.array(createExpenseSchema)

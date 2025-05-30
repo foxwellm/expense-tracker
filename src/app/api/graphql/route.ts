@@ -6,12 +6,12 @@ import { NextRequest } from 'next/server'
 import sanitizeHtml from 'sanitize-html'
 
 import { createServerSupabaseClient } from '@/lib/supabase'
-import { Expense } from '@/types/expense'
+import { CreateExpense, Expense } from '@/types/expense'
 import { Database } from '@/types/supabase'
 
-import { expensesSchema } from './schemas'
+import { createExpensesSchema } from './schemas'
 
-const sanitizeExpense = (expense: Expense) => {
+const sanitizeExpense = (expense: CreateExpense) => {
   if (!expense?.note) return expense
   return {
     ...expense,
@@ -24,10 +24,11 @@ const sanitizeExpense = (expense: Expense) => {
 
 const typeDefs = gql`
   type Expense {
-    date: String
-    category: String
-    sub_category: String
-    cost_in_cents: Int
+    id: ID!
+    date: String!
+    category: String!
+    sub_category: String!
+    cost_in_cents: Int!
     note: String
   }
 
@@ -41,9 +42,6 @@ const typeDefs = gql`
 
   type Mutation {
     addExpenses(expenses: [ExpenseInput!]!): [Expense]
-  }
-
-  type Mutation {
     deleteUserExpenses: Boolean!
   }
 
@@ -66,7 +64,7 @@ const getUserExpenses = async (
 ): Promise<Expense[]> => {
   const { data, error } = await supabase
     .from('expenses')
-    .select('date, category, sub_category, cost_in_cents, note')
+    .select('id, date, category, sub_category, cost_in_cents, note')
     .eq('user_id', user.id)
     .gte('date', startDate)
     .lte('date', endDate)
@@ -96,15 +94,15 @@ const resolvers = {
   Mutation: {
     addExpenses: async (
       _parent: undefined,
-      { expenses }: { expenses: Expense[] },
+      { expenses }: { expenses: CreateExpense[] },
       { user, authError, supabase }: ApolloContext
     ) => {
       if (!user || authError) {
         throw new Error('Unauthorized')
       }
 
-      const parsedExpenses = expensesSchema.parse(expenses)
-      const cleanedExpenses = parsedExpenses.map((expense: Expense) => ({
+      const parsedExpenses = createExpensesSchema.parse(expenses)
+      const cleanedExpenses = parsedExpenses.map((expense: CreateExpense) => ({
         ...sanitizeExpense(expense),
         user_id: user.id,
       }))

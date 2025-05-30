@@ -3,6 +3,7 @@ import { gql } from '@apollo/client'
 export const ADD_EXPENSES = gql`
   mutation AddExpenses($expenses: [ExpenseInput!]!) {
     addExpenses(expenses: $expenses) {
+      id
       date
       category
       sub_category

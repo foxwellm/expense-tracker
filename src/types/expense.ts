@@ -1,9 +1,13 @@
 import { z } from 'zod/v4'
 
-import { expenseSchema } from '@/app/api/graphql/schemas/expense'
+import {
+  createExpenseSchema,
+  expenseSchema,
+} from '@/app/api/graphql/schemas/expense'
 import { expenseCategories } from '@/lib/constants/expenses'
 
 export type Expense = z.infer<typeof expenseSchema>
+export type CreateExpense = z.infer<typeof createExpenseSchema>
 
 export type ExpenseCategory = (typeof expenseCategories)[number]
 
