@@ -62,6 +62,9 @@ export const getTheme = (mode: 'light' | 'dark') =>
         fontSize: '0.75rem',
         fontWeight: 400,
       },
+      body2: {
+        fontSize: '0.75rem',
+      }
     },
     components: {
       MuiCssBaseline: {
