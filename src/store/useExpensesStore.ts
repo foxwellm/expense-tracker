@@ -48,14 +48,25 @@ export const useExpensesStore = create<ExpensesStore>((set) => ({
       endDateBound: endDayjsDate?.endOf('month').format('YYYY-MM-DD'),
       isRenderReady: false,
     }),
-  setQueryResult: ({ data, loading, error, refetch }) =>
-    set({
-      userExpenses: data?.userExpenses,
-      loading,
-      error,
-      refetch,
-      isRenderReady: loading === false,
-    }),
+  setQueryResult: ({ data, loading, error, refetch }) => {
+    set(() => {
+      const updates = {
+        loading,
+        error,
+        refetch,
+        isRenderReady: loading === false,
+      }
+
+      if (!loading && !error && data?.userExpenses) {
+        return {
+          ...updates,
+          userExpenses: data.userExpenses,
+        }
+      }
+
+      return updates
+    })
+  },
   setIsRenderReady: (isRenderReady) => set({ isRenderReady }),
   userExpenses: null,
   loading: true,
