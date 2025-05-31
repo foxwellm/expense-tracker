@@ -7,14 +7,12 @@ import CircularProgress from '@mui/material/CircularProgress'
 import MenuItem from '@mui/material/MenuItem'
 import Stack from '@mui/material/Stack'
 import TextField from '@mui/material/TextField'
-import Typography from '@mui/material/Typography'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import { PickerValue } from '@mui/x-date-pickers/internals'
 import dayjs from 'dayjs'
 import { useSnackbar } from 'notistack'
 import { useEffect, useState } from 'react'
 
-import { useBreakpoint } from '@/app/_hooks'
 import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
 import { expenseCategories } from '@/lib/constants/expenses'
 import { getSubCategories } from '@/lib/utils/expense'
@@ -23,7 +21,6 @@ import { ExpenseCategory } from '@/types/expense'
 
 export function AddExpenseForm() {
   const { enqueueSnackbar } = useSnackbar()
-  const { mediumHeader } = useBreakpoint()
   const refetch = useExpensesStore((s) => s.refetch)
   const setIsRenderReady = useExpensesStore((s) => s.setIsRenderReady)
   const currentDate = dayjs()
@@ -78,9 +75,7 @@ export function AddExpenseForm() {
 
   return (
     <Box component="form" onSubmit={handleSubmit}>
-      <Stack spacing={3} alignItems="center">
-        <Typography variant={mediumHeader}>Add Expense</Typography>
-
+      <Stack spacing={3}>
         <DatePicker
           value={date}
           onChange={(newValue) => setDate(newValue)}

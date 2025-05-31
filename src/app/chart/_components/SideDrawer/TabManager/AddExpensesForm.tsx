@@ -6,7 +6,6 @@ import Button from '@mui/material/Button'
 import CircularProgress from '@mui/material/CircularProgress'
 import Stack from '@mui/material/Stack'
 import TextField from '@mui/material/TextField'
-import Typography from '@mui/material/Typography'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import { PickerValue } from '@mui/x-date-pickers/internals'
 import dayjs from 'dayjs'
@@ -14,7 +13,6 @@ import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 import { useSnackbar } from 'notistack'
 import { useEffect, useState } from 'react'
 
-import { useBreakpoint } from '@/app/_hooks'
 import { ADD_EXPENSES } from '@/app/api/graphql/mutations'
 import { getMockExpenses } from '@/lib/utils/expense'
 import { useExpensesStore } from '@/store'
@@ -22,7 +20,6 @@ dayjs.extend(isSameOrAfter)
 
 export function AddExpensesForm() {
   const { enqueueSnackbar } = useSnackbar()
-  const { mediumHeader } = useBreakpoint()
   const refetch = useExpensesStore((s) => s.refetch)
   const setIsRenderReady = useExpensesStore((s) => s.setIsRenderReady)
 
@@ -77,9 +74,7 @@ export function AddExpensesForm() {
 
   return (
     <Box component="form" onSubmit={handleSubmit}>
-      <Stack spacing={3} alignItems="center">
-        <Typography variant={mediumHeader}>Add Random Expenses</Typography>
-
+      <Stack spacing={3}>
         <TextField
           label="Quantity"
           type="number"

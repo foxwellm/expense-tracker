@@ -4,18 +4,14 @@ import { useMutation } from '@apollo/client'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import CircularProgress from '@mui/material/CircularProgress'
-import Stack from '@mui/material/Stack'
-import Typography from '@mui/material/Typography'
 import { useSnackbar } from 'notistack'
 import { useEffect } from 'react'
 
-import { useBreakpoint } from '@/app/_hooks'
 import { DELETE_USER_EXPENSES } from '@/app/api/graphql/mutations'
 import { useExpensesStore } from '@/store'
 
-export function DeleteExpenses() {
+export function DeleteAllExpenses() {
   const { enqueueSnackbar } = useSnackbar()
-  const { mediumHeader } = useBreakpoint()
   const refetch = useExpensesStore((s) => s.refetch)
   const setIsRenderReady = useExpensesStore((s) => s.setIsRenderReady)
   const [deleteUserExpenses, { data, loading, error }] = useMutation(
@@ -41,33 +37,28 @@ export function DeleteExpenses() {
   }, [data, error, enqueueSnackbar])
 
   return (
-    <Box>
-      <Stack spacing={3} alignItems="center">
-        <Typography variant={mediumHeader}>Delete Expenses</Typography>
-        <Box width={'100%'} sx={{ position: 'relative' }}>
-          <Button
-            onClick={() => deleteUserExpenses()}
-            fullWidth
-            variant="contained"
-            color="error"
-            disabled={loading}
-          >
-            Delete all expenses
-          </Button>
-          {loading && (
-            <CircularProgress
-              size={24}
-              sx={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                marginTop: '-12px',
-                marginLeft: '-12px',
-              }}
-            />
-          )}
-        </Box>
-      </Stack>
+    <Box width={'100%'}>
+      <Button
+        onClick={() => deleteUserExpenses()}
+        fullWidth
+        variant="contained"
+        color="error"
+        disabled={loading}
+      >
+        Delete all expenses
+      </Button>
+      {loading && (
+        <CircularProgress
+          size={24}
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            marginTop: '-12px',
+            marginLeft: '-12px',
+          }}
+        />
+      )}
     </Box>
   )
 }

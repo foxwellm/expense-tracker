@@ -1,50 +1,22 @@
 'use client'
 
 import DeleteSweepIcon from '@mui/icons-material/DeleteSweep'
+import EditNoteIcon from '@mui/icons-material/EditNote'
 import ReceiptIcon from '@mui/icons-material/Receipt'
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong'
 import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
 import Tab from '@mui/material/Tab'
 import Tabs from '@mui/material/Tabs'
 import { SyntheticEvent, useState } from 'react'
 
 import { AddExpenseForm } from './AddExpenseForm'
 import { AddExpensesForm } from './AddExpensesForm'
-import { DeleteExpenses } from './DeleteExpenses'
-
-interface TabPanelProps {
-  children?: React.ReactNode
-  dir?: string
-  index: number
-  value: number
-}
-
-function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box sx={{ p: 2 }}>{children}</Box>}
-    </div>
-  )
-}
-
-function a11yProps(index: number) {
-  return {
-    id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
-  }
-}
+import { DeleteAllExpenses } from './DeleteAllExpenses'
+import { EditExpenses } from './EditExpenses'
+import { TabPanel } from './TabPanel'
 
 export function TabManager() {
-  const [value, setValue] = useState(1)
+  const [value, setValue] = useState(0)
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue)
@@ -56,7 +28,7 @@ export function TabManager() {
         <Tabs
           value={value}
           onChange={handleChange}
-          indicatorColor="primary"
+          indicatorColor="secondary"
           textColor="inherit"
           variant="fullWidth"
           aria-label="expenses tabs"
@@ -67,20 +39,48 @@ export function TabManager() {
           //   },
           // }}
         >
-          <Tab icon={<ReceiptIcon />} {...a11yProps(0)} />
-          <Tab icon={<ReceiptLongIcon />} {...a11yProps(1)} />
-          <Tab icon={<DeleteSweepIcon />} {...a11yProps(2)} />
+          <Tab
+            sx={{ minWidth: 0, px: 0 }}
+            icon={<ReceiptIcon />}
+            aria-label="add expense"
+          />
+          <Tab
+            sx={{ minWidth: 0, px: 0 }}
+            icon={<ReceiptLongIcon />}
+            aria-label="add random expenses"
+          />
+          <Tab
+            sx={{ minWidth: 0, px: 0 }}
+            icon={<EditNoteIcon />}
+            aria-label="edit expenses"
+          />
+          <Tab
+            sx={{ minWidth: 0, px: 0 }}
+            icon={<DeleteSweepIcon />}
+            aria-label="delete all expenses"
+          />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        <AddExpenseForm />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <AddExpensesForm />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <DeleteExpenses />
-      </TabPanel>
+      {value === 0 && (
+        <TabPanel header="Add Expense">
+          <AddExpenseForm />
+        </TabPanel>
+      )}
+      {value === 1 && (
+        <TabPanel header="Add Random Expenses">
+          <AddExpensesForm />
+        </TabPanel>
+      )}
+      {value === 2 && (
+        <TabPanel header="Edit Expenses">
+          <EditExpenses />
+        </TabPanel>
+      )}
+      {value === 3 && (
+        <TabPanel>
+          <DeleteAllExpenses />
+        </TabPanel>
+      )}
     </>
   )
 }
