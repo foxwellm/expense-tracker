@@ -18,3 +18,9 @@ export const DELETE_USER_EXPENSES = gql`
     deleteUserExpenses
   }
 `
+
+export const DELETE_USER_EXPENSE = gql`
+  mutation DELETE_USER_EXPENSE($id: ID!) {
+    deleteUserExpense(id: $id)
+  }
+`

@@ -43,6 +43,7 @@ const typeDefs = gql`
   type Mutation {
     addExpenses(expenses: [ExpenseInput!]!): [Expense]
     deleteUserExpenses: Boolean!
+    deleteUserExpense(id: ID!): Boolean!
   }
 
   type Query {
@@ -130,6 +131,25 @@ const resolvers = {
         .eq('user_id', user.id)
 
       if (error) throw new Error(error.message)
+
+      return true
+    },
+    deleteUserExpense: async (
+      _parent: undefined,
+      { id }: { id: Expense['id'] },
+      { user, authError, supabase }: ApolloContext
+    ) => {
+      if (!user || authError) {
+        throw new Error('Unauthorized')
+      }
+
+      const { error: deleteError } = await supabase
+        .from('expenses')
+        .delete()
+        .eq('id', id)
+        .eq('user_id', user.id)
+
+      if (deleteError) throw new Error(deleteError.message)
 
       return true
     },
