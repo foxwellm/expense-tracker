@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 
 import { expenseCategories } from '@/lib/constants/expenses'
-import { Expense, ExpenseCategory } from '@/types/expense'
+import { CreateExpense, ExpenseCategory } from '@/types/expense'
 
 import { expenseSubCategories } from '../constants/expenseSubCategories'
 import { getRandomDateBetween } from './date'
@@ -36,7 +36,10 @@ function getRandomCostInCents() {
   return Math.round(Math.random() * (maxCost - minCost) + minCost)
 }
 
-export function getMockExpense(startDate: string, endDate: string): Expense {
+export function getMockExpense(
+  startDate: string,
+  endDate: string
+): CreateExpense {
   const category = getRandomCategory()
   const subCategory = getRandomSubCategory(category)
   const note = getRandomNote(category, subCategory)
@@ -53,7 +56,7 @@ export function getMockExpenses(
   quantity: number,
   startDate: string,
   endDate: string
-): Expense[] | undefined {
+): CreateExpense[] | undefined {
   if (!quantity || !dayjs(startDate) || !dayjs(endDate)) {
     return undefined
   }

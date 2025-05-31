@@ -39,16 +39,18 @@ export function SideDrawer({ children }: PropsWithChildren) {
   const { isDrawerOpen, closeDrawer } = useDrawerState()
   const { isSmallTablet, navHeight } = useBreakpoint()
 
+  const drawerTopOffset = isSmallTablet ? navHeight * 2 + 8 : navHeight + 8
+
   return (
     <Box display={'flex'}>
       <Drawer
         sx={{
           width: drawerWidth,
-          flexShrink: 0,
           '& .MuiDrawer-paper': {
+            height: `calc(100vh - ${drawerTopOffset}px)`,
             width: drawerWidth,
             boxSizing: 'border-box',
-            top: isSmallTablet ? navHeight * 2 + 8 : navHeight + 8,
+            top: drawerTopOffset,
             borderTopRightRadius: 8,
           },
         }}
