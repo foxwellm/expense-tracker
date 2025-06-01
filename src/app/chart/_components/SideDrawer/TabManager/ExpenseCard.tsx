@@ -1,5 +1,6 @@
 import { useMutation } from '@apollo/client'
-import HighlightOffIcon from '@mui/icons-material/HighlightOff'
+import DeleteIcon from '@mui/icons-material/Delete'
+import EditIcon from '@mui/icons-material/Edit'
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
@@ -9,7 +10,7 @@ import LinearProgress from '@mui/material/LinearProgress'
 import Typography from '@mui/material/Typography'
 import dayjs from 'dayjs'
 import { useSnackbar } from 'notistack'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import { DELETE_USER_EXPENSE } from '@/app/api/graphql/mutations'
 import { expenseCategoryColors } from '@/lib/constants/expenses'
@@ -27,12 +28,16 @@ export function ExpenseCard({
   sub_category,
   cost_in_cents,
   note,
-}: Expense) {
+  onEdit,
+  isUpdateLoading,
+}: Expense & { onEdit: () => void; isUpdateLoading: boolean }) {
   const { enqueueSnackbar } = useSnackbar()
   const setIsRenderReady = useExpensesStore((s) => s.setIsRenderReady)
+  const isRenderReady = useExpensesStore((s) => s.isRenderReady)
   const refetch = useExpensesStore((s) => s.refetch)
+  const [isDeleteLoading, setIsDeleteLoading] = useState(false)
 
-  const [deleteUserExpense, { data, loading, error }] = useMutation(
+  const [deleteUserExpense, { data, error }] = useMutation(
     DELETE_USER_EXPENSE,
     {
       onCompleted: (data) => {
@@ -42,6 +47,13 @@ export function ExpenseCard({
       },
     }
   )
+
+  useEffect(() => {
+    // NOTE: In case error and card not deleted
+    if (isRenderReady) {
+      setIsDeleteLoading(false)
+    }
+  }, [isRenderReady])
 
   useEffect(() => {
     if (error) {
@@ -57,6 +69,7 @@ export function ExpenseCard({
 
   const handleDeleteExpense = () => {
     setIsRenderReady(false)
+    setIsDeleteLoading(true)
     deleteUserExpense({
       variables: {
         id,
@@ -137,8 +150,7 @@ export function ExpenseCard({
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          p: 0.5,
-          gap: 0.5,
+          py: 0.825,
         }}
       >
         <IconButton
@@ -146,10 +158,17 @@ export function ExpenseCard({
           sx={{ p: 0.625 }}
           aria-label="delete expense"
         >
-          <HighlightOffIcon sx={{ fontSize: 20, color: 'error.main' }} />
+          <DeleteIcon sx={{ fontSize: 20, color: 'error.main' }} />
+        </IconButton>
+        <IconButton
+          onClick={onEdit}
+          sx={{ p: 0.625 }}
+          aria-label="edit expense"
+        >
+          <EditIcon sx={{ fontSize: 20, color: 'warning.main' }} />
         </IconButton>
       </CardActions>
-      {loading && (
+      {(isDeleteLoading || isUpdateLoading) && (
         <LinearProgress
           sx={{
             position: 'absolute',

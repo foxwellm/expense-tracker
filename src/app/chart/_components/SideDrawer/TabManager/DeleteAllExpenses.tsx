@@ -44,21 +44,22 @@ export function DeleteAllExpenses() {
         variant="contained"
         color="error"
         disabled={loading}
+        sx={{ position: 'relative' }}
       >
         Delete all expenses
+        {loading && (
+          <CircularProgress
+            size={24}
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              marginTop: '-12px',
+              marginLeft: '-12px',
+            }}
+          />
+        )}
       </Button>
-      {loading && (
-        <CircularProgress
-          size={24}
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            marginTop: '-12px',
-            marginLeft: '-12px',
-          }}
-        />
-      )}
     </Box>
   )
 }

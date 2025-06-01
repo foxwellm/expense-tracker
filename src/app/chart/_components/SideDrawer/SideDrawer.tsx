@@ -47,6 +47,8 @@ export function SideDrawer({ children }: PropsWithChildren) {
         sx={{
           width: drawerWidth,
           '& .MuiDrawer-paper': {
+            // NOTE: Needed for chrome ext mobile simulator
+            // height: '100%',
             height: `calc(100vh - ${drawerTopOffset}px)`,
             width: drawerWidth,
             boxSizing: 'border-box',

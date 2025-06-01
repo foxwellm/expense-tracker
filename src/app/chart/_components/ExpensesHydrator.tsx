@@ -16,6 +16,7 @@ export function ExpensesHydrator() {
       startDate: startDateBound,
       endDate: endDateBound,
     },
+    fetchPolicy: 'no-cache',
   })
 
   useEffect(() => {
