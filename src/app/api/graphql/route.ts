@@ -6,12 +6,12 @@ import { NextRequest } from 'next/server'
 import sanitizeHtml from 'sanitize-html'
 
 import { createServerSupabaseClient } from '@/lib/supabase'
-import { CreateExpense, Expense } from '@/types/expense'
+import { CreateExpense, Expense, UpdateExpense } from '@/types/expense'
 import { Database } from '@/types/supabase'
 
-import { createExpensesSchema } from './schemas'
+import { createExpensesSchema, updateExpenseSchema } from './schemas'
 
-const sanitizeExpense = (expense: CreateExpense) => {
+const sanitizeExpense = (expense: CreateExpense | UpdateExpense) => {
   if (!expense?.note) return expense
   return {
     ...expense,
@@ -42,6 +42,7 @@ const typeDefs = gql`
 
   type Mutation {
     addExpenses(expenses: [ExpenseInput!]!): [Expense]
+    updateExpense(expenseId: String!, expense: ExpenseInput!): Boolean!
     deleteUserExpenses: Boolean!
     deleteUserExpense(id: ID!): Boolean!
   }
@@ -115,6 +116,35 @@ const resolvers = {
 
       if (error) throw new Error(error.message)
       return data
+    },
+    updateExpense: async (
+      _parent: undefined,
+      { expenseId, expense }: { expenseId: string; expense: UpdateExpense },
+      { user, authError, supabase }: ApolloContext
+    ) => {
+      if (!user || authError) {
+        throw new Error('Unauthorized')
+      }
+
+      const parsedExpense = updateExpenseSchema.parse(expense)
+      const cleanedExpense = {
+        ...sanitizeExpense(parsedExpense),
+      }
+
+      const { data, error } = await supabase
+        .from('expenses')
+        .update(cleanedExpense)
+        .eq('id', expenseId)
+        .eq('user_id', user.id)
+        .select()
+
+      if (error) throw new Error(error.message)
+
+      if (!data || data.length === 0) {
+        throw new Error('Expense not found')
+      }
+
+      return true
     },
     deleteUserExpenses: async (
       _parent: undefined,

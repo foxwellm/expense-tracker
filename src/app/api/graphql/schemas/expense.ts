@@ -15,5 +15,6 @@ export const expenseSchema = baseExpenseSchema.extend({
 })
 
 export const createExpenseSchema = baseExpenseSchema
+export const updateExpenseSchema = baseExpenseSchema
 
 export const createExpensesSchema = z.array(createExpenseSchema)
