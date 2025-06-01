@@ -71,6 +71,8 @@ const getUserExpenses = async (
     .gte('date', startDate)
     .lte('date', endDate)
     .order('date', { ascending: false })
+    .order('category', { ascending: true })
+    .order('cost_in_cents', { ascending: false })
 
   if (error) {
     throw new Error('Failed to fetch expenses')
