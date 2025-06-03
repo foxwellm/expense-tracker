@@ -20,7 +20,7 @@ export const ChartPageButtons = () => {
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 })
 
   const underlineButton = useCallback(
-    (label: ChartType) => {
+    (label: ChartType, isChartSelected: boolean = true) => {
       if (!containerRef.current) return
 
       const targetBtn = containerRef.current.querySelector(
@@ -31,31 +31,41 @@ export const ChartPageButtons = () => {
 
       const { offsetLeft, offsetWidth } = targetBtn
 
-      if (active === null) {
+      if (isChartSelected) {
+        setUnderlineStyle({ left: offsetLeft, width: offsetWidth })
+      } else {
+        setUnderlineStyle({ left: offsetLeft, width: offsetWidth })
+
         const center = offsetLeft + offsetWidth / 2
         setUnderlineStyle({ left: center, width: 0 })
 
         requestAnimationFrame(() => {
           setUnderlineStyle({ left: offsetLeft, width: offsetWidth })
         })
-      } else {
-        setUnderlineStyle({ left: offsetLeft, width: offsetWidth })
       }
     },
-    [active, containerRef]
+    [containerRef]
   )
 
   useEffect(() => {
     switch (pathname) {
       case options['Bar Chart']:
         if (active === 'Bar Chart') break
-        underlineButton('Bar Chart')
         setActive('Bar Chart')
+        if (active === null) {
+          underlineButton('Bar Chart', false)
+          break
+        }
+        underlineButton('Bar Chart')
         break
       case options['Sunburst Chart']:
         if (active === 'Sunburst Chart') break
-        underlineButton('Sunburst Chart')
         setActive('Sunburst Chart')
+        if (active === null) {
+          underlineButton('Sunburst Chart', false)
+          break
+        }
+        underlineButton('Sunburst Chart')
         break
       default:
         setActive(null)
@@ -63,8 +73,6 @@ export const ChartPageButtons = () => {
   }, [pathname, underlineButton, active])
 
   const handleClick = (label: ChartType) => {
-    underlineButton(label)
-    setActive(label)
     router.push(options[label])
   }
 
