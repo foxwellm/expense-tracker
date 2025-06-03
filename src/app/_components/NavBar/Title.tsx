@@ -6,11 +6,8 @@ import Typography from '@mui/material/Typography'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
-import { useBreakpoint } from '@/app/_hooks'
-
 export function Title() {
   const router = useRouter()
-  const { logoDimension } = useBreakpoint()
 
   return (
     <Box
@@ -28,12 +25,21 @@ export function Title() {
           },
         }}
       >
-        <Image
-          src="/FETIcon.png"
-          alt="FETIcon"
-          width={logoDimension}
-          height={logoDimension}
-        />
+        <Box
+          sx={{
+            width: 'clamp(20px, 5vw, 34px)',
+            height: 'clamp(20px, 5vw, 34px)',
+            position: 'relative',
+          }}
+        >
+          <Image
+            src="/FETIcon.png"
+            alt="FETIcon"
+            fill
+            style={{ objectFit: 'contain' }}
+            priority
+          />
+        </Box>
       </Button>
       <Typography
         variant="largeHeader"

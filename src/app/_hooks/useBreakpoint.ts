@@ -20,7 +20,6 @@ export const useBreakpoint = () => {
   })
 
   const navHeight = isSmallTablet ? 56 : 64
-  const logoDimension = isTablet ? 20 : 34
 
   let chartWidth
   let chartHeight
@@ -44,7 +43,6 @@ export const useBreakpoint = () => {
     isSmallTablet,
     isTablet,
     navHeight,
-    logoDimension,
     chartWidth,
     chartHeight,
   }
