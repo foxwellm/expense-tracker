@@ -1,31 +1,6 @@
 'use client'
 
-import '@mui/material/styles'
-
 import { useMediaQuery, useTheme } from '@mui/material'
-
-declare module '@mui/material/styles' {
-  interface BreakpointOverrides {
-    xs: true
-    sm: true
-    md: true
-    lg: true
-    xl: true
-    xxl: true
-    xxxl: true
-  }
-}
-
-const headers = {
-  h1: 'h1',
-  h2: 'h2',
-  h3: 'h3',
-  h4: 'h4',
-  h5: 'h5',
-  h6: 'h6',
-} as const
-
-type HeaderLevel = (typeof headers)[keyof typeof headers]
 
 export const useBreakpoint = () => {
   const theme = useTheme()
@@ -46,20 +21,6 @@ export const useBreakpoint = () => {
 
   const navHeight = isSmallTablet ? 56 : 64
   const logoDimension = isTablet ? 20 : 34
-
-  let largeHeader: HeaderLevel
-  let mediumHeader: HeaderLevel
-
-  if (isMobile) {
-    largeHeader = headers.h5
-    mediumHeader = headers.h4
-  } else if (isTablet) {
-    largeHeader = headers.h3
-    mediumHeader = headers.h4
-  } else {
-    largeHeader = headers.h1
-    mediumHeader = headers.h3
-  }
 
   let chartWidth
   let chartHeight
@@ -83,8 +44,6 @@ export const useBreakpoint = () => {
     isSmallTablet,
     isTablet,
     navHeight,
-    largeHeader,
-    mediumHeader,
     logoDimension,
     chartWidth,
     chartHeight,

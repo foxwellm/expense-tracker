@@ -10,7 +10,7 @@ import { useBreakpoint } from '@/app/_hooks'
 
 export function Title() {
   const router = useRouter()
-  const { largeHeader, logoDimension } = useBreakpoint()
+  const { logoDimension } = useBreakpoint()
 
   return (
     <Box
@@ -36,9 +36,11 @@ export function Title() {
         />
       </Button>
       <Typography
-        variant={largeHeader}
+        variant="largeHeader"
         component="div"
-        sx={{ pointerEvents: 'none' }}
+        sx={{
+          pointerEvents: 'none',
+        }}
       >
         Foxwell Expense Tracker
       </Typography>

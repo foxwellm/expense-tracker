@@ -38,6 +38,14 @@ export const getTheme = (mode: 'light' | 'dark') =>
     },
     typography: {
       fontFamily: 'Roboto, sans-serif',
+      largeHeader: {
+        fontSize: 'clamp(0.875rem, 3vw, 1.75rem)',
+        fontWeight: 600,
+      },
+      mediumHeader: {
+        fontSize: 'clamp(1rem, 3vw, 1.25rem)',
+        fontWeight: 600,
+      },
       h1: {
         fontSize: '1.75rem',
         fontWeight: 700,
@@ -64,7 +72,7 @@ export const getTheme = (mode: 'light' | 'dark') =>
       },
       body2: {
         fontSize: '0.75rem',
-      }
+      },
     },
     components: {
       MuiCssBaseline: {

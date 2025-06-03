@@ -16,7 +16,7 @@ export function NavBar({ user }: { user: User | null }) {
   const { isSmallTablet } = useBreakpoint()
   return (
     <AppBar position="sticky" color="default">
-      <Toolbar>
+      <Toolbar disableGutters sx={{ px: { xs: 2, sm: 3 } }}>
         <Box display={'flex'} flex={1}>
           <Title />
         </Box>

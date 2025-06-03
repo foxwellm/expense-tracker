@@ -12,7 +12,9 @@ const buildEslintCommand = (filenames) => {
 
 const lintStagedConfig = {
   '**/*.{js,jsx,ts,tsx}': [buildEslintCommand],
-  '**/*.{ts,tsx}': ['tsc-files --noEmit --incremental false'],
+  '**/*.{ts,tsx}': [
+    'tsc-files --noEmit --incremental false src/types/mui.d.ts',
+  ],
   '**/*.{json,md,mjs,html}': ['prettier --write'],
   '**/*.test.ts': ['jest'],
 }
