@@ -4,12 +4,17 @@ import { Box, Button, ButtonGroup } from '@mui/material'
 import { usePathname, useRouter } from 'next/navigation'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-const options = {
+const chartOptions = {
   'Bar Chart': '/chart/bar',
   'Sunburst Chart': '/chart/sunburst',
 }
 
-type ChartType = keyof typeof options
+type ChartType = keyof typeof chartOptions
+
+const getChartTypeFromPath = (path: string): ChartType | null => {
+  const entry = Object.entries(chartOptions).find(([, value]) => value === path)
+  return entry ? (entry[0] as ChartType) : null
+}
 
 export const ChartPageButtons = () => {
   const router = useRouter()
@@ -20,7 +25,7 @@ export const ChartPageButtons = () => {
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 })
 
   const underlineButton = useCallback(
-    (label: ChartType, isChartSelected: boolean = true) => {
+    (label: ChartType, isChartSelected: boolean) => {
       if (!containerRef.current) return
 
       const targetBtn = containerRef.current.querySelector(
@@ -48,32 +53,19 @@ export const ChartPageButtons = () => {
   )
 
   useEffect(() => {
-    switch (pathname) {
-      case options['Bar Chart']:
-        if (active === 'Bar Chart') break
-        setActive('Bar Chart')
-        if (active === null) {
-          underlineButton('Bar Chart', false)
-          break
-        }
-        underlineButton('Bar Chart')
-        break
-      case options['Sunburst Chart']:
-        if (active === 'Sunburst Chart') break
-        setActive('Sunburst Chart')
-        if (active === null) {
-          underlineButton('Sunburst Chart', false)
-          break
-        }
-        underlineButton('Sunburst Chart')
-        break
-      default:
-        setActive(null)
+    const chartType = getChartTypeFromPath(pathname)
+
+    if (chartType === active) return
+
+    setActive(chartType)
+
+    if (chartType !== null) {
+      underlineButton(chartType, active !== null)
     }
   }, [pathname, underlineButton, active])
 
   const handleClick = (label: ChartType) => {
-    router.push(options[label])
+    router.push(chartOptions[label])
   }
 
   return (
@@ -86,7 +78,7 @@ export const ChartPageButtons = () => {
           },
         }}
       >
-        {Object.keys(options).map((label) => (
+        {Object.keys(chartOptions).map((label) => (
           <Button
             key={label}
             data-label={label}
