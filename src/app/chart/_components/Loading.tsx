@@ -2,9 +2,8 @@
 
 import Skeleton from '@mui/material/Skeleton'
 import Slider from '@mui/material/Slider'
-import { useEffect, useState } from 'react'
 
-import { useBreakpoint } from '@/app/_hooks'
+import { useBreakpoint, useIsHydrated } from '@/app/_hooks'
 
 import { ChartLayout } from './ChartLayout'
 
@@ -55,17 +54,9 @@ function SliderLoading() {
 }
 
 export function Loading({ width, height }: { width: number; height: number }) {
-  const [ready, setReady] = useState(false)
+  const { isHydrated } = useIsHydrated()
 
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        setReady(true)
-      })
-    })
-  }, [])
-
-  if (!ready) return null
+  if (!isHydrated) return null
 
   return (
     <ChartLayout slider={<SliderLoading />}>
