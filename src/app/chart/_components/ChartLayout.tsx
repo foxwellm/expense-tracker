@@ -13,7 +13,7 @@ export function ChartLayout({
       sx={{
         display: 'flex',
         flexDirection: {
-          xxs: 'column',
+          zero: 'column',
           md: 'row',
         },
         marginY: 8,

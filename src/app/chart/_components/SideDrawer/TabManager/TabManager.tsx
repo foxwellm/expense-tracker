@@ -16,7 +16,7 @@ import { EditExpenses } from './EditExpenses'
 import { TabPanel } from './TabPanel'
 
 export function TabManager() {
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(1)
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue)
@@ -32,7 +32,7 @@ export function TabManager() {
           textColor="inherit"
           variant="fullWidth"
           aria-label="expenses tabs"
-          // NOTE: Needed fo mobile simulator
+          // NOTE: Needed for chrome ext mobile simulator
           // sx={{
           //   '& .MuiTabs-indicator': {
           //     backgroundColor: 'transparent',

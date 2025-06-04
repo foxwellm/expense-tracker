@@ -20,13 +20,13 @@ export function SideDrawer({ children }: PropsWithChildren) {
           width: drawerWidth,
           '& .MuiDrawer-paper': {
             height: {
-              xxs: `calc(100vh - ${navHeight.mobile * 2 + 8}px)`,
+              zero: `calc(100vh - ${navHeight.mobile * 2 + 8}px)`,
               sm: `calc(100vh - ${navHeight.notMobile + 8}px)`,
             },
             width: drawerWidth,
             boxSizing: 'border-box',
             top: {
-              xxs: navHeight.mobile * 2 + 8,
+              zero: navHeight.mobile * 2 + 8,
               sm: navHeight.notMobile + 8,
             },
             borderTopRightRadius: 8,
@@ -43,7 +43,7 @@ export function SideDrawer({ children }: PropsWithChildren) {
         open={isDrawerOpen}
         onClick={closeDrawer}
         sx={{
-          display: { xxs: 'block', sm: 'none' },
+          display: { zero: 'block', sm: 'none' },
           zIndex: (theme) => theme.zIndex.appBar - 1,
         }}
       />
@@ -62,7 +62,7 @@ export function SideDrawer({ children }: PropsWithChildren) {
                 : theme.transitions.duration.leavingScreen,
             }),
           marginLeft: {
-            xxs: `-${drawerWidth}px`,
+            zero: `-${drawerWidth}px`,
             sm: isDrawerOpen ? 0 : `-${drawerWidth}px`,
           },
         }}

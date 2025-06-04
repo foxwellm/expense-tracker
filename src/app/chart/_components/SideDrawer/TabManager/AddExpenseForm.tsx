@@ -22,20 +22,18 @@ import { ExpenseCategory } from '@/types/expense'
 export function AddExpenseForm() {
   const { enqueueSnackbar } = useSnackbar()
   const refetch = useExpensesStore((s) => s.refetch)
-  const setIsRenderReady = useExpensesStore((s) => s.setIsRenderReady)
   const currentDate = dayjs()
   const furthestPastDate = dayjs().subtract(2, 'years')
 
   const [date, setDate] = useState<PickerValue>(currentDate)
-  const [category, setCategory] = useState<ExpenseCategory>('Food')
-  const [subCategory, setSubCategory] = useState<string>('Soups')
-  const [cost, setCost] = useState<string>('23.46')
-  const [note, setNote] = useState<string>('')
+  const [category, setCategory] = useState<ExpenseCategory>('Office')
+  const [subCategory, setSubCategory] = useState<string>('Furniture')
+  const [cost, setCost] = useState<string>('1223.46')
+  const [note, setNote] = useState<string>('Corner couch')
 
   const [addExpense, { data, loading, error }] = useMutation(ADD_EXPENSES, {
     onCompleted: (data) => {
       if (refetch && data) {
-        setIsRenderReady(false)
         refetch()
       }
     },

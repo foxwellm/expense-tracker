@@ -15,7 +15,7 @@ export function SideDrawerFab() {
       sx={{
         position: 'fixed',
         top: {
-          xxs: `calc(${navHeight.mobile * 2 + 4}px)`,
+          zero: `calc(${navHeight.mobile * 2 + 4}px)`,
           sm: `${navHeight.notMobile + 4}px`,
         },
         marginTop: 1,
