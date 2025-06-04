@@ -4,19 +4,20 @@ import AddIcon from '@mui/icons-material/Add'
 import Box from '@mui/material/Box'
 import Fab from '@mui/material/Fab'
 
-import { useBreakpoint } from '@/app/_hooks'
-import { drawerWidth } from '@/lib/constants/dimensions'
+import { drawerWidth, navHeight } from '@/lib/constants/dimensions'
 import { useDrawerState } from '@/store'
 
 export function SideDrawerFab() {
   const { isDrawerOpen, openDrawer, closeDrawer } = useDrawerState()
-  const { isSmallTablet, navHeight } = useBreakpoint()
 
   return (
     <Box
       sx={{
         position: 'fixed',
-        top: isSmallTablet ? navHeight * 2 + 4 : navHeight + 4,
+        top: {
+          xxs: `calc(${navHeight.mobile * 2 + 4}px)`,
+          sm: `${navHeight.notMobile + 4}px`,
+        },
         marginTop: 1,
         marginLeft: 1.5,
         zIndex: (theme) => theme.zIndex.drawer + 1,

@@ -6,6 +6,7 @@ export const getTheme = (mode: 'light' | 'dark') =>
   createTheme({
     breakpoints: {
       values: {
+        xxs: 0,
         xs: 600, // Mobile
         sm: 750, // Small Tablet
         md: 900, // Tablet
