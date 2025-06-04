@@ -32,7 +32,7 @@ const color = (category: ExpenseCategory) => {
 }
 
 const marginTop = 20
-const marginBottom = 80
+const marginBottom = 30
 const marginRight = 0
 const marginLeft = 120
 const legendHeight = 80
@@ -88,6 +88,9 @@ export function BarChart({
         .attr('font-size', `${legendFontSize}px`)
         .attr('fill', 'currentColor')
     })
+    return () => {
+      svg.selectAll('.legend').remove()
+    }
   }, [categories, chartWidth])
 
   useEffect(() => {
@@ -205,7 +208,6 @@ export function BarChart({
     return () => {
       svg.selectAll('.x-axis').remove()
       svg.selectAll('.y-axis').remove()
-      svg.selectAll('.legend').remove()
     }
   }, [monthlyExpenses, categories, monthYearDomain, chartWidth, chartHeight])
 
