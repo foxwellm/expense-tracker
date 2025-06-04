@@ -1,9 +1,5 @@
-'use client'
-
-import Box from '@mui/material/Box'
+import { Box } from '@mui/material'
 import { ReactNode } from 'react'
-
-import { useBreakpoint } from '@/app/_hooks'
 
 export function ChartLayout({
   children,
@@ -12,37 +8,36 @@ export function ChartLayout({
   children: ReactNode
   slider: ReactNode
 }) {
-  const { isTablet } = useBreakpoint()
-
   return (
-    <>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: {
+          xxs: 'column',
+          md: 'row',
+        },
+        marginY: 8,
+      }}
+    >
       <Box
         sx={{
+          flex: 1,
           display: 'flex',
-          flexDirection: isTablet ? 'column' : 'row',
-          marginY: 8,
+          justifyContent: 'center',
+          position: 'relative',
         }}
       >
-        <Box
-          sx={{
-            flex: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            position: 'relative',
-          }}
-        >
-          {children}
-        </Box>
-
-        <Box
-          sx={{
-            mx: 3,
-            position: 'relative',
-          }}
-        >
-          {slider}
-        </Box>
+        {children}
       </Box>
-    </>
+
+      <Box
+        sx={{
+          mx: 3,
+          position: 'relative',
+        }}
+      >
+        {slider}
+      </Box>
+    </Box>
   )
 }
