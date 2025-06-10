@@ -13,18 +13,22 @@ export function NavBar({ user }: { user: User | null }) {
         <Box display="flex" flex={1}>
           <Title />
         </Box>
-        <Box sx={{ display: { zero: 'none', sm: 'flex' } }}>
-          <ChartPageButtons />
-        </Box>
+        {user && (
+          <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
+            <ChartPageButtons />
+          </Box>
+        )}
         <PaletteModeSwitch />
         <ProfileButton user={user} />
       </Toolbar>
 
-      <Toolbar sx={{ display: { zero: 'flex', sm: 'none' } }}>
-        <Box sx={{ width: '100%' }}>
-          <ChartPageButtons />
-        </Box>
-      </Toolbar>
+      {user && (
+        <Toolbar sx={{ display: { xs: 'flex', sm: 'none' } }}>
+          <Box sx={{ width: '100%' }}>
+            <ChartPageButtons />
+          </Box>
+        </Toolbar>
+      )}
     </AppBar>
   )
 }
