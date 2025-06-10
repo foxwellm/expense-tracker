@@ -26,6 +26,10 @@ declare module '@mui/material/styles' {
     xxl: true
     xxxl: true
   }
+
+  interface TypeBackground {
+    demo?: string
+  }
 }
 
 declare module '@mui/material/Typography' {

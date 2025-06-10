@@ -21,6 +21,7 @@ export const getTheme = (mode: 'light' | 'dark') =>
       background: {
         default: mode === 'dark' ? '#0d0d0d' : '#fafafa',
         paper: mode === 'dark' ? '#1a1a1a' : '#ffffff',
+        demo: mode === 'dark' ? '#030712' : '#fafafa',
       },
       primary: {
         main: '#4dabf7',
