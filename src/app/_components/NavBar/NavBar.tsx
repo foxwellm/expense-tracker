@@ -14,7 +14,7 @@ export function NavBar({ user }: { user: User | null }) {
           <Title />
         </Box>
         {user && (
-          <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
+          <Box sx={{ display: { zero: 'none', sm: 'flex' } }}>
             <ChartPageButtons />
           </Box>
         )}
