@@ -2,10 +2,32 @@
 
 import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider } from '@mui/material/styles'
-import { PropsWithChildren, useMemo } from 'react'
+import {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useMemo,
+  useState,
+} from 'react'
 
-import { ThemeProviderContext, useThemeMode } from '@/app/_contexts'
 import { getTheme } from '@/theme'
+
+type ThemeMode = 'light' | 'dark'
+
+interface ThemeContextType {
+  mode: ThemeMode
+  setMode: (mode: ThemeMode) => void
+}
+
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
+
+export function useThemeMode() {
+  const context = useContext(ThemeContext)
+  if (!context) {
+    throw new Error('useThemeMode must be used inside ThemeProviderContext')
+  }
+  return context
+}
 
 function ThemeInner({ children }: PropsWithChildren) {
   const { mode } = useThemeMode()
@@ -20,10 +42,13 @@ function ThemeInner({ children }: PropsWithChildren) {
 }
 
 export function ThemeProviderClient({ children }: PropsWithChildren) {
+  const [mode, setMode] = useState<ThemeMode>('dark')
+  const value = useMemo(() => ({ mode, setMode }), [mode])
+
   return (
-    <ThemeProviderContext>
+    <ThemeContext.Provider value={value}>
       {/* NOTE: ThemeInner used so that useThemeMode can be inside ThemeProviderContext */}
       <ThemeInner>{children}</ThemeInner>
-    </ThemeProviderContext>
+    </ThemeContext.Provider>
   )
 }
